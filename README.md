@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # ResilientDB website
 
 TODO:
