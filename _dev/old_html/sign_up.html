@@ -1,0 +1,96 @@
+@@include('template/document_start.html')
+
+	<body>
+		<!-- start main -->
+		<main role="main">
+			<!-- start section -->
+			<section class="section section--no-pt section--no-pb section--light-bg">
+				<div class="grid grid--container">
+					<div class="authorization authorization--registration">
+						<!-- this is demo, remove div class row and div's class col -->
+						<div class="row">
+							<div class="col col--md-auto">
+								<div class="text--center">
+									<a class="site-logo" href="index.html">
+										<img class="img-responsive" width="175" height="42" src="img/site_logo_2.png" alt="demo">
+									</a>
+								</div>
+
+								<form class="authorization__form" action="#">
+									<h3 class="__title">Sign Up</h3>
+
+									<div class="input-wrp">
+										<input class="textfield" type="text" value="" placeholder="Name" />
+									</div>
+
+									<div class="input-wrp">
+										<input class="textfield" type="text" value="" placeholder="Email" />
+									</div>
+
+									<div class="input-wrp">
+										<i class="textfield-ico fontello-eye"></i>
+										<input class="textfield" type="text" value="" placeholder="Password" />
+									</div>
+
+									<div class="input-wrp">
+										<i class="textfield-ico fontello-eye"></i>
+										<input class="textfield" type="text" value="" placeholder="Confirm Password" />
+									</div>
+
+									<p>
+										<label class="checkbox">
+											<input name="p1" type="checkbox" value="ok" required />
+											<i class="fontello-check"></i><span>I agree with <a href="#">Terms of Services</a></span>
+										</label>
+
+										<button class="custom-btn custom-btn--medium custom-btn--style-2 wide" type="submit" role="button">Submit</button>
+									</p>
+
+									<p class="text--center"><a href="sign_in.html">Sign In</a> if you don’t have an account</p>
+								</form>
+							</div>
+
+							<div class="col col--md-auto">
+								<div class="text--center">
+									<a class="site-logo" href="index.html">
+										<img class="img-responsive" width="175" height="42" src="img/site_logo_2.png" alt="demo">
+									</a>
+								</div>
+
+								<form class="authorization__form" action="#">
+									<h3 class="__title">Sign Up</h3>
+
+									<p>
+										We sent the code to your email address. Please, check your inbox or spam folder.
+									</p>
+
+									<div class="input-wrp">
+										<input class="textfield" type="text" value="" placeholder="Enter PIN" />
+									</div>
+
+									<button class="custom-btn custom-btn--medium custom-btn--style-2 wide" type="submit" role="button">Submit</button>
+								</form>
+
+								<br>
+
+								<form id="recovery" class="authorization__form" action="#">
+									<h3 class="__title">Password Recovery</h3>
+
+									<div class="input-wrp">
+										<input class="textfield" type="text" value="" placeholder="Enter PIN" />
+									</div>
+
+									<button class="custom-btn custom-btn--medium custom-btn--style-2 wide" type="submit" role="button">Submit</button>
+
+									<p class="text--center">Back to <a href="sign_in.html">Sign In</a></p>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+		</main>
+		<!-- end main -->
+
+@@include('template/document_end.html')

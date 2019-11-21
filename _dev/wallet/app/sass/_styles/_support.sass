@@ -1,0 +1,84 @@
+.support
+    &__header
+        padding: 40px 40px 0
+    h2
+        padding-bottom: 30px
+    &__tabs
+        display: flex
+    &__tabs-item
+        font-size: 14px
+        font-weight: 700
+        margin-right: 50px
+        position: relative
+        padding-bottom: 12px
+        cursor: pointer
+        &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 100%
+            border-bottom: 3px solid $blue
+            opacity: 0
+            transition: 0.4s
+        &.active
+            &:after
+                opacity: 1
+        &:last-child
+            margin-right: 0
+    &__content
+        background-color: #fff
+    &__content-item
+        background-color: #fff
+        padding: 40px 40px 0 40px
+        display: none
+        opacity: 0
+        animation: fadeIn 1s ease 1 forwards
+        position: relative
+        &.active
+            display: block
+    &__row
+        display: flex
+        justify-content: space-between
+    .hr  
+        margin: 35px 0
+        height: 1px
+        background-color: #efefef
+        width: calc(100% + 80px)
+        position: relative
+        left: -40px
+    &__col
+        width: calc(33.33333% - 6.666666666666667px)
+        padding-right: 20px
+        h3
+            margin-bottom: 24px
+    &__list
+        a
+            line-height: 25px
+            color: #777777
+            font-size: 14px
+            transition: color 0.4s
+            &:hover
+                color: $blue
+
++media-breakpoint-down(sm)
+    .support
+        &__row
+            margin-bottom: 40px 
+        &__content-item
+            padding: 40px 15px 0
+        &__header
+            padding: 40px 15px 0   
+        .hr
+            display: none
+
++media-breakpoint-down(xs)
+    .support
+        &__row
+            display: block
+            margin-bottom: 20px
+        &__col
+            width: 100%
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0

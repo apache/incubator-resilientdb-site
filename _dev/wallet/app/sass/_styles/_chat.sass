@@ -1,0 +1,281 @@
+.chat-wrap
+    display: flex
+    
+.add-additions
+    position: absolute
+    top: -3px
+    left: 0px
+    cursor: pointer
+    z-index: 2
+
+.chat
+    width: calc(100% - 260px)
+    position: relative
+    padding-left: 65px
+    padding-right: 100px
+    &:after
+        content: ''
+        position: absolute
+        top: -40px
+        right: 0px
+        width: 1px
+        height: 100vh
+        border-right: 1px solid rgba(0,0,0,0.1)
+    &__body
+        width: 100%
+        height: 600px
+        overflow-y: auto
+    &__form
+        height: 86px
+        line-height: 86px
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: -105px
+            height: 100vh
+            width: calc(100% + 205px)
+            background-color: rgba(0,0,0,0.01)
+        &:after
+            content: ''
+            position: absolute
+            top: 0
+            left: -105px
+            width: calc(100% + 205px)
+            border-top: 1px solid rgba(0,0,0,0.1)
+        textarea
+            padding-top: 30px
+            width: 100%
+            height: 100%
+            border: none
+            background-color: transparent
+            display: block
+            resize: none
+            font-size: 14px
+            line-height: 22px
+            padding-left: 30px
+            position: relative
+            z-index: 1
+            &::placeholder
+                color: #777777
+        button
+            width: 38px
+            height: 38px
+            background-color: #4b4f57
+            border-radius: 50%
+            border: none
+            position: relative
+            cursor: pointer
+            transition: background-color 0.4s
+            position: relative
+            z-index: 1
+            img
+                position: absolute
+                top: 50%
+                left: 57%
+                transform: translate(-50%, -50%)
+            &:hover
+                background-color: #557ef8
+    &__form-controls
+        position: absolute
+        z-index: 1
+        top: 0
+        right: 0px
+        display: flex
+        align-items: center
+
+.smile
+    cursor: pointer
+    margin-right: 10px
+
+.message
+    display: flex
+    position: relative
+    margin: 20px 0
+    &__ava
+        width: 35px
+        height: 35px
+        border-radius: 50%
+        overflow: hidden
+        position: absolute
+        top: 0
+    &__post-data
+        position: absolute
+        top: 55px
+        color: rgba(0,0,0,0.6)
+        font-size: 11px
+        width: 35px
+        text-align: center
+        color: rgba(0,0,0,0.6)
+    &__text
+        padding: 20px
+        max-width: 465px
+        border-radius: 3px
+        font-size: 14px
+        line-height: 22px
+    &--to
+        justify-content: flex-end
+        .message
+            &__ava
+                top: 10px
+                right: 0
+            &__text
+                background-color: #5185f7
+                color: #ffffff
+                margin: 0 60px 0 40px
+                position: relative
+                &:after
+                    content: ''
+                    position: absolute
+                    top: 22px
+                    right: -5px
+                    width: 0
+                    height: 0
+                    border-top: 5px solid transparent
+                    border-bottom: 5px solid transparent
+                    border-left: 5px solid #5185f7
+            
+    &--from
+        justify-content: flex-start
+        .message
+            &__ava
+                top: 10px
+                left: 0
+            &__text
+                border: 1px solid #efefef
+                border-radius: 5px
+                margin: 0 40px 0 75px
+                color: rgba(119, 119, 119, 0.9)
+                position: relative
+                &:before
+                    content: ''
+                    position: absolute
+                    top: 22px
+                    left: -5px
+                    width: 0
+                    height: 0
+                    border-top: 5px solid transparent
+                    border-bottom: 5px solid transparent
+                    border-right: 5px solid #efefef
+                &:after
+                    content: ''
+                    position: absolute
+                    top: 22px
+                    left: -4px
+                    width: 0
+                    height: 0
+                    border-top: 4px solid transparent
+                    border-bottom: 4px solid transparent
+                    border-right: 4px solid #ffffff
+                
+.support-center
+    text-align: center
+    width: 100%
+    max-width: 300px
+    padding: 0 40px
+    position: absolute
+    top: 40px
+    right: 0
+    &__ava
+        width: 120px
+        height: 120px
+        margin: 0 auto 30px
+        border-radius: 50%
+    &__title
+        color: #333333
+        font-size: 20px
+        font-weight: 700
+        margin-bottom: 10px
+    &__text
+        font-size: 14px
+        color: #777777
+        margin-bottom: 60px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 30px
+
++media-breakpoint-down(lg)
+    .chat
+        padding-left: 25px
+        padding-right: 40px
+        &__form
+            &:before
+                width: calc(100% + 145px)
+            &:after
+                left: -65px
+                width: calc(100% + 105px)
+
++media-breakpoint-down(md)
+    .chat-wrap
+        display: block
+
+    .chat
+        width: 100%
+        padding: 0
+        &:after
+            display: none
+
+    .chat-menu
+        position: absolute
+        top: 8px
+        left: 250px
+
+    .support-center
+        position: relative
+        top: 0
+        left: 0
+        display: flex
+        max-width: 100%
+        justify-content: flex-start
+        text-align: left
+        align-items: center
+        padding: 0 0 40px 0
+        margin-bottom: 40px
+        &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: -40px
+            width: calc(100% + 80px)
+            border-bottom: 1px solid rgba(0,0,0,0.1)
+        &__text
+            margin-bottom: 0
+            font-size: 12px
+        &__header
+            position: absolute
+            width: 100%
+            top: 0
+            left: 0
+        &__ava
+            margin: 0
+            width: 60px
+            height: 60px
+            margin-right: 20px
+        &__title
+            font-size: 18px
+            margin-bottom: 5px
+        &__row
+            width: 100%
+            display: flex
+            justify-content: space-between
+  
++media-breakpoint-down(sm)
+    .message--to .message__text
+        margin: 0 60px 0 0px
+
+    .message--from .message__text
+        margin: 0 0 0 60px
+
++media-breakpoint-down(xs)
+    .support-center
+        align-items: flex-start
+        padding-bottom: 30px
+        margin-bottom: 20px
+        &__text
+            margin-bottom: 20px
+        &__row
+            display: block
+

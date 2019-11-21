@@ -1,0 +1,230 @@
+/* --------------------------------
+   form
+-------------------------------- */
+
+form
+{
+	position: relative;
+
+	.input-wrp
+	{
+		position: relative;
+		display: block;
+		width: 100%;
+		line-height: 1;
+		margin-top: 20px;
+	}
+
+	.textfield-ico
+	{
+		position: absolute;
+		right: 20px;
+		top: 19px;
+		font-size: rem-calc(18px);
+		color: #d1d1d1;
+
+		&.fontello-eye { cursor: pointer; }
+
+		+ .textfield { padding-right: 40px; }
+	}
+
+	.textfield
+	{
+		display: block;
+		width: 100%;
+		background: $white-color;
+		border: none;
+		box-shadow: none;
+		line-height: 1.2;
+		font:
+		{
+			size: rem-calc(16px);
+			family: $base-fontFamily;
+		};
+		color: #555;
+		appearance: none;
+		outline: none;
+		padding: 18px 20px;
+		@include border-radius(30px);
+		@include transition(
+			background-color 0.3s ease-in-out,
+			border-color 0.3s ease-in-out,
+			color 0.3s ease-in-out
+		);
+
+		@include placeholder
+		{
+			color: #555;
+			@include transition(color 0.3s ease-in-out);
+		}
+
+		&:hover,
+		&:focus,
+		&.hover,
+		&.focus
+		{
+			// border-color: #9da5ad;
+		}
+
+		&.error { border-color: $primary-color !important; }
+
+		.section--dark-bg &:not(:hover):not(:focus)
+		{
+			background-color: #34363b;
+			color: #c9c9c9;
+
+			@include placeholder { color: #c9c9c9; }
+		}
+	}
+
+	.textfield.nice-select
+	{
+		height: 55px;
+		padding-right: 40px;
+
+		&:after
+		{
+			right: 20px;
+			width: 7px;
+			height: 7px;
+			border-bottom: 2px solid #5e5e5e;
+			border-right: 2px solid #5e5e5e;
+		}
+
+		.current { line-height: inherit; }
+
+		.list
+		{
+			left: 18px;
+			right: 18px;
+		}
+	}
+
+	input.textfield { height: 55px; }
+
+	textarea
+	{
+		resize: vertical;
+		min-height: 125px;
+		min-height: 190px;
+		height: 100%;
+	}
+
+	button[type=submit]
+	{
+		cursor: pointer;
+		box-shadow: none;
+		outline: none;
+		margin-top: 25px;
+	}
+}
+
+.form--horizontal
+{
+	padding: 10px;
+	background-color: rgba(#222427, 1);
+	@include border-radius(50px);
+
+	.cell
+	{
+		&:last-child
+		{
+			width: 1%;
+			padding-left: 10px;
+		}
+	}
+
+	.input-wrp,
+	button[type=submit]
+	{
+		margin-top: 0;
+	}
+
+	button[type=submit] { min-width: 125px; }
+}
+
+label { cursor: pointer; }
+
+.checkbox
+{
+	position: relative;
+	display: inline-block;
+	margin-top: 20px;
+	line-height: 1.1;
+	padding-left: 30px;
+
+	&:first-child { margin-top: 0; }
+
+	input[type="checkbox"]
+	{
+		position: absolute;
+		top: 14px;
+		left: 7px;
+		width: 1px;
+		height: 1px;
+		clip: rect(2px,2px,2px,2px);
+
+		&:checked ~
+		{
+			i
+			{
+				background-color: $primary-color;
+				border-color: $primary-color;
+
+				&:before { transform: scale(1); }
+			}
+
+			span a { color: $primary-color; }
+		}
+	}
+
+	i
+	{
+		position: relative;
+		float: left;
+		width: 15px;
+		height: 15px;
+		margin-left: -30px;
+		background-color: $white-color;
+		border: 1px solid #e3e3e3;
+		font-size: rem-calc(8px);
+		font-weight: 700;
+		text-align: center;
+		overflow: hidden;
+		@include border-radius(2px);
+		@include transition(
+			background-color 0.25s ease-in-out,
+			border-color     0.25s ease-in-out
+		);
+
+		&:before
+		{
+			line-height: 14px;
+			transform: scale(0);
+			color: $white-color;
+			@include transition(transform .25s cubic-bezier(.23,1,.32,1));
+		}
+
+		&:last-child { margin-right: 0; }
+	}
+}
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

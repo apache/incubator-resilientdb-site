@@ -1,0 +1,200 @@
+/* --------------------------------
+   buttons
+-------------------------------- */
+
+.custom-btn
+{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 30px;
+	padding-right: 30px;
+	line-height: 1;
+	font-family: $base-fontFamily;
+	text:
+	{
+		align: center !important;
+		decoration: none !important;
+		shadow: none !important;
+		transform: capitalize;
+	};
+	letter-spacing: .5px;
+	white-space: nowrap;
+	color: #4f4a37;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-drag: none;
+	user-drag: none;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	overflow: hidden;
+	z-index: 2;
+	@include border-radius(30px);
+	@include transition(
+		background-color 0.25s ease-in-out,
+		border-color     0.25s ease-in-out,
+		color            0.25s ease-in-out
+	);
+
+	&:hover,
+	&:focus
+	{
+
+	}
+
+	&--small
+	{
+		min-height: 38px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		font-size: rem-calc(14px);
+		font-weight: 400;
+	}
+
+	&--medium
+	{
+		min-width: 185px;
+		min-height: 56px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-size: rem-calc(16px);
+		font-weight: 500;
+	}
+
+	&.custom-btn--style-1
+	{
+		background-color: $primary-color;
+		color: #333;
+
+		&:before,
+		&:after
+		{
+			content: "";
+			position: absolute;
+			z-index: -1;
+			@include transition( opacity 0.25s ease-in-out );
+		}
+
+		&:before
+		{
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: -moz-linear-gradient(125deg, rgba(91,70,126,1) 0%, rgba(51,101,167,1) 50%, rgba(71,204,166,1) 100%);
+			background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(71,204,166,1)), color-stop(50%, rgba(51,101,167,1)), color-stop(100%, rgba(91,70,126,1)));
+			background: -webkit-linear-gradient(125deg, rgba(91,70,126,1) 0%, rgba(51,101,167,1) 50%, rgba(71,204,166,1) 100%);
+			background: -o-linear-gradient(125deg, rgba(91,70,126,1) 0%, rgba(51,101,167,1) 50%, rgba(71,204,166,1) 100%);
+			background: -ms-linear-gradient(125deg, rgba(91,70,126,1) 0%, rgba(51,101,167,1) 50%, rgba(71,204,166,1) 100%);
+			background: linear-gradient(325deg, rgba(91,70,126,1) 0%, rgba(51,101,167,1) 50%, rgba(71,204,166,1) 100%);
+		}
+
+		&:after
+		{
+			top: 2px;
+			right: 2px;
+			bottom: 2px;
+			left: 2px;
+			background-color: $white-color;
+			border-radius: inherit;
+		}
+
+		&:hover,
+		&:focus
+		{
+			background-color: $primary-color;
+			color: $white-color;
+
+			&:before,
+			&:after
+			{
+				opacity: 0;
+			}
+		}
+	}
+
+	&.custom-btn--style-2
+	{
+		background-color: $primary-color;
+		color: $white-color;
+
+		&:hover,
+		&:focus
+		{
+			background-color: lighten(saturate($primary-color, 16.81), 1.18);
+		}
+	}
+
+	&.custom-btn--style-3
+	{
+		background-color: #10cb6c;
+		color: $white-color;
+
+		&:hover,
+		&:focus
+		{
+			background-color: #26de81;
+		}
+	}
+
+	&.custom-btn--style-4
+	{
+		background-color: #00acfe;
+		color: $white-color;
+
+		&:hover,
+		&:focus
+		{
+			background-color: #42c0fc;
+		}
+	}
+
+	&.custom-btn--style-5
+	{
+		background-color: #f6003b;
+		color: $white-color;
+
+		&:hover,
+		&:focus
+		{
+			background-color: #fb376e;
+		}
+	}
+
+	&.custom-btn--style-6
+	{
+		background-color: #292b30;
+		color: $white-color;
+
+		&:hover,
+		&:focus
+		{
+			background-color: #3d3e3f;
+		}
+	}
+
+	&.wide { width: 100%; }
+}
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

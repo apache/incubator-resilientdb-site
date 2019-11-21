@@ -1,0 +1,62 @@
+/* --------------------------------
+   facts
+-------------------------------- */
+
+$gutter: 60px;
+
+.facts
+{
+	.__inner { margin-bottom: -$gutter; }
+
+	.__item
+	{
+		position: relative;
+		width: 100%;
+		margin-bottom: $gutter;
+		font-size: rem-calc(18px);
+	}
+
+	.num
+	{
+		line-height: 1;
+		font-size: rem-calc(45px);
+		font-weight: 900;
+		font-family: 'Lato', sans-serif;
+
+		&:before { content: attr(data-before); }
+		&:after { content: attr(data-after); }
+	}
+}
+
+.facts--light-color
+{
+	color: $white-color;
+}
+
+.facts--dark-color
+{
+	color: #404040;
+
+	.num { color: $primary-color; }
+}
+
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

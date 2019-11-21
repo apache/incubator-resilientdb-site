@@ -1,0 +1,119 @@
+/* --------------------------------
+   testimonial
+-------------------------------- */
+
+$gutter: 30px;
+
+.testimonial-ico
+{
+	display: block;
+	height: 70px;
+	margin-bottom: $gutter;
+	line-height: 0.9;
+	font-size: rem-calc(250px);
+	font-style: normal;
+	font-weight: 600;
+	color: $white-color;
+}
+
+.testimonial
+{
+	padding-top: 50px;
+	color: $white-color;
+
+	.__item
+	{
+		line-height: 1.4;
+
+		.__text
+		{
+			font-size: rem-calc(20px);
+
+			p
+			{
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.__author
+		{
+			margin-top: 25px;
+			border-left: 2px solid $white-color;
+			padding-left: 25px;
+			line-height: 1.2;
+
+			&--image { margin-right: 20px; }
+
+			&--name,
+			&--position
+			{
+				display: block;
+			}
+
+			&--name
+			{
+				margin-bottom: 5px;
+				color: inherit;
+			}
+
+			&--position
+			{
+				line-height: 1;
+				font-weight: 600;
+				font-size: rem-calc(16px);
+				opacity: .5;
+			}
+		}
+	}
+
+	&--slider
+	{
+		.slick-slide
+		{
+			margin-left: $gutter;
+
+			&:first-child { margin-left: 0 ; }
+		}
+
+		.slick-dots
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin-top: 0;
+		}
+	}
+}
+
+@include min-screen($sm-width)
+{
+	.testimonial
+	{
+		.__item
+		{
+			.__text { font-size: rem-calc(23px); }
+		}
+	}
+}
+
+@include min-screen($md-width)
+{
+	.testimonial
+	{
+		.__item
+		{
+			.__text { font-size: rem-calc(25px); }
+		}
+	}
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+	
+}

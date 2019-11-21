@@ -1,0 +1,41 @@
+@@include('template/document_start.html')
+
+	<body>
+		<!-- start main -->
+		<main role="main">
+			<!-- start section -->
+			<section class="section section--no-pt section--no-pb section--light-bg">
+				<div class="grid grid--container">
+					<div class="authorization authorization--login">
+						<a class="site-logo" href="index.html">
+							<img class="img-responsive" width="175" height="42" src="img/site_logo_2.png" alt="demo">
+						</a>
+
+						<form class="authorization__form" action="#">
+							<h3 class="__title">Sign In</h3>
+
+							<div class="input-wrp">
+								<input class="textfield" type="text" value="" placeholder="Email" />
+							</div>
+
+							<div class="input-wrp">
+								<i class="textfield-ico fontello-eye"></i>
+								<input class="textfield" type="text" value="" placeholder="Password" />
+							</div>
+
+							<p>
+								<a href="sign_up.html#recovery">I forgot my password</a>
+
+								<button class="custom-btn custom-btn--medium custom-btn--style-2 wide" type="submit" role="button">Submit</button>
+							</p>
+
+							<p class="text--center"><a href="sign_up.html">Sign Up</a> if you don’t have an account</p>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+		</main>
+		<!-- end main -->
+
+@@include('template/document_end.html')

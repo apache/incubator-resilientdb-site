@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Wallet</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- Load google font
+	================================================== -->
+	<script type="text/javascript">
+		WebFontConfig = {
+			google: { families: [ 'Lato:300,400,500,700'] }
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + 
+			'://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
+
+	<!-- Load other scripts
+	================================================== -->
+	<script type="text/javascript">
+		var _html = document.documentElement;
+		_html.className = _html.className.replace("no-js","js");
+	</script>
+
+	<style>.preloader{width: 100%;height: 100%;position: fixed;background-color: #fff;z-index: 9999;}</style>
+
+
+</head>
+
+<body>
+
+	<div class="preloader"></div>
+
+	<div class="wrapper">
+
+		<header class="header">
+
+			<div class="inner-col">
+
+				<a href="" class="mobile-logo d-md-none">
+					<img src="img/logo.png" alt="">
+				</a>
+
+				<div class="btn-menu btn-menu--left">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+
+				<form class="search">
+					<span class="search__icon">
+						<img src="img/search.png" alt="">
+					</span>
+					<input class="search__input" type="text" placeholder="Search">
+				</form>
+			</div>
+
+		
+			<div class="inner-row align-right">
+
+				<div class="notification">
+					<div class="notification__icon">
+						<img src="img/notification-icon.svg" alt="">
+					</div>
+					<div class="notification__list">
+						<div class="notification__list-item">
+							<p><span class="circle" style="background-color: #58a3ea;"></span>	Sent Litecoin</p>
+							<span class="rate rate--minus">- 0.1 LTC</span>
+						</div>
+						<div class="notification__list-item">
+							<p><span class="circle" style="background-color: #45d25c;"></span>Recieved Bitcoin</p>
+							<span class="rate rate--plus">+ 0.056 BTC</span>
+						</div>
+						<div class="notification__list-item">
+							<p><span class="circle" style="background-color: #fd5e71;"></span>Declined Bitcoin</p>
+							<span class="rate rate--normal">1 BTC</span>
+						</div>
+						<div class="notification__list-item">
+							<p><span class="circle" style="background-color: #58a3ea;"></span>Sent Litecoin</p>
+							<span class="rate rate--minus">- 0.1 LTC</span>
+						</div>
+						<a href="" class="notification__more">See more</a>
+					</div>
+				</div>
+
+				<div class="d-none d-md-block">
+					<div class="user">
+						<div class="user__avatar">
+							<img src="img/user.png" alt="">
+							<div class="user__arr">
+								<img src="img/user-dropdown-icon.svg" alt="">
+							</div>
+						</div>
+						<p class="user__name">
+							Alex Bolden
+						</p>
+						<ul class="user-menu">
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="16.503px" height="15.001px" viewBox="0 0 16.503 15.001" style="enable-background:new 0 0 16.503 15.001;"
+											xml:space="preserve">
+									   <path d="M14.951,0H1.547C0.693,0,0,0.692,0,1.547v8.764c0,0.854,0.692,1.547,1.547,1.547h2.062v2.191
+										   c0.15,0.644,0.897,1.413,2.119,0.603l3.093-2.794h6.135c0.854,0,1.547-0.692,1.547-1.547V1.547C16.503,0.693,15.811,0,14.956,0
+										   C14.955,0,14.953,0,14.951,0z M15.467,9.795c0,0.569-0.462,1.031-1.031,1.031H8.507l-3.418,3.047
+										   c-0.577,0.717-0.423-1.165-0.423-1.98l0,0v-1.067H2.088c-0.569,0-1.031-0.462-1.031-1.031V2.062c0-0.569,0.462-1.031,1.031-1.031
+										   h12.373c0.569,0,1.031,0.462,1.031,1.031v7.733H15.467z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Support 
+									</span>
+								</a>
+							</li>
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="18px" height="18px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+											   <path d="M9,6C7.343,6,6,7.343,6,9c0,1.657,1.343,3,3,3c1.657,0,3-1.343,3-3C12,7.343,10.657,6,9,6z M9,10.5
+												   c-0.828,0-1.5-0.672-1.5-1.5S8.172,7.5,9,7.5s1.5,0.672,1.5,1.5S9.828,10.5,9,10.5z M15.75,6.75h-1.32l0.93-0.93
+												   c0.847-0.909,0.797-2.333-0.112-3.18c-0.864-0.805-2.203-0.805-3.068,0l-0.93,0.93V2.25C11.25,1.007,10.243,0,9,0
+												   C7.757,0,6.75,1.007,6.75,2.25v1.32L5.82,2.625C4.911,1.778,3.487,1.828,2.64,2.737c-0.805,0.864-0.805,2.203,0,3.068l0.93,0.93
+												   H2.25C1.007,6.735,0,7.742,0,8.985c0,1.243,1.007,2.25,2.25,2.25h1.32L2.625,12.18c-0.847,0.909-0.797,2.333,0.112,3.18
+												   c0.864,0.805,2.203,0.805,3.068,0l0.93-0.93v1.32c0,1.243,1.007,2.25,2.25,2.25c1.243,0,2.25-1.007,2.25-2.25v-1.32l0.93,0.93
+												   c0.909,0.847,2.333,0.797,3.18-0.112c0.805-0.864,0.805-2.203,0-3.068l-0.93-0.93h1.32c1.243,0.008,2.257-0.992,2.265-2.235V9
+												   C18,7.757,16.993,6.75,15.75,6.75z M15.75,9.75h-1.56c-0.125,0.868-0.465,1.69-0.99,2.393l1.102,1.102
+												   c0.269,0.315,0.233,0.788-0.082,1.057c-0.281,0.241-0.695,0.241-0.976,0L12.142,13.2c-0.702,0.525-1.525,0.865-2.393,0.99v1.56
+												   c0,0.414-0.336,0.75-0.75,0.75s-0.75-0.336-0.75-0.75v-1.56c-0.868-0.125-1.69-0.465-2.393-0.99l-1.102,1.102
+												   c-0.315,0.269-0.788,0.233-1.057-0.082c-0.241-0.281-0.241-0.695,0-0.976l1.102-1.102c-0.525-0.702-0.865-1.525-0.99-2.393h-1.56
+												   c-0.414,0-0.75-0.336-0.75-0.75s0.336-0.75,0.75-0.75h1.56c0.125-0.868,0.465-1.69,0.99-2.393L3.697,4.754
+												   C3.428,4.439,3.464,3.966,3.779,3.697c0.281-0.241,0.695-0.241,0.976,0l1.102,1.102c0.702-0.525,1.525-0.865,2.393-0.99v-1.56
+												   c0-0.414,0.336-0.75,0.75-0.75s0.75,0.336,0.75,0.75v1.56c0.868,0.125,1.69,0.465,2.393,0.99l1.102-1.102
+												   c0.315-0.269,0.788-0.233,1.057,0.082c0.241,0.281,0.241,0.695,0,0.976L13.2,5.857c0.525,0.702,0.865,1.525,0.99,2.393h1.56
+												   c0.414,0,0.75,0.336,0.75,0.75S16.164,9.75,15.75,9.75z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Settings 
+									</span>
+								</a>
+							</li>
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="9.467px" height="11px" viewBox="0 0 9.467 11" style="enable-background:new 0 0 9.467 11;" xml:space="preserve">
+											   <path d="M8.545,5.135H7.811V2.971C7.811,1.332,6.481,0,4.841,0H4.625C2.987,0,1.656,1.331,1.656,2.971
+												   v0.721h1.231V2.971c0-0.96,0.78-1.74,1.738-1.74h0.216c0.959,0,1.738,0.781,1.738,1.74v2.165H0.922C0.416,5.135,0,5.548,0,6.056
+												   v4.024C0,10.587,0.413,11,0.922,11h7.622c0.507,0,0.922-0.412,0.922-0.92V6.056C9.467,5.548,9.054,5.135,8.545,5.135z
+													M8.236,9.769H1.231V6.366h7.005V9.769z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Sign out 
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="btn-menu btn-menu--right">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+
+			</div>
+
+		</header>
+
+
+		<div class="content">
+			<aside class="sidebar">
+				<div class="sidebar__close-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="16" viewBox="0 0 15 16"><defs><path id="hy9fa" d="M294.49 17.58L307.92 31l-1.41 1.41L293.08 19z"/><path id="hy9fb" d="M293.08 31.01l13.43-13.43 1.41 1.41-13.43 13.43z"/></defs><g><g transform="translate(-293 -17)"><use fill="#fff" xlink:href="#hy9fa"/></g><g transform="translate(-293 -17)"><use fill="#fff" xlink:href="#hy9fb"/></g></g></svg>
+				</div>
+
+				<a href="" class="logo">
+					<img class="logo__img" src="img/logo.png" alt="">
+					<span class="logo__text">Crypterium</span>
+				</a>
+
+				<ul class="menu">
+					<li class="menu__item">
+						<a class="menu__link" href="index.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="15px" height="15px" viewBox="120.5 14.5 15 15" style="enable-background:new 120.5 14.5 15 15;" xml:space="preserve">
+							   
+									   <path d="M133.921,18.447L123.658,14.5c-0.872,0-1.579,0.707-1.579,1.579v2.368
+										   c-0.872,0-1.579,0.707-1.579,1.579v7.895c0,0.872,0.707,1.579,1.579,1.579h11.842c0.872,0,1.579-0.707,1.579-1.579v-7.895
+										   C135.5,19.154,134.793,18.447,133.921,18.447z M123.657,17.088c0.001-0.436,0.354-0.789,0.79-0.788l5.526,2.146h-6.316V17.088z
+											M133.921,27.13c0,0.436-0.354,0.79-0.79,0.79h-10.263c-0.436-0.001-0.789-0.354-0.789-0.79v-6.315
+										   c0-0.436,0.353-0.789,0.789-0.79h10.263c0.436,0,0.79,0.354,0.79,0.79V27.13z M124.842,23.183h-0.79
+										   c-0.217,0.003-0.392,0.178-0.395,0.395v0.789c0.003,0.217,0.178,0.392,0.395,0.395h0.79v0.001
+										   c0.217-0.003,0.393-0.179,0.395-0.396v-0.789C125.234,23.361,125.059,23.186,124.842,23.183z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Wallet
+							</span>
+						</a>
+					</li>
+					<li class="menu__item active">
+						<a class="menu__link" href="transactions.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="15.277px" height="12px" viewBox="18.361 16 15.277 12" style="enable-background:new 18.361 16 15.277 12;"
+									xml:space="preserve">
+							   <path d="M27.858,19.159H20.79l2.003-2.003c0.264-0.264,0.264-0.694,0-0.958
+								   c-0.262-0.263-0.692-0.264-0.956-0.002l-3.334,3.303c-0.091,0.091-0.142,0.211-0.142,0.34c0,0.129,0.05,0.25,0.141,0.341l3.3,3.3
+								   c0.264,0.264,0.694,0.265,0.959,0c0.262-0.263,0.264-0.691,0.003-0.955l-1.98-2.005h7.075c2.437,0,4.42,1.983,4.42,4.42v2.38
+								   c0,0.375,0.305,0.68,0.68,0.68c0.375,0,0.68-0.305,0.68-0.68v-2.38C33.639,21.752,31.045,19.159,27.858,19.159z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Transactions
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="buy.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="13.5px" height="18px" viewBox="0 0 13.5 18" style="enable-background:new 0 0 13.5 18;" xml:space="preserve">
+							   <path d="M10.5,4.5V3.75C10.5,1.679,8.821,0,6.75,0S3,1.679,3,3.75V4.5H0v11.25C0,16.993,1.007,18,2.25,18h9
+								   c1.243,0,2.25-1.007,2.25-2.25V4.5H10.5z M4.5,3.75c0-1.243,1.007-2.25,2.25-2.25S9,2.507,9,3.75V4.5H4.5V3.75z M12,15.75
+								   c0,0.414-0.336,0.75-0.75,0.75h-9c-0.414,0-0.75-0.336-0.75-0.75V6H12V15.75z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Buy/Sale
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="support.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="16.503px" height="15.001px" viewBox="0 0 16.503 15.001" style="enable-background:new 0 0 16.503 15.001;"
+									xml:space="preserve">
+							   <path d="M14.951,0H1.547C0.693,0,0,0.692,0,1.547v8.764c0,0.854,0.692,1.547,1.547,1.547h2.062v2.191
+								   c0.15,0.644,0.897,1.413,2.119,0.603l3.093-2.794h6.135c0.854,0,1.547-0.692,1.547-1.547V1.547C16.503,0.693,15.811,0,14.956,0
+								   C14.955,0,14.953,0,14.951,0z M15.467,9.795c0,0.569-0.462,1.031-1.031,1.031H8.507l-3.418,3.047
+								   c-0.577,0.717-0.423-1.165-0.423-1.98l0,0v-1.067H2.088c-0.569,0-1.031-0.462-1.031-1.031V2.062c0-0.569,0.462-1.031,1.031-1.031
+								   h12.373c0.569,0,1.031,0.462,1.031,1.031v7.733H15.467z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Support
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="settings.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="18px" height="18px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+									   <path d="M9,6C7.343,6,6,7.343,6,9c0,1.657,1.343,3,3,3c1.657,0,3-1.343,3-3C12,7.343,10.657,6,9,6z M9,10.5
+										   c-0.828,0-1.5-0.672-1.5-1.5S8.172,7.5,9,7.5s1.5,0.672,1.5,1.5S9.828,10.5,9,10.5z M15.75,6.75h-1.32l0.93-0.93
+										   c0.847-0.909,0.797-2.333-0.112-3.18c-0.864-0.805-2.203-0.805-3.068,0l-0.93,0.93V2.25C11.25,1.007,10.243,0,9,0
+										   C7.757,0,6.75,1.007,6.75,2.25v1.32L5.82,2.625C4.911,1.778,3.487,1.828,2.64,2.737c-0.805,0.864-0.805,2.203,0,3.068l0.93,0.93
+										   H2.25C1.007,6.735,0,7.742,0,8.985c0,1.243,1.007,2.25,2.25,2.25h1.32L2.625,12.18c-0.847,0.909-0.797,2.333,0.112,3.18
+										   c0.864,0.805,2.203,0.805,3.068,0l0.93-0.93v1.32c0,1.243,1.007,2.25,2.25,2.25c1.243,0,2.25-1.007,2.25-2.25v-1.32l0.93,0.93
+										   c0.909,0.847,2.333,0.797,3.18-0.112c0.805-0.864,0.805-2.203,0-3.068l-0.93-0.93h1.32c1.243,0.008,2.257-0.992,2.265-2.235V9
+										   C18,7.757,16.993,6.75,15.75,6.75z M15.75,9.75h-1.56c-0.125,0.868-0.465,1.69-0.99,2.393l1.102,1.102
+										   c0.269,0.315,0.233,0.788-0.082,1.057c-0.281,0.241-0.695,0.241-0.976,0L12.142,13.2c-0.702,0.525-1.525,0.865-2.393,0.99v1.56
+										   c0,0.414-0.336,0.75-0.75,0.75s-0.75-0.336-0.75-0.75v-1.56c-0.868-0.125-1.69-0.465-2.393-0.99l-1.102,1.102
+										   c-0.315,0.269-0.788,0.233-1.057-0.082c-0.241-0.281-0.241-0.695,0-0.976l1.102-1.102c-0.525-0.702-0.865-1.525-0.99-2.393h-1.56
+										   c-0.414,0-0.75-0.336-0.75-0.75s0.336-0.75,0.75-0.75h1.56c0.125-0.868,0.465-1.69,0.99-2.393L3.697,4.754
+										   C3.428,4.439,3.464,3.966,3.779,3.697c0.281-0.241,0.695-0.241,0.976,0l1.102,1.102c0.702-0.525,1.525-0.865,2.393-0.99v-1.56
+										   c0-0.414,0.336-0.75,0.75-0.75s0.75,0.336,0.75,0.75v1.56c0.868,0.125,1.69,0.465,2.393,0.99l1.102-1.102
+										   c0.315-0.269,0.788-0.233,1.057,0.082c0.241,0.281,0.241,0.695,0,0.976L13.2,5.857c0.525,0.702,0.865,1.525,0.99,2.393h1.56
+										   c0.414,0,0.75,0.336,0.75,0.75S16.164,9.75,15.75,9.75z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Settings
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link active" href="archive.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="18px" height="16px" viewBox="-12 15 18 16" style="enable-background:new -12 15 18 16;" xml:space="preserve">
+									   <path d="M6,19.557L-3,15l-9,4.557l9,4.318L6,19.557z M-3,16.681l5.608,2.84L-3,22.211l-5.608-2.69
+										   L-3,16.681z M2.561,26.668L-3,29.336l-5.561-2.668h-3.412L-12,26.682L-3,31l9-4.318l-0.027-0.014H2.561z M2.561,23.106L-3,25.774
+										   l-5.561-2.668h-3.412L-12,23.12l9,4.318l9-4.318l-0.027-0.014C5.973,23.106,2.561,23.106,2.561,23.106z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Archive
+							</span>
+						</a>
+					</li>
+				</ul>
+
+				<div class="d-md-none">
+					<div class="user">
+						<div class="user__avatar">
+							<img src="img/user.png" alt="">
+							<div class="user__arr">
+								<img src="img/user-dropdown-icon.svg" alt="">
+							</div>
+						</div>
+						<p class="user__name">
+							Alex Bolden
+						</p>
+						<ul class="user-menu">
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="16.503px" height="15.001px" viewBox="0 0 16.503 15.001" style="enable-background:new 0 0 16.503 15.001;"
+											xml:space="preserve">
+									   <path d="M14.951,0H1.547C0.693,0,0,0.692,0,1.547v8.764c0,0.854,0.692,1.547,1.547,1.547h2.062v2.191
+										   c0.15,0.644,0.897,1.413,2.119,0.603l3.093-2.794h6.135c0.854,0,1.547-0.692,1.547-1.547V1.547C16.503,0.693,15.811,0,14.956,0
+										   C14.955,0,14.953,0,14.951,0z M15.467,9.795c0,0.569-0.462,1.031-1.031,1.031H8.507l-3.418,3.047
+										   c-0.577,0.717-0.423-1.165-0.423-1.98l0,0v-1.067H2.088c-0.569,0-1.031-0.462-1.031-1.031V2.062c0-0.569,0.462-1.031,1.031-1.031
+										   h12.373c0.569,0,1.031,0.462,1.031,1.031v7.733H15.467z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Support 
+									</span>
+								</a>
+							</li>
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="18px" height="18px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+											   <path d="M9,6C7.343,6,6,7.343,6,9c0,1.657,1.343,3,3,3c1.657,0,3-1.343,3-3C12,7.343,10.657,6,9,6z M9,10.5
+												   c-0.828,0-1.5-0.672-1.5-1.5S8.172,7.5,9,7.5s1.5,0.672,1.5,1.5S9.828,10.5,9,10.5z M15.75,6.75h-1.32l0.93-0.93
+												   c0.847-0.909,0.797-2.333-0.112-3.18c-0.864-0.805-2.203-0.805-3.068,0l-0.93,0.93V2.25C11.25,1.007,10.243,0,9,0
+												   C7.757,0,6.75,1.007,6.75,2.25v1.32L5.82,2.625C4.911,1.778,3.487,1.828,2.64,2.737c-0.805,0.864-0.805,2.203,0,3.068l0.93,0.93
+												   H2.25C1.007,6.735,0,7.742,0,8.985c0,1.243,1.007,2.25,2.25,2.25h1.32L2.625,12.18c-0.847,0.909-0.797,2.333,0.112,3.18
+												   c0.864,0.805,2.203,0.805,3.068,0l0.93-0.93v1.32c0,1.243,1.007,2.25,2.25,2.25c1.243,0,2.25-1.007,2.25-2.25v-1.32l0.93,0.93
+												   c0.909,0.847,2.333,0.797,3.18-0.112c0.805-0.864,0.805-2.203,0-3.068l-0.93-0.93h1.32c1.243,0.008,2.257-0.992,2.265-2.235V9
+												   C18,7.757,16.993,6.75,15.75,6.75z M15.75,9.75h-1.56c-0.125,0.868-0.465,1.69-0.99,2.393l1.102,1.102
+												   c0.269,0.315,0.233,0.788-0.082,1.057c-0.281,0.241-0.695,0.241-0.976,0L12.142,13.2c-0.702,0.525-1.525,0.865-2.393,0.99v1.56
+												   c0,0.414-0.336,0.75-0.75,0.75s-0.75-0.336-0.75-0.75v-1.56c-0.868-0.125-1.69-0.465-2.393-0.99l-1.102,1.102
+												   c-0.315,0.269-0.788,0.233-1.057-0.082c-0.241-0.281-0.241-0.695,0-0.976l1.102-1.102c-0.525-0.702-0.865-1.525-0.99-2.393h-1.56
+												   c-0.414,0-0.75-0.336-0.75-0.75s0.336-0.75,0.75-0.75h1.56c0.125-0.868,0.465-1.69,0.99-2.393L3.697,4.754
+												   C3.428,4.439,3.464,3.966,3.779,3.697c0.281-0.241,0.695-0.241,0.976,0l1.102,1.102c0.702-0.525,1.525-0.865,2.393-0.99v-1.56
+												   c0-0.414,0.336-0.75,0.75-0.75s0.75,0.336,0.75,0.75v1.56c0.868,0.125,1.69,0.465,2.393,0.99l1.102-1.102
+												   c0.315-0.269,0.788-0.233,1.057,0.082c0.241,0.281,0.241,0.695,0,0.976L13.2,5.857c0.525,0.702,0.865,1.525,0.99,2.393h1.56
+												   c0.414,0,0.75,0.336,0.75,0.75S16.164,9.75,15.75,9.75z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Settings 
+									</span>
+								</a>
+							</li>
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="9.467px" height="11px" viewBox="0 0 9.467 11" style="enable-background:new 0 0 9.467 11;" xml:space="preserve">
+											   <path d="M8.545,5.135H7.811V2.971C7.811,1.332,6.481,0,4.841,0H4.625C2.987,0,1.656,1.331,1.656,2.971
+												   v0.721h1.231V2.971c0-0.96,0.78-1.74,1.738-1.74h0.216c0.959,0,1.738,0.781,1.738,1.74v2.165H0.922C0.416,5.135,0,5.548,0,6.056
+												   v4.024C0,10.587,0.413,11,0.922,11h7.622c0.507,0,0.922-0.412,0.922-0.92V6.056C9.467,5.548,9.054,5.135,8.545,5.135z
+													M8.236,9.769H1.231V6.366h7.005V9.769z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Sign out 
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="copyright">
+					© 2018 Crypterium
+				</div>
+
+			</aside>
+
+			<main class="main-content">
+				<section class="transactions">
+
+					<div class="transactions__header">
+						<h2>Transactions</h2>
+
+						<a href="" class="btn btn--blue">Send currency</a>
+					</div>
+
+					<div class="transactions__filters">
+
+						<div class="transactions__filters-col">
+
+							<div class="custom-select--grey custom-select--currency">
+								<select class="custom-select">
+									<option value="Bitcoin">Bitcoin</option>
+									<option value="Ethereum">Ethereum</option>
+									<option value="Litecoin">Litecoin</option>
+								</select>
+							</div>
+							
+							<div class="custom-select--grey custom-select--actions">
+								<select class="custom-select">
+									<option value="All transactions">All transactions</option>
+									<option value="Sent">Sent</option>
+									<option value="Pending">Pending</option>
+									<option value="Recieved">Recieved</option>
+									<option value="Decline">Decline</option>
+								</select>
+							</div>
+							
+						</div>
+						<div class="transactions__filters-col transactions__filters-col--align-right">
+							<div class="datapickers">
+								<div class="datapicker-range">
+									<img src="img/calendar.svg" alt="">
+									<input type="text" placeholder="2017-04-01" class="datepicker-input datepicker-here" data-date-format="yyyy-mm-dd">
+								</div>
+								<div class="separator"></div>
+								<div class="datapicker-range">
+									<img src="img/calendar.svg" alt="">
+									<input type="text" placeholder="2017-04-01" class="datepicker-input datepicker-here" data-date-format="yyyy-mm-dd">
+								</div>
+							</div>
+							
+							<div class="input-wrap search-input">
+								<img src="img/search.svg" alt="">
+								<input type="text" placeholder="Search">
+							</div>
+						</div>
+			
+					</div>
+
+					<div class="transactions__list">
+						<div class="transaction">
+
+							<div class="transaction__header transaction__header--six-cols">
+								<div class="transaction__data">
+									<p>June 26, 2017 5:59 AM</p>
+								</div>
+
+								<div class="transaction__currency">
+									<svg style="box-shadow: 0 3px 7px rgba(194, 194, 194, 0.57);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+										<path fill="#c5c5c5" d="M22.857,0H7.143C3.214,0,0,3.214,0,7.143v15.714C0,26.786,3.214,30,7.143,30h15.714C26.786,30,30,26.786,30,22.857V7.143
+											C30,3.214,26.786,0,22.857,0z M19.334,21.071c-2.825,0-5.591,0-8.416,0c0.24-1.142,0.481-2.224,0.721-3.366
+											c-0.481,0.301-0.902,0.601-1.383,0.962c0.06-0.24,0.06-0.421,0.12-0.661c0.06-0.361,0.12-0.721,0.18-1.082
+											c0-0.06,0.06-0.12,0.12-0.18c0.421-0.301,0.842-0.601,1.262-0.902c0.06-0.06,0.06-0.12,0.12-0.12
+											c0.481-2.224,0.902-4.388,1.383-6.612c0,0,0,0,0-0.06c0.842-0.12,1.683-0.12,2.585-0.12c-0.12,0.721-0.301,1.383-0.421,2.104
+											c-0.18,0.842-0.361,1.683-0.541,2.525c0,0,0,0,0,0.06c1.142-0.781,2.284-1.563,3.426-2.344c-0.06,0.18-0.06,0.361-0.12,0.481
+											c-0.06,0.421-0.18,0.842-0.24,1.322c0,0.06-0.06,0.12-0.12,0.18c-1.082,0.721-2.164,1.443-3.186,2.224
+											c-0.06,0.06-0.12,0.12-0.12,0.18c-0.18,1.022-0.421,2.044-0.661,3.066v0.06c1.924,0,3.847,0,5.771,0
+											C19.634,19.569,19.514,20.29,19.334,21.071z"/>
+									</svg>
+									Litecoin
+								</div>
+
+								<div class="transaction__info">
+									<img src="img/transaction-icon-pending.svg" alt="">
+									<p>
+										Pending to 3Bhe5sbhSTNxcDpYyy
+									</p>
+								</div>
+
+								<div class="transaction__status">
+									<div class="status status--pending">
+										Pending
+									</div>
+								</div>
+
+								<div class="transaction__course">
+									<span class="rate rate--minus">- 0.1 LTC</span>
+									<span class="rate rate--normal">- 25 USD</span>
+								</div>
+
+								<div class="transaction__actions">
+
+									<div class="tooltip">
+										<div class="tooltip__icon">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="18px" height="16px" viewBox="-12 15 18 16" style="enable-background:new -12 15 18 16;" xml:space="preserve">
+												   <path d="M6,19.557L-3,15l-9,4.557l9,4.318L6,19.557z M-3,16.681l5.608,2.84L-3,22.211l-5.608-2.69
+													   L-3,16.681z M2.561,26.668L-3,29.336l-5.561-2.668h-3.412L-12,26.682L-3,31l9-4.318l-0.027-0.014H2.561z M2.561,23.106L-3,25.774
+													   l-5.561-2.668h-3.412L-12,23.12l9,4.318l9-4.318l-0.027-0.014C5.973,23.106,2.561,23.106,2.561,23.106z"/>
+										   </svg>
+										</div>
+										<div class="tooltip__text">
+											Add to archive
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="transaction__body">
+								<ul class="transaction__details">
+									<li>
+										<span>Sender name:</span> Andrew Smith
+									</li>
+									<li>
+										<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+									</li>
+									<li>
+										<span>Condition:</span> Pending
+									</li>
+								</ul>
+							</div>							
+
+						</div>
+
+						<div class="transaction">
+
+							<div class="transaction__header transaction__header--six-cols">
+								<div class="transaction__data">
+									<p>June 26, 2017 5:59 AM</p>
+								</div>
+
+								<div class="transaction__currency">
+									<svg style="box-shadow: 0 3px 7px rgba(255, 150, 51, 0.57)" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+										<g>
+											<path fill="#ff9300" d="M14.5,15.286L13.786,18c0.786,0.214,3.429,1.071,3.786-0.5C17.929,15.857,15.214,15.5,14.5,15.286z"/>
+											<path fill="#ff9300" d="M15.357,11.5L14.714,14c0.714,0.214,2.857,0.929,3.214-0.5C18.286,12.071,16.071,11.714,15.357,11.5z"/>
+											<path fill="#ff9300" d="M22.857,0H7.143C3.214,0,0,3.214,0,7.143v15.714C0,26.786,3.214,30,7.143,30h15.714C26.786,30,30,26.786,30,22.857V7.143
+												C30,3.214,26.786,0,22.857,0z M20.357,13.5c-0.143,1.143-0.786,1.643-1.643,1.929c1.143,0.571,1.714,1.429,1.143,3
+												c-0.643,1.857-2.214,2.071-4.357,1.643L15,22.143l-1.214-0.286l0.5-2c-0.357-0.143-0.643-0.214-1-0.286l-0.5,2l-1.214-0.286
+												l0.5-2.071C11.786,19.143,11.5,19.071,11.214,19l-1.643-0.429l0.643-1.429l0.929,0.214c0.357,0.071,0.5-0.143,0.571-0.286
+												l0.786-3.214c0.071,0,0.071,0,0.143,0c-0.071-0.071-0.143-0.071-0.143-0.071l0.571-2.286c0-0.286-0.071-0.571-0.571-0.714
+												l-0.929-0.214l0.357-1.357l1.714,0.429c0.286,0.071,0.5,0.143,0.786,0.214l0.5-2l1.214,0.286l-0.5,2
+												c0.357,0.071,0.643,0.143,1,0.214l0.5-2l1.214,0.286l-0.5,2C19.429,11.214,20.571,12,20.357,13.5z"/>
+										</g>
+								   </svg>								   
+								   Bitcoin
+								</div>
+
+								<div class="transaction__info">
+									<img src="img/transaction-icon-sent.svg" alt="">
+									<p>
+										Sent to 3Bhe5sbhSTNxcDpYyy
+									</p>
+								</div>
+
+								<div class="transaction__status">
+									<div class="status status--sent">
+										Sent
+									</div>
+								</div>
+
+								<div class="transaction__course">
+									<span class="rate rate--pending">+ 1 ETH</span>
+									<span class="rate rate--normal">+ 987 USD</span>
+								</div>
+
+								<div class="transaction__actions">
+
+									<div class="tooltip">
+										<div class="tooltip__icon">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="18px" height="16px" viewBox="-12 15 18 16" style="enable-background:new -12 15 18 16;" xml:space="preserve">
+												   <path d="M6,19.557L-3,15l-9,4.557l9,4.318L6,19.557z M-3,16.681l5.608,2.84L-3,22.211l-5.608-2.69
+													   L-3,16.681z M2.561,26.668L-3,29.336l-5.561-2.668h-3.412L-12,26.682L-3,31l9-4.318l-0.027-0.014H2.561z M2.561,23.106L-3,25.774
+													   l-5.561-2.668h-3.412L-12,23.12l9,4.318l9-4.318l-0.027-0.014C5.973,23.106,2.561,23.106,2.561,23.106z"/>
+										   </svg>
+										</div>
+										<div class="tooltip__text">
+											Add to archive
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="transaction__body">
+								<ul class="transaction__details">
+									<li>
+										<span>Sender name:</span> Andrew Smith
+									</li>
+									<li>
+										<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+									</li>
+									<li>
+										<span>Condition:</span> Sent
+									</li>
+								</ul>
+							</div>							
+
+						</div>
+
+						<div class="transaction">
+
+							<div class="transaction__header transaction__header--six-cols">
+								<div class="transaction__data">
+									<p>June 26, 2017 5:59 AM</p>
+								</div>
+
+								<div class="transaction__currency">
+									<svg style="box-shadow: 0 3px 7px rgba(107, 119, 202, 0.57);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+								   		<path fill="#6e79cb" d="M22.857,0H7.143C3.214,0,0,3.214,0,7.143v15.714C0,26.786,3.214,30,7.143,30h15.714C26.786,30,30,26.786,30,22.857V7.143
+									   C30,3.214,26.786,0,22.857,0z M14.929,7.821c1.5,2.429,2.929,4.786,4.357,7.214c-0.071,0.071-0.143,0.071-0.214,0.143
+									   c-1.357,0.786-2.714,1.571-4,2.357c-0.143,0.071-0.286,0.071-0.429,0c-1.286-0.786-2.571-1.5-3.857-2.286
+									   c0-0.071-0.071-0.143-0.214-0.214C12,12.607,13.5,10.25,14.929,7.821z M14.929,22.179C13.5,19.964,12,17.893,10.5,15.821
+									   c0.143,0.071,0.214,0.143,0.357,0.214c1.286,0.786,2.5,1.5,3.786,2.286c0.214,0.143,0.357,0.143,0.571,0
+									   c1.357-0.786,2.714-1.571,4.071-2.357c0.071-0.071,0.143-0.071,0.214-0.071C18,17.964,16.5,20.107,14.929,22.179z"/>
+								   </svg>							   
+								   Ethereum
+								</div>
+
+								<div class="transaction__info">
+									<img src="img/transaction-icon-recived.svg" alt="">
+									<p>Sent to 3Bhe5sbhSTNxcDpYyy</p>
+								</div>
+
+								<div class="transaction__status">
+									<div class="status status--recived">
+										Recived
+									</div>
+								</div>
+
+								<div class="transaction__course">
+									<span class="rate rate--plus">+ 0.056 BTC</span>
+									<span class="rate rate--normal">+ 351 USD</span>
+								</div>
+
+								<div class="transaction__actions">
+
+									<div class="tooltip">
+										<div class="tooltip__icon">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="18px" height="16px" viewBox="-12 15 18 16" style="enable-background:new -12 15 18 16;" xml:space="preserve">
+												   <path d="M6,19.557L-3,15l-9,4.557l9,4.318L6,19.557z M-3,16.681l5.608,2.84L-3,22.211l-5.608-2.69
+													   L-3,16.681z M2.561,26.668L-3,29.336l-5.561-2.668h-3.412L-12,26.682L-3,31l9-4.318l-0.027-0.014H2.561z M2.561,23.106L-3,25.774
+													   l-5.561-2.668h-3.412L-12,23.12l9,4.318l9-4.318l-0.027-0.014C5.973,23.106,2.561,23.106,2.561,23.106z"/>
+										   </svg>
+										</div>
+										<div class="tooltip__text">
+											Add to archive
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="transaction__body">
+								<ul class="transaction__details">
+									<li>
+										<span>Sender name:</span> Andrew Smith
+									</li>
+									<li>
+										<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+									</li>
+									<li>
+										<span>Condition:</span> Recived
+									</li>
+								</ul>
+							</div>							
+
+						</div>
+
+						<div class="transaction">
+
+							<div class="transaction__header transaction__header--six-cols">
+								<div class="transaction__data">
+									<p>June 26, 2017 5:59 AM</p>
+								</div>
+
+								<div class="transaction__currency">
+									<svg style="box-shadow: 0 3px 7px rgba(107, 119, 202, 0.57);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+											<path fill="#6e79cb" d="M22.857,0H7.143C3.214,0,0,3.214,0,7.143v15.714C0,26.786,3.214,30,7.143,30h15.714C26.786,30,30,26.786,30,22.857V7.143
+										C30,3.214,26.786,0,22.857,0z M14.929,7.821c1.5,2.429,2.929,4.786,4.357,7.214c-0.071,0.071-0.143,0.071-0.214,0.143
+										c-1.357,0.786-2.714,1.571-4,2.357c-0.143,0.071-0.286,0.071-0.429,0c-1.286-0.786-2.571-1.5-3.857-2.286
+										c0-0.071-0.071-0.143-0.214-0.214C12,12.607,13.5,10.25,14.929,7.821z M14.929,22.179C13.5,19.964,12,17.893,10.5,15.821
+										c0.143,0.071,0.214,0.143,0.357,0.214c1.286,0.786,2.5,1.5,3.786,2.286c0.214,0.143,0.357,0.143,0.571,0
+										c1.357-0.786,2.714-1.571,4.071-2.357c0.071-0.071,0.143-0.071,0.214-0.071C18,17.964,16.5,20.107,14.929,22.179z"/>
+									</svg>							   
+									Ethereum
+								</div>
+
+								<div class="transaction__info">
+									<img src="img/transaction-icon-disable.svg" alt="">
+									<p>Sent to 3Bhe5sbhSTNxcDpYyy</p>
+								</div>
+
+								<div class="transaction__status">
+									<div class="status status--decline">
+										Decline
+									</div>
+								</div>
+
+								<div class="transaction__course">
+									<span class="rate rate--minus">- 0.1 LTC</span>
+									<span class="rate rate--normal">- 25 USD</span>
+								</div>
+
+								<div class="transaction__actions">
+
+									<div class="tooltip">
+										<div class="tooltip__icon">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="18px" height="16px" viewBox="-2 15 18 16" style="enable-background:new -2 15 18 16;" xml:space="preserve">
+												   <path  d="M16,19.557L7,15l-9,4.557l9,4.318L16,19.557z M7,16.681l5.608,2.84L7,22.211l-5.608-2.69L7,16.681z
+														M12.561,26.668L7,29.336l-5.561-2.668h-3.412L-2,26.682L7,31l9-4.318l-0.027-0.014H12.561z M12.561,23.106L7,25.774l-5.561-2.668
+													   h-3.412L-2,23.12l9,4.318l9-4.318l-0.027-0.014H12.561z"/>
+										   </svg>
+										</div>
+										<div class="tooltip__text">
+											Add to archive
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="transaction__body">
+								<ul class="transaction__details">
+									<li>
+										<span>Sender name:</span> Andrew Smith
+									</li>
+									<li>
+										<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+									</li>
+									<li>
+										<span>Condition:</span> Decline
+									</li>
+								</ul>
+							</div>							
+
+						</div>
+
+						<div class="transaction">
+
+							<div class="transaction__header transaction__header--six-cols">
+								<div class="transaction__data">
+									<p>June 26, 2017 5:59 AM</p>
+								</div>
+
+								<div class="transaction__currency">
+									<svg style="box-shadow: 0 3px 7px rgba(194, 194, 194, 0.57);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+										<path fill="#c5c5c5" d="M22.857,0H7.143C3.214,0,0,3.214,0,7.143v15.714C0,26.786,3.214,30,7.143,30h15.714C26.786,30,30,26.786,30,22.857V7.143
+											C30,3.214,26.786,0,22.857,0z M19.334,21.071c-2.825,0-5.591,0-8.416,0c0.24-1.142,0.481-2.224,0.721-3.366
+											c-0.481,0.301-0.902,0.601-1.383,0.962c0.06-0.24,0.06-0.421,0.12-0.661c0.06-0.361,0.12-0.721,0.18-1.082
+											c0-0.06,0.06-0.12,0.12-0.18c0.421-0.301,0.842-0.601,1.262-0.902c0.06-0.06,0.06-0.12,0.12-0.12
+											c0.481-2.224,0.902-4.388,1.383-6.612c0,0,0,0,0-0.06c0.842-0.12,1.683-0.12,2.585-0.12c-0.12,0.721-0.301,1.383-0.421,2.104
+											c-0.18,0.842-0.361,1.683-0.541,2.525c0,0,0,0,0,0.06c1.142-0.781,2.284-1.563,3.426-2.344c-0.06,0.18-0.06,0.361-0.12,0.481
+											c-0.06,0.421-0.18,0.842-0.24,1.322c0,0.06-0.06,0.12-0.12,0.18c-1.082,0.721-2.164,1.443-3.186,2.224
+											c-0.06,0.06-0.12,0.12-0.12,0.18c-0.18,1.022-0.421,2.044-0.661,3.066v0.06c1.924,0,3.847,0,5.771,0
+											C19.634,19.569,19.514,20.29,19.334,21.071z"/>
+									</svg>
+									Litecoin
+								</div>
+
+								<div class="transaction__info">
+									<img src="img/transaction-icon-pending.svg" alt="">
+									<p>Pending to 3Bhe5sbhSTNxcDpYyy</p>
+								</div>
+
+								<div class="transaction__status">
+									<div class="status status--pending">
+										Pending
+									</div>
+								</div>
+
+								<div class="transaction__course">
+									<span class="rate rate--minus">- 0.1 LTC</span>
+									<span class="rate rate--normal">- 25 USD</span>
+								</div>
+
+								<div class="transaction__actions">
+
+									<div class="tooltip">
+										<div class="tooltip__icon">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="18px" height="16px" viewBox="-12 15 18 16" style="enable-background:new -12 15 18 16;" xml:space="preserve">
+												   <path d="M6,19.557L-3,15l-9,4.557l9,4.318L6,19.557z M-3,16.681l5.608,2.84L-3,22.211l-5.608-2.69
+													   L-3,16.681z M2.561,26.668L-3,29.336l-5.561-2.668h-3.412L-12,26.682L-3,31l9-4.318l-0.027-0.014H2.561z M2.561,23.106L-3,25.774
+													   l-5.561-2.668h-3.412L-12,23.12l9,4.318l9-4.318l-0.027-0.014C5.973,23.106,2.561,23.106,2.561,23.106z"/>
+										   </svg>
+										</div>
+										<div class="tooltip__text">
+											Add to archive
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="transaction__body">
+								<ul class="transaction__details">
+									<li>
+										<span>Sender name:</span> Andrew Smith
+									</li>
+									<li>
+										<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+									</li>
+									<li>
+										<span>Condition:</span> Pending
+									</li>
+								</ul>
+							</div>							
+
+						</div>
+
+						<div class="transaction">
+
+							<div class="transaction__header transaction__header--six-cols">
+								<div class="transaction__data">
+										June 26, 2017 5:59 AM
+								</div>
+
+								<div class="transaction__currency">
+									<svg style="box-shadow: 0 3px 7px rgba(255, 150, 51, 0.57)" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+										<g>
+											<path fill="#ff9300" d="M14.5,15.286L13.786,18c0.786,0.214,3.429,1.071,3.786-0.5C17.929,15.857,15.214,15.5,14.5,15.286z"/>
+											<path fill="#ff9300" d="M15.357,11.5L14.714,14c0.714,0.214,2.857,0.929,3.214-0.5C18.286,12.071,16.071,11.714,15.357,11.5z"/>
+											<path fill="#ff9300" d="M22.857,0H7.143C3.214,0,0,3.214,0,7.143v15.714C0,26.786,3.214,30,7.143,30h15.714C26.786,30,30,26.786,30,22.857V7.143
+												C30,3.214,26.786,0,22.857,0z M20.357,13.5c-0.143,1.143-0.786,1.643-1.643,1.929c1.143,0.571,1.714,1.429,1.143,3
+												c-0.643,1.857-2.214,2.071-4.357,1.643L15,22.143l-1.214-0.286l0.5-2c-0.357-0.143-0.643-0.214-1-0.286l-0.5,2l-1.214-0.286
+												l0.5-2.071C11.786,19.143,11.5,19.071,11.214,19l-1.643-0.429l0.643-1.429l0.929,0.214c0.357,0.071,0.5-0.143,0.571-0.286
+												l0.786-3.214c0.071,0,0.071,0,0.143,0c-0.071-0.071-0.143-0.071-0.143-0.071l0.571-2.286c0-0.286-0.071-0.571-0.571-0.714
+												l-0.929-0.214l0.357-1.357l1.714,0.429c0.286,0.071,0.5,0.143,0.786,0.214l0.5-2l1.214,0.286l-0.5,2
+												c0.357,0.071,0.643,0.143,1,0.214l0.5-2l1.214,0.286l-0.5,2C19.429,11.214,20.571,12,20.357,13.5z"/>
+										</g>
+								   </svg>								   
+								   Bitcoin
+								</div>
+
+								<div class="transaction__info">
+									<img src="img/transaction-icon-sent.svg" alt="">
+									Sent to 3Bhe5sbhSTNxcDpYyy
+								</div>
+
+								<div class="transaction__status">
+									<div class="status status--sent">
+										Sent
+									</div>
+								</div>
+
+								<div class="transaction__course">
+									<span class="rate rate--minus">- 0.1 LTC</span>
+									<span class="rate rate--normal">- 25 USD</span>
+								</div>
+
+								<div class="transaction__actions">
+
+									<div class="tooltip">
+										<div class="tooltip__icon">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="18px" height="16px" viewBox="-12 15 18 16" style="enable-background:new -12 15 18 16;" xml:space="preserve">
+												   <path d="M6,19.557L-3,15l-9,4.557l9,4.318L6,19.557z M-3,16.681l5.608,2.84L-3,22.211l-5.608-2.69
+													   L-3,16.681z M2.561,26.668L-3,29.336l-5.561-2.668h-3.412L-12,26.682L-3,31l9-4.318l-0.027-0.014H2.561z M2.561,23.106L-3,25.774
+													   l-5.561-2.668h-3.412L-12,23.12l9,4.318l9-4.318l-0.027-0.014C5.973,23.106,2.561,23.106,2.561,23.106z"/>
+										   </svg>
+										</div>
+										<div class="tooltip__text">
+											Add to archive
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="transaction__body">
+								<ul class="transaction__details">
+									<li>
+										<span>Sender name:</span> Andrew Smith
+									</li>
+									<li>
+										<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+									</li>
+									<li>
+										<span>Condition:</span> Sent
+									</li>
+								</ul>
+							</div>							
+
+						</div>
+
+						<div class="transaction">
+
+							<div class="transaction__header transaction__header--six-cols">
+								<div class="transaction__data">
+									<p>June 26, 2017 5:59 AM</p>
+								</div>
+
+								<div class="transaction__currency">
+									<svg style="box-shadow: 0 3px 7px rgba(107, 119, 202, 0.57);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+								   		<path fill="#6e79cb" d="M22.857,0H7.143C3.214,0,0,3.214,0,7.143v15.714C0,26.786,3.214,30,7.143,30h15.714C26.786,30,30,26.786,30,22.857V7.143
+									   C30,3.214,26.786,0,22.857,0z M14.929,7.821c1.5,2.429,2.929,4.786,4.357,7.214c-0.071,0.071-0.143,0.071-0.214,0.143
+									   c-1.357,0.786-2.714,1.571-4,2.357c-0.143,0.071-0.286,0.071-0.429,0c-1.286-0.786-2.571-1.5-3.857-2.286
+									   c0-0.071-0.071-0.143-0.214-0.214C12,12.607,13.5,10.25,14.929,7.821z M14.929,22.179C13.5,19.964,12,17.893,10.5,15.821
+									   c0.143,0.071,0.214,0.143,0.357,0.214c1.286,0.786,2.5,1.5,3.786,2.286c0.214,0.143,0.357,0.143,0.571,0
+									   c1.357-0.786,2.714-1.571,4.071-2.357c0.071-0.071,0.143-0.071,0.214-0.071C18,17.964,16.5,20.107,14.929,22.179z"/>
+								   </svg>							   
+								   Ethereum
+								</div>
+
+								<div class="transaction__info">
+									<img src="img/transaction-icon-recived.svg" alt="">
+									<p>Sent to 3Bhe5sbhSTNxcDpYyy</p>
+								</div>
+
+								<div class="transaction__status">
+									<div class="status status--recived">
+										Recived
+									</div>
+								</div>
+
+								<div class="transaction__course">
+									<span class="rate rate--minus">- 0.1 LTC</span>
+									<span class="rate rate--normal">- 25 USD</span>
+								</div>
+
+								<div class="transaction__actions">
+
+									<div class="tooltip">
+										<div class="tooltip__icon">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="18px" height="16px" viewBox="-2 15 18 16" style="enable-background:new -2 15 18 16;" xml:space="preserve">
+												   <path  d="M16,19.557L7,15l-9,4.557l9,4.318L16,19.557z M7,16.681l5.608,2.84L7,22.211l-5.608-2.69L7,16.681z
+														M12.561,26.668L7,29.336l-5.561-2.668h-3.412L-2,26.682L7,31l9-4.318l-0.027-0.014H12.561z M12.561,23.106L7,25.774l-5.561-2.668
+													   h-3.412L-2,23.12l9,4.318l9-4.318l-0.027-0.014H12.561z"/>
+										   </svg>
+										</div>
+										<div class="tooltip__text">
+											Add to archive
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="transaction__body">
+								<ul class="transaction__details">
+									<li>
+										<span>Sender name:</span> Andrew Smith
+									</li>
+									<li>
+										<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+									</li>
+									<li>
+										<span>Condition:</span> Recived
+									</li>
+								</ul>
+							</div>							
+
+						</div>
+
+						<div class="transaction">
+
+							<div class="transaction__header transaction__header--six-cols">
+								<div class="transaction__data">
+									<p>June 26, 2017 5:59 AM</p>
+								</div>
+
+								<div class="transaction__currency">
+									<svg style="box-shadow: 0 3px 7px rgba(107, 119, 202, 0.57);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+											<path fill="#6e79cb" d="M22.857,0H7.143C3.214,0,0,3.214,0,7.143v15.714C0,26.786,3.214,30,7.143,30h15.714C26.786,30,30,26.786,30,22.857V7.143
+										C30,3.214,26.786,0,22.857,0z M14.929,7.821c1.5,2.429,2.929,4.786,4.357,7.214c-0.071,0.071-0.143,0.071-0.214,0.143
+										c-1.357,0.786-2.714,1.571-4,2.357c-0.143,0.071-0.286,0.071-0.429,0c-1.286-0.786-2.571-1.5-3.857-2.286
+										c0-0.071-0.071-0.143-0.214-0.214C12,12.607,13.5,10.25,14.929,7.821z M14.929,22.179C13.5,19.964,12,17.893,10.5,15.821
+										c0.143,0.071,0.214,0.143,0.357,0.214c1.286,0.786,2.5,1.5,3.786,2.286c0.214,0.143,0.357,0.143,0.571,0
+										c1.357-0.786,2.714-1.571,4.071-2.357c0.071-0.071,0.143-0.071,0.214-0.071C18,17.964,16.5,20.107,14.929,22.179z"/>
+									</svg>							   
+									Ethereum
+								</div>
+
+								<div class="transaction__info">
+									<img src="img/transaction-icon-disable.svg" alt="">
+									<p>Sent to 3Bhe5sbhSTNxcDpYyy</p>
+								</div>
+
+								<div class="transaction__status">
+									<div class="status status--decline">
+										Decline
+									</div>
+								</div>
+
+								<div class="transaction__course">
+									<span class="rate rate--minus">- 0.1 LTC</span>
+									<span class="rate rate--normal">- 25 USD</span>
+								</div>
+
+								<div class="transaction__actions">
+
+									<div class="tooltip">
+										<div class="tooltip__icon">
+											<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+												width="18px" height="16px" viewBox="-2 15 18 16" style="enable-background:new -2 15 18 16;" xml:space="preserve">
+												   <path d="M16,19.557L7,15l-9,4.557l9,4.318L16,19.557z M7,16.681l5.608,2.84L7,22.211l-5.608-2.69L7,16.681z
+														M12.561,26.668L7,29.336l-5.561-2.668h-3.412L-2,26.682L7,31l9-4.318l-0.027-0.014H12.561z M12.561,23.106L7,25.774l-5.561-2.668
+													   h-3.412L-2,23.12l9,4.318l9-4.318l-0.027-0.014H12.561z"/>
+										   </svg>
+										</div>
+										<div class="tooltip__text">
+											Add to archive
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="transaction__body">
+								<ul class="transaction__details">
+									<li>
+										<span>Sender name:</span> Andrew Smith
+									</li>
+									<li>
+										<span>Sender adress:</span> 3Bhe5sbhSTNxcDpYyyWkyN76YReDs8wFv8
+									</li>
+									<li>
+										<span>Condition:</span> Decline
+									</li>
+								</ul>
+							</div>							
+
+						</div>
+
+					</div>
+				</section>
+			</main>
+		</div>
+
+	</div>
+
+	<div class="d-none">
+
+		<form class="popup popup-add-wallet zoom-anim-dialog" id="add-wallet">
+			<div class="popup__content">
+				
+				
+				<img class="popup-add-wallet__img" src="img/popup-add-wallet-icon.png" alt="">
+				<h3>Add new wallet</h3>
+
+				<div class="popup-add-wallet__row">
+
+					<input type="text" placeholder="Name wallet">
+					
+				</div>
+
+				<button class="btn btn--blue btn--full">Add new wallet</button>
+			</div>
+			<div class="popup__thanks">
+				<img src="img/popup-success.png" alt="">
+				<h3>Your wallet added successful!</h3>
+			</div>
+		</form>
+
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

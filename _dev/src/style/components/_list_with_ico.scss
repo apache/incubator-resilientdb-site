@@ -1,0 +1,63 @@
+/* --------------------------------
+   list with ico
+-------------------------------- */
+
+.list-with-ico
+{
+	line-height: 1.2;
+	font-size: rem-calc(20px);
+	color: #404040;
+
+	.list__item
+	{
+		margin-top: 25px;
+
+		&:first-child { margin-top: 0; }
+	}
+
+	.cell
+	{
+		width: 100%;
+
+		&:first-child
+		{
+			padding-right: 15px;
+			width: 1%;
+		}
+	}
+
+	.ico
+	{
+		display: inline-block;
+		vertical-align: top;
+		line-height: 1;
+		font-size: rem-calc(35px);
+		color: #497bfd
+	}
+}
+
+@include min-screen($sm-width)
+{
+	.list-with-ico
+	{
+		.cell
+		{
+			&:first-child { padding-right: 30px; }
+		}
+	}
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+	
+}
+
+@include min-screen($xl-width)
+{
+
+}

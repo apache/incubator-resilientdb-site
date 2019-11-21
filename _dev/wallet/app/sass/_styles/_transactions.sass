@@ -1,0 +1,323 @@
+.transactions
+    background-color: #ffffff
+    padding: 0px 0 40px
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 40px 40px 30px
+        background-color: #f2f5f6
+    &__filters
+        background-color: #f2f5f6
+        padding: 0 40px 40px
+        display: flex
+        justify-content: space-between
+    &__filters-col
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__filters-col--aling-right
+        width: 100%
+        justify-content: flex-end
+    &__list
+        margin-bottom: 30px
+    h3
+        padding-top: 40px
+        padding-left: 40px
+        margin-bottom: 20px
+    .btn
+        margin-left: 40px
+
+.transaction
+    transition: background-color 0.4s
+    padding: 0 40px
+    position: relative
+    &.open
+        background-color: #f9f9f9
+    &__header
+        display: flex
+        width: 100%
+        height: 60px
+        align-items: center
+        position: relative
+        cursor: pointer
+    &:after
+        content: ''
+        position: absolute
+        left: 0px
+        bottom: 0
+        width: 100%
+        border-bottom: 1px solid #eeeeee
+    &:last-child
+        &:after
+            display: none
+    &__header--five-cols
+        .transaction
+            &__data
+                width: 24%
+            &__currency
+                width: 22%
+            &__info
+                width: 36%
+            &__status
+                width: 15%
+            &__course
+                width: 13%
+    &__header--six-cols
+        .transaction
+            &__data
+                width: 22%
+            &__currency
+                width: 16%
+            &__info
+                width: 36%
+            &__status
+                width: 9%
+            &__course
+                width: 9%
+            &__actions
+                width: 8%
+    &__header--three-cols
+        .transaction
+            &__data
+                width: 25%
+            &__info
+                width: 60%
+            &__course
+                width: 15%
+    &__data
+        font-size: 14px
+        color: #aeaeae
+    &__currency
+        font-size: 15px
+        color: $black
+        display: flex
+        align-items: center
+        svg
+            margin-right: 15px
+            border-radius: 6px
+    &__info
+        font-size: 15px
+        line-height: 16px
+        color: $blackL
+        display: flex
+        align-items: center
+        img
+            margin-right: 20px
+    &__course
+        text-align: right
+        span
+            display: block
+        .rate--minus, .rate--plus, .rate--pending
+            font-size: 15px
+            line-height: 18px
+        .rate--normal
+            font-size: 12px
+    &__actions
+        display: flex
+        align-items: center
+        justify-content: center
+    &__body
+        display: none
+        padding: 25px 0 40px
+    &__details
+        width: 100%
+        display: flex
+        align-items: center
+        flex-direction: column
+        li
+            width: 400px
+            font-size: 12px
+            color: #555555
+            line-height: 20px
+            span
+                display: inline-block
+                font-size: 12px
+                color: $black
+                font-weight: 700
+                width: 80px
+                text-align: right
+                margin-right: 20px
+
++media-breakpoint-down(lg)
+    .transaction
+        &__header--five-cols
+            .transactions
+                &__currency
+                    width: 20%
+                &__info
+                    width: 38%
+        &__header--three-cols
+            .transaction
+                &__course
+                    width: 20%
+                &__info
+                    width: 55%
+                    p
+                        max-width: 180px    
+
++media-breakpoint-down(md)
+    .transactions
+        &__filters
+            display: block
+        &__filters-col
+            justify-content: flex-start
+            &:first-child
+                margin-bottom: 20px
+
+    .transaction
+        &__header--five-cols
+            .transaction
+                &__data
+                    width: 18%
+                &__currency
+                    width: 20%
+                &__info
+                    width: 45%
+                &__status
+                    width: 12%
+        &__header--six-cols
+            .transaction
+                &__data
+                    width: 17%
+                    p
+                        max-width: 100px
+                &__currency
+                    width: 18%
+                &__info
+                    width: 31%
+                    p
+                        max-width: 180px
+                &__status
+                    width: 11%
+                &__course
+                    width: 11%
+                &__actions
+                    width: 12%
+        &__header--three-cols
+            .transaction
+                &__course
+                    width: 20%
+                &__info
+                    width: 55%
+                    p
+                        max-width: 100%     
+        &__data
+            font-size: 14px
+            line-height: 16px
+        &__currency
+            font-size: 14px
+            svg
+                margin-right: 10px
+
+        &__info
+            font-size: 14px
+            img
+                margin-right: 10px
+        &__course
+            .rate
+                &--minus, &--pending, &--plus
+                    font-size: 12px
+                &--normal
+                    font-size: 10px
+
++media-breakpoint-down(sm)
+    .transactions
+        .btn
+            margin-left: 10px
+        &__header
+            padding: 20px  10px
+        h3
+            padding-left: 10px
+        &__filters
+            padding: 0 10px 20px
+        &__filres-col
+            flex-wrap: wrap
+            &:first-child
+                justify-content: space-between
+
+    .transaction
+        padding: 0 10px
+            
+
+@media only screen and (max-width : 640px)
+    .transaction
+        padding: 0 10px
+        &__header
+            flex-wrap: wrap
+            height: auto
+            padding: 15px 0 55px
+        &__header--five-cols
+            .transaction
+                &__data
+                    width: 100%
+                &__currency
+                    width: 33.3333%
+                &__status
+                    width: 33.3333%
+                &__course
+                    width: 33.3333%
+                &__info
+                    width: 100%
+        &__header--six-cols
+            .transaction
+                &__data
+                    width: 100%
+                    p
+                        max-width: 100%
+                &__info
+                    width: 100%
+                    p
+                        max-width: 100%
+                &__currency
+                    width: 33.3333%
+                &__status
+                    width: 33.3333%
+                &__course
+                    width: 33.3333%
+                &__actions
+                    width: 100px
+        &__header--three-cols
+            .transaction
+                &__course
+                    width: 50%
+                &__data
+                    width: 50%
+                    margin-bottom: 0
+                &__info
+                    width: 100%
+                    p
+                        max-width: 100%     
+        &__data
+            margin-bottom: 20px
+        &__status
+            .status
+                margin: 0 auto
+        &__info
+            position: absolute
+            bottom: 15px
+            left: 0
+        &__body
+            padding: 5px 0 25px
+        &__details
+            li
+                width: 100%
+                span
+                    text-align: left
+                    margin-right: 5px
+        &__actions
+            position: absolute
+            top: 15px
+            right: 0
+            justify-content: flex-end
+
++media-breakpoint-down(xs)
+    .transactions
+        &__filters-col
+            justify-content: space-between
+        &__filters-col--align-right
+            display: block
+        &__header
+            .btn
+                margin-left: 20px
+                padding: 0 20px

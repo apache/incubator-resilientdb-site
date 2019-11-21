@@ -1,0 +1,48 @@
+/* --------------------------------
+   logos
+-------------------------------- */
+
+$gutter: 30px;
+
+.logos
+{
+	padding-top: $gutter/2;
+	padding-bottom: $gutter/2;
+
+	// .__inner { margin-bottom: -$gutter; }
+
+	img
+	{
+		margin: $gutter/2 5px;
+		max-width: 100%
+	}
+
+	.__item
+	{
+		position: relative;
+		width: 100%;
+		background-color: $white-color;
+		margin-bottom: $gutter;
+		@include transition(box-shadow 0.3s ease-in-out);
+	}
+}
+
+@include min-screen($sm-width)
+{
+	
+}
+
+@include min-screen($md-width)
+{
+	
+}
+
+@include min-screen($lg-width)
+{
+	
+}
+
+@include min-screen($xl-width)
+{
+	
+}

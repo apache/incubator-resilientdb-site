@@ -1,0 +1,194 @@
+// common styles start
+.wrapper
+	width: 100%
+	min-height: 100vh
+	position: relative
+	justify-content: flex-start
+	flex-direction: column
+	overflow: hidden
+
+.header
+	order: 1
+	padding: 0 40px 0 260px
+
+.content
+	order: 2
+	margin-top: 90px
+
+.main-content
+	width: 100%
+	padding: 0px 0px 0px 220px
+	background-color: #f2f5f6
+
+.inner-col
+	display: flex
+	align-items: center
+
+.row
+	width: 100%
+
+.rate
+	font-size: 11px
+	text-transform: uppercase
+	&--plus
+		color: $green
+	&--minus
+		color: $red
+	&--pending
+		color: $yellow
+	&--normal
+		color: #cfcfcf
+
+.inner-row
+	display: flex
+	align-items: center
+
+.align-right
+	justify-content: flex-end
+
+h2
+	font-size: 25px
+	color: $black
+	font-weight: 700
+
+h3
+	font-size: 18px
+	color: #444444
+
+h4
+	font-size: 14px
+	color: #333333
+
+.status
+	width: 65px
+	line-height: 24px
+	border-radius: 3px
+	text-align: center
+	color: #ffffff
+	font-size: 12px
+	&--sent
+		background-color: $blue
+	&--recived
+		background-color: $green
+	&--decline
+		background-color: #fd5e71
+	&--pending
+		background-color: #f29f3f
+	&--active
+		background-color: #56d4a1
+	&--inactive
+		background-color: #ee4d64
+
+.btn
+	border-radius: 5px
+	line-height: 45px
+	height: 45px
+	display: inline-block
+	padding: 0 25px
+	color: #fefefe
+	text-transform: uppercase
+	letter-spacing: 0.55px
+	font-size: 11px
+	transition: background-color 0.4s
+	border: none
+	cursor: pointer
+	&--blue
+		box-shadow: 0 3px 9px rgba(94, 111, 249, 0.52)
+		background-color: #557ef8
+		&:hover
+			background-color: #688eff
+	&--purpure
+		box-shadow: 0 3px 9px rgba(113, 78, 253, 0.52)
+		background-color: #714efd
+		&:hover
+			background-color: #8567ff
+	&--green
+		box-shadow: 0 3px 9px rgba(51, 196, 109, 0.52)
+		background-color: #33c46d
+		&:hover
+			background-color: #42d47c
+	&--full
+		width: 100%
+		display: block
+		text-align: center
+		padding: 0
+	&:hover
+		color: #ffffff
+
+.small-btn
+	width: 70px
+	line-height: 22px
+	text-align: center
+	border: 1px solid #ffffff
+	border-radius: 5px
+	color: #ffffff
+	font-size: 11px
+	letter-spacing: 0.55px
+	text-transform: uppercase
+	transition: background-color 0.4s, color 0.4s, border 0.4s
+	&:hover
+		background-color: #262930
+		color: #ffffff
+		border: 1px solid #262930
+
+.tooltip
+	position: relative
+	&:nth-child(2n)
+		margin: 0 6px
+	&.active, &:hover
+		.tooltip
+			&__icon
+				svg
+					path
+						fill: #3e3f43
+	&__icon
+		svg
+			path
+				fill: #c9d4e1
+	&__text
+		position: absolute
+		width: auto
+		white-space: nowrap
+		top: -35px
+		left: 50%
+		transform: translateX(-50%)
+		font-size: 11px
+		color: #ffffff
+		padding: 8px 11px
+		background-color: #3f4042
+		border-radius: 2px
+		display: none
+		text-align: center
+		&:after
+			content: ''
+			position: absolute
+			bottom: -5px
+			left: 50%	
+			transform: translateX(-50%)
+			width: 0
+			height: 0 
+			border-left: 5px solid transparent
+			border-right: 5px solid transparent
+			border-top: 5px solid #3f4042
+			
+
+
+@media only screen and (max-width : 1300px)
+	.main-content
+		padding-left: 110px
+
++media-breakpoint-down(md)
+	.main-content
+		padding-left: 90px	
+
++media-breakpoint-down(sm)
+	.content
+		margin-top: 50px
+
+	.header
+		padding-right: 10px
+
+	.main-content
+		padding-left: 0
+		padding-top: 10px
+		

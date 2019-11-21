@@ -1,0 +1,75 @@
+/* --------------------------------
+   documents
+-------------------------------- */
+
+$gutter: 30px;
+
+.documents
+{
+	text-align: center;
+
+	.__inner { margin-bottom: -$gutter; }
+
+	.__document
+	{
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: $gutter;
+		line-height: 1;
+		text-decoration: none;
+
+		.__ico
+		{
+			display: inline-block;
+			vertical-align: top;
+
+			&:before { vertical-align: top; }
+		}
+
+		span { display: block; }
+	}
+}
+
+.documents--style-1
+{
+	.__document
+	{
+		.__ico
+		{
+			font-size: rem-calc(44px);
+			color: #497bfd;
+		}
+	}
+}
+
+.documents--style-2
+{
+	.__document
+	{
+		.__ico
+		{
+			font-size: rem-calc(84px);
+			color: $primary-color;
+		}
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+
+}
+
+@include min-screen($md-width) // 768
+{
+
+}
+
+@include min-screen($lg-width) // 992
+{
+
+}
+
+@include min-screen($xl-width) // 1200
+{
+
+}

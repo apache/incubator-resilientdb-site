@@ -1,0 +1,221 @@
+// wallet section start
+.wallets
+    padding: 40px 40px 25px 40px
+    &__list
+        display: flex
+    h2
+        margin-bottom: 20px
+
+.wallet
+    width: calc(25% - 7.5px)
+    max-width: 300px
+    height: 135px
+    border-radius: 2px
+    margin-right: 10px
+    position: relative
+    padding: 20px
+    transition: transform 0.4s, box-shadow 0.4s
+    &:hover
+        transform: translateY(-5px)
+        box-shadow: 0 3px 38px rgba(170, 176, 177, 0.98)
+    &--full-width
+        width: 100%
+        max-width: 100%
+        display: block
+        padding: 30px 40px
+        height: auto
+        &:hover
+            box-shadow: none
+            transform: translateY(0)
+        .wallet
+            &__currency-icon
+                width: 71px
+                height: 71px
+                svg
+                    width: 100%
+                    height: 100%
+            &__header
+                margin-bottom: 20px
+            &__footer
+                position: static
+                bottom: 0
+                left: 0
+                width: 100%
+            &__course
+                position: relative
+                &:before
+                    content: 'Balance: '
+                    position: absolute
+                    top: -16px
+                    font-size: 12px
+                    font-weight: 700
+                    color: #ffffff
+                    left: 0
+    &__bg-img
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__currency
+        display: flex
+        align-items: center
+    &__currency-icon
+        margin-right: 15px
+        svg
+            path
+                fill: #ffffff
+    &__currency-info, &__last-transactions, &__currency-course
+        font-size: 16px
+        line-height: 18px
+        display: block
+        color: #ffffff
+        font-weight: 700
+        span
+            display: block
+            &:last-child
+                font-weight: 400
+                font-size: 14px
+    &__course
+        text-align: left
+        
+        span
+            display: block
+            color: #ffffff
+            text-transform: uppercase
+            &:first-child
+                font-size: 16px
+                font-weight: 700
+                line-height: 18px
+            &:nth-child(2)
+                line-height: 16px
+                font-size: 14px
+    &__footer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        color: #ffffff
+        position: absolute
+        bottom: 25px
+        left: 20px
+        width: calc(100% - 40px)
+        font-size: 12px
+    
+    
+                
+.add-wallet
+    width: calc(25% - 7.5px)
+    max-width: 300px
+    border: 2px solid #d8dfe1
+    border-radius: 2px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    height: 135px
+    &__icon
+        margin-bottom: 10px
+    &__text
+        font-size: 12px
+        color: #bac1c2
+// wallet section end
+
++media-breakpoint-down(lg)
+    .wallets
+        padding-bottom: 30px
+        &__list
+            flex-wrap: wrap
+            max-width: 610px
+            justify-content: space-between
+
+    .wallet, .add-wallet
+        margin-bottom: 10px
+        width: calc(50% - 5px)
+        margin-right: 0
+
+    .wallet--full-width
+        width: 100%
+        margin-bottom: 0
+        &:hover
+            box-shadow: none
+            transform: translateY(0)
+        .wallet
+            &__header
+                flex-wrap: wrap
+            &__currency
+                width: 100%
+                margin-bottom: 10px
+            &__last-transactions
+                width: 33.3333%
+            &__currency-course
+                width: 33.3333%
+            &__course
+                width: 33.3333%
+        .small-btn
+            position: absolute
+            top: 40px
+            right: 40px
+
++media-breakpoint-down(md)
+    .wallet--full-width
+        .wallet
+            &__currency
+                width: 40%
+            &__last-transactions
+                width: 20%
+            &__currency-course
+                width: 20%
+            &__course
+                width: 20%
+        .small-btn
+            position: relative
+            top: 0
+            right: 0
+
++media-breakpoint-down(sm)
+    .wallets
+        padding: 0 10px
+        &__list
+            margin-bottom: 10px
+
+    .wallet--full-width
+        padding: 40px 10px
+        .wallet
+            &__currency
+                width: 40%
+            &__last-transactions
+                width: 17%
+            &__currency-course
+                width: 23%
+            &__course
+                width: 20%
+
++media-breakpoint-down(xs)
+    .wallet
+        width: 100%
+        max-width: 100%
+
+    .add-wallet
+        max-width: 100%
+        width: 100%
+
+    .wallet--full-width
+        .wallet
+            &__header
+                flex-wrap: wrap
+            &__currency
+                width: 100%
+                margin-bottom: 10px
+            &__last-transactions
+                width: 33.3333%
+            &__currency-course
+                width: 33.3333%
+            &__course
+                width: 33.3333%
+        .small-btn
+            position: absolute
+            top: 40px
+            right: 10px

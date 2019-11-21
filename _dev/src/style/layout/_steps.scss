@@ -1,0 +1,98 @@
+/* --------------------------------
+   steps
+-------------------------------- */
+
+$gutter: 30px;
+
+.steps
+{
+	counter-reset: num;
+	color: $white-color;
+
+	.__inner { margin-bottom: -$gutter; }
+
+	.__item
+	{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin-bottom: $gutter;
+
+		&:before
+		{
+			counter-increment: num;
+			content: counter(num);
+			display: block;
+			line-height: 1;
+			font-size: rem-calc(45px);
+			font-weight: 700;
+			margin-bottom: 15px;
+		}
+
+		&:after
+		{
+			content: "";
+			position: absolute;
+			top: 75px;
+			right: 100%;
+			width: 64px;
+			height: 1px;
+			margin-right: - (32px - $column-gutter / 2);
+			background-color: rgba($white-color, 0.2);
+		}
+
+		.__point
+		{
+			display: inline-block;
+			vertical-align: top;
+			width: 30px;
+			height: 30px;
+			border: 3px solid $primary-color;
+			padding: 6px;
+			@include border-radius(50%);
+
+			&:before
+			{
+				content: "";
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: $primary-color;
+				@include border-radius(inherit);
+			}
+		}
+
+		.__title { color: inherit; }
+	}
+
+	.col
+	{
+		&:first-child
+		{
+			.__item
+			{
+				&:after { content: none; }
+			}
+		}
+	}
+}
+
+@include min-screen($sm-width)
+{
+	
+}
+
+@include min-screen($md-width)
+{
+	
+}
+
+@include min-screen($lg-width)
+{
+	
+}
+
+@include min-screen($xl-width)
+{
+	
+}

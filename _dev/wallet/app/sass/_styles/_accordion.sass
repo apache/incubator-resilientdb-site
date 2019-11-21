@@ -1,0 +1,65 @@
+.accordion
+    margin-bottom: 50px
+    &__item
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: -40px
+            width: calc(100% + 80px)
+            border-bottom: 1px solid #eeeeee
+    &__title
+        color: #333333
+        font-size: 18px
+        font-weight: 700
+        padding: 20px 25px 20px 0
+        cursor: pointer
+        position: relative
+        &.open
+            .plus
+                border: 1px solid #557ef8
+                span
+                    &:first-child
+                        background-color: #557ef8
+                    &:last-child
+                        opacity: 0
+    .plus
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0px
+        border: 1px solid #b7b7b7
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background-color: #fff
+        transition: border 0.4s        
+        span
+            width: 10px
+            height: 1px
+            background-color: #b7b7b7
+            position: absolute
+            top: 50%
+            left: 50%
+            &:first-child
+                transition: background-color 0.4s
+                transform: translate(-50%, -50%)
+            &:last-child
+                transition: opacity 0.4s
+                transform: translate(-50%, -50%) rotate(90deg)
+
+    &__body
+        padding: 6px 0 20px
+        font-size: 15px
+        color: #666666
+        line-height: 25px
+        display: none
+    
++media-breakpoint-down(sm)
+    .accordion
+        &__title
+            font-size: 16px
+        &__body
+            font-size: 14px
+            line-height: 22px

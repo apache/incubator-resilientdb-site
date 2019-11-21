@@ -1,0 +1,120 @@
+/* --------------------------------
+   review
+-------------------------------- */
+
+$gutter: 30px;
+
+.review
+{
+	.__item
+	{
+		.__text
+		{
+			.__logo { }
+
+			p
+			{
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.__logo
+		{
+			display: inline-block;
+			vertical-align: top;
+			height: 100px;
+			margin-bottom: 15px;
+		}
+
+		.__author
+		{
+			margin-top: 25px;
+			line-height: 1.2;
+
+			&:first-child { margin-top: 0; }
+
+			&--image { margin-bottom: 15px; }
+
+			&--name,
+			&--position
+			{
+				display: block;
+			}
+
+			&--name
+			{
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+			&--position
+			{
+				line-height: 1;
+				font-size: rem-calc(16px);
+			}
+		}
+	}
+
+	&--slider
+	{
+		.__item { vertical-align: top; }
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	.review
+	{
+		&--slider
+		{
+			.slick-slide
+			{
+				margin-left: $gutter;
+
+				&:first-child { margin-left: 0 ; }
+			}
+		}
+	}
+}
+
+@include min-screen($md-width) // 768
+{
+	.review
+	{
+		.__item
+		{
+			.__text
+			{
+				.__logo
+				{
+					margin-top: 25px;
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+
+@include min-screen($lg-width) // 992
+{
+	.review
+	{
+		.__item
+		{
+			.__text
+			{
+				.__logo
+				{
+					margin-top: 40px;
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+}
+
+@include min-screen($xl-width) // 1200
+{
+	
+}

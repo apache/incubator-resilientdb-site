@@ -1,0 +1,85 @@
+/* --------------------------------
+   tab
+-------------------------------- */
+
+.tab-container
+{
+	position: relative;
+
+	.tab-nav
+	{
+		line-height: 0;
+		font-size: 0;
+		letter-spacing: -1px;
+
+		a
+		{
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 1;
+			font-size: rem-calc(16px);
+			text-align: center;
+			text-decoration: none !important;
+			letter-spacing: 0;
+			border: none;
+			box-shadow: none;
+			outline: none;
+			user-select: none;
+			-webkit-user-drag: none;
+			user-drag: none;
+			padding: 0 15px;
+			@include transition(all 0.3s ease-in-out);
+
+			&.active { }
+		}
+	}
+
+	.tab-content
+	{
+		position: relative;
+
+		&__item
+		{
+			@extend %block-absolute--full;
+			top: 0;
+			left: 0;
+			visibility: hidden;
+			opacity: 0;
+			@include transition(
+				opacity    300ms ease-in-out,
+				visibility 300ms ease-in-out
+			);
+
+			&.is-visible
+			{
+				position: static;
+				top: auto;
+				left: auto;
+				visibility: visible;
+				z-index: 2;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+	
+}
+
+@include min-screen($lg-width)
+{
+	
+}
+
+@include min-screen($xl-width)
+{
+	
+}

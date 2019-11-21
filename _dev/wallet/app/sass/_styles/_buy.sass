@@ -1,0 +1,175 @@
+.buy
+    &__header
+        padding: 40px 
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__body
+        background-color: #fff
+        padding: 40px
+    
+.exchange
+    display: flex
+    padding-bottom: 30px
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0px
+        width: 100%
+        border-bottom: 1px solid #eeeeee
+    &__col
+        max-width: 385px
+        width: 100%
+        &:first-child
+            margin-right: 95px
+
+.payment
+    position: relative
+    padding: 40px 0
+    h3
+        margin-bottom: 40px
+    &__row
+        .btn
+            margin-right: 10px
+    .form__row
+        justify-content: flex-start
+        .radio-input
+            &:first-child
+                margin-right: 30px
+    &__img
+        position: absolute
+        top: 100px
+        left: 600px
+
+.credit-card
+    width: 270px
+    margin-right: 10px
+
+.credit-card-name
+    width: 270px
+
+.credit-card-month
+    width: 140px
+    margin-right: 10px
+
+.credit-card-year
+    width: 100px
+    margin-right: 10px
+
+.credit-card-cvv
+    width: 100px
+
+.save-payment
+    h3
+        margin-bottom: 20px
+    &__item
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0
+            left: -40px
+            width: calc(100% + 80px)
+            border-top: 1px solid #eeeeee
+    &__header
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            top: 0
+            left: -40px
+            width: calc(100% + 80px)
+            border-top: 1px solid #eeeeee
+        padding: 20px 0
+        display: flex
+        align-items: center
+    &__body
+        display: none
+    .radio-input
+        margin-right: 40px
+    &__card-num
+        font-size: 14px
+        line-height: 16px
+        color: #333333
+        margin-right: 40px
+    &__owner-name
+        font-size: 14px
+        line-height: 16px
+        color: #333333
+
+.edit
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+    color: #557ef8
+    font-size: 14px
+    cursor: pointer
+    &:after
+        content: ''
+        position: absolute
+        bottom: -1px
+        left: 0
+        width: 100%
+        border-bottom: 1px solid #557ef8
+        opacity: 1
+        transition: opacity 0.4s
+    &:hover
+        &:after
+            opacity: 0
+
++media-breakpoint-down(lg)
+    .payment
+        &__img
+            display: none
+
++media-breakpoint-down(md)
+    .exchange
+        display: block
+        &__col
+            &:first-child
+                margin-right: 0
+                margin-bottom: 20px            
+
++media-breakpoint-down(sm)
+    .buy
+        &__header
+            padding: 40px 15px
+        &__body
+            padding: 40px 15px
+
+    .exchange
+        &__col
+            max-width: 100%
+        
+    .credit-card
+        width: calc(50% - 5px)
+        margin-right: 0
+
+    .credit-card-name
+        width: calc(50% - 5px)
+
++media-breakpoint-down(xs)
+    .credit-card
+        width: 100%
+        margin-bottom: 20px
+
+    .credit-card-name
+        width: 100%
+
+    .credit-card-month
+        width: 100%
+        margin-bottom: 20px
+    
+    .credit-card-year
+        width: calc(50% - 5px)
+        margin-bottom: 20px
+    
+    .credit-card-cvv
+        width: calc(50% - 5px)
+
++media-breakpoint-down(xs)
+    .save-payment__owner-name
+        display: none

@@ -1,0 +1,35 @@
+/* --------------------------------
+   site logo
+-------------------------------- */
+
+.site-logo
+{
+	display: inline-block;
+	vertical-align: middle;
+
+	img
+	{
+		vertical-align: middle;
+		max-width: 100%;
+	}
+}
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

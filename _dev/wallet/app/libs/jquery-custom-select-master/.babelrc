@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false,
+        "loose": true,
+        "exclude": [
+          "transform-typeof-symbol"
+        ]
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-es2015-modules-strip",
+    "@babel/proposal-object-rest-spread"
+  ]
+}

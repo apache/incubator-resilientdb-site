@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Wallet</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- Load google font
+	================================================== -->
+	<script type="text/javascript">
+		WebFontConfig = {
+			google: { families: [ 'Lato:300,400,500,700'] }
+		};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + 
+			'://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+	</script>
+
+	<!-- Load other scripts
+	================================================== -->
+	<script type="text/javascript">
+		var _html = document.documentElement;
+		_html.className = _html.className.replace("no-js","js");
+	</script>
+
+	<style>.preloader{width: 100%;height: 100%;position: fixed;background-color: #fff;z-index: 9999;}</style>
+
+</head>
+
+<body>
+
+	<div class="preloader"></div>
+
+	<div class="wrapper">
+
+		<header class="header">
+
+			<div class="inner-col">
+
+				<a href="" class="mobile-logo d-md-none">
+					<img src="img/logo.png" alt="">
+				</a>
+
+				<div class="btn-menu btn-menu--left">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+
+				<form class="search">
+					<span class="search__icon">
+						<img src="img/search.png" alt="">
+					</span>
+					<input class="search__input" type="text" placeholder="Search">
+				</form>
+			</div>
+
+		
+			<div class="inner-row align-right">
+
+				<div class="notification">
+					<div class="notification__icon">
+						<img src="img/notification-icon.svg" alt="">
+					</div>
+					<div class="notification__list">
+						<div class="notification__list-item">
+							<p><span class="circle" style="background-color: #58a3ea;"></span>	Sent Litecoin</p>
+							<span class="rate rate--minus">- 0.1 LTC</span>
+						</div>
+						<div class="notification__list-item">
+							<p><span class="circle" style="background-color: #45d25c;"></span>Recieved Bitcoin</p>
+							<span class="rate rate--plus">+ 0.056 BTC</span>
+						</div>
+						<div class="notification__list-item">
+							<p><span class="circle" style="background-color: #fd5e71;"></span>Declined Bitcoin</p>
+							<span class="rate rate--normal">1 BTC</span>
+						</div>
+						<div class="notification__list-item">
+							<p><span class="circle" style="background-color: #58a3ea;"></span>Sent Litecoin</p>
+							<span class="rate rate--minus">- 0.1 LTC</span>
+						</div>
+						<a href="" class="notification__more">See more</a>
+					</div>
+				</div>
+
+				<div class="d-none d-md-block">
+					<div class="user">
+						<div class="user__avatar">
+							<img src="img/user.png" alt="">
+							<div class="user__arr">
+								<img src="img/user-dropdown-icon.svg" alt="">
+							</div>
+						</div>
+						<p class="user__name">
+							Alex Bolden
+						</p>
+						<ul class="user-menu">
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="16.503px" height="15.001px" viewBox="0 0 16.503 15.001" style="enable-background:new 0 0 16.503 15.001;"
+											xml:space="preserve">
+									   <path d="M14.951,0H1.547C0.693,0,0,0.692,0,1.547v8.764c0,0.854,0.692,1.547,1.547,1.547h2.062v2.191
+										   c0.15,0.644,0.897,1.413,2.119,0.603l3.093-2.794h6.135c0.854,0,1.547-0.692,1.547-1.547V1.547C16.503,0.693,15.811,0,14.956,0
+										   C14.955,0,14.953,0,14.951,0z M15.467,9.795c0,0.569-0.462,1.031-1.031,1.031H8.507l-3.418,3.047
+										   c-0.577,0.717-0.423-1.165-0.423-1.98l0,0v-1.067H2.088c-0.569,0-1.031-0.462-1.031-1.031V2.062c0-0.569,0.462-1.031,1.031-1.031
+										   h12.373c0.569,0,1.031,0.462,1.031,1.031v7.733H15.467z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Support 
+									</span>
+								</a>
+							</li>
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="18px" height="18px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+											   <path d="M9,6C7.343,6,6,7.343,6,9c0,1.657,1.343,3,3,3c1.657,0,3-1.343,3-3C12,7.343,10.657,6,9,6z M9,10.5
+												   c-0.828,0-1.5-0.672-1.5-1.5S8.172,7.5,9,7.5s1.5,0.672,1.5,1.5S9.828,10.5,9,10.5z M15.75,6.75h-1.32l0.93-0.93
+												   c0.847-0.909,0.797-2.333-0.112-3.18c-0.864-0.805-2.203-0.805-3.068,0l-0.93,0.93V2.25C11.25,1.007,10.243,0,9,0
+												   C7.757,0,6.75,1.007,6.75,2.25v1.32L5.82,2.625C4.911,1.778,3.487,1.828,2.64,2.737c-0.805,0.864-0.805,2.203,0,3.068l0.93,0.93
+												   H2.25C1.007,6.735,0,7.742,0,8.985c0,1.243,1.007,2.25,2.25,2.25h1.32L2.625,12.18c-0.847,0.909-0.797,2.333,0.112,3.18
+												   c0.864,0.805,2.203,0.805,3.068,0l0.93-0.93v1.32c0,1.243,1.007,2.25,2.25,2.25c1.243,0,2.25-1.007,2.25-2.25v-1.32l0.93,0.93
+												   c0.909,0.847,2.333,0.797,3.18-0.112c0.805-0.864,0.805-2.203,0-3.068l-0.93-0.93h1.32c1.243,0.008,2.257-0.992,2.265-2.235V9
+												   C18,7.757,16.993,6.75,15.75,6.75z M15.75,9.75h-1.56c-0.125,0.868-0.465,1.69-0.99,2.393l1.102,1.102
+												   c0.269,0.315,0.233,0.788-0.082,1.057c-0.281,0.241-0.695,0.241-0.976,0L12.142,13.2c-0.702,0.525-1.525,0.865-2.393,0.99v1.56
+												   c0,0.414-0.336,0.75-0.75,0.75s-0.75-0.336-0.75-0.75v-1.56c-0.868-0.125-1.69-0.465-2.393-0.99l-1.102,1.102
+												   c-0.315,0.269-0.788,0.233-1.057-0.082c-0.241-0.281-0.241-0.695,0-0.976l1.102-1.102c-0.525-0.702-0.865-1.525-0.99-2.393h-1.56
+												   c-0.414,0-0.75-0.336-0.75-0.75s0.336-0.75,0.75-0.75h1.56c0.125-0.868,0.465-1.69,0.99-2.393L3.697,4.754
+												   C3.428,4.439,3.464,3.966,3.779,3.697c0.281-0.241,0.695-0.241,0.976,0l1.102,1.102c0.702-0.525,1.525-0.865,2.393-0.99v-1.56
+												   c0-0.414,0.336-0.75,0.75-0.75s0.75,0.336,0.75,0.75v1.56c0.868,0.125,1.69,0.465,2.393,0.99l1.102-1.102
+												   c0.315-0.269,0.788-0.233,1.057,0.082c0.241,0.281,0.241,0.695,0,0.976L13.2,5.857c0.525,0.702,0.865,1.525,0.99,2.393h1.56
+												   c0.414,0,0.75,0.336,0.75,0.75S16.164,9.75,15.75,9.75z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Settings 
+									</span>
+								</a>
+							</li>
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="9.467px" height="11px" viewBox="0 0 9.467 11" style="enable-background:new 0 0 9.467 11;" xml:space="preserve">
+											   <path d="M8.545,5.135H7.811V2.971C7.811,1.332,6.481,0,4.841,0H4.625C2.987,0,1.656,1.331,1.656,2.971
+												   v0.721h1.231V2.971c0-0.96,0.78-1.74,1.738-1.74h0.216c0.959,0,1.738,0.781,1.738,1.74v2.165H0.922C0.416,5.135,0,5.548,0,6.056
+												   v4.024C0,10.587,0.413,11,0.922,11h7.622c0.507,0,0.922-0.412,0.922-0.92V6.056C9.467,5.548,9.054,5.135,8.545,5.135z
+													M8.236,9.769H1.231V6.366h7.005V9.769z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Sign out 
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="btn-menu btn-menu--right">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+
+			</div>
+
+		</header>
+
+
+		<div class="content">
+			<aside class="sidebar">
+				<div class="sidebar__close-btn">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="16" viewBox="0 0 15 16"><defs><path id="hy9fa" d="M294.49 17.58L307.92 31l-1.41 1.41L293.08 19z"/><path id="hy9fb" d="M293.08 31.01l13.43-13.43 1.41 1.41-13.43 13.43z"/></defs><g><g transform="translate(-293 -17)"><use fill="#fff" xlink:href="#hy9fa"/></g><g transform="translate(-293 -17)"><use fill="#fff" xlink:href="#hy9fb"/></g></g></svg>
+				</div>
+
+				<a href="" class="logo">
+					<img class="logo__img" src="img/logo.png" alt="">
+					<span class="logo__text">Crypterium</span>
+				</a>
+
+				<ul class="menu">
+					<li class="menu__item">
+						<a class="menu__link" href="index.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="15px" height="15px" viewBox="120.5 14.5 15 15" style="enable-background:new 120.5 14.5 15 15;" xml:space="preserve">
+							   
+									   <path d="M133.921,18.447L123.658,14.5c-0.872,0-1.579,0.707-1.579,1.579v2.368
+										   c-0.872,0-1.579,0.707-1.579,1.579v7.895c0,0.872,0.707,1.579,1.579,1.579h11.842c0.872,0,1.579-0.707,1.579-1.579v-7.895
+										   C135.5,19.154,134.793,18.447,133.921,18.447z M123.657,17.088c0.001-0.436,0.354-0.789,0.79-0.788l5.526,2.146h-6.316V17.088z
+											M133.921,27.13c0,0.436-0.354,0.79-0.79,0.79h-10.263c-0.436-0.001-0.789-0.354-0.789-0.79v-6.315
+										   c0-0.436,0.353-0.789,0.789-0.79h10.263c0.436,0,0.79,0.354,0.79,0.79V27.13z M124.842,23.183h-0.79
+										   c-0.217,0.003-0.392,0.178-0.395,0.395v0.789c0.003,0.217,0.178,0.392,0.395,0.395h0.79v0.001
+										   c0.217-0.003,0.393-0.179,0.395-0.396v-0.789C125.234,23.361,125.059,23.186,124.842,23.183z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Wallet
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="transactions.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="15.277px" height="12px" viewBox="18.361 16 15.277 12" style="enable-background:new 18.361 16 15.277 12;"
+									xml:space="preserve">
+							   <path d="M27.858,19.159H20.79l2.003-2.003c0.264-0.264,0.264-0.694,0-0.958
+								   c-0.262-0.263-0.692-0.264-0.956-0.002l-3.334,3.303c-0.091,0.091-0.142,0.211-0.142,0.34c0,0.129,0.05,0.25,0.141,0.341l3.3,3.3
+								   c0.264,0.264,0.694,0.265,0.959,0c0.262-0.263,0.264-0.691,0.003-0.955l-1.98-2.005h7.075c2.437,0,4.42,1.983,4.42,4.42v2.38
+								   c0,0.375,0.305,0.68,0.68,0.68c0.375,0,0.68-0.305,0.68-0.68v-2.38C33.639,21.752,31.045,19.159,27.858,19.159z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Transactions
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="buy.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="13.5px" height="18px" viewBox="0 0 13.5 18" style="enable-background:new 0 0 13.5 18;" xml:space="preserve">
+							   <path d="M10.5,4.5V3.75C10.5,1.679,8.821,0,6.75,0S3,1.679,3,3.75V4.5H0v11.25C0,16.993,1.007,18,2.25,18h9
+								   c1.243,0,2.25-1.007,2.25-2.25V4.5H10.5z M4.5,3.75c0-1.243,1.007-2.25,2.25-2.25S9,2.507,9,3.75V4.5H4.5V3.75z M12,15.75
+								   c0,0.414-0.336,0.75-0.75,0.75h-9c-0.414,0-0.75-0.336-0.75-0.75V6H12V15.75z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Buy/Sale
+							</span>
+						</a>
+					</li>
+					<li class="menu__item active">
+						<a class="menu__link" href="support.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="16.503px" height="15.001px" viewBox="0 0 16.503 15.001" style="enable-background:new 0 0 16.503 15.001;"
+									xml:space="preserve">
+							   <path d="M14.951,0H1.547C0.693,0,0,0.692,0,1.547v8.764c0,0.854,0.692,1.547,1.547,1.547h2.062v2.191
+								   c0.15,0.644,0.897,1.413,2.119,0.603l3.093-2.794h6.135c0.854,0,1.547-0.692,1.547-1.547V1.547C16.503,0.693,15.811,0,14.956,0
+								   C14.955,0,14.953,0,14.951,0z M15.467,9.795c0,0.569-0.462,1.031-1.031,1.031H8.507l-3.418,3.047
+								   c-0.577,0.717-0.423-1.165-0.423-1.98l0,0v-1.067H2.088c-0.569,0-1.031-0.462-1.031-1.031V2.062c0-0.569,0.462-1.031,1.031-1.031
+								   h12.373c0.569,0,1.031,0.462,1.031,1.031v7.733H15.467z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Support
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link" href="settings.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="18px" height="18px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+									   <path d="M9,6C7.343,6,6,7.343,6,9c0,1.657,1.343,3,3,3c1.657,0,3-1.343,3-3C12,7.343,10.657,6,9,6z M9,10.5
+										   c-0.828,0-1.5-0.672-1.5-1.5S8.172,7.5,9,7.5s1.5,0.672,1.5,1.5S9.828,10.5,9,10.5z M15.75,6.75h-1.32l0.93-0.93
+										   c0.847-0.909,0.797-2.333-0.112-3.18c-0.864-0.805-2.203-0.805-3.068,0l-0.93,0.93V2.25C11.25,1.007,10.243,0,9,0
+										   C7.757,0,6.75,1.007,6.75,2.25v1.32L5.82,2.625C4.911,1.778,3.487,1.828,2.64,2.737c-0.805,0.864-0.805,2.203,0,3.068l0.93,0.93
+										   H2.25C1.007,6.735,0,7.742,0,8.985c0,1.243,1.007,2.25,2.25,2.25h1.32L2.625,12.18c-0.847,0.909-0.797,2.333,0.112,3.18
+										   c0.864,0.805,2.203,0.805,3.068,0l0.93-0.93v1.32c0,1.243,1.007,2.25,2.25,2.25c1.243,0,2.25-1.007,2.25-2.25v-1.32l0.93,0.93
+										   c0.909,0.847,2.333,0.797,3.18-0.112c0.805-0.864,0.805-2.203,0-3.068l-0.93-0.93h1.32c1.243,0.008,2.257-0.992,2.265-2.235V9
+										   C18,7.757,16.993,6.75,15.75,6.75z M15.75,9.75h-1.56c-0.125,0.868-0.465,1.69-0.99,2.393l1.102,1.102
+										   c0.269,0.315,0.233,0.788-0.082,1.057c-0.281,0.241-0.695,0.241-0.976,0L12.142,13.2c-0.702,0.525-1.525,0.865-2.393,0.99v1.56
+										   c0,0.414-0.336,0.75-0.75,0.75s-0.75-0.336-0.75-0.75v-1.56c-0.868-0.125-1.69-0.465-2.393-0.99l-1.102,1.102
+										   c-0.315,0.269-0.788,0.233-1.057-0.082c-0.241-0.281-0.241-0.695,0-0.976l1.102-1.102c-0.525-0.702-0.865-1.525-0.99-2.393h-1.56
+										   c-0.414,0-0.75-0.336-0.75-0.75s0.336-0.75,0.75-0.75h1.56c0.125-0.868,0.465-1.69,0.99-2.393L3.697,4.754
+										   C3.428,4.439,3.464,3.966,3.779,3.697c0.281-0.241,0.695-0.241,0.976,0l1.102,1.102c0.702-0.525,1.525-0.865,2.393-0.99v-1.56
+										   c0-0.414,0.336-0.75,0.75-0.75s0.75,0.336,0.75,0.75v1.56c0.868,0.125,1.69,0.465,2.393,0.99l1.102-1.102
+										   c0.315-0.269,0.788-0.233,1.057,0.082c0.241,0.281,0.241,0.695,0,0.976L13.2,5.857c0.525,0.702,0.865,1.525,0.99,2.393h1.56
+										   c0.414,0,0.75,0.336,0.75,0.75S16.164,9.75,15.75,9.75z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Settings
+							</span>
+						</a>
+					</li>
+					<li class="menu__item">
+						<a class="menu__link active" href="archive.html">
+							<span class="menu__link-icon">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									width="18px" height="16px" viewBox="-12 15 18 16" style="enable-background:new -12 15 18 16;" xml:space="preserve">
+									   <path d="M6,19.557L-3,15l-9,4.557l9,4.318L6,19.557z M-3,16.681l5.608,2.84L-3,22.211l-5.608-2.69
+										   L-3,16.681z M2.561,26.668L-3,29.336l-5.561-2.668h-3.412L-12,26.682L-3,31l9-4.318l-0.027-0.014H2.561z M2.561,23.106L-3,25.774
+										   l-5.561-2.668h-3.412L-12,23.12l9,4.318l9-4.318l-0.027-0.014C5.973,23.106,2.561,23.106,2.561,23.106z"/>
+							   </svg>
+							</span>
+							<span class="menu__link-text">
+								Archive
+							</span>
+						</a>
+					</li>
+				</ul>
+
+				<div class="d-md-none">
+					<div class="user">
+						<div class="user__avatar">
+							<img src="img/user.png" alt="">
+							<div class="user__arr">
+								<img src="img/user-dropdown-icon.svg" alt="">
+							</div>
+						</div>
+						<p class="user__name">
+							Alex Bolden
+						</p>
+						<ul class="user-menu">
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="16.503px" height="15.001px" viewBox="0 0 16.503 15.001" style="enable-background:new 0 0 16.503 15.001;"
+											xml:space="preserve">
+									   <path d="M14.951,0H1.547C0.693,0,0,0.692,0,1.547v8.764c0,0.854,0.692,1.547,1.547,1.547h2.062v2.191
+										   c0.15,0.644,0.897,1.413,2.119,0.603l3.093-2.794h6.135c0.854,0,1.547-0.692,1.547-1.547V1.547C16.503,0.693,15.811,0,14.956,0
+										   C14.955,0,14.953,0,14.951,0z M15.467,9.795c0,0.569-0.462,1.031-1.031,1.031H8.507l-3.418,3.047
+										   c-0.577,0.717-0.423-1.165-0.423-1.98l0,0v-1.067H2.088c-0.569,0-1.031-0.462-1.031-1.031V2.062c0-0.569,0.462-1.031,1.031-1.031
+										   h12.373c0.569,0,1.031,0.462,1.031,1.031v7.733H15.467z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Support 
+									</span>
+								</a>
+							</li>
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="18px" height="18px" viewBox="0 0 18 18" style="enable-background:new 0 0 18 18;" xml:space="preserve">
+											   <path d="M9,6C7.343,6,6,7.343,6,9c0,1.657,1.343,3,3,3c1.657,0,3-1.343,3-3C12,7.343,10.657,6,9,6z M9,10.5
+												   c-0.828,0-1.5-0.672-1.5-1.5S8.172,7.5,9,7.5s1.5,0.672,1.5,1.5S9.828,10.5,9,10.5z M15.75,6.75h-1.32l0.93-0.93
+												   c0.847-0.909,0.797-2.333-0.112-3.18c-0.864-0.805-2.203-0.805-3.068,0l-0.93,0.93V2.25C11.25,1.007,10.243,0,9,0
+												   C7.757,0,6.75,1.007,6.75,2.25v1.32L5.82,2.625C4.911,1.778,3.487,1.828,2.64,2.737c-0.805,0.864-0.805,2.203,0,3.068l0.93,0.93
+												   H2.25C1.007,6.735,0,7.742,0,8.985c0,1.243,1.007,2.25,2.25,2.25h1.32L2.625,12.18c-0.847,0.909-0.797,2.333,0.112,3.18
+												   c0.864,0.805,2.203,0.805,3.068,0l0.93-0.93v1.32c0,1.243,1.007,2.25,2.25,2.25c1.243,0,2.25-1.007,2.25-2.25v-1.32l0.93,0.93
+												   c0.909,0.847,2.333,0.797,3.18-0.112c0.805-0.864,0.805-2.203,0-3.068l-0.93-0.93h1.32c1.243,0.008,2.257-0.992,2.265-2.235V9
+												   C18,7.757,16.993,6.75,15.75,6.75z M15.75,9.75h-1.56c-0.125,0.868-0.465,1.69-0.99,2.393l1.102,1.102
+												   c0.269,0.315,0.233,0.788-0.082,1.057c-0.281,0.241-0.695,0.241-0.976,0L12.142,13.2c-0.702,0.525-1.525,0.865-2.393,0.99v1.56
+												   c0,0.414-0.336,0.75-0.75,0.75s-0.75-0.336-0.75-0.75v-1.56c-0.868-0.125-1.69-0.465-2.393-0.99l-1.102,1.102
+												   c-0.315,0.269-0.788,0.233-1.057-0.082c-0.241-0.281-0.241-0.695,0-0.976l1.102-1.102c-0.525-0.702-0.865-1.525-0.99-2.393h-1.56
+												   c-0.414,0-0.75-0.336-0.75-0.75s0.336-0.75,0.75-0.75h1.56c0.125-0.868,0.465-1.69,0.99-2.393L3.697,4.754
+												   C3.428,4.439,3.464,3.966,3.779,3.697c0.281-0.241,0.695-0.241,0.976,0l1.102,1.102c0.702-0.525,1.525-0.865,2.393-0.99v-1.56
+												   c0-0.414,0.336-0.75,0.75-0.75s0.75,0.336,0.75,0.75v1.56c0.868,0.125,1.69,0.465,2.393,0.99l1.102-1.102
+												   c0.315-0.269,0.788-0.233,1.057,0.082c0.241,0.281,0.241,0.695,0,0.976L13.2,5.857c0.525,0.702,0.865,1.525,0.99,2.393h1.56
+												   c0.414,0,0.75,0.336,0.75,0.75S16.164,9.75,15.75,9.75z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Settings 
+									</span>
+								</a>
+							</li>
+							<li class="user-menu__item">
+								<a href="" class="user-menu__link">
+									<span class="user-menu__icon">
+										<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+											width="9.467px" height="11px" viewBox="0 0 9.467 11" style="enable-background:new 0 0 9.467 11;" xml:space="preserve">
+											   <path d="M8.545,5.135H7.811V2.971C7.811,1.332,6.481,0,4.841,0H4.625C2.987,0,1.656,1.331,1.656,2.971
+												   v0.721h1.231V2.971c0-0.96,0.78-1.74,1.738-1.74h0.216c0.959,0,1.738,0.781,1.738,1.74v2.165H0.922C0.416,5.135,0,5.548,0,6.056
+												   v4.024C0,10.587,0.413,11,0.922,11h7.622c0.507,0,0.922-0.412,0.922-0.92V6.056C9.467,5.548,9.054,5.135,8.545,5.135z
+													M8.236,9.769H1.231V6.366h7.005V9.769z"/>
+									   </svg>
+									</span>
+									<span class="user-menu__text">
+										Sign out 
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="copyright">
+					© 2018 Crypterium
+				</div>
+
+			</aside>
+
+			<main class="main-content">
+				<section class="support">
+
+					<div class="support__header">
+						<h2>Support</h2>
+
+						<ul class="support__tabs">
+							<li class="support__tabs-item active" data-tab="1">FAQs</li>
+							<li class="support__tabs-item" data-tab="2">Help Desk</li>
+							<li class="support__tabs-item" data-tab="3">Chat</li>
+						</ul>
+					</div>
+
+					<div class="support__content">
+
+						<div id="tab-1" class="support__content-item support__faq active">
+							
+							<ul class="accordion">
+								<li class="accordion__item">
+									<div class="accordion__title">How long does a sell or withdrawal take to complete? <span class="plus"><span></span><span></span></span></div>
+									<div class="accordion__body">
+										Using a Web Browser Go to the Buys page. Select the type of digital currency you'd like to buy. Enter the amount you'd like to buy denominated in either digital currency or your local currency. Select the wallet you wish to have your funds deposited into. Select your desired payment me...
+									</div>
+								</li>
+								<li class="accordion__item">
+									<div class="accordion__title">What is the minimum amount of digital currency that I can purchase? <span class="plus"><span></span><span></span></span></div>
+									<div class="accordion__body">
+										Using a Web Browser Go to the Buys page. Select the type of digital currency you'd like to buy. Enter the amount you'd like to buy denominated in either digital currency or your local currency. Select the wallet you wish to have your funds deposited into. Select your desired payment me...
+									</div>
+								</li>
+								<li class="accordion__item">
+									<div class="accordion__title">How do I buy digital currency? <span class="plus"><span></span><span></span></span></div>
+									<div class="accordion__body">
+										Using a Web Browser Go to the Buys page. Select the type of digital currency you'd like to buy. Enter the amount you'd like to buy denominated in either digital currency or your local currency. Select the wallet you wish to have your funds deposited into. Select your desired payment me...
+									</div>
+								</li>
+								<li class="accordion__item">
+									<div class="accordion__title">How long does a purchase or deposit take to complete? <span class="plus"><span></span><span></span></span></div>
+									<div class="accordion__body">
+										Using a Web Browser Go to the Buys page. Select the type of digital currency you'd like to buy. Enter the amount you'd like to buy denominated in either digital currency or your local currency. Select the wallet you wish to have your funds deposited into. Select your desired payment me...
+									</div>
+								</li>
+								<li class="accordion__item">
+									<div class="accordion__title">Payment Methods for US Customers <span class="plus"><span></span><span></span></span></div>
+									<div class="accordion__body">
+										Using a Web Browser Go to the Buys page. Select the type of digital currency you'd like to buy. Enter the amount you'd like to buy denominated in either digital currency or your local currency. Select the wallet you wish to have your funds deposited into. Select your desired payment me...
+									</div>
+								</li>
+								<li class="accordion__item">
+									<div class="accordion__title">Do you provide a shopping cart plugin for my store? <span class="plus"><span></span><span></span></span></div>
+									<div class="accordion__body">
+										Using a Web Browser Go to the Buys page. Select the type of digital currency you'd like to buy. Enter the amount you'd like to buy denominated in either digital currency or your local currency. Select the wallet you wish to have your funds deposited into. Select your desired payment me...
+									</div>
+								</li>
+								<li class="accordion__item">
+									<div class="accordion__title">What is a webhook? <span class="plus"><span></span><span></span></span></div>
+									<div class="accordion__body">
+										Using a Web Browser Go to the Buys page. Select the type of digital currency you'd like to buy. Enter the amount you'd like to buy denominated in either digital currency or your local currency. Select the wallet you wish to have your funds deposited into. Select your desired payment me...
+									</div>
+								</li>
+							</ul>
+
+							<a href="" class="btn btn--blue">Submit request</a>
+
+						</div>
+						<div id="tab-2" class="support__content-item support__desk">
+							
+							<div class="desk-list">
+								<a href="" class="desk">
+									<svg version="1.1" class="desk__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										viewBox="0 0 480.002 480.002" style="enable-background:new 0 0 480.002 480.002;" xml:space="preserve">
+										   <path d="M432.001,80.005c-60.154-0.038-118.398-21.126-164.632-59.608L245.121,1.853c-2.966-2.471-7.274-2.471-10.24,0
+											   l-22.248,18.544c-46.234,38.482-104.478,59.57-164.632,59.608c-4.418,0-8,3.582-8,8v106.944
+											   c0.407,126.552,78.841,239.735,197.192,284.552c1.807,0.668,3.793,0.668,5.6,0c118.357-44.812,196.799-157.996,197.208-284.552
+											   V88.005C440.001,83.587,436.419,80.005,432.001,80.005z M424.001,194.949c-0.386,118.789-73.356,225.267-184,268.496
+											   c-110.644-43.229-183.613-149.707-184-268.496V95.885c61.123-1.832,119.871-24.082,166.872-63.2l17.128-14.28l17.128,14.272
+											   c47,39.121,105.748,61.374,166.872,63.208V194.949z"/>
+										   <path d="M400.865,110.317c-56.647-6.096-110.221-28.827-153.968-65.328l-1.76-1.48c-2.972-2.489-7.3-2.489-10.272,0l-1.752,1.472
+											   c-43.748,36.505-97.325,59.239-153.976,65.336c-4.06,0.441-7.135,3.869-7.136,7.952v76.68
+											   c-0.052,108.802,64.812,207.142,164.848,249.928c2.013,0.863,4.291,0.863,6.304,0c100.036-42.786,164.9-141.126,164.848-249.928
+											   v-76.68C408,114.186,404.925,110.758,400.865,110.317z M392.001,194.949c0.045,101.154-59.54,192.828-152,233.856
+											   c-92.46-41.028-152.045-132.702-152-233.856v-69.6c55.729-7.325,108.341-29.943,152-65.344c43.659,35.405,96.27,58.028,152,65.36
+											   V194.949z"/>
+										   <path d="M287.008,256.083c-1.591-6.231-5.029-11.836-9.863-16.078c13.237-11.617,14.55-31.764,2.934-45.001
+											   c-4.242-4.834-9.847-8.272-16.078-9.863v-17.136h-16v16h-16v-16h-16v16h-16c-4.418,0-8,3.582-8,8v96c0,4.418,3.582,8,8,8h16v16h16
+											   v-16h16v16h16v-17.136C281.065,290.512,291.365,273.147,287.008,256.083z M256.001,280.005h-48v-32h48c8.837,0,16,7.163,16,16
+											   S264.838,280.005,256.001,280.005z M256.001,232.005h-48v-32h48c8.837,0,16,7.163,16,16S264.838,232.005,256.001,232.005z"/>
+										   <path d="M240.001,128.005c-61.828,0.066-111.934,50.172-112,112c0,61.856,50.144,112,112,112s112-50.144,112-112
+											   S301.857,128.005,240.001,128.005z M240.001,336.005c-53.019,0-96-42.981-96-96s42.981-96,96-96c52.996,0.057,95.943,43.004,96,96
+											   C336.001,293.024,293.02,336.005,240.001,336.005z"/>
+										   <rect x="232.001" y="80.005" width="16" height="16"/>
+										   <rect x="232.001" y="384.005" width="16" height="16"/>
+										   <rect x="104.001" y="136.005" width="16" height="16"/>
+										   <rect x="104.001" y="232.005" width="16" height="16"/>
+										   <rect x="152.001" y="336.005" width="16" height="16"/>
+										   <rect x="360.001" y="136.005" width="16" height="16"/>
+										   <rect x="360.001" y="232.005" width="16" height="16"/>
+										   <rect x="312.001" y="336.005" width="16" height="16"/>
+								   </svg>
+									<div class="desk__title">Account Security</div>
+									<div class="desk__text">
+										Canary rockfish deep sea smelt channel catfish. Combfish, jackfish poolfish poacher, mackerel redtooth triggerfish
+									</div>
+								</a>
+								<a href="" class="desk">
+
+									<svg version="1.1" class="desk__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+										   <path d="M344,0c-75.111,0-136,60.889-136,136c0.084,75.076,60.924,135.916,136,136c75.111,0,136-60.889,136-136S419.111,0,344,0z
+												M344,256c-66.274,0-120-53.726-120-120c0.075-66.243,53.757-119.925,120-120c66.274,0,120,53.726,120,120S410.274,256,344,256z"
+											   />
+										   <path d="M136,208C60.889,208,0,268.889,0,344c0.084,75.076,60.924,135.916,136,136c75.111,0,136-60.889,136-136
+											   S211.111,208,136,208z M136,464c-66.274,0-120-53.726-120-120c0.075-66.243,53.757-119.925,120-120c66.274,0,120,53.726,120,120
+											   S202.274,464,136,464z"/>
+										   <path d="M152,336h-32c-8.837,0-16-7.163-16-16s7.163-16,16-16h32c8.837,0,16,7.163,16,16h16c-0.055-14.547-9.914-27.227-24-30.864
+											   V272h-16v16h-16v-16h-16v17.136c-17.081,4.396-27.364,21.807-22.968,38.888C92.668,342.151,105.413,352.018,120,352h32
+											   c8.837,0,16,7.163,16,16s-7.163,16-16,16h-32c-8.837,0-16-7.163-16-16H88c0.055,14.547,9.914,27.227,24,30.864V416h16v-16h16v16
+											   h16v-17.136c17.081-4.396,27.364-21.807,22.968-38.888C179.332,345.849,166.587,335.982,152,336z"/>
+										   <path d="M32,344h16c0.057-48.577,39.423-87.943,88-88v-16C78.59,240.066,32.066,286.59,32,344z"/>
+										   <path d="M224,344c-0.057,48.577-39.423,87.943-88,88v16c57.41-0.066,103.934-46.59,104-104H224z"/>
+										   <path d="M391.007,152.078c-1.591-6.231-5.029-11.836-9.863-16.078c13.237-11.617,14.55-31.764,2.934-45.001
+											   c-4.242-4.834-9.847-8.272-16.078-9.863V64h-16v16h-16V64h-16v16h-16c-4.418,0-8,3.582-8,8v96c0,4.418,3.582,8,8,8h16v16h16v-16
+											   h16v16h16v-17.136C385.064,186.507,395.364,169.142,391.007,152.078z M360,176h-48v-32h48c8.837,0,16,7.163,16,16
+											   S368.837,176,360,176z M360,128h-48V96h48c8.837,0,16,7.163,16,16S368.837,128,360,128z"/>
+										   <path d="M192,40h-40C93.277,40.075,44.552,85.432,40.28,144H24c-4.418-0.003-8.002,3.577-8.005,7.995
+											   c-0.001,1.873,0.655,3.686,1.853,5.125l40,48c2.824,3.398,7.868,3.862,11.266,1.038c0.377-0.313,0.725-0.661,1.038-1.038l40-48
+											   c2.828-3.395,2.368-8.439-1.027-11.267c-1.439-1.198-3.252-1.854-5.125-1.853H88.496c4.075-31.979,31.266-55.957,63.504-56h40
+											   c4.418,0,8-3.582,8-8V48C200,43.582,196.418,40,192,40z M184,72h-32c-44.163,0.049-79.951,35.837-80,80c0,4.418,3.582,8,8,8h6.92
+											   L64,187.504L41.08,160H48c4.418,0,8-3.582,8-8c0.057-52.996,43.004-95.943,96-96h32V72z"/>
+										   <path d="M462.152,330.88l-40-48c-3.067-3.398-8.308-3.666-11.706-0.598c-0.209,0.189-0.409,0.389-0.598,0.598l-40,48
+											   c-2.828,3.395-2.368,8.439,1.027,11.267c1.439,1.198,3.252,1.854,5.125,1.853h15.496c-4.068,31.98-31.259,55.96-63.496,56h-40
+											   c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8h40c58.723-0.075,107.448-45.432,111.72-104H456
+											   c4.418,0.003,8.002-3.577,8.005-7.995C464.006,334.132,463.35,332.319,462.152,330.88z M432,328c-4.418,0-8,3.582-8,8
+											   c-0.057,52.996-43.004,95.943-96,96h-32v-16h32c44.163-0.049,79.952-35.837,80-80c0-4.418-3.582-8-8-8h-6.92L416,300.496
+											   L438.92,328H432z"/>
+										   <path d="M240,136h16c0.057-48.577,39.423-87.943,88-88V32C286.59,32.066,240.066,78.59,240,136z"/>
+										   <path d="M432,136c-0.057,48.577-39.423,87.943-88,88v16c57.41-0.066,103.934-46.59,104-104H432z"/>
+								   </svg>
+								   
+									<div class="desk__title">
+										Exchange Fees
+									</div>
+									<div class="desk__text">
+										Monkeyface prickleback eelblenny wels catfish Manta Ray, Norwegian Atlantic salmon taimen white shark.
+									</div>
+								</a>
+								<a href="" class="desk">
+									<svg version="1.1" class="desk__img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+										viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+											<path d="M352,320c-13.255,0-24,10.745-24,24s10.745,24,24,24s24-10.745,24-24S365.255,320,352,320z M352,352c-4.418,0-8-3.582-8-8
+												s3.582-8,8-8s8,3.582,8,8S356.418,352,352,352z"/>
+											<path d="M432,224.8V120c0-4.418-3.582-8-8-8h-66.4C344.428,38.215,273.936-10.922,200.151,2.249
+												C144.193,12.238,100.389,56.042,90.4,112H64c-26.499,0.026-47.974,21.501-48,48v272c0.026,26.499,21.501,47.974,48,48h360
+												c4.418,0,8-3.582,8-8v-72.8c18.611-3.827,31.976-20.199,32-39.2v-96C463.976,244.999,450.611,228.627,432,224.8z M431.976,241.368
+												c9.591,3.395,16.008,12.458,16.024,22.632c-0.01,1.48-0.16,2.956-0.448,4.408c-0.08,0.448-0.208,0.872-0.32,1.312
+												c-0.236,0.978-0.535,1.941-0.896,2.88c-0.176,0.456-0.352,0.904-0.552,1.336c-0.432,0.935-0.923,1.841-1.472,2.712
+												c-0.208,0.328-0.392,0.68-0.608,1c-0.795,1.14-1.687,2.211-2.664,3.2c-0.168,0.168-0.368,0.312-0.544,0.48
+												c-0.842,0.796-1.737,1.534-2.68,2.208c-0.376,0.264-0.8,0.504-1.16,0.744c-0.829,0.52-1.689,0.987-2.576,1.4
+												c-0.432,0.2-0.864,0.408-1.304,0.584c-0.248,0.096-0.52,0.144-0.8,0.24V241.368z M348.352,190.704
+												c1.704-3.856,3.264-7.768,4.6-11.752c0.168-0.504,0.304-1.024,0.464-1.528c1.208-3.744,2.232-7.528,3.104-11.36
+												c0.168-0.728,0.36-1.448,0.52-2.184c0.864-4.088,1.52-8.208,2-12.36c0.104-0.872,0.176-1.736,0.264-2.608
+												C359.72,144.624,360,140.32,360,136c0-2.592-0.088-5.224-0.28-8H416v64h-68.16C348.032,191.576,348.16,191.128,348.352,190.704z
+												M224,16c66.093,0.436,119.564,53.907,120,120c-0.014,4.575-0.297,9.146-0.848,13.688c0,0.4-0.064,0.8-0.12,1.216
+												c-0.565,4.307-1.366,8.581-2.4,12.8c-0.144,0.592-0.264,1.176-0.416,1.768c-1.06,4.112-2.337,8.166-3.824,12.144
+												c-0.24,0.648-0.48,1.296-0.736,1.944c-1.55,3.942-3.304,7.801-5.256,11.56c-0.152,0.296-0.32,0.584-0.472,0.88h-18.4
+												c10.734-16.707,16.451-36.142,16.472-56h-16c-0.012,20.454-7.168,40.261-20.232,56h-25.864c10.382-15.471,7.214-36.312-7.296-48
+												c15.435-12.413,17.886-34.988,5.473-50.423c-4.195-5.216-9.765-9.154-16.081-11.369V64h-16v16h-16V64h-16v16h-16
+												c-4.418,0-8,3.582-8,8v104h-57.952c-0.152-0.296-0.32-0.584-0.472-0.88c-1.95-3.756-3.702-7.612-5.248-11.552
+												c-0.256-0.64-0.488-1.288-0.728-1.928c-1.494-3.979-2.773-8.036-3.832-12.152c-0.152-0.592-0.272-1.176-0.416-1.768
+												c-1.035-4.219-1.836-8.492-2.4-12.8c-0.056-0.4-0.08-0.8-0.12-1.2c-0.546-4.553-0.824-9.134-0.832-13.72
+												C104.436,69.907,157.907,16.436,224,16z M236,136h-44V96h44c11.046,0,20,8.954,20,20S247.046,136,236,136z M256,172
+												c0,11.046-8.954,20-20,20h-44v-40h44C247.046,152,256,160.954,256,172z M64,128h24.28c-0.192,2.776-0.28,5.408-0.28,8
+												c0,4.32,0.28,8.624,0.696,12.912c0.088,0.872,0.16,1.736,0.264,2.608c0.48,4.152,1.136,8.272,2,12.36
+												c0.16,0.736,0.352,1.456,0.52,2.184c0.872,3.832,1.896,7.616,3.104,11.36c0.16,0.504,0.296,1.024,0.464,1.528
+												c1.336,4,2.896,7.896,4.6,11.752c0.192,0.424,0.32,0.872,0.512,1.296H64c-17.673,0-32-14.327-32-32S46.327,128,64,128z M416,464
+												H64c-17.673,0-32-14.327-32-32V195.68c8.773,7.927,20.176,12.317,32,12.32h352v80h-61.992
+												c-30.745-0.334-56.306,23.589-58.008,54.288c-0.945,30.914,23.348,56.74,54.262,57.686c0.579,0.018,1.159,0.026,1.738,0.026h64
+												V464z M448,360c0,13.255-10.745,24-24,24h-72c-22.091,0.011-40.009-17.889-40.019-39.981c0-0.42,0.006-0.84,0.019-1.259
+												c1.391-22.072,19.896-39.146,42.008-38.76H424c2.49-0.018,4.973-0.269,7.416-0.752c0.8-0.144,1.504-0.376,2.256-0.568
+												c1.61-0.394,3.194-0.885,4.744-1.472c0.8-0.32,1.6-0.664,2.4-1.032c1.431-0.67,2.82-1.426,4.16-2.264
+												c0.696-0.432,1.4-0.8,2.064-1.312c0.312-0.224,0.672-0.392,0.976-0.616L448,360z"/>
+											<path d="M120,136h16c0.057-48.577,39.423-87.943,88-88V32C166.59,32.066,120.066,78.59,120,136z"/>
+											<path d="M144,224v52.688l-21.656,21.656c-1.5,1.5-2.344,3.534-2.344,5.656v33.472c-12.497,4.418-19.046,18.131-14.627,30.627
+												c4.418,12.497,18.131,19.046,30.627,14.627s19.046-18.131,14.627-30.627c-2.416-6.835-7.793-12.211-14.627-14.627v-30.16
+												l21.656-21.656c1.5-1.5,2.344-3.534,2.344-5.656v-56H144z M128,368c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8
+												S132.418,368,128,368z"/>
+											<path d="M104,224v20l-28.8,21.6c-2.014,1.511-3.2,3.882-3.2,6.4v9.472c-12.497,4.418-19.046,18.131-14.627,30.627
+												c4.418,12.497,18.131,19.046,30.627,14.627s19.046-18.131,14.627-30.627c-2.416-6.835-7.793-12.211-14.627-14.627V276l28.8-21.6
+												c2.014-1.511,3.2-3.882,3.2-6.4v-24H104z M80,312c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S84.418,312,80,312z"/>
+											<path d="M286.627,408.099c-2.416-6.835-7.793-12.211-14.627-14.627V328c0-2.122-0.844-4.156-2.344-5.656L248,300.688V224h-16v80
+												c0,2.122,0.844,4.156,2.344,5.656L256,331.312v62.16c-12.497,4.418-19.046,18.131-14.627,30.627s18.131,19.046,30.627,14.627
+												C284.497,434.309,291.046,420.596,286.627,408.099z M264,424c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S268.418,424,264,424z"
+												/>
+											<path d="M192,224v92.688l-13.656,13.656c-1.5,1.5-2.344,3.534-2.344,5.656v64h16v-60.688l13.656-13.656
+												c1.5-1.5,2.344-3.534,2.344-5.656v-96H192z"/>
+											<rect x="288" y="224" width="16" height="32"/>
+											<path d="M364.44,249.344L344,235.72V224h-16v16c0,2.674,1.335,5.172,3.56,6.656L352,260.28V272h16v-16
+												C368,253.326,366.665,250.828,364.44,249.344z"/>
+											<rect x="288" y="272" width="16" height="16"/>
+											<path d="M72,0H56c0,17.673-14.327,32-32,32v16c17.673,0,32,14.327,32,32h16c0-17.673,14.327-32,32-32V32C86.327,32,72,17.673,72,0
+												z M64,53.6c-3.546-5.388-8.135-10.012-13.496-13.6c5.361-3.588,9.95-8.212,13.496-13.6c3.546,5.388,8.135,10.012,13.496,13.6
+												C72.135,43.588,67.546,48.212,64,53.6z"/>
+									</svg>								   
+									<div class="desk__title">
+										Wallet Issues
+									</div>
+									<div class="desk__text">
+											Lagena rivuline flying characin; trahira, gulper. Coho salmon, catfish bonnetmouth rockweed gunnel arowana
+									</div>
+								</a>
+							</div>
+
+							<div class="support__row">
+								<div class="support__col">
+									<h3>Payement Method</h3>
+
+									<ul class="support__list">
+										<li><a href="">Payment Methods for US Customers</a></li>
+										<li><a href="">Payment Methods for European Customers</a></li>
+										<li><a href="">Payment Methods for UK Customers</a></li>
+									</ul>
+								</div>
+								<div class="support__col">
+									<h3>Wallet Services</h3>
+
+									<ul class="support__list">
+										<li><a href="">Supported Digital Currencies</a></li>
+										<li><a href="">How do I send digital currency to another wallet?</a></li>
+										<li><a href="">How do I receive digital currency from another wallet?</a></li>
+									</ul>
+								</div>
+								<div class="support__col">
+									<h3>Merchant Services</h3>
+
+									<ul class="support__list">
+										<li><a href="">How do I accept bitcoin payments on my website?</a></li>
+										<li><a href="">What fees does Coinbase charge for merchant processing?</a></li>
+										<li><a href="">Do you provide a shopping cart plugin for my store?</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="hr"></div>
+
+							<div class="support__row">
+								<div class="support__col">
+									<h3>Buy and Sale</h3>
+
+									<ul class="support__list">
+										<li><a href="">How do I buy digital currency?</a></li>
+										<li><a href="">Coinbase Pricing & Fees Disclosures</a></li>
+										<li><a href="">Coinbase Account Limits</a></li>
+									</ul>
+								</div>
+								<div class="support__col">
+									<h3>Security</h3>
+
+									<ul class="support__list">
+										<li><a href="">How can I make my account more secure?</a></li>
+										<li><a href="">How is Coinbase insured?</a></li>
+										<li><a href="">Is Coinbase regulated?</a></li>
+									</ul>
+								</div>
+								<div class="support__col">
+									<h3>Digital Currency</h3>
+
+									<ul class="support__list">
+										<li><a href="">Bitcoin Cash FAQ</a></li>
+										<li><a href="">What is Bitcoin?</a></li>
+										<li><a href="">What is Bitcoin Cash?</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div id="tab-3" class="support__content-item support__chat">
+							
+							<div class="chat-wrap">
+
+								<div class="support-center">
+									<div class="support-center__header">
+										<div class="support-center__logo"><img src="img/chat.png" alt=""></div>
+
+										<div class="chat-menu">
+											<img src="img/chat-menu.png" alt="">
+										</div>
+									</div>
+
+									<img class="support-center__ava" src="img/chat-ava-2.png" alt="">
+
+									<div class="support-center__row">
+										<div class="support-center__col">
+											<div class="support-center__title">Anna Mcallister</div>
+											<div class="support-center__text">Support Center</div>
+										</div>
+										<div class="support-center__col">
+											<a href="#request" class="btn btn--blue popup-link">Submit request</a>
+										</div>
+											
+									</div>
+									
+								</div>
+
+								<div class="chat">
+									<div class="chat__body" data-simplebar>
+										<div class="message message--from">
+											<div class="message__post-data">12:47</div>
+											<img src="img/chat-ava-2.png" alt="" class="message__ava">
+											<div class="message__text">It goes a little something like this.</div>
+										</div>
+
+										<div class="message message--from">
+											<div class="message__post-data">12:38</div>
+											<img src="img/chat-ava-2.png" alt="" class="message__ava">
+											<div class="message__text">It was all a dream, I used to read Word Up magazine Salt'n'Pepa and Heavy D up in the limousine.</div>
+										</div>
+
+										<div class="message message--to">
+											<div class="message__post-data">12:39</div>
+											<img src="img/chat-ava.png" alt="" class="message__ava">
+											<div class="message__text">Did you ever Hang' pictures on your wall?</div>
+										</div>
+
+										<div class="message message--from">
+											<div class="message__post-data">12:40</div>
+											<img src="img/chat-ava-2.png" alt="" class="message__ava">
+											<div class="message__text">Yes I did! Every Saturday! Rap Attack, Mr. Magic, Marley Marl. I even let my tape rock 'til my tape popped. Smokin' weed and bamboo, sippin' on private stock.  But this was way back, when I had the red and black lumberjack with the hat to match.</div>
+										</div>
+
+										<div class="message message--to">
+											<div class="message__post-data">12:43</div>
+											<img src="img/chat-ava.png" alt="" class="message__ava">
+											<div class="message__text">Haha awesome,  I think I know the album your looking. for.</div>
+										</div>
+										
+									</div>
+									<form class="chat__form">
+										<div class="add-additions">
+											<img src="img/clip.svg" alt="">
+										</div>
+										<textarea placeholder="Введите сообщение..."></textarea>
+										<div class="chat__form-controls">
+											<div class="smile">
+												<img src="img/smile.svg" alt="">
+											</div>
+											<button>
+												<img src="img/sendletter.svg" alt="">
+											</button>
+										</div>
+									</form>
+								</div>
+
+								
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</section>
+			</main>
+		</div>
+
+	</div>
+
+	<div class="d-none">
+
+		<form class="popup popup-add-wallet zoom-anim-dialog" id="request">
+			<div class="popup__content">
+				
+				
+				<img class="popup-add-wallet__img" src="img/popup-request.png" alt="">
+				<h3>Send Requestt</h3>
+
+				<label class="form__label">Name</label>
+				<div class="form__row">
+					<div class="input-wrap">
+						<input type="text" placeholder="Enter your name">
+					</div>
+				</div>	
+				
+				<label class="form__label">E-mail</label>
+				<div class="form__row">
+					
+					<div class="input-wrap">
+						<input type="text" placeholder="Enter your email">
+					</div>
+				</div>	
+
+				<label class="form__label">Comments</label>
+				<div class="form__row">
+					<div class="input-wrap">
+						<textarea placeholder="Write an optional message"></textarea>
+					</div>
+				</div>	
+
+				<button class="btn btn--blue btn--full">Continue</button>
+			</div>
+			<div class="popup__thanks">
+				<img src="img/popup-success.png" alt="">
+				<h3>Your wallet added successful!</h3>
+			</div>
+		</form>
+
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

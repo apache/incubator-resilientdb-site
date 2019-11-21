@@ -1,0 +1,86 @@
+/* --------------------------------
+   calculator
+-------------------------------- */
+
+$gutter: 30px;
+
+.calculator
+{
+	line-height: 1;
+	font-weight: 500;
+	color: $white-color;
+
+	.textfield { font-weight: 500; }
+
+	.select-exchange
+	{
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		background: 0 transparent;
+		padding-right: 30px;
+
+		font-size: rem-calc(16px);
+		color: #333;
+
+		&:after
+		{
+			border-bottom: 2px solid #5e5e5e;
+			border-right: 2px solid #5e5e5e;
+			right: 10px;
+			width: 7px;
+			height: 7px;
+			margin-top: -6px;
+		}
+
+		.list { width: 100%; }
+	}
+
+	.__desc
+	{
+		display: inline-block;
+		margin-top: 15px;
+	}
+
+	.result
+	{
+		margin-top: 20px;
+
+		&__title { color: inherit; }
+
+		&__text { line-height: 1.4; }
+
+		&__value
+		{
+			font-size: rem-calc(35px);
+			font-weight: 900;
+			font-family: Lato,sans-serif;
+		}
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	
+}
+
+@include min-screen($md-width) // 768
+{
+	.calculator
+	{
+		.result { margin-top: 40px; }
+	}
+}
+
+@include min-screen($lg-width) // 992
+{
+	.calculator
+	{
+		.result { margin-top: 60px; }
+	}
+}
+
+@include min-screen($xl-width) // 1200
+{
+	
+}

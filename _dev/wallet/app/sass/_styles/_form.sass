@@ -1,0 +1,413 @@
+.custom-select
+    position: relative
+    width: 100%
+    &--grey
+        .select-options 
+            background-color: #f2f5f6
+    &--currency
+        max-width: 126px
+        min-width: 126px
+        width: 126px
+        margin-right: 15px
+    &--actions
+        min-width: 160px
+        width: 160px
+        max-width: 160px
+
+.select-hidden
+    display: none
+
+.select
+	cursor: pointer
+	display: block
+	position: relative
+	width: 100%
+	height: 50px
+	box-sizing: border-box
+    border: 1px solid #dee1e2
+
+.custom-select__option
+    text-align: left
+    background-color: transparent
+    height: 50px
+    line-height: 48px
+    cursor: pointer
+    padding: 0 18px
+    color: $blackL
+    font-size: 14px
+    user-select: none
+    border-radius: 5px
+    transition: background-color 0.4s
+    &--value
+        border: 1px solid #dee1e2
+        &:after
+            content: ""
+            width: 10px
+            height: 6px
+            background-image: url(../img/chevron-down.svg)
+            background-size: 10px 6px
+            background-repeat: no-repeat
+            position: absolute
+            top: 22px
+            right: 17px
+            transition: 0.4s
+            border: none
+        &:focus
+            outline: none
+            text-decoration: none
+        &.active
+            &:after
+                transform: rotateX(-180deg)
+        &:after
+            opacity: 0.5
+
+.custom-select__dropdown
+    max-height: 200px
+    overflow-y: auto
+
+.datapickers
+    display: flex
+    align-items: center
+
+.datapicker-range
+    width: 137px
+    min-width: 137px
+    height: 50px
+    position: relative
+    
+    img
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 12px
+    input
+        width: 100%
+        height: 100%
+        background-color: transparent
+        border: none
+        font-size: 14px
+        color: #555555
+        padding-left: 43px
+        border: 1px solid #dee1e2
+        border-radius: 5px
+        transition: border 0.4s
+        &:focus
+            border: 1px solid #7c7c7c
+
+.separator
+    width: 18px
+    height: 1px
+    background-color: #e1e4e5
+    margin: 0 12px
+
+.input-wrap
+    position: relative
+    width: 100%
+    textarea
+        resize: none
+        border: 1px solid #dee1e2
+        width: 100%
+        height: 138px
+        background-color: transparent
+        border-radius: 5px
+        font-size: 14px
+        padding-right: 20px
+        padding-left: 20px
+        padding-top: 20px
+        &::placeholder
+            color: #b4b4b4
+        transition: border 0.4s
+        &:focus
+            border: 1px solid #7c7c7c
+    input
+        border: 1px solid #dee1e2
+        width: 100%
+        height: 50px
+        background-color: transparent
+        border-radius: 5px
+        font-size: 14px
+        padding-right: 20px
+        padding-left: 20px
+        transition: border 0.4s
+        &:focus
+            border: 1px solid #7c7c7c
+        &::placeholder
+            color: #b4b4b4
+    &__label
+        position: absolute
+        font-size: 12px
+        color: #aeaeae
+        text-transform: uppercase
+        right: 20px
+        top: 50%
+        margin: 0
+        transform: translateY(-50%)
+    &--50
+        width: calc(50% - 10px)
+
+.search-input
+    margin-left: 15px
+    width: 266px
+    min-width: 266px
+    img
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 13px
+    input
+        padding-left: 44px
+
+.form
+    &__title
+        margin-bottom: 35px
+    &__row
+        margin-bottom: 25px
+        display: flex
+        justify-content: space-between
+        .form__row
+            margin-bottom: 0
+    &__label
+        color: #333333
+        font-size: 14px
+        font-weight: 700
+        margin-bottom: 10px
+        text-align: left
+        display: block
+        white-space: nowrap
+    &__col-xl
+        width: calc(55% - 6.666666666666667px)
+    &__col-lg
+        width: calc(30% - 6.666666666666667px)
+    &__col-xs
+        width:  calc(15% - 6.666666666666667px)
+    &__col-md
+        width: calc(33.33333% - 6.666666666666667px)
+    &__col-sm
+        width: calc(22.5% - 6.666666666666667px)
+
+.settings-form
+    max-width: 800px
+    width: 100%
+
+.checkbox-list
+    li
+        margin-bottom: 25px
+        &:last-child
+            margin-bottom: 30px
+
+.checkbox 
+    display: block
+    position: relative
+    padding-left: 30px
+    margin-bottom: 0px
+    cursor: pointer
+    font-size: 15px
+    color: #666666
+    &__input 
+        position: absolute
+        opacity: 0
+        cursor: pointer
+        &:checked ~ .checkbox__checkmark 
+            &:after 
+                opacity: 1
+    // &:hover input ~ .checkbox__checkmark 
+    //     background-color: #ccc
+    &__checkmark
+        position: absolute
+        top: 0
+        left: 0
+        height: 15px
+        width: 15px
+        background-color: #d7dfe2
+        border-radius: 3px 
+        overflow: hidden
+        &:after 
+            content: ""
+            position: absolute
+            opacity: 0
+            left: 50%
+            transform: translate(-50%, -50%)
+            top: 50%
+            width: 14px
+            height: 11px
+            background-image: url(../img/checkbox-arr.svg)
+            background-repeat: no-repeat
+            background-position: center
+            transition: opacity 0.2s
+
+.radio-input 
+	display: block
+	position: relative
+	padding-left: 35px
+	cursor: pointer
+	user-select: none
+	&__radio
+		position: absolute
+		opacity: 0
+		&:checked ~ .radio-input__checkmark 
+			&:after 
+				opacity: 1
+    &:hover .radio-input__input ~ .radio-input__checkmark 
+        background-color: #ccc
+
+.radio-input__checkmark
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 0
+    height: 14px
+    width: 14px
+    background-color: #d7dfe2
+    border-radius: 50%
+    &:after 
+        content: ""
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background: #9ba8ad
+        opacity: 0
+    
+.group-input
+    display: flex
+    input
+        width: 100%
+        border: 1px solid #e1e4e5
+        border-radius: 5px 0 0 5px
+        border-right: none
+        padding-left: 20px
+        font-size: 14px
+        color: #555555
+    .custom-select
+        width: 120px
+        min-width: 120px
+    .custom-select__option--value
+        border-radius: 0 5px 5px 0
+
++media-breakpoint-down(lg)
+    .search-input
+        width: 180px
+        min-width: 180px
+
+    .custom-select--actions
+        width: 150px
+        min-width: 150px
+
+    .separator
+        margin: 0 5px
+        width: 8px
+
++media-breakpoint-down(md)
+    .separator
+        margin: 0 12px
+        width: 12px
+
+    .form
+        &__row
+            flex-wrap: wrap
+        &__col-xl
+            margin-bottom: 20px
+            width: 100%
+        &__col-lg
+            width:  calc(50% - 5px)
+        &__col-sm, &__col-xs
+            width:  calc(50% - 5px)
+
+.switch-block
+    display: flex
+    align-items: center
+    .switch
+        margin-right: 24px
+    p
+        font-size: 15px
+        line-height: 16px
+
+        font-weight: 700
+        margin-bottom: 0 !important
+        max-width: 100% !important
+    b
+        color: #333333
+
+.switch 
+    position: relative
+    display: inline-block
+    width: 48px
+    min-width: 48px
+    height: 26px
+    border-radius: 13px
+    background-color: #fff
+    overflow: hidden
+    margin-bottom: 0 
+    &__checkbox
+        display: none
+        &:checked + .switch__slider 
+            border: 1px solid #56d4a1
+            background-color: #56d4a1
+            &:before 
+                transform: translateX(22px)
+                border: 1px solid #fff
+        &:focus + .switch__slider 
+            box-shadow: 0 0 1px #2196f3  
+    &__slider 
+        position: absolute
+        cursor: pointer
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        transition: .4s
+        border-radius: 13px
+        border: 1px solid #d5d5d5
+        &:before 
+            position: absolute
+            content: ""
+            height: 20px
+            width: 20px
+            left: 2px
+            bottom: 2px
+            background-color: white
+            transition: .4s
+            border: 1px solid #d5d5d5
+            border-radius: 50%
+
++media-breakpoint-down(xs)
+    .search-input
+        width: 100%
+        margin-left: 0
+        margin-top: 20px
+
+    .custom-select--currency, .custom-select--actions
+        width: calc(50% - 10px)
+        min-width: calc(50% - 10px)
+        max-width: calc(50% - 10px)
+
+    .datapickers
+        display: flex
+        justify-content: space-between
+
+    .datapicker-range
+        width: calc(50% - 10px)
+        min-width: calc(50% - 10px)
+        max-width: calc(50% - 10px)
+        display: inline-block
+        &:first-child
+            margin-right: 10px
+
+    .separator
+        display: none
+        
+    .select-styled
+        font-size: 13px
+
+    .form
+        &__col-md
+            width: 100%
+        &__col-xs
+            width: 100%
+        &__col-lg
+            width: 100%
+            margin-bottom: 20px
+

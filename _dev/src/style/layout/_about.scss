@@ -1,0 +1,75 @@
+/* --------------------------------
+   about
+-------------------------------- */
+
+$gutter: 30px;
+
+.about
+{
+	.__inner { margin-bottom: -$gutter; }
+
+	.__item
+	{
+		margin-bottom: $gutter;
+
+		&:hover { }
+	}
+
+	.__quote
+	{
+		padding: 20px 55px;
+
+		color: #666;
+
+		[class*=" fontello-quote"],
+		[class^=fontello-quote]
+		{
+			line-height: 1;
+			font-size: rem-calc(35px);
+			color: #f1f0f0;
+		}
+
+		.fontello-quote-left
+		{
+			float: left;
+			margin-top: -20px;
+			margin-left: -55px;
+		}
+
+		.fontello-quote-right
+		{
+			float: right;
+			margin-bottom: -20px;
+			margin-right: -55px;
+		}
+	}
+
+	p
+	{
+		margin-top: 15px;
+		margin-bottom: 15px;
+
+		&:first-child { margin-top: 0; }
+		&:last-child  { margin-bottom: 0; }
+	}
+}
+
+@include min-screen($sm-width)
+{
+	
+}
+
+@include min-screen($md-width)
+{
+	
+}
+
+@include min-screen($lg-width)
+{
+	
+}
+
+@include min-screen($xl-width)
+{
+	
+}

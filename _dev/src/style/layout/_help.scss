@@ -1,0 +1,42 @@
+/* --------------------------------
+   help block
+-------------------------------- */
+
+$gutter: 60px;
+
+.help-block
+{
+	.__inner { margin-bottom: -($gutter - 20px); }
+
+	.__item
+	{
+		position: relative;
+		width: 100%;
+		margin-bottom: $gutter - 20px;
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	
+}
+
+@include min-screen($md-width) // 768
+{
+	.help-block
+	{
+		.__inner { margin-bottom: -$gutter; }
+
+		.__item { margin-bottom: $gutter; }
+	}
+}
+
+@include min-screen($lg-width) // 992
+{
+	
+}
+
+@include min-screen($xl-width) // 1200
+{
+	
+}

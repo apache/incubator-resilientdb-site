@@ -1,0 +1,86 @@
+/* --------------------------------
+   pricing tab
+-------------------------------- */
+
+.pricing-tab
+{
+	.tab-nav
+	{
+		a
+		{
+			margin: 0 20px 35px;
+			padding: 0;
+			color: #b8b8b8;
+
+			&:after
+			{
+				content: "";
+				pointer-events: none;
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				right: 50%;
+				opacity: 0;
+				margin-top: 10px;
+				border-top: 3px solid $primary-color;
+				@include transition(
+					left    0.3s ease-in-out,
+					right   0.3s ease-in-out,
+					opacity 0.3s ease-in-out
+				);
+			}
+
+			&.active,
+			&:hover
+			{
+				color: #333;
+
+				img { @include grayscale(0%) }
+			}
+
+			&.active
+			{
+				&:after
+				{
+					left: 0;
+					right: 0;
+					opacity: 1;
+				}
+			}
+		}
+
+		img
+		{
+			margin-right: 10px;
+			@include grayscale(100%);
+			@include transition(filter 0.3s ease-in-out, opacity 0.3s ease-in-out);
+		}
+	}
+
+	.tab-content
+	{
+		border-top: 15px solid transparent;
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	.pricing-tab
+	{
+		.tab-nav { margin-bottom: 25px; }
+	}
+}
+
+@include min-screen($md-width) // 768
+{
+	
+}
+
+@include min-screen($lg-width) // 992
+{
+	
+}
+
+@include min-screen($xl-width) // 1200
+{
+}

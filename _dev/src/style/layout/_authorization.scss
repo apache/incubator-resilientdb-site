@@ -1,0 +1,71 @@
+/* --------------------------------
+   authorization
+-------------------------------- */
+
+.authorization
+{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 30px 0;
+
+	.site-logo { margin-bottom: 30px }
+
+	&__form
+	{
+		width: 100%;
+		max-width: 370px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 40px 20px;
+		background-color: $white-color;
+		border: 1px solid #ededed;
+		font-size: rem-calc(16px);
+
+		.__title
+		{
+			text-align: center;
+		}
+
+		.textfield
+		{
+			border: 1px solid #e0e0e0;
+
+			&:hover,
+			&:focus,
+			&.hover,
+			&.focus
+			{
+				border-color: #2a2a2a;
+			}
+		}
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	.authorization
+	{
+		.site-logo { margin-bottom: 50px }
+
+		&__form { padding: 60px 30px; }
+	}
+}
+
+@include min-screen($md-width) // 768
+{
+	
+}
+
+@include min-screen($lg-width) // 992
+{
+	
+}
+
+@include min-screen($xl-width) // 1200
+{
+	
+}

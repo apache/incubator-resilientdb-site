@@ -1,0 +1,105 @@
+.wallet__list
+    margin-bottom: 40px
+
+.wallet__btns
+    .btn
+        &:first-child
+            margin-right: 10px
+
+.wallet__item
+    display: flex
+    align-items: center
+    padding: 14px 0
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: -40px
+        width: calc(100% + 80px)
+        border-bottom: 1px solid #eeeeee
+    &:last-child
+        &:after
+            display: none
+    &__checkbox
+        width: 4%
+        height: 15px
+    &__currency
+        width: 14%
+        display: flex
+        align-items: center
+        svg
+            border-radius: 6px
+            margin-right: 15px
+    &__status
+        width: 12%
+    &__id
+        width: 45%
+        font-size: 15px
+        color: #666666
+    &__course
+        width: 15%
+        font-size: 12px
+        text-transform: uppercase
+        color: #aeaeae
+        span
+            color: #333333
+            font-size: 15px
+            display: block
+    &__toggle
+        width: 5%
+    &__action
+        width: 5%
+        text-align: right
+
++media-breakpoint-down(lg)
+    .wallet__item
+        &__currency
+            width: 16%
+        &__course
+            width: 11%
+        &__toggle
+            width: 6%
+        &__action
+            width: 6%
+
++media-breakpoint-down(md)
+    .wallet__item
+        &__checkbox
+            width: 10%
+        &__currency
+            width: 25%
+        &__status
+            width: 25%
+        &__course
+            width: 20%
+        &__id
+            display: none
+        &__toggle
+            width: 10%
+        &__action
+            width: 10%
+
++media-breakpoint-down(xs)
+    .wallet__item
+        flex-wrap: wrap
+        &__checkbox
+            margin-bottom: 10px
+        &__currency
+            width: 40%
+            margin-bottom: 10px
+        &__status
+            width: 50%
+            display: flex
+            justify-content: flex-end
+            margin-bottom: 10px
+        &__course
+            width: 50%
+        &__toggle
+            width: 25%
+            position: absolute
+            top: 15px
+            right: 60px
+
+        &__action
+            width: 50%

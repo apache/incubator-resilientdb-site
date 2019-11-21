@@ -1,0 +1,53 @@
+/* --------------------------------
+   social btns
+-------------------------------- */
+
+.social-btns
+{
+	line-height: 0;
+	font-size: 0;
+	letter-spacing: -1px;
+	margin: 0 -5px;
+
+	a
+	{
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+		color: $white-color;
+		text:
+		{
+			align: center !important;
+			decoration: none !important;
+		};
+		letter-spacing: 0;
+		margin: 0 5px;
+		@include transition(
+			background-color 0.3s ease-in-out,
+			border-color     0.3s ease-in-out,
+			color            0.3s ease-in-out
+		);
+
+		&:before { line-height: inherit; }
+	}
+}
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

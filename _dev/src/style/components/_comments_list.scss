@@ -1,0 +1,133 @@
+/* --------------------------------
+   comments list
+-------------------------------- */
+
+$gutter: 30px;
+$img-width: 78px;
+
+.comments-list
+{
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+
+	.comment
+	{
+		margin-top: $gutter;
+
+		&:after
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		&__author-img
+		{
+			width: $img-width;
+			margin-bottom: 20px;
+		}
+
+		&__text
+		{
+			background-color: $white-color;
+			padding: 25px 15px;
+			overflow: hidden;
+
+			>div:first-child
+			{
+				line-height: 1;
+				font-size: rem-calc(16px);
+			}
+
+			p
+			{
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+		}
+
+		&__author-name,
+		&__date-post
+		{
+			display: block;
+			margin-bottom: 10px;
+			text-align: left;
+		}
+
+		&__author-name
+		{
+			font-size: rem-calc(20px);
+			font-weight: 700;
+			color: #404040
+		}
+
+		&__date-post { }
+
+		&__reply
+		{
+			float: right;
+			line-height: 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		.children { padding-left: 25px; }
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	.comments-list
+	{
+		.comment
+		{
+			&__author-img
+			{
+				float: left;
+				margin-right: 20px;
+			}
+
+			&__text { padding: 25px 30px; }
+
+			.children { padding-left: ($img-width / 2) + 20px; }
+		}
+	}
+}
+
+@include min-screen(641px)
+{
+	.comments-list
+	{
+		.comment
+		{
+			&__author-name,
+			&__date-post
+			{
+				display: inline;
+			}
+
+			&__date-post { margin-left: 15px; }
+		}
+	}
+}
+
+@include min-screen($md-width) //768
+{
+	.comments-list
+	{
+		.comment
+		{
+			.children { padding-left: $img-width + 20px; }
+		}
+	}
+}
+
+@include min-screen($lg-width) //992
+{
+	
+}
+
+@include min-screen($xl-width) //1200
+{
+	
+}
