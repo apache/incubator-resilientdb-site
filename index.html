@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+	<head>
+		<title>ResilientDB</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui" />
+
+		<meta name="theme-color" content="#3F6EBF" />
+		<meta name="msapplication-navbutton-color" content="#3F6EBF" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#3F6EBF" />
+
+		<!-- Favicons
+		================================================== -->
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+		<!-- CSS
+		================================================== -->
+		<link rel="stylesheet" href="css/style.min.css" type="text/css">
+
+		<!-- Load google font
+		================================================== -->
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: { families: [ 'Open+Sans:300,400,500','Lato:900', 'Poppins:400', 'Catamaran:300,400,500,600,700'] }
+			};
+			(function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + 
+				'://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
+		</script>
+
+		<!-- Load other scripts
+		================================================== -->
+		<script type="text/javascript">
+			var _html = document.documentElement,
+				isTouch = (('ontouchstart' in _html) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
+
+			_html.className = _html.className.replace("no-js","js");
+
+			isTouch ? _html.classList.add("touch") : _html.classList.add("no-touch");
+		</script>
+		<script type="text/javascript" src="js/device.min.js"></script>
+
+
+<!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	</head>
+
+	<body data-spy="scroll" data-target="#top-bar__navigation">
+		<!-- start header -->
+		<header id="top-bar" class="top-bar--light">
+			<div id="top-bar__inner">
+				<a id="top-bar__logo" class="site-logo" href="index.html">
+					<img class="img-responsive" width="175" height="42" src="img/site_logo.png" alt="demo" />
+					<img class="img-responsive" width="175" height="42" src="img/site_logo_2.png" alt="demo" />
+				</a>
+
+				<a id="top-bar__navigation-toggler" href="javascript:void(0);"><span></span></a>
+
+				<div id="top-bar__navigation-wrap">
+					<div>
+						<nav id="top-bar__navigation" class="nav navigation nav-tabs" role="tablist" >
+							<ul>
+								<li class="active">
+									<a href="#start-screen"><span>ResilientDB</span></a>
+								</li>
+
+								<li>
+									<a href="#roadmap"><span>Roadmap</span></a>
+								</li>
+
+								<li>
+									<a href="#downloads"><span>Downloads</span></a>
+								</li>
+
+								<li>
+									<a href="#publications"><span>Publications</span></a>
+								</li>
+
+								<li>
+									<a href="#faq"><span>FAQ’s</span></a>
+								</li>
+
+								<li>
+									<a href="#team"><span>Team</span></a>
+								</li>
+
+<!--								<li>-->
+<!--									<a href=""><span>Support</span></a>-->
+<!--								</li>-->
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end header -->
+
+		<!-- start start screen -->
+		<div id="start-screen" class="start-screen--light start-screen--style-2">
+			<div class="start-screen__static-bg jarallax" data-speed="0.3" style="background-image: url(img/bg_3.jpg);">
+
+				<div class="start-screen__content">
+					<div class="start-screen__content__inner">
+						<div class="grid grid--container">
+							<div class="row row--xs-center">
+								<div class="col col--md-7">
+									<h1 class="__title">Scaling Resilient Databases</h1>
+
+									<div class="row">
+										<div class="col col--lg-11 col--xl-9">
+											<div class="col-MB-25">
+												Relying on efficient, scalable and provebly-correct consensus protocols!
+											</div>
+
+											<div class="row row--xs-center">
+												<div class="col col--xs-auto">
+													<a class="custom-btn custom-btn--medium custom-btn--style-2" style="margin-top: 20px;" href="white_pappers.pdf" target="_blank">Get White Papper</a>
+												</div>
+
+												<div class="col col--xs-auto">
+													<a class="btn-play" href="#" style="margin-top: 20px;"><i></i>Video Presentation</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- end start screen -->
+
+		<!-- start main -->
+		<main role="main">
+
+			<!-- start section -->
+			<section class="section">
+				<div class="grid grid--container">
+					<div data-aos="fade-up" data-aos-offset="100">
+						<div class="section-heading section-heading--center  col-MB-60">
+							<h5 class="__subtitle">Our mission</h5>
+
+							<h2 class="__title">Crypterium Awesome ICO Service that Works for You!</h2>
+						</div>
+
+						<div class="row row--xs-middle">
+							<div class="col col--lg-8">
+								<p class="text--center">
+									<img class="lazy" src="img/blank.gif" data-src="img/ico/ico_logo.png" width="43" height="48" alt="demo" />
+								</p>
+
+								<p>
+									JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- start video -->
+					<div class="video-container" data-aos="fade-up">
+						<img class="img-responsive center-block lazy" src="img/blank.gif" data-src="img/video_bg.png" alt="demo" />
+
+						<div class="__video" style="max-width: 770px;">
+							<div class="__wrp">
+								<div class="embed-responsive">
+									<div class="__bg embed-responsive-item lazy" data-src="img/video_bg_1.jpg">
+										<div class="__btn_wrp">
+											<a class="__play-btn  circled" data-fancybox href="http://player.vimeo.com/video/44309170"></a>
+
+											<span class="__desc">Video Presentation</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end video -->
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section id="roadmap" class="section jarallax" data-speed="0.5">
+				<img class="jarallax-img" src="img/bg_6.jpg" alt="demo" />
+
+				<div class="grid grid--container">
+					<div class="section-heading section-heading--center section-heading--white  col-MB-60">
+						<h5 class="__subtitle">Our special way</h5>
+
+						<h2 class="__title">ResilientDB Road Map</h2>
+					</div>
+
+					<!-- start timeline -->
+					<div class="timeline timeline--style-1 timeline--light-color">
+						<div class="row row--xs-middle row--no-gutters">
+							<div class="col col--xs-10">
+								<div class="row row--xs-middle row--xs-center row--no-gutters" style="min-width: 750px;">
+									<div class="__item __item--active">
+										<i class="__point"></i>
+
+										<span class="__text __text--first">June 2017</span>
+										<h5 class="__text __text--second">Stats Center<br>Beta</h5>
+									</div>
+
+									<span class="__line __line--active"></span>
+
+									<div class="__item __item--active">
+										<i class="__point"></i>
+
+										<span class="__text __text--first">July 2017</span>
+										<h5 class="__text __text--second">BI Intergration</h5>
+									</div>
+
+									<span class="__line __line--active"></span>
+
+									<div class="__item __item--active">
+										<i class="__point"></i>
+
+										<span class="__text __text--first">December 2017</span>
+										<h5 class="__text __text--second">Fantasy<br>Prototype</h5>
+									</div>
+
+									<span class="__line __line--active"></span>
+
+									<div class="__item __item--active">
+										<i class="__point"></i>
+
+										<span class="__text __text--first">December 2017</span>
+										<h5 class="__text __text--second">Tokens<br>Crowdsale</h5>
+									</div>
+
+									<span class="__line __line--active"></span>
+
+									<div class="__item __item--active __item--current">
+										<i class="__point"></i>
+
+										<span class="__text __text--first">January 2018</span>
+										<h5 class="__text __text--second">Blogging<br>Platform</h5>
+									</div>
+
+									<span class="__line"></span>
+
+									<div class="__item">
+										<i class="__point"></i>
+
+										<span class="__text __text--first">April 2018</span>
+										<h5 class="__text __text--second">Fantasy Sports<br>with SCR</h5>
+									</div>
+
+									<span class="__line"></span>
+
+									<div class="__item">
+										<i class="__point"></i>
+
+										<span class="__text __text--first">May 2018</span>
+										<h5 class="__text __text--second">Advertizing<br>System</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end timeline -->
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section class="section">
+				<div class="grid grid--container">
+					<div class="section-heading section-heading--center  col-MB-60">
+						<h5 class="__subtitle">MEET THE PRODUCT</h5>
+
+						<h2 class="__title">Beautiful, functional and nearly ready to launch</h2>
+					</div>
+
+					<!-- start feature -->
+					<div class="feature feature--style-2  text--center">
+						<div class="__inner">
+							<div class="row">
+								<!-- start item -->
+								<div class="col col--lg-4">
+									<div class="__item" data-aos="zoom-in" data-aos-delay="100">
+										<div class="__content">
+											<i class="__ico">
+												<img class="img-responsive lazy" src="img/blank.gif" data-src="img/feature_img/1_1.png" width="34" height="60" alt="demo" />
+											</i>
+
+											<h3 class="__title">Mobile App</h3>
+
+											<p> Our popular wallet works on your Android or iPhone in addition to your web browser.</p>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--lg-4">
+									<div class="__item" data-aos="zoom-in" data-aos-delay="200">
+										<div class="__content">
+											<i class="__ico">
+												<img class="img-responsive lazy" src="img/blank.gif" data-src="img/feature_img/2_1.png" width="46" height="60px" alt="demo" />
+											</i>
+
+											<h3 class="__title">Insurance Protection</h3>
+
+											<p>Digital currency stored on our servers is covered by our insurance policy.</p>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--lg-4">
+									<div class="__item" data-aos="zoom-in" data-aos-delay="300">
+										<div class="__content">
+											<i class="__ico">
+												<img class="img-responsive lazy" src="img/blank.gif" data-src="img/feature_img/3_1.png" width="46" height="60" alt="demo" />
+											</i>
+
+											<h3 class="__title">Secure Storage</h3>
+
+											<p>We store the vast majority of the digital assets in secure offline storage.</p>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+							</div>
+						</div>
+					</div>
+					<!-- end feature -->
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section id="publications" class="section jarallax" data-speed="0.5">
+				<img class="jarallax-img" src="img/bg_5.jpg" alt="demo" />
+
+				<div class="grid grid--container">
+					<div class="row row--xs-middle row--xs-center  text--center">
+						<div class="col col--lg-auto">
+							<div data-aos="fade-right" data-aos-offset="50" data-aos-easing="ease">
+								<h2 style="color: #fff">ResilientDB Consensus Protocols</h2>
+							</div>
+						</div>
+
+						<div class="col col--lg-auto">
+							<div data-aos="fade-left" data-aos-offset="50" data-aos-easing="ease">
+								<br class="hide--lg">
+								<a class="custom-btn custom-btn--medium custom-btn--style-2" href="#">Read more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section class="section">
+				<div class="grid grid--container">
+					<div class="section-heading section-heading--center  col-MB-60">
+						<h5 class="__subtitle">Our service is built on Ethereum Blockchain </h5>
+
+						<h2 class="__title">Practical Byzantine Fault-tolerance</h2>
+					</div>
+
+					<div class="row row--md-between">
+						<div class="col col--md-5 col--lg-4">
+							<div class="list-with-ico">
+								<!-- start item -->
+								<div class="list__item" data-aos="fade-right" data-aos-offset="50">
+									<div class="b-table">
+										<div class="cell v-middle">
+											<i class="ico fontello-avatar"></i>
+										</div>
+
+										<div class="cell v-middle">
+											<h5>Name: Arthur Smith (ART)</h5>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="list__item" data-aos="fade-right" data-aos-offset="50">
+									<div class="b-table">
+										<div class="cell v-middle">
+											<i class="ico fontello-layer"></i>
+										</div>
+
+										<div class="cell v-middle">
+											<h5>Platform : Ethereum (ERC55)</h5>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="list__item" data-aos="fade-right" data-aos-offset="50">
+									<div class="b-table">
+										<div class="cell v-middle">
+											<i class="ico fontello-settings"></i>
+										</div>
+
+										<div class="cell v-middle">
+											<h5>Role : Purchase digital services</h5>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="list__item" data-aos="fade-right" data-aos-offset="50">
+									<div class="b-table">
+										<div class="cell v-middle">
+											<i class="ico fontello-calculator"></i>
+										</div>
+
+										<div class="cell v-middle">
+											<h5>Total supply : 100'000'000 tokens</h5>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="list__item" data-aos="fade-right" data-aos-offset="50">
+									<div class="b-table">
+										<div class="cell v-middle">
+											<i class="ico fontello-attachment"></i>
+										</div>
+
+										<div class="cell v-middle">
+											<h5>ICO supply : 60'000'000 tokens</h5>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="list__item" data-aos="fade-right" data-aos-offset="50">
+									<div class="b-table">
+										<div class="cell v-middle">
+											<i class="ico fontello-tag"></i>
+										</div>
+
+										<div class="cell v-middle">
+											<h5>Token price : 0.25€ / 0.29 USD</h5>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+							</div>
+						</div>
+
+						<div class="col hide--md col-MB-40"></div>
+
+						<div class="col col--md-7">
+							<div data-aos="fade-up">
+								<h3>We truly believe in the "tokenization" of the economy, that is why we created a token to use our service.</h3>
+
+								<p>
+									JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. 
+								</p>
+
+								<p>
+									<a class="custom-btn custom-btn--medium custom-btn--style-1" href="#">Buy tokens</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section id="downloads" class="section section--light-blue-bg section--custom-04">
+				<style type="text/css">
+					.section--custom-04
+					{
+						background-image: url(img/sectoin_bg_2.png);
+						background-position: 50% 50%;
+						background-repeat: no-repeat;
+					}
+				</style>
+
+				<div class="grid grid--container">
+					<div class="row row--xs-center">
+						<div class="col col--md-5 col--lg-4">
+							<div class="section-heading" data-aos="fade-right">
+								<h5 class="__subtitle">White pappers</h5>
+
+								<h2 class="__title">Documentation Download</h2>
+							</div>
+						</div>
+
+						<div class="col hide--md col-MB-40"></div>
+
+						<div class="col col--md-7 col--lg-8">
+							<!-- start documents -->
+							<div class="documents documents--style-1">
+								<div class="__inner">
+									<div class="row row--xs-between">
+										<!-- start item -->
+										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
+											<a href="#" class="__document" data-aos="fade-left" data-aos-delay="100">
+												<i class="__ico fontello-document"></i>
+
+												<span class="h5">WhitePapper</span>
+											</a>
+										</div>
+										<!-- end item -->
+
+										<!-- start item -->
+										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
+											<a href="#" class="__document" data-aos="fade-left" data-aos-delay="200">
+												<i class="__ico fontello-document"></i>
+
+												<span class="h5">One Page Summary</span>
+											</a>
+										</div>
+										<!-- end item -->
+
+										<!-- start item -->
+										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
+											<a href="#" class="__document" data-aos="fade-left" data-aos-delay="300">
+												<i class="__ico fontello-document"></i>
+
+												<span class="h5">Pitch Deck</span>
+											</a>
+										</div>
+										<!-- end item -->
+
+										<!-- start item -->
+										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
+											<a href="#" class="__document" data-aos="fade-left" data-aos-delay="400">
+												<i class="__ico fontello-document"></i>
+
+												<span class="h5">Industry Report</span>
+											</a>
+										</div>
+										<!-- end item -->
+									</div>
+								</div>
+							</div>
+							<!-- end documents -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section id="faq" class="section">
+				<div class="grid grid--container">
+					<div class="section-heading section-heading--center  col-MB-60">
+						<h5 class="__subtitle">FAQ</h5>
+
+						<h2 class="__title">Have any questions?</h2>
+					</div>
+
+					<div class="row row--xs-middle">
+						<div class="col col--lg-10">
+							<!-- start FAQ -->
+							<div class="faq">
+								<div class="accordion-container">
+									<!-- start item -->
+									<div class="accordion-item">
+										<div class="accordion-toggler">
+											<h4 class="__title h5">Can American citizens take part in the crowdsale?</h4>
+
+											<i class="circled"></i>
+										</div>
+
+										<article>
+											<div class="__inner">
+												<p>
+													JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers per
+												</p>
+											</div>
+										</article>
+									</div>
+									<!-- end item -->
+
+									<!-- start item -->
+									<div class="accordion-item">
+										<div class="accordion-toggler">
+											<h4 class="__title h5">Does the crowdsale comply with legal regulations?</h4>
+
+											<i class="circled"></i>
+										</div>
+
+										<article>
+											<div class="__inner">
+												<p>
+													JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers per
+												</p>
+
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quas molestias aut dolore fugiat at, neque aliquam nesciunt dolor! Molestiae sunt magnam asperiores, quasi blanditiis iste doloremque odit qui! Neque?
+												</p>
+											</div>
+										</article>
+									</div>
+									<!-- end item -->
+
+									<!-- start item -->
+									<div class="accordion-item">
+										<div class="accordion-toggler">
+											<h4 class="__title h5">Can I trade SCR at an exchange?</h4>
+
+											<i class="circled"></i>
+										</div>
+
+										<article>
+											<div class="__inner">
+												<p>
+													JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers per
+												</p>
+
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quas molestias aut dolore fugiat at, neque aliquam nesciunt dolor! Molestiae sunt magnam asperiores, quasi blanditiis iste doloremque odit qui! Neque?
+												</p>
+											</div>
+										</article>
+									</div>
+									<!-- end item -->
+
+									<!-- start item -->
+									<div class="accordion-item">
+										<div class="accordion-toggler">
+											<h4 class="__title h5">What is the difference between Scorum Coin tokens and Scorum Power tokens?</h4>
+
+											<i class="circled"></i>
+										</div>
+
+										<article>
+											<div class="__inner">
+												<p>
+													JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers per
+												</p>
+
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quas molestias aut dolore fugiat at, neque aliquam nesciunt dolor! Molestiae sunt magnam asperiores, quasi blanditiis iste doloremque odit qui! Neque?
+												</p>
+											</div>
+										</article>
+									</div>
+									<!-- end item -->
+
+									<!-- start item -->
+									<div class="accordion-item">
+										<div class="accordion-toggler">
+											<h4 class="__title h5">Why is Scorum’s economic model sustainable?</h4>
+
+											<i class="circled"></i>
+										</div>
+
+										<article>
+											<div class="__inner">
+												<p>
+													JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers per
+												</p>
+
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quas molestias aut dolore fugiat at, neque aliquam nesciunt dolor! Molestiae sunt magnam asperiores, quasi blanditiis iste doloremque odit qui! Neque?
+												</p>
+											</div>
+										</article>
+									</div>
+									<!-- end item -->
+
+									<!-- start item -->
+									<div class="accordion-item">
+										<div class="accordion-toggler">
+											<h4 class="__title h5">Can I mine SCR?</h4>
+
+											<i class="circled"></i>
+										</div>
+
+										<article>
+											<div class="__inner">
+												<p>
+													JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers per
+												</p>
+
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quas molestias aut dolore fugiat at, neque aliquam nesciunt dolor! Molestiae sunt magnam asperiores, quasi blanditiis iste doloremque odit qui! Neque?
+												</p>
+											</div>
+										</article>
+									</div>
+									<!-- end item -->
+								</div>
+
+								<div class="text--center">
+									<a class="custom-btn custom-btn--medium custom-btn--style-1" href="#">Show more</a>
+								</div>
+							</div>
+							<!-- end FAQ -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section id="team" class="section section--with-border">
+				<div class="grid grid--container">
+					<div class="section-heading section-heading--center  col-MB-60">
+						<h5 class="__subtitle">Foundation</h5>
+
+						<h2 class="__title">Advisors</h2>
+					</div>
+
+					<!-- start team -->
+					<div class="team team--style-1">
+						<div class="__inner">
+							<div class="row">
+								<!-- start item -->
+								<div class="col col--sm-6 col--lg-4">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-delay="100">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/1_b.png" width="230" height="230" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-facebook  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">David Drake</h5>
+						
+											<p>
+												David Drake, through his family office LDJ Capital, has acted as GP & LP investors with his partners in fund-of-funds, realty funds,
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--sm-6 col--lg-4">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-delay="200">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/2_b.png" width="230" height="230" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-linkedin  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Ann Balock</h5>
+						
+											<p>
+												Business development, Skolkovo Foundation. Interaction with public authorities and building partnerships with technology
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--sm-6 col--lg-4">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-delay="300">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/3_b.png" width="230" height="230" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-gplus  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Vladimir Nikitin</h5>
+						
+											<p>
+												Business development, Skolkovo Foundation. Interaction with public authorities and building partnerships with technology 
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+							</div>
+						</div>
+					</div>
+					<!-- end team -->
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section class="section jarallax" data-speed="0.3">
+				<img class="jarallax-img" src="img/bg_4.jpg" alt="demo" />
+
+				<div class="grid grid--container">
+					<div class="section-heading section-heading--center section-heading--white  col-MB-60">
+						<h5 class="__subtitle">Our brain</h5>
+
+						<h2 class="__title">Awesome Team</h2>
+					</div>
+
+					<!-- start team -->
+					<div class="team team--style-2 team--light-color">
+						<div class="__inner">
+							<div class="row">
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="50">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/1.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-linkedin  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">David Drake</h5>
+											<span class="__subtitle">UI Designer</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="100">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/2.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-linkedin  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Allan Bellor</h5>
+											<span class="__subtitle">Analitics</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="150">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/3.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-facebook  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Joe Doe</h5>
+											<span class="__subtitle">Tech Operation</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="200">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/4.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-gplus  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Sam Tolder</h5>
+											<span class="__subtitle">CEO</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="250">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/5.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-facebook  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Henry Polar</h5>
+											<span class="__subtitle">SEO Specialist</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="300">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/6.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-facebook  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Sandra Pen</h5>
+											<span class="__subtitle">Humar Resources</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="350">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/7.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-facebook  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Den Miller</h5>
+											<span class="__subtitle">Economist</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="400">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/8.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-facebook  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Brawn Lee</h5>
+											<span class="__subtitle">Journalist</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="450">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/9.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-gplus  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Linda Gampton</h5>
+											<span class="__subtitle">UX Team Lead</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="500">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/10.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-facebook  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">John Smith</h5>
+											<span class="__subtitle">General Director</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="550">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/11.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-linkedin  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Sam Oldrich</h5>
+											<span class="__subtitle">Manager</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="col col--xs-6 col--sm-4 col--md-3 col--lg-2">
+									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="600">
+										<figure class="__image  center-block circled">
+											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/12.png" width="110" height="110" alt="demo" />
+
+											<div class="social-btns">
+												<a class="fontello-facebook  circled" href="#"></a>
+											</div>
+										</figure>
+
+										<div class="__content">
+											<h5 class="__title">Denis Portlen</h5>
+											<span class="__subtitle">Programmer</span>
+										</div>
+									</div>
+								</div>
+								<!-- end item -->
+							</div>
+						</div>
+					</div>
+					<!-- end team -->
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section class="section">
+				<div class="grid grid--container">
+					<div class="section-heading section-heading--center  col-MB-60">
+						<h5 class="__subtitle">What says about Us</h5>
+
+						<h2 class="__title">Press About Us</h2>
+					</div>
+
+					<!-- start review -->
+					<div class="review review--slider  review--style-1" data-slick='{"autoplay": true, "arrows": false, "dots": true, "speed": 1000}'>
+						<!-- start item -->
+						<div class="__item">
+							<div class="__text  text--center">
+								<i class="__logo">
+									<img class="img-responsive" width="232" height="87" src="img/logos_img/7.png" alt="demo" />
+								</i>
+
+								<p>
+									“ Candlefish round stingray Reedfish giant wels, slimy sculpin beardfish anglerfish lighthousefish stream catfish. Rio Grande perch medaka rock bass ronquil squeaker southern hake northern pearleye South American Lungfish Red salmon cod icefish “
+								</p>
+							</div>
+
+							<div class="__author  text--center">
+								<img class="__author--image  center-block circled" width="78" height="78" src="img/ava.png" alt="demo"/>
+								<h5 class="__author--name">Den Miller</h5>
+								<span class="__author--position">CEO</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item">
+							<div class="__text  text--center">
+								<i class="__logo">
+									<img class="img-responsive" width="232" height="87" src="img/logos_img/8.png" alt="demo" />
+								</i>
+
+								<p>
+									“Lionfish ronquil yellowbelly tail catfish. Temperate ocean-bass merluccid hake snake mackerel archerfish zingel, shad swordtail, cepalin alooh masu salmon herring gopher rockfish. Pacific salmon longnose lancetfish giant sea bass candlefish deepwater flathead “
+								</p>
+							</div>
+
+							<div class="__author  text--center">
+								<img class="__author--image  center-block circled" width="78" height="78" src="img/ava_2.png" alt="demo"/>
+								<h5 class="__author--name">Hanna Garcia</h5>
+								<span class="__author--position">Journalist</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+
+						<!-- start item -->
+						<div class="__item">
+							<div class="__text  text--center">
+								<i class="__logo">
+									<img class="img-responsive" width="232" height="87" src="img/logos_img/7.png" alt="demo" />
+								</i>
+
+								<p>
+									“ Candlefish round stingray Reedfish giant wels, slimy sculpin beardfish anglerfish lighthousefish stream catfish. Rio Grande perch medaka rock bass ronquil squeaker southern hake northern pearleye South American Lungfish Red salmon cod icefish “
+								</p>
+							</div>
+
+							<div class="__author  text--center">
+								<img class="__author--image  center-block circled" width="78" height="78" src="img/ava.png" alt="demo"/>
+								<h5 class="__author--name">Den Miller</h5>
+								<span class="__author--position">CEO</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item">
+							<div class="__text  text--center">
+								<i class="__logo">
+									<img class="img-responsive" width="232" height="87" src="img/logos_img/8.png" alt="demo" />
+								</i>
+
+								<p>
+									“Lionfish ronquil yellowbelly tail catfish. Temperate ocean-bass merluccid hake snake mackerel archerfish zingel, shad swordtail, cepalin alooh masu salmon herring gopher rockfish. Pacific salmon longnose lancetfish giant sea bass candlefish deepwater flathead “
+								</p>
+							</div>
+
+							<div class="__author  text--center">
+								<img class="__author--image  center-block circled" width="78" height="78" src="img/ava_2.png" alt="demo"/>
+								<h5 class="__author--name">Hanna Garcia</h5>
+								<span class="__author--position">Journalist</span>
+							</div>
+						</div>
+						<!-- end item -->
+					</div>
+					<!-- end review -->
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section class="section section--light-bg">
+				<div class="grid">
+					<div class="section-heading section-heading--center  col-MB-60">
+						<h2 class="__title">Latest News & Blog</h2>
+					</div>
+
+					<!-- start posts -->
+					<div class="posts posts--slider" data-slick='{"autoplay": true, "dots": true, "speed": 1000}'>
+						<!-- start item -->
+						<div class="__item __item--preview">
+							<figure class="__image">
+								<img src="img/posts_img/1.jpg" alt="demo" />
+							</figure>
+
+							<div class="__content">
+								<p class="__category"><a href="#">Cryptocurrency</a></p>
+
+								<h3 class="__title h4"><a href="#">New trends in UI/UX Design World Integration</a></h3>
+
+								<p class="__text">
+									Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of 
+								</p>
+
+								<span class="__date-post">September, 15 2017</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item __item--preview">
+							<figure class="__image">
+								<img src="img/posts_img/2.jpg" alt="demo" />
+							</figure>
+
+							<div class="__content">
+								<p class="__category"><a href="#">Bitcoin</a></p>
+
+								<h3 class="__title h4"><a href="#">The LH-Crypto project has reached $7 000 000!</a></h3>
+
+								<p class="__text">
+									The meetings will take place in the following cities: 15 January – Milan, 16 January – Lugano, 17 January – Zurich, 18 Jan
+								</p>
+
+								<span class="__date-post">September, 15 2017</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item __item--preview">
+							<figure class="__image">
+								<img src="img/posts_img/3.jpg" alt="demo" />
+							</figure>
+
+							<div class="__content">
+								<p class="__category"><a href="#">ICO</a></p>
+
+								<h3 class="__title h4"><a href="#">Crypto project has reached NormalCap!</a></h3>
+
+								<p class="__text">
+									Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 
+								</p>
+
+								<span class="__date-post">September, 15 2017</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item __item--preview">
+							<figure class="__image">
+								<img src="img/posts_img/4.jpg" alt="demo" />
+							</figure>
+
+							<div class="__content">
+								<p class="__category"><a href="#">Blockchain</a></p>
+
+								<h3 class="__title h4"><a href="#">Start the redemption before the ICO completion</a></h3>
+
+								<p class="__text">
+									Lh-Crypto project buys 10% of the total amount of LHC tokens sold at a double rate. Thus, even now, project investors can receive an 
+								</p>
+
+								<span class="__date-post">September, 15 2017</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item __item--preview">
+							<figure class="__image">
+								<img src="img/posts_img/1.jpg" alt="demo" />
+							</figure>
+
+							<div class="__content">
+								<p class="__category"><a href="#">Cryptocurrency</a></p>
+
+								<h3 class="__title h4"><a href="#">New trends in UI/UX Design World Integration</a></h3>
+
+								<p class="__text">
+									Specially for our VIP customers the LH Crypto team representatives Alexander Smirnov and Antonis Lapos will conduct a number of 
+								</p>
+
+								<span class="__date-post">September, 15 2017</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item __item--preview">
+							<figure class="__image">
+								<img src="img/posts_img/2.jpg" alt="demo" />
+							</figure>
+
+							<div class="__content">
+								<p class="__category"><a href="#">Bitcoin</a></p>
+
+								<h3 class="__title h4"><a href="#">The LH-Crypto project has reached $7 000 000!</a></h3>
+
+								<p class="__text">
+									The meetings will take place in the following cities: 15 January – Milan, 16 January – Lugano, 17 January – Zurich, 18 Jan
+								</p>
+
+								<span class="__date-post">September, 15 2017</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item __item--preview">
+							<figure class="__image">
+								<img src="img/posts_img/3.jpg" alt="demo" />
+							</figure>
+
+							<div class="__content">
+								<p class="__category"><a href="#">ICO</a></p>
+
+								<h3 class="__title h4"><a href="#">Crypto project has reached NormalCap!</a></h3>
+
+								<p class="__text">
+									Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 
+								</p>
+
+								<span class="__date-post">September, 15 2017</span>
+							</div>
+						</div>
+						<!-- end item -->
+
+						<!-- start item -->
+						<div class="__item __item--preview">
+							<figure class="__image">
+								<img src="img/posts_img/4.jpg" alt="demo" />
+							</figure>
+
+							<div class="__content">
+								<p class="__category"><a href="#">Blockchain</a></p>
+
+								<h3 class="__title h4"><a href="#">Start the redemption before the ICO completion</a></h3>
+
+								<p class="__text">
+									Lh-Crypto project buys 10% of the total amount of LHC tokens sold at a double rate. Thus, even now, project investors can receive an 
+								</p>
+
+								<span class="__date-post">September, 15 2017</span>
+							</div>
+						</div>
+						<!-- end item -->
+					</div>
+					<!-- end posts -->
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section class="section jarallax" data-speed="0.5">
+				<img class="jarallax-img" src="img/bg_.jpg" alt="demo" />
+
+				<div class="pattern" style="background-color: rgba(0, 0, 0, 0.53);"></div>
+
+				<div class="grid grid--container">
+					<div class="section-heading section-heading--center section-heading--white  col-MB-60">
+						<h2 class="__title">Subscribe Newsletter</h2>
+					</div>
+
+					<div class="center-block" style="max-width: 510px">
+						<form class="form--horizontal" action="#">
+							<div class="b-table">
+								<div class="cell v-middle">
+									<div class="input-wrp">
+										<input class="textfield" type="text" value="" placeholder="E-mail" />
+									</div>
+								</div>
+
+								<div class="cell v-middle">
+									<button class="custom-btn custom-btn--medium custom-btn--style-2" type="submit" role="button">Subscribe</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+		</main>
+		<!-- end main -->
+
+		<!-- start footer -->
+		<footer id="footer" class="text--center text--lg-left">
+			<div class="grid grid--container">
+				<div class="row">
+					<div class="col col--xs-12">
+						<div class="__item">
+							<a class="site-logo" href="index.html">
+								<img class="img-responsive lazy" width="175" height="42" src="img/blank.gif" data-src="img/site_logo.png" alt="demo" />
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row--xs-middle">
+					<div class="col col--sm-10 col--md-8 col--lg-5">
+						<div class="__item">
+							<address class="__text">
+								523 Sylvan Ave, 5th Floor Mountain View, CA 94041USA <br>
+								<a href="tel:+1(234)56789">+1 (234) 56789</a>, <a href="tel:+19876543210">+1 987 654 3210</a> <br>
+								<a href="mailto:supportcenter@crypterium.com">supportcenter@crypterium.com</a>
+							</address>
+
+							<div class="social-btns">
+								<a class="fontello-twitter" href="#"></a>
+								<a class="fontello-facebook" href="#"></a>
+								<a class="fontello-linkedin-squared" href="#"></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col col--sm-10 col--md-8 col--lg-7">
+						<div class="__item">
+							<nav id="footer__navigation" class="navigation">
+								<div class="row row--xs-middle">
+									<div class="col col--xs-auto col--md-3 col--lg-4">
+										<ul class="__menu">
+											<li><a href="#">Home</a></li>
+											<li><a href="#">About us</a></li>
+											<li><a href="#">Contacts</a></li>
+											<li><a href="#">News</a></li>
+										</ul>
+									</div>
+
+									<div class="col col--xs-auto col--md-3 col--lg-4">
+										<ul class="__menu">
+											<li><a href="#">Events</a></li>
+											<li><a href="#">Wallet</a></li>
+											<li><a href="#">FAQ’s</a></li>
+											<li><a href="#">Support</a></li>
+										</ul>
+									</div>
+
+									<div class="col hide--md col-MB-20"></div>
+
+									<div class="col col--xs-auto col--md-auto col--lg-4">
+										<ul class="__menu">
+											<li><a href="#">Blog</a></li>
+											<li><a href="#">Privacy policy</a></li>
+											<li><a href="#">Terms & conditionss</a></li>
+											<li><a href="#">Customer Service</a></li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row--xs-middle row--lg-between">
+					<div class="col col--sm-10 col--md-8 col--lg-6">
+						<div class="__item">
+							<span class="__copy">© 2018, Crypterium Theme by <a class="__dev" href="#" target="_blank">Artureanec</a></span>
+						</div>
+					</div>
+
+					<div class="col col--sm-10 col--md-8 col--lg-6  text--lg-right">
+						<div class="__item">
+							<span class="__copy"><a href="#">Privacy Policy</a> | <a href="#">Sitemap</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end footer -->
+
+		<div id="btn-to-top-wrap">
+			<a id="btn-to-top" class="circled" href="javascript:void(0);" data-visible-offset="800"></a>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+		<script type="text/javascript" src="js/main.min.js"></script>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='https://www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+		</script>
+
+		<!-- BEGIN JIVOSITE CODE {literal} -->
+		<script type='text/javascript'>
+		(function(){ var widget_id = 'Paw7lkpeN6';var d=document;var w=window;function l(){
+		var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+		<!-- {/literal} END JIVOSITE CODE -->
+	</body>
+</html>
