@@ -1,6 +1,4 @@
 # ResilientDB website
 
-TODO:
-- add content
-- fix scrolnav to make smooth
-- fix active tab issue
+This repository is dedicated for ResilientDB website. 
+

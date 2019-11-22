@@ -51,21 +51,16 @@
 			isTouch ? _html.classList.add("touch") : _html.classList.add("no-touch");
 		</script>
 		<script type="text/javascript" src="js/device.min.js"></script>
-
-
-<!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+		<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 		<script>
 			$(document).ready(function(){
-				// Add scrollspy to <body>
-				$('body').scrollspy({target: ".navbar", offset: 0});
-
 				// Add smooth scrolling on all links inside the navbar
 				$("#top-bar__navigation a").on('click', function(event) {
+
+					$("#top-bar__navigation li").removeClass('active');
+					$(this.parentElement).addClass('active');
+					console.log("clicked on:");
+					console.log($(this));
 					// Make sure this.hash has a value before overriding default behavior
 					if (this.hash !== "") {
 						// Prevent default anchor click behavior
@@ -76,9 +71,9 @@
 
 						// Using jQuery's animate() method to add smooth page scroll
 						// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-						$('html, body').animate({
+						$('body,html').animate({
 							scrollTop: $(hash).offset().top
-						}, 800, function(){
+						}, 1200, function(){
 
 							// Add hash (#) to URL when done scrolling (default click behavior)
 							window.location.hash = hash;

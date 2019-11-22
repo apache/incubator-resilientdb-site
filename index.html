@@ -51,21 +51,16 @@
 			isTouch ? _html.classList.add("touch") : _html.classList.add("no-touch");
 		</script>
 		<script type="text/javascript" src="js/device.min.js"></script>
-
-
-<!--		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+		<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 		<script>
 			$(document).ready(function(){
-				// Add scrollspy to <body>
-				$('body').scrollspy({target: ".navbar", offset: 0});
-
 				// Add smooth scrolling on all links inside the navbar
 				$("#top-bar__navigation a").on('click', function(event) {
+
+					$("#top-bar__navigation li").removeClass('active');
+					$(this.parentElement).addClass('active');
+					console.log("clicked on:");
+					console.log($(this));
 					// Make sure this.hash has a value before overriding default behavior
 					if (this.hash !== "") {
 						// Prevent default anchor click behavior
@@ -76,9 +71,9 @@
 
 						// Using jQuery's animate() method to add smooth page scroll
 						// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-						$('html, body').animate({
+						$('body,html').animate({
 							scrollTop: $(hash).offset().top
-						}, 800, function(){
+						}, 1200, function(){
 
 							// Add hash (#) to URL when done scrolling (default click behavior)
 							window.location.hash = hash;
@@ -727,11 +722,11 @@
 								<div class="col-3 col--xs-6 col--sm-4 col--md-3 col--lg-3">
 									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="50">
 										<figure class="__image  center-block circled">
-											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/suyash.jpeg" width="110" height="110" alt="demo" />
+											<a href="https://gupta-suyash.github.io/"><img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/suyash.jpeg" width="110" height="110"  /></a>
 
-											<div class="social-btns">
-												<a class="fontello-linkedin  circled" href="#"></a>
-											</div>
+					<!--						<div class="social-btns">-->
+					<!--							<a class="fontello-linkedin  circled" href="#"></a>-->
+					<!--						</div>-->
 										</figure>
 
 										<div class="__content">
@@ -746,11 +741,13 @@
 								<div class="col-3 col--xs-6 col--sm-4 col--md-3 col--lg-3">
 									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="100">
 										<figure class="__image  center-block circled">
-											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/sajjad.jpeg" width="110" height="110" alt="demo" />
+											<a href="https://sajjadrahnama.com/">
+												<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/sajjad.jpeg" width="110" height="110" alt="demo" />
+											</a>
 
-											<div class="social-btns">
-												<a class="fontello-linkedin  circled" href="#"></a>
-											</div>
+					<!--						<div class="social-btns">-->
+					<!--							<a class="fontello-linkedin  circled" href="#"></a>-->
+					<!--						</div>-->
 										</figure>
 
 										<div class="__content">
@@ -765,7 +762,9 @@
 								<div class="col-3 col--xs-6 col--sm-4 col--md-3 col--lg-3">
 									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="150">
 										<figure class="__image  center-block circled">
-											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/tq.jpeg" width="110" height="110" alt="demo" />
+											<a href="http://thamir.qadah.com">
+												<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/tq.jpeg" width="110" height="110" />
+											</a>
 
 											<div class="social-btns">
 												<a class="fontello-linkedin  circled" href="https://www.linkedin.com/in/qadahtm/"></a>
@@ -784,7 +783,9 @@
 								<div class="col-3 col--xs-6 col--sm-4 col--md-3 col--lg-3">
 									<div class="__item  text--center" data-aos="zoom-in" data-aos-offset="50" data-aos-duration="300" data-aos-delay="200">
 										<figure class="__image  center-block circled">
-											<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/mo.jpeg" width="110" height="110" alt="demo" />
+											<a href="https://expolab.org/">
+												<img class="img-responsive circled lazy" src="img/blank.gif" data-src="img/team_img/mo.jpeg" width="110" height="110" alt="demo" />
+											</a>
 
 											<div class="social-btns">
 												<a class="fontello-linkedin  circled" href="https://www.linkedin.com/in/mohammad-sadoghi-b842a27/"></a>
@@ -841,14 +842,12 @@
 				<div class="row row--xs-middle">
 					<div class="col col--sm-10 col--md-8 col--lg-5">
 						<div class="__item">
-							<div class="social-btns">
-		<!--						<a class="fontello-email" href="mailto:resilientdatabase@gmail.com"> Email: resilientdatabase@gmail.com</a>-->
-		<!--						<a class="fontello-twitter" href="https://twitter.com/resilientdb"> Twitter: @resilientdb</a>-->
-
-								<a href="mailto:resilientdatabase@gmail.com"> Email: resilientdatabase@gmail.com</a>
-		                        <br>
-								<a href="https://twitter.com/resilientdb"> Twitter: @resilientdb</a>
-							</div>
+							<ul class="__menu">
+								<li><a href="mailto:resilientdatabase@gmail.com" style="text-decoration: none; color: white"> Email: resilientdatabase@gmail.com</a></li>
+								<li><a href="https://twitter.com/resilientdb" style="text-decoration: none;color: white"> Twitter: @resilientdb</a></li>
+							</ul>
+		<!--					<div class="social-btns">-->
+		<!--					</div>-->
 						</div>
 					</div>
 
@@ -856,6 +855,7 @@
 						<div class="__item">
 							<nav id="footer__navigation" class="navigation">
 								<div class="row row--xs-middle">
+
 									<div class="col col--xs-auto col--md-3 col--lg-4">
 										<ul class="__menu">
 											<li><a href="#start-screen">ResilentDB</a></li>
@@ -870,7 +870,7 @@
 										</ul>
 									</div>
 
-									<div class="col hide--md col-MB-20"></div>
+		<!--							<div class="col hide&#45;&#45;md col-MB-20"></div>-->
 
 		<!--							<div class="col col&#45;&#45;xs-auto col&#45;&#45;md-auto col&#45;&#45;lg-4">-->
 		<!--								<ul class="__menu">-->
