@@ -1653,6 +1653,9 @@ template {
 .fontello-twitter:before {
   content: '\f099'
 }
+.fontello-email:before {
+  content: '\f0e0'
+}
 .fontello-facebook:before {
   content: '\f09a'
 }
@@ -4644,6 +4647,15 @@ img {
 .contact-block .contact-link:focus,
 .contact-block .contact-link:hover {
   text-decoration: underline
+}
+.light {
+  font-weight: lighter
+}
+.thick {
+  font-weight: 700
+}
+.thicker {
+  font-weight: 900
 }
 .h1,
 .h2,
