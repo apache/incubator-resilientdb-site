@@ -7473,7 +7473,7 @@ label {
   border-right: 2px dashed #a9b1bb
 }
 .timeline--style-2 .__text--first {
-  color: #333
+  color: inherit
 }
 @media only screen and (min-width:560px) {
   .testimonial .__item .__text {
