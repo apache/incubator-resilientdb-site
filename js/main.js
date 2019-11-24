@@ -28593,6 +28593,17 @@ module.exports = function(Chart) {
 			$this.toggleClass('is-active');
 			jHeader.toggleClass('is-expanded');
 
+			if ($window.scrollTop() === 0){
+				if (jHeader.hasClass('is-expanded')){
+					jHeader.addClass('is-fixed');
+					jHeader.addClass('is-visible');
+				}
+				else{
+					jHeader.removeClass('is-fixed');
+					jHeader.removeClass('is-visible');
+				}
+			}
+
 			if ( $this.hasClass('is-active') )
 			{
 				nHtmlNode.style.overflow = 'hidden';
