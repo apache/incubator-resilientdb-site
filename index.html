@@ -236,7 +236,6 @@
 			</section>
 			<!-- end section -->
 
-
 			<!-- start section -->
 			<section class="section section--dark-bg">
 				<div class="grid grid--container">
@@ -247,6 +246,135 @@
 					</div>
 
 					<img class="lazy img-responsive center-block" src="img/blank.gif" data-src="img/world_map.png" alt="demo" />
+				</div>
+			</section>
+			<!-- end section -->
+
+			<!-- start section -->
+			<section class="section">
+
+				<div class="grid grid--container  col--xs-align-bottom">
+					<div class="facts">
+						<div class="__inner">
+							<div class="row row--xs-middle">
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="0" data-to="50000" data-before=">"></span><br>
+										Resilient TPS
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="1" data-to="60"></span><br>
+										Replicas Globally
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="0" data-to="6"></span><br>
+										Countries
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="0" data-to="4"></span><br>
+										Continents
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid grid--container" style="margin-top: 2em;">
+
+					<div style="width:100%;position:relative;">
+						<canvas id="canvas_00001" width="100%"></canvas>
+
+						<script type="text/javascript">
+							(function ()
+							{
+								if (typeof window.jQuery !== 'undefined' && window.Chart !== 'undefined')
+								{
+									var xa_labels = [1, 2, 3, 4, 5, 6];
+									var rdb_data = [10, 40, 42, 48, 52, 53];
+									var pbft_data = [34, 33, 30, 17, 16, 15];
+
+									var config = {
+										type: 'line',
+										data: {
+											labels: xa_labels,
+											datasets: [{
+												label: 'ResilientDB',
+												backgroundColor: 'rgba(235, 246, 236, 0.4)',
+												borderColor: '#00ab40',
+												fill: true,
+												borderWidth: 2,
+												data: rdb_data,
+											}, {
+												label: 'PBFT',
+												backgroundColor: 'rgba(216, 234, 228, 0.4)',
+												borderColor: '#0085a2',
+												fill: true,
+												borderWidth: 2,
+												data: pbft_data,
+											}]
+										},
+										options: {
+											responsive: true,
+											defaultFontSize: 24,
+											title: {
+												display: true,
+												fontSize: 24,
+												text: 'ResilientDB Global-cale Throughput Performance',
+											},
+											tooltips: {
+												mode: 'index',
+												intersect: false,
+											},
+											hover: {
+												mode: 'nearest',
+												intersect: true
+											},
+											scales: {
+												xAxes: [{
+													display: true,
+													ticks: {
+														fontSize: 20
+													},
+													scaleLabel: {
+														display: true,
+														fontSize: 18,
+														labelString: 'Number of Clusters (Regions)'
+													}
+												}],
+												yAxes: [{
+													display: true,
+													ticks: {
+														fontSize: 20
+													},
+													scaleLabel: {
+														display: true,
+														fontSize: 18,
+														labelString: 'Throughput (KTPS)'
+													}
+												}]
+											}
+										}
+									};
+
+									jQuery(document).ready(function($){
+
+										var ctx = document.getElementById('canvas_00001').getContext('2d');
+										window.myLine = new Chart(ctx, config);
+									});
+								}
+							})();
+						</script>
+					</div>
 				</div>
 			</section>
 			<!-- end section -->
