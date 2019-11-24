@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+	<head>
+		<title>ResilientDB</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui" />
+
+		<meta name="theme-color" content="#3F6EBF" />
+		<meta name="msapplication-navbutton-color" content="#3F6EBF" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#3F6EBF" />
+
+		<!-- Favicons
+		================================================== -->
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+		<!-- CSS
+		================================================== -->
+		<link rel="stylesheet" href="css/style.min.css" type="text/css">
+
+		<!-- Load google font
+		================================================== -->
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: { families: [ 'Open+Sans:300,400,500','Lato:900', 'Poppins:400', 'Catamaran:300,400,500,600,700'] }
+			};
+			(function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + 
+				'://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
+		</script>
+
+		<!-- Load other scripts
+		================================================== -->
+		<script type="text/javascript">
+			var _html = document.documentElement,
+				isTouch = (('ontouchstart' in _html) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints));
+
+			_html.className = _html.className.replace("no-js","js");
+
+			isTouch ? _html.classList.add("touch") : _html.classList.add("no-touch");
+		</script>
+		<script type="text/javascript" src="js/device.min.js"></script>
+		<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				// Add smooth scrolling on all links inside the navbar
+				$("#top-bar__navigation a").on('click', function(event) {
+
+					$("#top-bar__navigation li").removeClass('active');
+					$(this.parentElement).addClass('active');
+
+					// Make sure this.hash has a value before overriding default behavior
+					if (this.hash !== "") {
+						// Prevent default anchor click behavior
+						event.preventDefault();
+
+						// Store hash
+						var hash = this.hash;
+
+						// Using jQuery's animate() method to add smooth page scroll
+						// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+						$('body,html').animate({
+							scrollTop: $(hash).offset().top
+						}, 1200, function(){
+
+							// Add hash (#) to URL when done scrolling (default click behavior)
+							window.location.hash = hash;
+						});
+					}  // End if
+				});
+			});
+		</script>
+	</head>
+
+	<body class="page-404">
+		<!-- start header -->
+		<header id="top-bar" class="top-bar--light">
+			<div id="top-bar__inner">
+				<a id="top-bar__logo" class="site-logo" href="index.html">
+					<img class="img-responsive" width="175" height="42" src="img/site_logo.png" alt="demo" />
+					<img class="img-responsive" width="175" height="42" src="img/site_logo_2.png" alt="demo" />
+				</a>
+
+				<a id="top-bar__navigation-toggler" href="javascript:void(0);"><span></span></a>
+
+				<div id="top-bar__navigation-wrap">
+					<div>
+						<nav id="top-bar__navigation" class="navigation" role="navigation">
+							<ul>
+								<li>
+									<a href="javascript:void(0);"><span>Home</span></a>
+
+									<div class="submenu">
+										<ul>
+											<li><a href="index.html">Home Page</a></li>
+											<li><a href="index_6.html">Home Slider</a></li>
+											<li><a href="index_9.html">Agency</a></li>
+											<li><a href="index_7.html">Landing Wallet</a></li>
+											<li><a href="index_4.html">Landing ICO 1</a></li>
+											<li><a href="index_3.html">Landing ICO 2</a></li>
+											<li><a href="index_2.html">Landing ICO 3</a></li>
+											<li><a href="index_5.html">Landing ICO 5</a></li>
+											<li><a href="index_8.html">Mining Farm</a></li>
+											<li><a href="wallet/index.html">Crypto Wallet</a></li>
+										</ul>
+									</div>
+								</li>
+
+								<li class="active">
+									<a href="javascript:void(0);"><span>Pages</span></a>
+
+									<div class="submenu">
+										<ul>
+											<li><a href="about.html">About</a></li>
+											<li><a href="services.html">Services</a></li>
+											<li><a href="blog.html">Blog</a></li>
+											<li><a href="blog_massonry.html">Blog Massonry</a></li>
+											<li><a href="blog_details.html">Blog Post</a></li>
+											<li><a href="pricing_table.html">Pricinag Tables</a></li>
+											<li><a href="typography.html">Typography</a></li>
+											<li class="active"><a href="404.html">404 page</a></li>
+											<li><a href="widgets.html">Widgets</a></li>
+											<li><a href="contacts.html">Contact</a></li>
+											<li><a href="sign_in.html">Sign In</a></li>
+											<li><a href="sign_up.html">Sign Up</a></li>
+										</ul>
+									</div>
+								</li>
+
+								<li>
+									<a href="white_pappers.pdf" target="_blank"><span>White Pappers</span></a>
+								</li>
+
+								<li>
+									<a href="faq.html"><span>FAQ’s</span></a>
+								</li>
+
+								<li>
+									<a href="support.html"><span>Support</span></a>
+								</li>
+							</ul>
+						</nav>
+
+						<br class="hide--lg">
+
+						<ul id="top-bar__subnavigation">
+							<li><a class="custom-btn custom-btn--small custom-btn--style-3" href="sign_in.html">Login</a></li>
+							<li><a href="sign_up.html">Sign up</a></li>
+
+							<li>
+								<div id="top-bar__choose-lang">
+									<div class="list-wrap">
+										<ul class="list">
+											<li><img class="img-responsive  circled" src="img/ico/flag/2.png" width="25" height="25" alt="demo" ></li>
+											<li><img class="img-responsive  circled" src="img/ico/flag/3.png" width="25" height="25" alt="demo" ></li>
+											<li><img class="img-responsive  circled" src="img/ico/flag/4.png" width="25" height="25" alt="demo" ></li>
+										</ul>
+									</div>
+
+									<i><img class="img--active img-responsive  circled" src="img/ico/flag/1.png" width="25" height="25" alt="demo" ></i>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end header -->
+
+		<!-- start intro -->
+		<div id="intro" style="background-image: url(img/intro_img/1.jpg);">
+			<div class="grid grid--container">
+				<div class="row row--xs-middle">
+					<div class="col col--sm-10 col--md-7 col--lg-5 text--center">
+						<span class="span">Ooops!</span>
+
+						<h2 class="__title">Page not found</h2>
+
+						<p class="col-MB-40">The page you are looking for was moved, removed, renamed or might never existed.</p>
+
+						<p><a class="custom-btn custom-btn--medium custom-btn--style-2" href="index.html">Home page</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end intro -->
+
+		<div id="btn-to-top-wrap">
+			<a id="btn-to-top" class="circled" href="javascript:void(0);" data-visible-offset="800"></a>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/jquery-2.2.4.min.js"><\/script>')</script>
+
+		<script type="text/javascript" src="js/main.min.js"></script>
+
+	</body>
+</html>
