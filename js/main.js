@@ -28602,10 +28602,7 @@ module.exports = function(Chart) {
 				// Using jQuery's animate() method to add smooth page scroll
 				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 				var stop = $(hash).offset().top;
-				console.log(stop);
-				if (stop > 0){
-					stop -= 57;
-				}
+
 				$('body,html').animate({
 					scrollTop: stop
 				}, 1200, function(){

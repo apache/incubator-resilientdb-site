@@ -209,8 +209,8 @@
 				<div class="grid grid--container" style="margin-top: 2em;">
 
 					<div style="width:100%;position:relative;">
-						<canvas id="canvas_00001" width="100%" style="margin-top: 2em;"></canvas>
-						<canvas id="canvas_00002" width="100%" style="margin-top: 4em;"></canvas>
+						<canvas id="canvas_00001" width="100%" style="margin-top: 2em; min-height: 8rem"></canvas>
+						<canvas id="canvas_00002" width="100%" style="margin-top: 4em; min-height: 8rem"></canvas>
 
 						<script type="text/javascript">
 							(function ()
@@ -243,10 +243,10 @@
 										},
 										options: {
 											responsive: true,
-											defaultFontSize: 24,
+											defaultFontSize: 18,
 											title: {
 												display: true,
-												fontSize: 24,
+												fontSize: 22,
 												text: 'ResilientDB (Geo)',
 											},
 											tooltips: {
@@ -261,22 +261,22 @@
 												xAxes: [{
 													display: true,
 													ticks: {
-														fontSize: 20
+														fontSize: 16
 													},
 													scaleLabel: {
 														display: true,
-														fontSize: 18,
+														fontSize: 16,
 														labelString: 'Number of Clusters (Regions)'
 													}
 												}],
 												yAxes: [{
 													display: true,
 													ticks: {
-														fontSize: 20
+														fontSize: 16
 													},
 													scaleLabel: {
 														display: true,
-														fontSize: 18,
+														fontSize: 16,
 														labelString: 'Throughput (KTPS)'
 													}
 												}]
@@ -310,10 +310,10 @@
 										},
 										options: {
 											responsive: true,
-											defaultFontSize: 24,
+											defaultFontSize: 20,
 											title: {
 												display: true,
-												fontSize: 24,
+												fontSize: 22,
 												text: 'ResilientDB (Parallel)',
 											},
 											tooltips: {
@@ -328,22 +328,22 @@
 												xAxes: [{
 													display: true,
 													ticks: {
-														fontSize: 20
+														fontSize: 16
 													},
 													scaleLabel: {
 														display: true,
-														fontSize: 18,
+														fontSize: 16,
 														labelString: 'Number of Replicas'
 													}
 												}],
 												yAxes: [{
 													display: true,
 													ticks: {
-														fontSize: 20
+														fontSize: 16
 													},
 													scaleLabel: {
 														display: true,
-														fontSize: 18,
+														fontSize: 16,
 														labelString: 'Throughput (KTPS)'
 													}
 												}]
