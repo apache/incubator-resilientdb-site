@@ -171,13 +171,15 @@
 			<section class="section">
 
 				<div class="grid grid--container  col--xs-align-bottom">
+					<h2 class="__title" style="text-align: center">ResilientDB (Geo)</h2>
+
 					<div class="facts">
 						<div class="__inner">
 							<div class="row row--xs-middle">
 								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
 									<div class="__item text--xs-center">
 										<span class="num js-count" data-from="0" data-to="50000" data-before=">"></span><br>
-										Resilient TPS (Geo)
+										Resilient TPS
 									</div>
 								</div>
 
@@ -187,21 +189,6 @@
 										Replicas Globally
 									</div>
 								</div>
-
-								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
-									<div class="__item text--xs-center">
-										<span class="num js-count" data-from="0" data-to="350000"></span><br>
-										Resilient TPS (Parallel)
-									</div>
-								</div>
-
-								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
-									<div class="__item text--xs-center">
-										<span class="num js-count" data-from="1" data-to="46"></span><br>
-										Replicas (Single Site)
-									</div>
-								</div>
-
 								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
 									<div class="__item text--xs-center">
 										<span class="num js-count" data-from="0" data-to="6"></span><br>
@@ -218,26 +205,39 @@
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="grid grid--container" style="margin-top: 2em;">
-
-
-					<div class="row" style="margin-top: 3em">
-						<div class="col">
-							<h2 class="__title" style="text-align: center">ResilientDB (Geo)</h2>
-						</div>
-					</div>
 
 					<div class="row" style="margin-top: 3em">
 						<div class="col">
 							<canvas id="canvas_00001" width="100%"></canvas>
 						</div>
 					</div>
+				</div>
+			</section>
+			<!-- end section -->
 
-					<div class="row" style="margin-top: 3em">
-						<div class="col">
-							<h2 class="__title" style="text-align: center">ResilientDB (Parallel)</h2>
+			<!-- start section -->
+			<section class="section">
+
+				<div class="grid grid--container  col--xs-align-bottom">
+					<h2 class="__title" style="text-align: center">ResilientDB (Parallel)</h2>
+
+					<div class="facts">
+						<div class="__inner">
+							<div class="row row--xs-middle">
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="0" data-to="350000"></span><br>
+										Resilient TPS
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="1" data-to="46"></span><br>
+										Replicas (Single Site)
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 
@@ -246,167 +246,165 @@
 							<canvas id="canvas_00002" width="100%"></canvas>
 						</div>
 					</div>
-					<div style="width:100%;position:relative;">
-						<script type="text/javascript">
-							(function ()
-							{
-								if (typeof window.jQuery !== 'undefined' && window.Chart !== 'undefined')
-								{
-									var xa_labels = [1, 2, 3, 4, 5, 6];
-									var rdb_data = [10, 40, 42, 48, 52, 53];
-									var pbft_data = [34, 33, 30, 17, 16, 15];
-									var plot_fontsize = 24;
-
-									if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-										// some code..
-										plot_fontsize = 14
-									}
-
-									var config = {
-										type: 'line',
-										data: {
-											labels: xa_labels,
-											datasets: [{
-												label: 'ResilientDB',
-												// backgroundColor: 'rgba(235, 246, 236, 0.4)',
-												borderColor: 'rgb(204,0,0)',
-												fill: true,
-												borderWidth: 2,
-												data: rdb_data,
-											}, {
-												label: 'PBFT',
-												// backgroundColor: 'rgba(216, 234, 228, 0.4)',
-												borderColor: '#0085a2',
-												fill: true,
-												borderWidth: 2,
-												data: pbft_data,
-											}]
-										},
-										options: {
-											responsive: true,
-											defaultFontSize: plot_fontsize,
-											// title: {
-											// 	display: true,
-											// 	fontSize: 22,
-											// 	text: 'ResilientDB (Geo)',
-											// },
-											tooltips: {
-												mode: 'index',
-												intersect: false,
-											},
-											hover: {
-												mode: 'nearest',
-												intersect: true
-											},
-											scales: {
-												xAxes: [{
-													display: true,
-													ticks: {
-														fontSize: plot_fontsize
-													},
-													scaleLabel: {
-														display: true,
-														fontSize: plot_fontsize,
-														labelString: 'Number of Clusters (Regions)'
-													}
-												}],
-												yAxes: [{
-													display: true,
-													ticks: {
-														fontSize: plot_fontsize
-													},
-													scaleLabel: {
-														display: true,
-														fontSize: plot_fontsize,
-														labelString: 'Throughput (KTPS)'
-													}
-												}]
-											}
-										}
-									};
-
-									xa_labels = [4, 8, 16, 32, 46];
-									rdb_data = [350, 305, 310, 300, 225];
-									pbft_data = [180, 160, 125, 110, 50];
-
-									var config2 = {
-										type: 'line',
-										data: {
-											labels: xa_labels,
-											datasets: [{
-												label: 'ResilientDB',
-												// backgroundColor: 'rgba(235, 246, 236, 0.4)',
-												borderColor: 'rgb(204,0,0)',
-												fill: true,
-												borderWidth: 2,
-												data: rdb_data,
-											}, {
-												label: 'PBFT',
-												// backgroundColor: 'rgba(216, 234, 228, 0.4)',
-												borderColor: '#0085a2',
-												fill: true,
-												borderWidth: 2,
-												data: pbft_data,
-											}]
-										},
-										options: {
-											responsive: true,
-											defaultFontSize: 20,
-											// title: {
-											// 	display: true,
-											// 	fontSize: 22,
-											// 	text: 'ResilientDB (Parallel)',
-											// },
-											tooltips: {
-												mode: 'index',
-												intersect: false,
-											},
-											hover: {
-												mode: 'nearest',
-												intersect: true
-											},
-											scales: {
-												xAxes: [{
-													display: true,
-													ticks: {
-														fontSize: plot_fontsize
-													},
-													scaleLabel: {
-														display: true,
-														fontSize: plot_fontsize,
-														labelString: 'Number of Replicas'
-													}
-												}],
-												yAxes: [{
-													display: true,
-													ticks: {
-														fontSize: plot_fontsize
-													},
-													scaleLabel: {
-														display: true,
-														fontSize: plot_fontsize,
-														labelString: 'Throughput (KTPS)'
-													}
-												}]
-											}
-										}
-									};
-
-									jQuery(document).ready(function($){
-
-										var ctx = document.getElementById('canvas_00001').getContext('2d');
-										var ctx2 = document.getElementById('canvas_00002').getContext('2d');
-										window.myLine = new Chart(ctx, config);
-										window.myLine2 = new Chart(ctx2, config2);
-									});
-								}
-							})();
-						</script>
-					</div>
 				</div>
 			</section>
 			<!-- end section -->
 
+			<script type="text/javascript">
+				(function ()
+				{
+					if (typeof window.jQuery !== 'undefined' && window.Chart !== 'undefined')
+					{
+						var xa_labels = [1, 2, 3, 4, 5, 6];
+						var rdb_data = [10, 40, 42, 48, 52, 53];
+						var pbft_data = [34, 33, 30, 17, 16, 15];
+						var plot_fontsize = 24;
+
+						if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+							// some code..
+							plot_fontsize = 14
+						}
+
+						var config = {
+							type: 'line',
+							data: {
+								labels: xa_labels,
+								datasets: [{
+									label: 'ResilientDB',
+									// backgroundColor: 'rgba(235, 246, 236, 0.4)',
+									borderColor: 'rgb(204,0,0)',
+									fill: true,
+									borderWidth: 2,
+									data: rdb_data,
+								}, {
+									label: 'PBFT',
+									// backgroundColor: 'rgba(216, 234, 228, 0.4)',
+									borderColor: '#0085a2',
+									fill: true,
+									borderWidth: 2,
+									data: pbft_data,
+								}]
+							},
+							options: {
+								responsive: true,
+								defaultFontSize: plot_fontsize,
+								// title: {
+								// 	display: true,
+								// 	fontSize: 22,
+								// 	text: 'ResilientDB (Geo)',
+								// },
+								tooltips: {
+									mode: 'index',
+									intersect: false,
+								},
+								hover: {
+									mode: 'nearest',
+									intersect: true
+								},
+								scales: {
+									xAxes: [{
+										display: true,
+										ticks: {
+											fontSize: plot_fontsize
+										},
+										scaleLabel: {
+											display: true,
+											fontSize: plot_fontsize,
+											labelString: 'Number of Clusters (Regions)'
+										}
+									}],
+									yAxes: [{
+										display: true,
+										ticks: {
+											fontSize: plot_fontsize
+										},
+										scaleLabel: {
+											display: true,
+											fontSize: plot_fontsize,
+											labelString: 'Throughput (KTPS)'
+										}
+									}]
+								}
+							}
+						};
+
+						xa_labels = [4, 8, 16, 32, 46];
+						rdb_data = [350, 305, 310, 300, 225];
+						pbft_data = [180, 160, 125, 110, 50];
+
+						var config2 = {
+							type: 'line',
+							data: {
+								labels: xa_labels,
+								datasets: [{
+									label: 'ResilientDB',
+									// backgroundColor: 'rgba(235, 246, 236, 0.4)',
+									borderColor: 'rgb(204,0,0)',
+									fill: true,
+									borderWidth: 2,
+									data: rdb_data,
+								}, {
+									label: 'PBFT',
+									// backgroundColor: 'rgba(216, 234, 228, 0.4)',
+									borderColor: '#0085a2',
+									fill: true,
+									borderWidth: 2,
+									data: pbft_data,
+								}]
+							},
+							options: {
+								responsive: true,
+								defaultFontSize: 20,
+								// title: {
+								// 	display: true,
+								// 	fontSize: 22,
+								// 	text: 'ResilientDB (Parallel)',
+								// },
+								tooltips: {
+									mode: 'index',
+									intersect: false,
+								},
+								hover: {
+									mode: 'nearest',
+									intersect: true
+								},
+								scales: {
+									xAxes: [{
+										display: true,
+										ticks: {
+											fontSize: plot_fontsize
+										},
+										scaleLabel: {
+											display: true,
+											fontSize: plot_fontsize,
+											labelString: 'Number of Replicas'
+										}
+									}],
+									yAxes: [{
+										display: true,
+										ticks: {
+											fontSize: plot_fontsize
+										},
+										scaleLabel: {
+											display: true,
+											fontSize: plot_fontsize,
+											labelString: 'Throughput (KTPS)'
+										}
+									}]
+								}
+							}
+						};
+
+						jQuery(document).ready(function($){
+
+							var ctx = document.getElementById('canvas_00001').getContext('2d');
+							var ctx2 = document.getElementById('canvas_00002').getContext('2d');
+							window.myLine = new Chart(ctx, config);
+							window.myLine2 = new Chart(ctx2, config2);
+						});
+					}
+				})();
+			</script>
 			<!-- start section -->
 			<section id="roadmap" class="section jarallax" data-speed="0.5">
 				<img class="jarallax-img" src="img/bg_15.jpg" />
