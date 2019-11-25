@@ -177,7 +177,7 @@
 								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
 									<div class="__item text--xs-center">
 										<span class="num js-count" data-from="0" data-to="50000" data-before=">"></span><br>
-										Resilient TPS
+										Resilient TPS (Geo)
 									</div>
 								</div>
 
@@ -185,6 +185,20 @@
 									<div class="__item text--xs-center">
 										<span class="num js-count" data-from="1" data-to="60"></span><br>
 										Replicas Globally
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="0" data-to="350000"></span><br>
+										Resilient TPS (Parallel)
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="1" data-to="46"></span><br>
+										Replicas (Single Site)
 									</div>
 								</div>
 
@@ -208,10 +222,31 @@
 
 				<div class="grid grid--container" style="margin-top: 2em;">
 
-					<div style="width:100%;position:relative;">
-						<canvas id="canvas_00001" width="100%" style="margin-top: 2em; min-height: 8rem"></canvas>
-						<canvas id="canvas_00002" width="100%" style="margin-top: 4em; min-height: 8rem"></canvas>
 
+					<div class="row" style="margin-top: 3em">
+						<div class="col">
+							<h2 class="__title" style="text-align: center">ResilientDB (Geo)</h2>
+						</div>
+					</div>
+
+					<div class="row" style="margin-top: 3em">
+						<div class="col">
+							<canvas id="canvas_00001" width="100%"></canvas>
+						</div>
+					</div>
+
+					<div class="row" style="margin-top: 3em">
+						<div class="col">
+							<h2 class="__title" style="text-align: center">ResilientDB (Parallel)</h2>
+						</div>
+					</div>
+
+					<div class="row" style="margin-top: 3em">
+						<div class="col">
+							<canvas id="canvas_00002" width="100%"></canvas>
+						</div>
+					</div>
+					<div style="width:100%;position:relative;">
 						<script type="text/javascript">
 							(function ()
 							{
@@ -220,6 +255,12 @@
 									var xa_labels = [1, 2, 3, 4, 5, 6];
 									var rdb_data = [10, 40, 42, 48, 52, 53];
 									var pbft_data = [34, 33, 30, 17, 16, 15];
+									var plot_fontsize = 24;
+
+									if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+										// some code..
+										plot_fontsize = 14
+									}
 
 									var config = {
 										type: 'line',
@@ -243,12 +284,12 @@
 										},
 										options: {
 											responsive: true,
-											defaultFontSize: 18,
-											title: {
-												display: true,
-												fontSize: 22,
-												text: 'ResilientDB (Geo)',
-											},
+											defaultFontSize: plot_fontsize,
+											// title: {
+											// 	display: true,
+											// 	fontSize: 22,
+											// 	text: 'ResilientDB (Geo)',
+											// },
 											tooltips: {
 												mode: 'index',
 												intersect: false,
@@ -261,22 +302,22 @@
 												xAxes: [{
 													display: true,
 													ticks: {
-														fontSize: 16
+														fontSize: plot_fontsize
 													},
 													scaleLabel: {
 														display: true,
-														fontSize: 16,
+														fontSize: plot_fontsize,
 														labelString: 'Number of Clusters (Regions)'
 													}
 												}],
 												yAxes: [{
 													display: true,
 													ticks: {
-														fontSize: 16
+														fontSize: plot_fontsize
 													},
 													scaleLabel: {
 														display: true,
-														fontSize: 16,
+														fontSize: plot_fontsize,
 														labelString: 'Throughput (KTPS)'
 													}
 												}]
@@ -311,11 +352,11 @@
 										options: {
 											responsive: true,
 											defaultFontSize: 20,
-											title: {
-												display: true,
-												fontSize: 22,
-												text: 'ResilientDB (Parallel)',
-											},
+											// title: {
+											// 	display: true,
+											// 	fontSize: 22,
+											// 	text: 'ResilientDB (Parallel)',
+											// },
 											tooltips: {
 												mode: 'index',
 												intersect: false,
@@ -328,22 +369,22 @@
 												xAxes: [{
 													display: true,
 													ticks: {
-														fontSize: 16
+														fontSize: plot_fontsize
 													},
 													scaleLabel: {
 														display: true,
-														fontSize: 16,
+														fontSize: plot_fontsize,
 														labelString: 'Number of Replicas'
 													}
 												}],
 												yAxes: [{
 													display: true,
 													ticks: {
-														fontSize: 16
+														fontSize: plot_fontsize
 													},
 													scaleLabel: {
 														display: true,
-														fontSize: 16,
+														fontSize: plot_fontsize,
 														labelString: 'Throughput (KTPS)'
 													}
 												}]
