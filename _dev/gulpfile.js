@@ -20,20 +20,24 @@ var gulp        = require('gulp'),
 			js:     '../js/',
 			style:  '../css/',
 			img:    '../img/',
-			fonts:  '../fonts/'
+			fonts:  '../fonts/',
+			docs:  '../docs/'
 		},
 		src: {
 			html:  ['src/html/**/*.html','!src/html/template/**/*.html'],
 			js:    ['src/js/lib/device.js', 'src/js/lib/jquery-2.2.4.js', 'src/js/main.js'],
 			style:  'src/style/main.scss',
 			img:    'src/img/**/*.*',
+			docs:    'src/docs/**/*.*',
 			fonts:  'src/fonts/**/*.*'
+
 		},
 		watch: {
 			html:   'src/html/**/*.html',
 			js:     'src/js/**/*.js',
 			style: ['src/style/**/*.scss', 'src/style/**/*.css'],
 			img:    'src/img/**/*.*',
+			docs:    'src/docs/**/*.*',
 			fonts:  'src/fonts/**/*.*'
 		},
 		clean: [
@@ -41,6 +45,7 @@ var gulp        = require('gulp'),
 			'../js',
 			'../css',
 			'../img',
+			'../docs',
 			'../fonts'
 		]
 	};
@@ -113,6 +118,12 @@ gulp.task('fonts:build', function()
 		.pipe(gulp.dest(path.dist.fonts))
 });
 
+gulp.task('docs:build', function()
+{
+	return gulp.src(path.src.docs)
+		.pipe(gulp.dest(path.dist.docs))
+});
+
 
 gulp.task('js:dev', function ()
 {
@@ -153,6 +164,7 @@ gulp.task('build', gulp.series(
 	'js:build',
 	'style:build',
 	'fonts:build',
+	'docs:build',
 	'image:build'
 ));
 
@@ -161,6 +173,7 @@ gulp.task('dev', gulp.series(
 	'js:dev',
 	'style:dev',
 	'fonts:build',
+	'docs:build',
 	'image:dev'
 ));
 
@@ -173,6 +186,7 @@ gulp.task('watch', function (_cb)
 	watch(path.watch.js, 'js:dev');
 	watch(path.watch.img, 'image:dev');
 	watch(path.watch.fonts, 'fonts:build');
+	watch(path.watch.docs, 'docs:build');
 
 	_cb();
 });
