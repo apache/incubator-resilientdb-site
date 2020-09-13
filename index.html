@@ -299,14 +299,14 @@
 							<div class="row row--xs-middle">
 								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
 									<div class="__item text--xs-center">
-										<span class="num js-count" data-from="0" data-to="350000"></span><br>
+										<span class="num js-count" data-from="0" data-to="365354"></span><br>
 										Resilient TPS
 									</div>
 								</div>
 
 								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
 									<div class="__item text--xs-center">
-										<span class="num js-count" data-from="1" data-to="46"></span><br>
+										<span class="num js-count" data-from="1" data-to="91"></span><br>
 										Replicas
 									</div>
 								</div>
@@ -401,9 +401,9 @@
 							}
 						};
 
-						xa_labels = [4, 8, 16, 32, 46];
-						rdb_data = [350, 305, 310, 300, 225];
-						pbft_data = [180, 160, 125, 110, 50];
+						xa_labels = [4, 16, 32, 64, 91];
+						rdb_data = [355, 365, 356, 242, 210];
+						pbft_data = [195, 150, 95, 55, 38];
 
 						var config2 = {
 							type: 'line',
@@ -584,7 +584,7 @@
 
 									<span class="__line __line--active"></span>
 									<span class="__text __text--first">January 2020</span>
-									<h5 class="__text __text--second">Speculative Consensus</h5>
+									<h5 class="__text __text--second"><a href="https://arxiv.org/pdf/1911.00838.pdf">Speculative Consensus</a></h5>
 								</div>
 								<!-- end item -->
 
@@ -594,14 +594,14 @@
 
 									<span class="__line __line--active"></span>
 									<span class="__text __text--first">February 2020</span>
-									<h5 class="__text __text--second">Parallel Consensus</h5>
+									<h5 class="__text __text--second"><a href="https://drops.dagstuhl.de/opus/volltexte/2019/11351/pdf/LIPIcs-DISC-2019-44.pdf">Wait-free Consensus</a></h5>
 									<p>Scale Up</p>
 								</div>
 								<!-- end item -->
 
 
 								<!-- start item -->
-								<div class="__item __item--active __item--current">
+								<div class="__item __item--active">
 									<i class="__point"></i>
 
 									<span class="__line __line--active"></span>
@@ -614,7 +614,7 @@
 								<!-- end item -->
 
 								<!-- start item -->
-								<div class="__item __item--active __item--current">
+								<div class="__item __item--active">
 									<i class="__point"></i>
 
 									<span class="__line __line--active"></span>
@@ -626,9 +626,9 @@
 								<!-- end item -->
 
 								<!-- start item -->
-								<div class="__item">
+								<div class="__item __item--active">
 									<i class="__point"></i>
-									<span class="__line"></span>
+									<span class="__line __line--active"></span>
 									<span class="__text __text--first">May 2020</span>
 									<h5 class="__text __text--second">
 										<a style="text-decoration: none;" href="https://www.youtube.com/watch?v=33k9aFoDtBw">Geo Consensus</a>
@@ -643,12 +643,12 @@
 								<!-- end item -->
 
 								<!-- start item -->
-								<div class="__item">
+								<div class="__item __item--active __item--current">
 									<i class="__point"></i>
 
 									<span class="__line"></span>
-									<span class="__text __text--first">June 2020</span>
-									<h5 class="__text __text--second">Sharded Consensus</h5>
+									<span class="__text __text--first">August 2020</span>
+									<h5 class="__text __text--second"><a href="https://arxiv.org/pdf/2008.04450.pdf">Sharded Consensus: Cerberus</a></h5>
 									<p>Scale out</p>
 								</div>
 								<!-- end item -->
@@ -658,7 +658,7 @@
 									<i class="__point"></i>
 
 									<span class="__line"></span>
-									<span class="__text __text--first">July 2020</span>
+									<span class="__text __text--first">October 2020</span>
 									<h5 class="__text __text--second">Linear Consensus</h5>
 								</div>
 								<!-- end item -->
@@ -668,7 +668,7 @@
 									<i class="__point"></i>
 
 									<span class="__line"></span>
-									<span class="__text __text--first">July 2020</span>
+									<span class="__text __text--first">November 2020</span>
 									<h5 class="__text __text--second">RDMA Accelerated Consensus</h5>
 										<p>HPC Enabled</p>
 								</div>
@@ -677,9 +677,18 @@
 								<!-- start item -->
 								<div class="__item">
 									<i class="__point"></i>
+									<span class="__line"></span>
+									<span class="__text __text--first">December 2020</span>
+									<h5 class="__text __text--second">Geo Sharded Consensus</h5>
+								</div>
+								<!-- end item -->
+
+								<!-- start item -->
+								<div class="__item">
+									<i class="__point"></i>
 
 									<span class="__line"></span>
-									<span class="__text __text--first">Summer 2020</span>
+									<span class="__text __text--first">Winter 2021</span>
 									<h5 class="__text __text--second">Global Scale</h5>
 									<p>10,000 nodes</p>
 								</div>
@@ -689,7 +698,7 @@
 									<i class="__point"></i>
 
 									<span class="__line"></span>
-									<span class="__text __text--first">Fall 2020</span>
+									<span class="__text __text--first">Spring 2021</span>
 									<h5 class="__text __text--second">Million TPS</h5>
 								</div>
 								<!-- end item -->
@@ -846,7 +855,16 @@
 												<span class="h5">ResilientDB Architecture</span>
 											</a>
 										</div>
-
+										<!-- end item -->
+										<!-- start item -->
+										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
+											<a href="http://www.vldb.org/pvldb/vol13/p2893-rahnama.pdf" class="__document" data-aos="fade-left" data-aos-delay="100">
+												<i class="__ico fontello-document"></i>
+												<span class="h5">ResilientDB Demo</span>
+											</a>
+										</div>
+										<!-- end item -->
+										<!-- start item -->
 										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
 											<a href="https://arxiv.org/abs/1911.09208" class="__document" data-aos="fade-left" data-aos-delay="100">
 												<i class="__ico fontello-document"></i>
@@ -897,20 +915,9 @@
 
 										<!-- start item -->
 										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
-											<a href="docs/MW.pdf" class="__document" data-aos="fade-left" data-aos-delay="400">
+											<a href="https://arxiv.org/pdf/2008.04450.pdf" class="__document" data-aos="fade-left" data-aos-delay="100">
 												<i class="__ico fontello-document"></i>
-
-												<span class="h5">BFT Tutorial (System)</span>
-											</a>
-										</div>
-										<!-- end item -->
-
-										<!-- start item -->
-										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
-											<a href="docs/Consensus-MW-2019-Slide-Theory.pdf" class="__document" data-aos="fade-left" data-aos-delay="400">
-												<i class="__ico fontello-document"></i>
-
-												<span class="h5">BFT Tutorial (Theory)</span>
+												<span class="h5">Sharded Consensus</span>
 											</a>
 										</div>
 										<!-- end item -->
@@ -921,6 +928,26 @@
 												<i class="__ico fontello-document"></i>
 
 												<span class="h5">Coordination-Free <br> Byzantine Replication</span>
+											</a>
+										</div>
+										<!-- end item -->
+
+										<!-- start item -->
+										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
+											<a href="docs/Tutorial_System_VLDB_2020.pdf" class="__document" data-aos="fade-left" data-aos-delay="400">
+												<i class="__ico fontello-document"></i>
+
+												<span class="h5">BFT Tutorial (System)</span>
+											</a>
+										</div>
+										<!-- end item -->
+
+										<!-- start item -->
+										<div class="col col--xs-6 col--sm-auto col--md-6 col--lg-auto">
+											<a href="docs/Tutorial_Theory_VLDB_2020.pdf" class="__document" data-aos="fade-left" data-aos-delay="400">
+												<i class="__ico fontello-document"></i>
+
+												<span class="h5">BFT Tutorial (Theory)</span>
 											</a>
 										</div>
 										<!-- end item -->
