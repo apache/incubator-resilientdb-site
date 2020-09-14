@@ -7503,6 +7503,9 @@ label {
   .timeline--style-2 .__item .__text--second {
     margin-top: 0
   }
+  .timeline--style-2 .__item .__text--second a {
+    text-decoration: none
+  }
   .company-contacts .__item {
     text-align: left
   }

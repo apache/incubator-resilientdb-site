@@ -236,7 +236,12 @@ $gutter: 30px;
 					}
 				}
 
-				&--second { margin-top: 0 }
+				&--second {
+					margin-top: 0;
+					a {
+						text-decoration: none;
+					}
+				}
 			}
 		}
 	}
