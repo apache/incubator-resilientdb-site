@@ -29261,6 +29261,7 @@ module.exports = function(Chart) {
 	function _counters ()
 	{
 		var counter = $('.js-count');
+		var counter_slo = $('.js-count-slo');
 
 		function _countInit() {
 			counter.each(function() {
@@ -29273,6 +29274,21 @@ module.exports = function(Chart) {
 						.countTo({
 							from: 0,
 							speed: 2000,
+							refreshInterval: 100
+						});
+				};
+			});
+
+			counter_slo.each(function() {
+				var $this = $(this);
+
+				if( $this.is_on_screen() && !$this.hasClass('animate') )
+				{
+					$this
+						.addClass('animate')
+						.countTo({
+							from: 0,
+							speed: 3000,
 							refreshInterval: 100
 						});
 				};

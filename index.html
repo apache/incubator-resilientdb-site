@@ -323,6 +323,72 @@
 			</section>
 			<!-- end section -->
 
+			<!-- start section -->
+			<section class="section">
+
+				<div class="grid grid--container  col--xs-align-bottom">
+					<h2 class="__title" style="text-align: center">ResilientDB (Geo Sharded)</h2>
+
+					<div class="facts">
+						<div class="__inner">
+							<div class="row row--xs-middle">
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="0" data-to="1200000"></span><br>
+										Resilient TPS
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="0" data-to="3"></span>
+										<span class="num">.</span>
+										<span class="num js-count-slo" data-from="0" data-to="3"></span>
+										<br>
+										Resilient Latency (Seconds)
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="1" data-to="5"></span><br>
+										Continents
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="1" data-to="10"></span><br>
+										Countries
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="1" data-to="15"></span><br>
+										Regions
+									</div>
+								</div>
+
+								<div class="col col--xs-6 col--sm-6 col--md-3 col--sm-align-center col-md-align-center">
+									<div class="__item text--xs-center">
+										<span class="num js-count" data-from="1" data-to="420"></span><br>
+										Replicas Globally
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row" style="margin-top: 3em">
+						<div class="col">
+							<canvas id="canvas_00003" width="100%"></canvas>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end section -->
+
 			<script type="text/javascript">
 				(function ()
 				{
@@ -468,16 +534,113 @@
 							}
 						};
 
+						xa_labels = ['Partitioned Workload',
+								 'Very Low',
+								'Low',
+								'Medium',
+								'High'];
+						var tput_data = [1200, 254, 196, 138, 81];
+						var lat_data = [3.3, 6.41, 7.01, 5.11, 6.82];
+
+						var config3 = {
+							type: 'line',
+							data: {
+								labels: xa_labels,
+								datasets: [{
+									label: 'Throughput',
+									yAxisID: 'tput',
+									// backgroundColor: 'rgba(235, 246, 236, 0.4)',
+									borderColor: '#0085a2',
+									fill: true,
+									borderWidth: 2,
+									data: tput_data,
+								}, {
+									label: 'Latency',
+									yAxisID: 'lat',
+									// backgroundColor: 'rgba(216, 234, 228, 0.4)',
+									borderColor: '#ff8b00',
+									fill: true,
+									borderWidth: 2,
+									data: lat_data,
+								}]
+							},
+							options: {
+								responsive: true,
+								defaultFontSize: 20,
+								// title: {
+								// 	display: true,
+								// 	fontSize: 22,
+								// 	text: 'ResilientDB (Geo Sharded)',
+								// },
+								tooltips: {
+									mode: 'index',
+									intersect: false,
+								},
+								hover: {
+									mode: 'nearest',
+									intersect: true
+								},
+								scales: {
+									xAxes: [{
+										display: true,
+										type: 'category',
+										ticks: {
+											autoSkip: false,
+											fontSize: (plot_fontsize-4)
+										},
+										scaleLabel: {
+											display: true,
+											fontSize: plot_fontsize,
+											labelString: 'Percentage of Cross-shard Transactions Spanning All Shards'
+										}
+									}],
+									yAxes: [{
+										id: 'tput',
+										display: true,
+										type: 'linear',
+										position: 'left',
+										ticks: {
+											fontSize: (plot_fontsize-6)
+										},
+										scaleLabel: {
+											display: true,
+											fontSize: plot_fontsize-4,
+											labelString: 'Throughput (KTPS)'
+										}
+									},
+										{
+											id: 'lat',
+											display: true,
+											type: 'linear',
+											position: 'right',
+											ticks: {
+												padding: 10,
+												fontSize: (plot_fontsize-6)
+											},
+											scaleLabel: {
+												display: true,
+												fontSize: plot_fontsize-4,
+												labelString: 'Latency (Seconds)'
+											}
+										}]
+								}
+							}
+						};
+
 						jQuery(document).ready(function($){
 
 							var ctx = document.getElementById('canvas_00001').getContext('2d');
 							var ctx2 = document.getElementById('canvas_00002').getContext('2d');
+							var ctx3 = document.getElementById('canvas_00003').getContext('2d');
 							window.myLine = new Chart(ctx, config);
 							window.myLine2 = new Chart(ctx2, config2);
+							window.myLine3 = new Chart(ctx3, config3);
 						});
 					}
 				})();
 			</script>
+
+
 			<!-- start section -->
 			<section id="roadmap" class="section jarallax" data-speed="0.5">
 				<img class="jarallax-img" src="img/bg_15.jpg" />
@@ -654,10 +817,10 @@
 								<!-- end item -->
 
 								<!-- start item -->
-								<div class="__item __item--active __item--current">
+								<div class="__item __item--active">
 									<i class="__point"></i>
 
-									<span class="__line"></span>
+									<span class="__line __line--active"></span>
 									<span class="__text __text--first">October 2020</span>
 									<h5 class="__text __text--second">
 										<a href="https://arxiv.org/abs/1911.00837">Concurrent Consensus</a>
@@ -666,19 +829,19 @@
 								<!-- end item -->
 
 								<!-- start item -->
-								<div class="__item">
+								<div class="__item __item--active">
 									<i class="__point"></i>
 
-									<span class="__line"></span>
+									<span class="__line __line--active"></span>
 									<span class="__text __text--first">November 2020</span>
 									<h5 class="__text __text--second">Linear Consensus</h5>
 								</div>
 								<!-- end item -->
 
 								<!-- start item -->
-								<div class="__item">
+								<div class="__item __item--active __item--current">
 									<i class="__point"></i>
-									<span class="__line"></span>
+									<span class="__line __line--active"></span>
 									<span class="__text __text--first">December 2020</span>
 									<h5 class="__text __text--second">Geo Sharded Consensus</h5>
 								</div>
