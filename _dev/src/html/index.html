@@ -464,10 +464,10 @@
 						};
 
 						xa_labels = ['Partitioned Workload',
-								 'Very Low',
-								'Low',
+								 'Low',
 								'Medium',
-								'High'];
+								'High',
+							'Extreme'];
 						var tput_data = [1200, 254, 196, 138, 81];
 						var lat_data = [3.3, 6.41, 7.01, 5.11, 6.82];
 
@@ -520,7 +520,7 @@
 										scaleLabel: {
 											display: true,
 											fontSize: plot_fontsize,
-											labelString: 'Percentage of Cross-shard Transactions Spanning All Shards'
+											labelString: 'The Degree of Cross-shard Transactions Spanning All Shards'
 										}
 									}],
 									yAxes: [{
