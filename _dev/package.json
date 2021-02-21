@@ -8,7 +8,7 @@
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
-    "gulp-file-include": "^2.2.2",
+    "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^6.2.0",
     "gulp-reference": "^1.1.2",
     "gulp-rename": "^1.4.0",
