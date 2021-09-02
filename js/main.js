@@ -28566,6 +28566,11 @@ module.exports = function(Chart) {
 			var $this = $(this),
 				$parent = $this.parent();
 
+			if ($this.hasClass("external-link"))
+			{
+				return;
+			}
+
 			if ( jMenuToggler.is(':visible') && $this.next(jSubmenu).length )
 			{
 				if ( $this.next().is(':visible') )
