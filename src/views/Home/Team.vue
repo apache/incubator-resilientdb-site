@@ -4,7 +4,7 @@
 	<div class="main">
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/mo.jpeg" />
+				<img src="@/assets/team_img/mo.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Mohammad Sadoghi</h3>
@@ -22,7 +22,7 @@
 	<div class="main2">
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/suyash.jpeg" />
+				<img src="@/assets/team_img/suyash.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Suyash Gupta</h3>
@@ -36,7 +36,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/sajjad.jpeg" />
+				<img src="@/assets/team_img/sajjad.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Sajjad Rahnama</h3>
@@ -50,7 +50,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/j.jpg" />
+				<img src="@/assets/team_img/j.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Jelle Hellings</h3>
@@ -62,7 +62,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/tq.jpeg" />
+				<img src="@/assets/team_img/tq.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Thamir Qadah</h3>
@@ -76,7 +76,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/dakai.jpg" />
+				<img src="@/assets/team_img/dakai.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Kang Dakai</h3>
@@ -88,7 +88,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/JunchaoChen.png" />
+				<img src="@/assets/team_img/JunchaoChen.png" />
 			</div>
 			<div class="caption">
 				<h3>Junchao Chen</h3>
@@ -102,7 +102,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/SheshaVishnuPrasad.jpg" />
+				<img src="@/assets/team_img/SheshaVishnuPrasad.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Shesha Vishnu Prasad</h3>
@@ -116,7 +116,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/JinxiaoYu.jpg" />
+				<img src="@/assets/team_img/JinxiaoYu.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Jinxiao Yu</h3>
@@ -130,7 +130,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/WayneWang.jpg" />
+				<img src="@/assets/team_img/WayneWang.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Wayne Wang</h3>
@@ -144,7 +144,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/ArindaamRoy.jpg" />
+				<img src="@/assets/team_img/ArindaamRoy.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Arindaam Roy</h3>
@@ -158,7 +158,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/DivjeetSinghJas.png" />
+				<img src="@/assets/team_img/DivjeetSinghJas.png" />
 			</div>
 			<div class="caption">
 				<h3>Divjeet Singh Jas</h3>
@@ -172,7 +172,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/Julieta.JPG" />
+				<img src="@/assets/team_img/Julieta.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Julieta Duarte</h3>
@@ -186,7 +186,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/GlennChen.jpg" />
+				<img src="@/assets/team_img/GlennChen.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Glenn Chen</h3>
@@ -200,7 +200,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/SeongwooChoi.jpeg" />
+				<img src="@/assets/team_img/SeongwooChoi.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Seongwoo Choi</h3>
@@ -214,7 +214,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/TroyInsixiengmay.jpg" />
+				<img src="@/assets/team_img/TroyInsixiengmay.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Troy Insixiengmay</h3>
@@ -231,7 +231,7 @@
 	<div class="main2">
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/rohan.jpeg" />
+				<img src="@/assets/team_img/rohan.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Rohan Sogani</h3>
@@ -245,7 +245,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/priya.jpeg" />
+				<img src="@/assets/team_img/priya.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Priya Holani</h3>
@@ -259,7 +259,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/dhruv.jpeg" />
+				<img src="@/assets/team_img/dhruv.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Dhruv Krishnan</h3>
@@ -273,7 +273,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/shubham.jpeg" />
+				<img src="@/assets/team_img/shubham.jpeg" />
 			</div>
 			<div class="caption">
 				<h3>Shubham Pandey</h3>
@@ -287,7 +287,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/howard.png" />
+				<img src="@/assets/team_img/howard.png" />
 			</div>
 			<div class="caption">
 				<h3>Haojun (Howard) Zhu</h3>
@@ -301,7 +301,7 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="src/assets/team_img/alejandro.JPG" />
+				<img src="@/assets/team_img/alejandro.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Alejandro Armas</h3>

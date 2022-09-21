@@ -79,7 +79,7 @@
 				<div class="content">
 					<i>
 						<img
-							src="src/assets/docker.png"
+							src="@/assets/docker.png"
 							height="60"
 							alt="docker"
 							data-was-processed="true"
@@ -97,7 +97,7 @@
 				<div class="content">
 					<i>
 						<img
-							src="src/assets/memory.png"
+							src="@/assets/memory.png"
 							height="60"
 							alt="in-memory"
 							data-was-processed="true"
@@ -115,7 +115,7 @@
 				<div class="content">
 					<i>
 						<img
-							src="src/assets/secure.png"
+							src="@/assets/secure.png"
 							height="60"
 							alt="secure"
 							data-was-processed="true"
@@ -132,13 +132,13 @@
 			</div>
 		</div>
 	</section>
-	<section class="timeline">
+	<!-- <section class="timeline">
 		<div class="info">
 			<div class="title">PROGRESS TO DATE</div>
 			<div class="head">ResilientDB Roadmap</div>
 			<timeline />
 		</div>
-	</section>
+	</section> -->
 
 	<section class="charts">
 		<div class="info">
@@ -495,8 +495,7 @@
 		FileTextOutlined,
 	} from "@ant-design/icons-vue";
 
-	// import Timeline from "@/src/views/Home/Timeline.vue"
-	import Timeline from "../Home/Timeline.vue";
+	// import Timeline from "../Home/Timeline.vue";
 	import Team from "./Team.vue";
 	import FooterSection from "./FooterSection.vue";
 	import Sponsors from "./Sponsors.vue";
@@ -512,7 +511,7 @@
 			PlayCircleOutlined,
 			CodeOutlined,
 			ReadOutlined,
-			Timeline,
+			// Timeline,
 			Team,
 			Chart1,
 			Chart2,
@@ -528,7 +527,7 @@
 <style scoped>
 	/* HERO SECTION */
 	.hero {
-		/* background-image: url("src/assets/background.png"); */
+		/* background-image: url("@/assets/background.png"); */
 		background-color: #cccccc;
 		/* background-repeat: no-repeat; */
 		/* background-size: 100%; */
@@ -544,7 +543,7 @@
 		width: 101%;
 		height: 105%;
 		position: absolute;
-		background-image: url("src/assets/background.png");
+		background-image: url("@/assets/background.png");
 		background-size: cover;
 		filter: blur(1.25px);
 	}
@@ -620,7 +619,7 @@
 	/* TIMELINE SECTION */
 	.timeline {
 		background: #000103;
-		/* background-image: url("src/assets/timeline.png"); */
+		/* background-image: url("@/assets/timeline.png"); */
 		background-color: #cccccc;
 		/* background-size: 100%; */
 		position: relative;
@@ -633,7 +632,7 @@
 		height: 100%;
 		position: absolute;
 		background: #000103;
-		/* background-image: url("src/assets/timeline.png"); */
+		/* background-image: url("@/assets/timeline.png"); */
 		background-size: cover;
 		filter: blur(5px);
 	}

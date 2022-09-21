@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { useBlocksStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
 	import {
@@ -141,7 +141,6 @@
 
 <template>
 	<div class="container timeline">
-
 		<div class="grid letOverflow">
 			<a-table :columns="columns" :data-source="data" bordered>
 				<!-- <template #headerCell="{ column }">
@@ -172,7 +171,6 @@
 							<fire-two-tone two-tone-color="red" /> {{ record.gasUsed }}
 						</div>
 					</template>
-					
 				</template>
 				<template #title><span>Latest Blocks</span></template>
 

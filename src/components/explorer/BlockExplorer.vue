@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import BlocksTable from "../explorer/BlocksTable.vue";
 	import MetaData from "../explorer/MetaData.vue";
 
