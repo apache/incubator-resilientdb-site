@@ -1,0 +1,137 @@
+/* --------------------------------
+   projects
+-------------------------------- */
+
+$gutter: 30px;
+
+.projects
+{
+	.__inner { margin-bottom: -$gutter; }
+
+	.__item
+	{
+		position: relative;
+		width: 100%;
+		margin-bottom: $gutter;
+
+		a { text-decoration: none; }
+
+		.__image
+		{
+			position: relative;
+			width: 100%;
+			height: 0;
+			padding-top: percentage(390/370);
+			margin: auto;
+			overflow: hidden;
+
+			img
+			{
+				@extend %block-absolute--full;
+				@include object-fit(cover, 50% 50%);
+				@include transition(
+					transform 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+					opacity   200ms
+				);
+			}
+		}
+
+		.__content
+		{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 25px 15px;
+			color: $white-color;
+		}
+
+		.__category
+		{
+			margin-bottom: 20px;
+			font-size: rem-calc(16px);
+			font-weight: 700;
+			line-height: 1.2;
+		}
+
+		.__title
+		{
+			line-height: 1.3;
+			color: inherit;
+		}
+
+		&:hover
+		{
+			.__image
+			{
+				img { transform: scale(1.2); }
+			}
+		}
+	}
+
+	&--slider
+	{
+		margin-left: -$gutter/2;
+		margin-right: -$gutter/2;
+
+		.slick-slide
+		{
+			padding-left: $gutter/2;
+			padding-right: $gutter/2;
+		}
+
+		.slick-dots { margin-top: 50px; }
+
+		.__item
+		{
+			vertical-align: top;
+			height: 100%;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	.projects
+	{
+		.__item
+		{
+			.__content
+			{
+				padding: 25px;
+			}
+		}
+	}
+}
+
+@include min-screen($md-width) // 768
+{
+	.projects
+	{
+		.__item
+		{
+			.__content
+			{
+				padding: 30px;
+			}
+		}
+	}
+}
+
+@include min-screen($lg-width) // 992
+{
+	
+}
+
+@include min-screen($xl-width) // 1200
+{
+	.projects
+	{
+		.grid:not(.grid--container) &
+		{
+			margin-left: $gutter;
+			margin-right: $gutter;
+		}
+	}
+}

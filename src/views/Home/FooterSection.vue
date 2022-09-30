@@ -16,42 +16,48 @@
 			<div class="col">
 				<h1>Resources</h1>
 				<ul>
-					<li>Documentation</li>
+					<!-- <li>Documentation</li> -->
 					<li>
 						<a href="https://resilientdb.com/blog/"> ExpoLab Blog </a>
 					</li>
 					<li>
 						<a href="https://github.com/resilientdb/resilientdb"> Github </a>
 					</li>
+					<li>
+						<a href="https://resilientdb.com/"> Legacy ResilientDB </a>
+					</li>
 				</ul>
 			</div>
 			<div class="col">
-				<h1>Support</h1>
+				<h1>Contact us</h1>
 				<ul>
-					<li>Contact us</li>
+					<li>info@resilientdb.com</li>
+					<li>support@resilientdb.com</li>
 				</ul>
 			</div>
 			<div class="col social">
 				<h1>Social</h1>
 				<ul>
-					<li>
+					<!-- <li>
 						<a href="#"><linkedin-outlined /></a>
-					</li>
+					</li> -->
 					<li>
-						<a href="#"> <twitter-outlined /></a>
+						<a href="https://twitter.com/resilientdb"> <twitter-outlined /></a>
 					</li>
 				</ul>
 			</div>
-			<div class="clearfix"></div>
+			<!-- <div class="clearfix"></div> -->
 		</div>
 		<section class="copy">
+			<img src="@/assets/logo_slogan.png" style="width: 230px" />
+
 			<div class="copy_text">
-				<p>Copyright &copy; 2022, ResilientDB</p>
+				<p>Copyright &copy; 2019-2022, ResilientDB</p>
 			</div>
-			<div class="terms">
+			<!-- <div class="terms">
 				<a href="#">Terms of service</a>
 				<a href="#">Privacy policy</a>
-			</div>
+			</div> -->
 		</section>
 	</div>
 	<!-- END OF FOOTER -->
@@ -68,7 +74,8 @@
 	.copy {
 		display: flex;
 		justify-content: space-between;
-		flex-direction: row;
+		flex-direction: column;
+		align-items: center;
 	}
 	.copy_text {
 		margin-left: 1rem;
@@ -156,6 +163,9 @@
 		}
 	}
 	@media only screen and (max-width: 500px) {
+		.contain {
+			flex-direction: column;
+		}
 		.footer .col {
 			width: 50%;
 		}
@@ -167,6 +177,9 @@
 		}
 	}
 	@media only screen and (max-width: 340px) {
+		.contain {
+			flex-direction: column;
+		}
 		.footer .col {
 			width: 100%;
 		}

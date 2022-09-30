@@ -1,13 +1,13 @@
 <template>
 	<div class="header">
-		<div style="display: flex; align-items: center">
+		<div class="logo" style="display: flex; align-items: center">
 			<img src="@/assets/resdb_logo_80.png" class="logo" alt="ResilientDB" />
 			<div class="title">
 				ResilientDB
 				<div class="version">NexRes</div>
 			</div>
 		</div>
-		<div style="display: flex">
+		<div class="tabs" style="display: flex">
 			<horizontal-menu-bar />
 		</div>
 	</div>
@@ -23,6 +23,7 @@
 
 <style scoped lang="scss">
 	@import "@/styles/variables.scss";
+
 	.header {
 		display: flex;
 		align-items: center;
@@ -31,7 +32,20 @@
 		// background: $secondary-color-dark;
 		background: #000103;
 	}
+	@media (max-width: 725px) {
+		.header {
+			display: inline;
+		}
 
+		.header .logo {
+			justify-content: center;
+		}
+
+		.header .tabs {
+			justify-content: center;
+			margin-top: 1rem;
+		}
+	}
 	.header .title {
 		margin-left: 10px;
 		font-size: 20px;

@@ -1,0 +1,12 @@
+.col
+{
+	flex: 0 0 100%;
+	width: 100%;
+	padding-left: $column-gutter / 2;
+	padding-right: $column-gutter / 2;
+
+	@include variant(no-gutters) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

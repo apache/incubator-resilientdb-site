@@ -1,0 +1,347 @@
+*
+{
+	padding: 0;
+	margin: 0;
+
+	&,
+	::after,
+	::before
+	{
+		box-sizing: inherit;
+	}
+}
+
+html
+{
+	font-size: $base-font-size;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
+}
+
+body
+{
+	position: relative;
+	line-height: 1.5;
+	font:
+	{
+		size: rem-calc(18px);
+		family: -apple-system, BlinkMacSystemFont, $base-fontFamily;
+		weight: 400;
+	};
+	color: rgb(136, 138, 139);
+	background-color: $white-color;
+	min-height: 100vh;
+	overflow-x: hidden;
+
+			  display: flex;
+			  flex-direction: column;
+	main    { flex: 1 0 auto; }
+	#footer { flex: 0 0 auto; }
+}
+
+ul, ol
+{
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+}
+
+iframe
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+table
+{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img
+{
+	vertical-align: middle;
+	-webkit-user-drag: none;
+	user-drag: none;
+	@include userSelect(none);
+}
+
+.img-responsive
+{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.center-block
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lazy[src]
+{
+	opacity: 0;
+	will-change: opacity;
+	@include transition(opacity 200ms);
+
+	&.loaded { opacity: 1; }
+}
+
+/* embed responsive */
+.embed-responsive
+{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	&-item,
+	iframe,
+	embed,
+	object,
+	video
+	{
+		@extend %block-absolute--full;
+		border: 0;
+	}
+
+	&-21by9 { padding-top: percentage(9 / 21); }
+	&-16by9 { padding-top: percentage(9 / 16); }
+	&-4by3  { padding-top: percentage(3 / 4); }
+	&-1by1  { padding-top: percentage(1 / 1); }
+}
+
+.section
+{
+	position: relative;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	z-index: 0;
+
+	&--no-pt { padding-top: 0 !important; }
+	&--no-pb { padding-bottom: 0 !important; }
+
+	&--with-border { box-shadow: inset 0 1px #f0f0f0; }
+
+	&--base-bg { background-color: $primary-color; }
+	&--light-bg { background-color: #fafbfb; }
+	&--light-blue-bg { background-color: #eef2f4; }
+	&--blue-bg { background-color: #20345f; }
+	&--dark-bg
+	{
+		background-color: #292b30;
+		color: $white-color;
+	}
+
+	@include min-screen($md-width)
+	{
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+
+	@include min-screen($lg-width)
+	{
+		padding-top: 140px;
+		padding-bottom: 140px;
+	}
+}
+
+*
+{
+	>.pattern
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+}
+
+/* parallax */
+.jarallax
+{
+	position: relative;
+	@extend %bg-cover;
+	z-index: 0;
+
+	> .jarallax-img
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include object-fit(cover);
+		z-index: -1;
+	}
+
+	.desktop & { background-attachment: fixed; }
+}
+
+/* float */
+.fl-l { @extend %fl-l; }
+.fl-r { @extend %fl-r; }
+
+/* vertical align */
+.v-top    { @extend %v-top; }
+.v-middle { @extend %v-middle; }
+.v-bottom { @extend %v-bottom; }
+
+.v-align
+{
+	@extend %height-full;
+
+	&:before
+	{
+		content: "";
+		@extend %width-0;
+		@extend %height-full;
+		margin-left: -4.5px;
+	}
+
+	&:before,
+	>*
+	{
+		@extend %display-inline-block;
+		@extend %v-middle;
+	}
+
+	>* { @extend %width-full; }
+}
+
+.b-table
+{
+	@extend %display-table;
+	@extend %width-full;
+
+	.cell { @extend %display-table-cell; }
+}
+
+/* circled element */
+
+.circled { @include border-radius(50%); }
+
+/* column margin bottom */
+
+.col-MB-60 { margin-bottom: 60px; }
+.col-MB-55 { margin-bottom: 55px; }
+.col-MB-50 { margin-bottom: 50px; }
+.col-MB-45 { margin-bottom: 45px; }
+.col-MB-40 { margin-bottom: 40px; }
+.col-MB-35 { margin-bottom: 35px; }
+.col-MB-30 { margin-bottom: 30px; }
+.col-MB-25 { margin-bottom: 25px; }
+.col-MB-20 { margin-bottom: 20px; }
+.col-MB-15 { margin-bottom: 15px; }
+.col-MB-10 { margin-bottom: 10px; }
+.col-MB-5  { margin-bottom: 5px; }
+.col-MB-0  { margin-bottom: 0px; }
+
+@include min-screen($sm-width)
+{
+	.col-sm-MB-60 { margin-bottom: 60px; }
+	.col-sm-MB-55 { margin-bottom: 55px; }
+	.col-sm-MB-50 { margin-bottom: 50px; }
+	.col-sm-MB-45 { margin-bottom: 45px; }
+	.col-sm-MB-40 { margin-bottom: 40px; }
+	.col-sm-MB-35 { margin-bottom: 35px; }
+	.col-sm-MB-30 { margin-bottom: 30px; }
+	.col-sm-MB-25 { margin-bottom: 25px; }
+	.col-sm-MB-20 { margin-bottom: 20px; }
+	.col-sm-MB-15 { margin-bottom: 15px; }
+	.col-sm-MB-10 { margin-bottom: 10px; }
+	.col-sm-MB-5  { margin-bottom: 5px; }
+	.col-sm-MB-0  { margin-bottom: 0px; }
+}
+
+@include min-screen($md-width)
+{
+	.col-md-MB-60 { margin-bottom: 60px; }
+	.col-md-MB-55 { margin-bottom: 55px; }
+	.col-md-MB-50 { margin-bottom: 50px; }
+	.col-md-MB-45 { margin-bottom: 45px; }
+	.col-md-MB-40 { margin-bottom: 40px; }
+	.col-md-MB-35 { margin-bottom: 35px; }
+	.col-md-MB-30 { margin-bottom: 30px; }
+	.col-md-MB-25 { margin-bottom: 25px; }
+	.col-md-MB-20 { margin-bottom: 20px; }
+	.col-md-MB-15 { margin-bottom: 15px; }
+	.col-md-MB-10 { margin-bottom: 10px; }
+	.col-md-MB-5  { margin-bottom: 5px; }
+	.col-md-MB-0  { margin-bottom: 0px; }
+}
+
+@include min-screen($lg-width)
+{
+	.col-lg-MB-60 { margin-bottom: 60px; }
+	.col-lg-MB-55 { margin-bottom: 55px; }
+	.col-lg-MB-50 { margin-bottom: 50px; }
+	.col-lg-MB-45 { margin-bottom: 45px; }
+	.col-lg-MB-40 { margin-bottom: 40px; }
+	.col-lg-MB-35 { margin-bottom: 35px; }
+	.col-lg-MB-30 { margin-bottom: 30px; }
+	.col-lg-MB-25 { margin-bottom: 25px; }
+	.col-lg-MB-20 { margin-bottom: 20px; }
+	.col-lg-MB-15 { margin-bottom: 15px; }
+	.col-lg-MB-10 { margin-bottom: 10px; }
+	.col-lg-MB-5  { margin-bottom: 5px; }
+	.col-lg-MB-0  { margin-bottom: 0px; }
+}
+
+@include min-screen($xl-width)
+{
+	.col-xl-MB-60 { margin-bottom: 60px; }
+	.col-xl-MB-55 { margin-bottom: 55px; }
+	.col-xl-MB-50 { margin-bottom: 50px; }
+	.col-xl-MB-45 { margin-bottom: 45px; }
+	.col-xl-MB-40 { margin-bottom: 40px; }
+	.col-xl-MB-35 { margin-bottom: 35px; }
+	.col-xl-MB-30 { margin-bottom: 30px; }
+	.col-xl-MB-25 { margin-bottom: 25px; }
+	.col-xl-MB-20 { margin-bottom: 20px; }
+	.col-xl-MB-15 { margin-bottom: 15px; }
+	.col-xl-MB-10 { margin-bottom: 10px; }
+	.col-xl-MB-5  { margin-bottom: 5px; }
+	.col-xl-MB-0  { margin-bottom: 0px; }
+}
+
+.contact-block
+{
+	.contact-link
+	{
+		text-decoration: none;
+
+		&:hover,
+		&:focus
+		{
+			text-decoration: underline;
+		}
+	}
+}
+
+.light {
+	font-weight: lighter;
+}
+
+.thick {
+	font-weight: bold;
+}
+
+.thicker {
+	font-weight: 900;
+}

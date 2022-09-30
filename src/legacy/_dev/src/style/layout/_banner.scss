@@ -1,0 +1,70 @@
+/* --------------------------------
+   banner
+-------------------------------- */
+
+.banner
+{
+	.img-place
+	{
+		position: relative;
+	}
+
+	.price
+	{
+		position: absolute;
+		top: 15%;
+		left: 22%;
+		display: inline-block;
+		vertical-align: top;
+		width: 140px;
+		height: 140px;
+		background-color: #ed2139;
+		line-height: 140px;
+		font-size: rem-calc(40px);
+		font-weight: 900;
+		font-family: Lato,sans-serif;
+		text-align: center;
+		color: $white-color;
+		@include border-radius(50%);
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+
+}
+
+@include min-screen($md-width) // 768
+{
+
+}
+
+@include min-screen($lg-width) // 992
+{
+	.banner
+	{
+		background-image: url(../img/video_card_large.png);
+		background-repeat: no-repeat;
+		background-position: left 45vw bottom 65%;
+
+		.img-place
+		{
+			position: static;
+		}
+
+		.price
+		{
+			
+			top: 10%;
+			left: 60%;
+			width: 175px;
+			height: 175px;
+			line-height: 175px;
+		}
+	}
+}
+
+@include min-screen($xl-width) // 1200
+{
+
+}

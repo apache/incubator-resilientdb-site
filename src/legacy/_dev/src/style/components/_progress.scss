@@ -1,0 +1,175 @@
+/* --------------------------------
+   progress
+-------------------------------- */
+
+.progress
+{
+	margin:30px 0;
+	padding: 40px 0;
+
+	&__inner
+	{
+		position: relative;
+		background-color: #f0f0f0;
+		font-family: 'Lato', sans-serif;
+		@include border-radius(30px);
+	}
+
+	.__bar
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: #0fc569;
+		background: -webkit-gradient(
+			linear, 0 0, 100% 100%,
+			color-stop(.25, #0fbb64),
+			color-stop(.25, #0fc569),
+			color-stop(.5, #0fc569),
+			color-stop(.5, #0fbb64),
+			color-stop(.75, #0fbb64),
+			color-stop(.75, #0fc569),
+			to(#0fc569)
+		);
+		background-image: -webkit-gradient(
+			linear, 0 0, 100% 100%,
+			color-stop(.25, #0fbb64),
+			color-stop(.25, #0fc569),
+			color-stop(.5, #0fc569),
+			color-stop(.5, #0fbb64),
+			color-stop(.75, #0fbb64),
+			color-stop(.75, #0fc569),
+			to(#0fc569)
+		);
+		background: linear-gradient(
+			135deg,
+			#0fbb64 25%,
+			#0fc569 25%,
+			#0fc569 50%,
+			#0fbb64 50%,
+			#0fbb64 75%,
+			#0fc569 75%,
+			#0fc569
+		);
+		@include border-radius(30px);
+	}
+
+	.__label
+	{
+		position: absolute;
+		top: -8px;
+		bottom: -8px;
+		width: 1px;
+		background-color: #c0c0c0;
+		line-height: 1;
+		font-size: rem-calc(14px);
+		color: #404040;
+
+		strong
+		{
+			position: absolute;
+			left: 50%;
+			bottom: 100%;
+			margin-bottom: 10px;
+			transform: translateX(-50%);
+		}
+	}
+
+	.__max-val
+	{
+		position: absolute;
+		right: 20px;
+		line-height: 38px;
+		font-size: rem-calc(14px);
+		color: #404040;
+	}
+}
+
+.progress--small
+{
+	.progress__inner { height: 20px; }
+
+	.__bar
+	{
+		background-size: 20px 20px;
+
+		&--animate
+		{
+			animation: progress-bar-stripes--small 3s linear infinite;
+
+			@keyframes progress-bar-stripes--small {
+				from { background-position: 0 0 }
+
+				to { background-position: 40px 0 }
+			}
+		}
+	}
+}
+
+.progress--medium
+{
+	.progress__inner { height: 38px; }
+
+	.__bar
+	{
+		background-size: 65px 65px;
+
+		&--animate { animation: progress-bar-stripes 3s linear infinite; }
+	}
+
+	.__label { font-size: rem-calc(14px); }
+
+	.__max-val
+	{
+		line-height: 38px;
+		font-size: rem-calc(14px);
+	}
+}
+
+.progress--big
+{
+	.progress__inner { height: 50px; }
+
+	.__bar
+	{
+		background-size: 65px 65px;
+
+		&--animate { animation: progress-bar-stripes 3s linear infinite; }
+	}
+
+	.__label { font-size: rem-calc(20px); }
+
+	.__max-val
+	{
+		line-height: 50px;
+		font-size: rem-calc(16px);
+	}
+}
+
+@keyframes progress-bar-stripes {
+	from { background-position: 0 0 }
+
+	to { background-position: 130px 0 }
+}
+
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

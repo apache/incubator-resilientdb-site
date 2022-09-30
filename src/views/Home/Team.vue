@@ -13,12 +13,13 @@
 					<a href="https://www.linkedin.com/in/mohammad-sadoghi-b842a27/"
 						><linkedin-outlined
 					/></a>
+					<a href="https://expolab.org/"><global-outlined /></a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="title2" style="color: #727272">OUR BRAIN</div>
-	<div class="head2">Awesome Team</div>
+	<div class="head2">Founding Team</div>
 	<div class="main2">
 		<div class="profile-card">
 			<div class="img">
@@ -31,6 +32,7 @@
 					<a href="https://www.linkedin.com/in/suyash-gupta-253b39a1"
 						><linkedin-outlined
 					/></a>
+					<a href="https://gupta-suyash.github.io/"><global-outlined /></a>
 				</div>
 			</div>
 		</div>
@@ -45,6 +47,9 @@
 					<a href="https://www.linkedin.com/in/sajjadrahnama/"
 						><linkedin-outlined
 					/></a>
+					<a href="https://www.linkedin.com/in/sajjadrahnama/"
+						><global-outlined
+					/></a>
 				</div>
 			</div>
 		</div>
@@ -55,9 +60,9 @@
 			<div class="caption">
 				<h3>Jelle Hellings</h3>
 				<p>Complexity Theorist</p>
-				<!-- <div class="social-links">
-					<a href="#"><linkedin-outlined /></a>
-				</div> -->
+				<div class="social-links">
+					<a href="http://jhellings.nl/"><global-outlined /></a>
+				</div>
 			</div>
 		</div>
 		<div class="profile-card">
@@ -71,28 +76,21 @@
 					<a href="https://www.linkedin.com/in/qadahtm/"
 						><linkedin-outlined
 					/></a>
+					<a href="http://thamir.qadah.com"><global-outlined /></a>
 				</div>
 			</div>
 		</div>
-		<div class="profile-card">
-			<div class="img">
-				<img src="@/assets/team_img/dakai.jpg" />
-			</div>
-			<div class="caption">
-				<h3>Kang Dakai</h3>
-				<p>System Designer</p>
-				<!-- <div class="social-links">
-					<a href="#"><linkedin-outlined /></a>
-				</div> -->
-			</div>
-		</div>
+	</div>
+
+	<div class="head2">NexRes Team</div>
+	<div class="main2">
 		<div class="profile-card">
 			<div class="img">
 				<img src="@/assets/team_img/JunchaoChen.png" />
 			</div>
 			<div class="caption">
 				<h3>Junchao Chen</h3>
-				<p>NexRes Architect</p>
+				<p>NexRes Lead Architect</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/junchao-chen-ab75a353/"
 						><linkedin-outlined
@@ -102,11 +100,24 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
+				<img src="@/assets/team_img/dakai.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Kang Dakai</h3>
+				<p>Concurrent Consensus Architect</p>
+				<!-- <div class="social-links">
+					<a href="#"><linkedin-outlined /></a>
+				</div> -->
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
 				<img src="@/assets/team_img/SheshaVishnuPrasad.jpg" />
 			</div>
 			<div class="caption">
 				<h3>Shesha Vishnu Prasad</h3>
-				<p>NexRes Recovery Architect</p>
+				<p>Recovery Architect</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/sheshavpd"
 						><linkedin-outlined
@@ -120,11 +131,41 @@
 			</div>
 			<div class="caption">
 				<h3>Jinxiao Yu</h3>
-				<p>Performance Analyst</p>
+				<p>Sharding Architect</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/jinxiao-yu-029137150/"
 						><linkedin-outlined
 					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/divjeet.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Divjeet Singh Jas</h3>
+				<p>dApp Lead Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/divjeet-singh/"
+						><linkedin-outlined
+					/></a>
+					<a href="https://www.divjeet.me"><global-outlined /></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/ArindaamRoy.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Arindaam Roy</h3>
+				<p>Toolkit & Integration Lead Engineer</p>
+				<div class="social-links">
+					<a href="https//www.linkedin.com/in/arindaam-roy/"
+						><linkedin-outlined
+					/></a>
+					<a href="https://arindaam.com"><global-outlined /></a>
 				</div>
 			</div>
 		</div>
@@ -137,34 +178,6 @@
 				<p>Sharding Engineer</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/weijia-w/"
-						><linkedin-outlined
-					/></a>
-				</div>
-			</div>
-		</div>
-		<div class="profile-card">
-			<div class="img">
-				<img src="@/assets/team_img/ArindaamRoy.jpg" />
-			</div>
-			<div class="caption">
-				<h3>Arindaam Roy</h3>
-				<p>Toolkit & Integration Engineer</p>
-				<div class="social-links">
-					<a href="https//www.linkedin.com/in/arindaam-roy/"
-						><linkedin-outlined
-					/></a>
-				</div>
-			</div>
-		</div>
-		<div class="profile-card">
-			<div class="img">
-				<img src="@/assets/team_img/DivjeetSinghJas.png" />
-			</div>
-			<div class="caption">
-				<h3>Divjeet Singh Jas</h3>
-				<p>dApp Lead Developer</p>
-				<div class="social-links">
-					<a href="https://www.linkedin.com/in/divjeet-singh/"
 						><linkedin-outlined
 					/></a>
 				</div>
@@ -268,6 +281,7 @@
 					<a href="https://www.linkedin.com/in/dhruvkrishnan/"
 						><linkedin-outlined
 					/></a>
+					<a href="http://dhruvkrishnan.com/"><global-outlined /></a>
 				</div>
 			</div>
 		</div>
@@ -310,6 +324,63 @@
 					<a href="https://www.linkedin.com/in/armasalejandro/"
 						><linkedin-outlined
 					/></a>
+					<a href="https://alejandroarmas.github.io"><global-outlined /></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/iyer.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Shreenath Iyer</h3>
+				<p>System Engineer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/iyershreenath"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/erik.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Erik Linsenmayer</h3>
+				<p>System Engineer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/erik-linsenmayer"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/patrick.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Patrick Liao</h3>
+				<p>System Engineer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/patrick-liao-2ab6b214a"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/domenic.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Domenic Cianfichi</h3>
+				<p>System Engineer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/domeniccianfichi/"
+						><linkedin-outlined
+					/></a>
 				</div>
 			</div>
 		</div>
@@ -337,7 +408,7 @@
 		margin-bottom: 3rem;
 		justify-content: center;
 		align-items: center;
-
+		justify-items: center;
 		/* background: white; */
 	}
 	.title {
@@ -440,18 +511,20 @@
 		color: #333;
 		font-size: 21px;
 		transition: 0.6s;
+		padding: 0 4px;
 	}
 	.social-links a:hover {
 		color: #0c52a1;
 	}
 </style>
 <script>
-	import { LinkedinOutlined } from "@ant-design/icons-vue";
+	import { LinkedinOutlined, GlobalOutlined } from "@ant-design/icons-vue";
 
 	export default {
 		name: "Team",
 		components: {
 			LinkedinOutlined,
+			GlobalOutlined,
 		},
 	};
 </script>

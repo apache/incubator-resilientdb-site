@@ -1,0 +1,70 @@
+@import 'utils/variables';
+@import 'utils/extends';
+@import 'utils/filters';
+@import 'utils/functions';
+@import 'utils/media-queries';
+@import 'utils/mixins';
+
+@import 'vendors/normalize';
+@import 'vendors/grid/flexbox-grid';
+
+@import 'vendors/fontello-codes';
+@import 'vendors/slick';
+@import 'vendors/aos';
+@import 'vendors/jquery.fancybox';
+@import 'vendors/nice-select';
+@import 'vendors/TimeCircles';
+
+@import 'vendors-extensions/countdown';
+@import 'vendors-extensions/fontello';
+@import 'vendors-extensions/slick';
+
+@import 'base/common';
+@import 'base/typography';
+
+@import 'components/site_logo';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/facts';
+@import 'components/progress';
+@import 'components/navigation';
+@import 'components/word_rotating';
+@import 'components/video_block';
+@import 'components/documents';
+@import 'components/tab';
+@import 'components/accordions';
+@import 'components/comments_list';
+@import 'components/social_btns';
+@import 'components/to_top_btn';
+@import 'components/list_with_ico';
+@import 'components/screenshots';
+@import 'components/special_list';
+@import 'components/btn_play';
+
+@import 'layout/header';
+@import 'layout/start-screen';
+@import 'layout/intro';
+@import 'layout/logos';
+@import 'layout/feature';
+@import 'layout/calculator';
+@import 'layout/posts';
+@import 'layout/review';
+@import 'layout/steps';
+@import 'layout/team';
+@import 'layout/testimonial';
+@import 'layout/timeline';
+@import 'layout/token_sale';
+@import 'layout/help';
+@import 'layout/contact_form';
+@import 'layout/content';
+@import 'layout/company_contacts';
+@import 'layout/footer';
+@import 'layout/authorization';
+@import 'layout/banner';
+@import 'layout/pricing_tab';
+@import 'layout/pricing_table';
+@import 'layout/projects';
+@import 'layout/gallery';
+@import 'layout/goods';
+@import 'layout/call_to_action';
+@import 'layout/events';

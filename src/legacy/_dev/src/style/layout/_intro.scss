@@ -1,0 +1,85 @@
+/* --------------------------------
+   intro
+-------------------------------- */
+
+#intro
+{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 400px;
+	padding-top: 80px;
+	font-size: rem-calc(20px);
+	color: $white-color;
+
+	@extend %bg-cover;
+
+	.grid
+	{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.__title
+	{
+		line-height: 1.1;
+		color: inherit;
+	}
+
+	.page-404 &
+	{
+		min-height: 100vh;
+
+		.span
+		{
+			display: block;
+			line-height: 0.8;
+			font-size: rem-calc(75px);
+			font-weight: 700;
+		}
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	#intro
+	{
+		min-height: 530px;
+
+		.page-404 &
+		{
+			.span { font-size: rem-calc(90px); }
+		}
+	}
+}
+
+@include min-screen($md-width) // 768
+{
+	#intro
+	{
+		.page-404 &
+		{
+			.span { font-size: rem-calc(120px); }
+		}
+	}
+}
+
+@include min-screen($lg-width) // 992
+{
+	#intro
+	{
+		min-height: 630px;
+		padding-top: 100px;
+
+		.grid
+		{
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+}
+
+@include min-screen($xl-width) // 1200
+{
+	
+}

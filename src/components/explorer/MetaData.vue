@@ -1,22 +1,22 @@
 <template>
 	<div class="statistics">
-		<a-card title="NexRes BlockChain (Dummy Data)">
+		<a-card title="NexRes Blockchain (Sample Data)">
 			<a-row style="margin: 1.5rem">
-				<a-col :span="6">
+				<a-col :xs="12" :sm="12" :md="6">
 					<a-statistic title="Active Replica" :value="11" />
 					<a-divider />
 					<a-statistic title="Batch Size (MB)" :value="112" />
 					<a-divider />
 					<a-statistic title="Client Timer" :value="3" />
 				</a-col>
-				<a-col :span="6">
+				<a-col :xs="12" :sm="12" :md="6">
 					<a-statistic title="Active Client" :value="2" />
 					<a-divider />
 					<a-statistic title="Checkpoint Window Size" :value="12" />
 					<a-divider />
 					<a-statistic title="Proposal Timer" :value="4" />
 				</a-col>
-				<a-col :span="12">
+				<a-col :md="12">
 					<chart />
 				</a-col>
 			</a-row>

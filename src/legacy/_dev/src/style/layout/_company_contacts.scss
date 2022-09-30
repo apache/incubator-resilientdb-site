@@ -1,0 +1,78 @@
+/* --------------------------------
+   company contacts
+-------------------------------- */
+
+$gutter: 30px;
+
+.company-contacts
+{
+	margin-top: $gutter;
+	margin-bottom: $gutter;
+	font-size: rem-calc(20px);
+	color: $white-color;
+
+	.__inner { margin-bottom: -$gutter; }
+
+	.__item
+	{
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: $gutter;
+	}
+
+	a
+	{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.company-address
+{
+	font-style: normal;
+
+	.__inner { margin-bottom: -($gutter + 5px); }
+
+	.__item
+	{
+		margin-bottom: $gutter + 5px;
+		padding-left: 70px;
+
+		>div { overflow: hidden; }
+	}
+
+	.__ico
+	{
+		float: left;
+		margin-left: -70px;
+		width: 55px;
+	}
+
+	a
+	{
+		color: inherit;
+	}
+}
+
+@include min-screen($sm-width)
+{
+	.company-contacts
+	{
+		.__item { text-align: left; }
+	}
+}
+
+@include min-screen($md-width)
+{
+	
+}
+
+@include min-screen($lg-width)
+{
+	
+}
+
+@include min-screen($xl-width)
+{
+	
+}

@@ -1,0 +1,23 @@
+/* --------------------------------
+   custom countdown styles
+-------------------------------- */
+
+.countdown
+{
+	line-height: 0;
+	font-size: 0;
+	letter-spacing: -1px;
+
+	.countdown-container
+	{
+		display: inline-block;
+		vertical-align: top;
+
+		span
+		{
+			display: block;
+			line-height: 1;
+			letter-spacing: 0;
+		}
+	}
+}

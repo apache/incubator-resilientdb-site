@@ -1,0 +1,83 @@
+/* --------------------------------
+   custom slick styles
+-------------------------------- */
+
+.slick-slider { }
+
+.slick-arrow
+{
+	text-align: center;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.slick-dots
+{
+	margin-top: 40px;
+	line-height: 0;
+	font-size: 0;
+	text-align: center;
+
+	li
+	{
+		position: relative;
+		display: inline-block;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+
+		margin-left: 10px;
+
+		&:first-child { margin-left: 0; }
+
+		&.slick-active
+		{
+			button
+			{
+				background-color: #d4d4d4;
+				cursor: default;
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	button
+	{
+		display: block;
+		width: 10px;
+		height: 10px;
+		padding: 0;
+		cursor: pointer;
+		cursor: hand;
+		color: transparent;
+		background-color: #dedede;
+		border: none;
+		outline: none;
+		@include border-radius(50%);
+		@include transition(
+			background-color 0.3s ease-in-out,
+			border-color     0.3s ease-in-out,
+			opacity          0.3s ease-in-out,
+			transform        0.3s ease-in-out
+		);
+	}
+}
+
+[class$="--base-bg"],
+[class*=base-bg]
+{
+	.slick-dots
+	{
+		li
+		{
+			&.slick-active
+			{
+				button { background-color: #e8fffa; }
+			}
+		}
+
+		button { background-color: #7bdbc8 }
+	}
+}

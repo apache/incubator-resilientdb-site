@@ -1,0 +1,16 @@
+.grid
+{
+	padding-left: $column-gutter / 2;
+	padding-right: $column-gutter / 2;
+
+	@include variant(container) {
+		margin: 0 auto;
+		max-width: $grid-max-width;
+		width: 100%;
+	}
+
+	@include variant(no-gutters) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

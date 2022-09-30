@@ -1,0 +1,51 @@
+/* --------------------------------
+   fontello
+-------------------------------- */
+
+@font-face
+{
+	font-family: 'fontello';
+	src: url('../fonts/fontello/fontello.eot?78668259');
+	src: url('../fonts/fontello/fontello.eot?78668259#iefix') format('embedded-opentype'),
+		 url('../fonts/fontello/fontello.woff2?78668259') format('woff2'),
+		 url('../fonts/fontello/fontello.woff?78668259') format('woff'),
+		 url('../fonts/fontello/fontello.ttf?78668259') format('truetype'),
+		 url('../fonts/fontello/fontello.svg?78668259#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello/fontello.svg?78668259#fontello') format('svg');
+  }
+}
+*/
+
+[class^="fontello-"]:before,
+[class*=" fontello-"]:before
+{
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+
+	display: inline-block;
+	text-decoration: inherit;
+	width: auto;
+	text-align: center;
+
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em;
+
+	/* Font smoothing. That was taken from TWBS */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

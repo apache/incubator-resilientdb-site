@@ -22,6 +22,9 @@
 				chartOptions: {
 					chart: {
 						id: "basic-line",
+						toolbar: {
+							show: false,
+						},
 					},
 					xaxis: {
 						categories: [

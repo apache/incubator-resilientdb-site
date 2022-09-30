@@ -1,0 +1,92 @@
+/* --------------------------------
+   special list
+-------------------------------- */
+
+.special-list
+{
+	line-height: 1.2;
+
+	.list__item
+	{
+		margin-top: 15px;
+
+		&:first-child { margin-top: 0; }
+
+		&--1
+		{
+			.ico
+			{
+				background-color: #4262c1;
+				box-shadow: 0 3px 18px rgba(#4262c1,0.8);
+			}
+		}
+
+		&--2
+		{
+			.ico
+			{
+				background-color: #694e96;
+				box-shadow: 0 3px 18px rgba(#694e96,0.8);
+			}
+		}
+
+		&--3
+		{
+			.ico
+			{
+				background-color: $primary-color;
+				box-shadow: 0 3px 18px rgba($primary-color,0.8);
+			}
+		}
+	}
+
+	.cell
+	{
+		width: 100%;
+
+		&:first-child
+		{
+			padding-right: 15px;
+			width: 1%;
+		}
+	}
+
+	.ico
+	{
+		display: inline-block;
+		vertical-align: top;
+		width: 44px;
+		height: 44px;
+		line-height: 46px;
+		font-size: rem-calc(22px);
+		text-align: center;
+		color: $white-color;
+		@include border-radius(50%);
+	}
+}
+
+@include min-screen($sm-width) // 560
+{
+	.special-list
+	{
+		.cell
+		{
+			&:first-child { padding-right: 20px; }
+		}
+	}
+}
+
+@include min-screen($md-width) // 758
+{
+
+}
+
+@include min-screen($lg-width) // 992
+{
+	
+}
+
+@include min-screen($xl-width) // 1200
+{
+
+}

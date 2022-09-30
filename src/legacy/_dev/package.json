@@ -1,0 +1,28 @@
+{
+  "name": "gulp-project",
+  "version": "1.0.0",
+  "description": "boilerplate for html+js+css apps",
+  "author": "art",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-reference": "^1.1.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "trim-newlines": "^4.0.2",
+    "meow": "^10.1.1",
+    "node-sass": "^6.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0",
+    "imagemin-pngquant": "^8.0.0"
+  }
+}

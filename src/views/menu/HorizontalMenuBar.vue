@@ -41,4 +41,12 @@
 	.menu-bar > * {
 		margin-left: 40px;
 	}
+	@media (max-width: 500px) {
+		.menu-bar > * {
+			margin-left: 10px;
+		}
+		.menu-bar {
+			margin-top: 1rem;
+		}
+	}
 </style>

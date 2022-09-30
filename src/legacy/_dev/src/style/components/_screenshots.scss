@@ -1,0 +1,54 @@
+/* --------------------------------
+   facts
+-------------------------------- */
+
+$gutter: 30px;
+
+.screenshots
+{
+	.__inner { }
+
+	.__item
+	{
+		vertical-align: top;
+		padding: 30px 15px 40px;
+
+		img
+		{
+			width: 100%;
+			box-shadow: 0 0 50px rgba($dark-color, 0.08);
+		}
+	}
+
+	.grid:not(.grid--container) &
+	{
+		margin-left: -$column-gutter / 2;
+		margin-right: -$column-gutter / 2;
+	}
+}
+
+.screenshots--slider
+{
+
+}
+
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

@@ -1,0 +1,55 @@
+/* --------------------------------
+   review
+-------------------------------- */
+
+$gutter: 30px;
+
+.word-rotating
+{
+	padding: 55px;
+	color: $white-color;
+
+	.__item
+	{
+		line-height: 1.4;
+		font-size: rem-calc(25px);
+
+		p
+		{
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	&--slider
+	{
+		.slick-slide
+		{
+			margin-left: $gutter;
+
+			&:first-child { margin-left: 0 ; }
+		}
+
+		.slick-dots { text-align: left; }
+	}
+}
+
+@include min-screen($sm-width)
+{
+	
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+	
+}

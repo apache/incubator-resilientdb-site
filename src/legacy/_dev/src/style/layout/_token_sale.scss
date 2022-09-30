@@ -1,0 +1,57 @@
+/* --------------------------------
+   token sale
+-------------------------------- */
+
+$gutter: 30px;
+
+.token-sale
+{
+	.__inner
+	{
+		margin-left: -($gutter + 10px);
+		margin-bottom: -$gutter;
+	}
+
+	.__item
+	{
+		display: inline-block;
+		vertical-align: top;
+		margin-left: $gutter + 10px;
+		margin-bottom: $gutter;
+		line-height: 1;
+		font-size: rem-calc(14px);
+		color: #929292;
+
+		.__ico { margin-right: 17px; }
+
+		.__num
+		{
+			display: block;
+			margin-bottom: 10px;
+			font-size: rem-calc(25px);
+			font-family: Lato,sans-serif;
+			font-weight: 700;
+			color: #404040;
+		}
+	}
+}
+
+@include min-screen($sm-width)
+{
+	
+}
+
+@include min-screen($md-width)
+{
+	
+}
+
+@include min-screen($lg-width)
+{
+	
+}
+
+@include min-screen($xl-width)
+{
+	
+}

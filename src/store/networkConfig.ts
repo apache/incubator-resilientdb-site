@@ -1,24 +1,24 @@
 import { defineStore } from "pinia";
 
 interface Cluster {
-  replicaIds: number[];
+	replicaIds: number[];
 }
 
 interface NetworkConfigState {
-  clusters: Cluster[];
+	clusters: Cluster[];
 }
 
 export const useNetworkStore = defineStore("networkConfig", {
-  state: () => {
-    const state: NetworkConfigState = {
-      clusters: [],
-    };
-    return state;
-  },
+	state: () => {
+		const state: NetworkConfigState = {
+			clusters: [],
+		};
+		return state;
+	},
 
-  actions: {
-    addCluster(replicaIds: number[]) {
-      this.clusters.push({ replicaIds });
-    },
-  },
+	actions: {
+		addCluster(replicaIds: number[]) {
+			this.clusters.push({ replicaIds });
+		},
+	},
 });

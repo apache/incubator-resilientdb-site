@@ -1,0 +1,69 @@
+/* --------------------------------
+   navigation
+-------------------------------- */
+
+.navigation
+{
+	position: relative;
+
+	ul
+	{
+		line-height: 0;
+		font-size: 0;
+		letter-spacing: -1px;
+	}
+
+	li
+	{
+		position: relative;
+		line-height: 1;
+		font-size: rem-calc(18px);
+		letter-spacing: 0;
+		white-space: normal;
+
+		&.active,
+		&:hover
+		{
+			
+		}
+
+		a
+		{
+			text-decoration: none;
+
+			&:not(.custom-btn)
+			{
+				display: inherit;
+				line-height: inherit;
+				font-size: inherit;
+				font-family: inherit;
+				@include transition(
+					background-color 0.3s ease-in-out,
+					border-color     0.3s ease-in-out,
+					color            0.3s ease-in-out
+				);
+			}
+		}
+	}
+}
+
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

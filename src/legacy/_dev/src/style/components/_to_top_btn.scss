@@ -1,0 +1,67 @@
+/* --------------------------------
+   top button
+-------------------------------- */
+
+#btn-to-top-wrap
+{
+	display: none;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 3;
+
+	@include min-screen(561px)
+	{
+		right: 25px;
+		bottom: 25px;
+	}
+}
+
+#btn-to-top
+{
+	display: block;
+	width: 44px;
+	height: 44px;
+	line-height: 42px;
+	font-size: 20px;
+	color: $white-color;
+	text-align: center;
+	text-decoration: none;
+	background-color: darken($primary-color, 5%);
+	opacity: 0.7;
+	@include transition(opacity 0.3s ease-in-out);
+
+	&:before
+	{
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 0;
+		height: 0;
+		border-bottom: 6px solid $white-color;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+	}
+
+	&:hover { opacity: 1; }
+}
+
+@include min-screen($sm-width)
+{
+
+}
+
+@include min-screen($md-width)
+{
+
+}
+
+@include min-screen($lg-width)
+{
+
+}
+
+@include min-screen($xl-width)
+{
+
+}

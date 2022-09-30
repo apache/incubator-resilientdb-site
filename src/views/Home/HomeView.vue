@@ -8,44 +8,42 @@
 				computation
 			</div>
 			<div class="buttons">
-				<a-space size="large">
-					<!-- <a-button type="primary" size="large">
+				<!-- <a-button type="primary" size="large">
 						<template #icon>
 							<read-outlined />
 						</template>
 						Documentation
 					</a-button> -->
-					<a-button
-						href="https://resilientdb.com/blog/"
-						type="primary"
-						size="large"
-					>
-						<template #icon>
-							<read-outlined />
-						</template>
-						ExpoLab Blog
-					</a-button>
-					<a-button
-						href="https://github.com/resilientdb/resilientdb"
-						type="primary"
-						size="large"
-					>
-						<template #icon>
-							<code-outlined />
-						</template>
-						Get Code
-					</a-button>
-					<a-button
-						href="https://www.youtube.com/watch?v=0kObJ0KPdkw&feature=youtu.be"
-						type="primary"
-						size="large"
-					>
-						<template #icon>
-							<play-circle-outlined />
-						</template>
-						Watch Demo
-					</a-button>
-				</a-space>
+				<a-button
+					href="https://resilientdb.com/blog/"
+					type="primary"
+					size="large"
+				>
+					<template #icon>
+						<read-outlined />
+					</template>
+					ExpoLab Blog
+				</a-button>
+				<a-button
+					href="https://github.com/resilientdb/resilientdb"
+					type="primary"
+					size="large"
+				>
+					<template #icon>
+						<code-outlined />
+					</template>
+					Get Code
+				</a-button>
+				<a-button
+					href="https://youtu.be/ewtFSwjitsg"
+					type="primary"
+					size="large"
+				>
+					<template #icon>
+						<play-circle-outlined />
+					</template>
+					Watch Demo
+				</a-button>
 			</div>
 		</div>
 	</section>
@@ -54,6 +52,16 @@
 		<div class="info">
 			<div class="title">OUR MISSION</div>
 			<div class="head">Why ResilientDB?</div>
+			<a-button
+				href="https://www.youtube.com/watch?v=whgGTSQttds&ab_channel=ExpoLabatUCDavis"
+				type="primary"
+				size="large"
+			>
+				<template #icon>
+					<play-circle-outlined />
+				</template>
+				ResilientDB: A journey in Becoming
+			</a-button>
 			<div class="desc">
 				The inception of Bitcoin and blockchain have renewed the vision of a
 				democratic and decentralized computational paradigm, that is, to ingrain
@@ -104,11 +112,12 @@
 						/>
 					</i>
 
-					<h3 class="_title">In-Memory Storage</h3>
+					<h3 class="_title">In-Memory & Durable Storage</h3>
 
 					<p style="padding: 0 3rem; color: rgb(125, 125, 125)">
-						Storing all meta-data and blockchain in-memory inside the replica,
-						saving CPU cycles.
+						Storing all meta-data and ledger in memory inside the replica for
+						low-latency access while offering deep integration with LevelDB and
+						RocksDB for added durability supprt.
 					</p>
 				</div>
 
@@ -132,6 +141,7 @@
 			</div>
 		</div>
 	</section>
+
 	<!-- <section class="timeline">
 		<div class="info">
 			<div class="title">PROGRESS TO DATE</div>
@@ -142,7 +152,7 @@
 
 	<section class="charts">
 		<div class="info">
-			<div class="title">ADVANCING OVER THE YEARS</div>
+			<div class="title">ADVANCEMENT OVER THE YEARS</div>
 			<div class="head">Using ResilientDB</div>
 			<div class="mainbody">
 				<div class="body2">
@@ -435,7 +445,10 @@
 				</div>
 				<div class="Item">
 					<a-card hoverable :bordered="false">
-						<a target="_blank" href="docs/Tutorial_System_VLDB_2020.pdf">
+						<a
+							target="_blank"
+							href="https://drive.google.com/file/d/1IQ_zHvJ9ZBdppkbGaINArjWbPRb8_yoC/view?usp=sharing"
+						>
 							<file-text-outlined style="font-size: 24px" />
 							<p style="padding-top: 8px; color: black">
 								BFT Tutorial (System)
@@ -445,7 +458,10 @@
 				</div>
 				<div class="Item">
 					<a-card hoverable :bordered="false">
-						<a target="_blank" href="docs/Tutorial_Theory_VLDB_2020.pdf">
+						<a
+							target="_blank"
+							href="https://drive.google.com/file/d/18K5vMp5vxZjHWdT2PW2ckAWeqpdwmezz/view?usp=sharing"
+						>
 							<file-text-outlined style="font-size: 24px" />
 							<p style="padding-top: 8px; color: black">
 								BFT Tutorial (Theory)
@@ -527,16 +543,16 @@
 <style scoped>
 	/* HERO SECTION */
 	.hero {
-		/* background-image: url("@/assets/background.png"); */
+		background-image: url(/src/assets/background.png);
 		background-color: #cccccc;
-		/* background-repeat: no-repeat; */
-		/* background-size: 100%; */
-		height: 900px;
-		position: relative;
+		/* background-repeat: unset; */
+		background-size: cover;
+		/* height: 900px; */
+		/* position: relative; */
 		color: aliceblue;
-		padding: 16rem 0rem;
+		padding: 8rem 0rem;
 	}
-	.hero::before {
+	/* .hero::before {
 		content: "";
 		top: -2px;
 		left: -12px;
@@ -546,12 +562,13 @@
 		background-image: url("@/assets/background.png");
 		background-size: cover;
 		filter: blur(1.25px);
-	}
+	} */
 	.info {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		text-align: center;
 	}
 	.heading {
 		font-size: 3rem;
@@ -566,9 +583,16 @@
 		width: 50%;
 	}
 	.buttons {
-		margin-top: 3rem;
-		display: flex;
-		justify-content: space-evenly;
+		margin: 3rem;
+		/* display: flex; */
+		/* justify-content: space-evenly; */
+		width: 50%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		grid-gap: 3rem;
+	}
+	.buttons > .a-buttons {
+		margin: 0 2rem;
 	}
 
 	/* MISSION SECTION */
@@ -610,10 +634,18 @@
 
 	.product .content {
 		text-align: center;
-		width: 400px;
 	}
 	.product .content h3 {
 		padding-top: 1rem;
+	}
+
+	@media (max-width: 1150px) {
+		.product .desc {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+			grid-gap: 1rem;
+			width: 80%;
+		}
 	}
 
 	/* TIMELINE SECTION */
@@ -693,16 +725,25 @@
 
 	.charts .mainbody {
 		display: flex;
-		margin: 3rem 1rem;
+		margin: 3rem 0rem;
 		width: 100%;
 		overflow: auto;
 		white-space: nowrap;
 	}
 
-	.charts .body,
-	.body2 {
-		padding: 1rem;
+	.charts .mainbody .body {
+		margin: 1rem 0;
 	}
+	.charts .mainbody .body2 {
+		margin: 1rem 0;
+	}
+
+	/* @media (max-width: 600px) {
+		.charts .mainbody {
+			display: block;
+		}
+	} */
+
 	.charts .facts {
 		text-align: center;
 		margin-bottom: 1rem;
