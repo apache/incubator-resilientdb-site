@@ -46,7 +46,7 @@
 	});
 </script>
 <template>
-	<div v-else style="margin-top: 50px" class="endpoints-container">
+	<div style="margin-top: 50px" class="endpoints-container">
 		<div
 			v-for="(cluster, i) in networkStore.clusters"
 			class="endpoint"
