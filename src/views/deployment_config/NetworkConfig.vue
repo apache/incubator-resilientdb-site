@@ -46,19 +46,6 @@
 	});
 </script>
 <template>
-	<div
-		style="
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			margin-top: 50px;
-			color: #dedbdb;
-		"
-		v-if="networkStore.clusters.length === 0"
-	>
-		<meh-outlined style="font-size: 40px" />
-		<div style="margin-top: 10px; font-size: 20px">No clusters added yet.</div>
-	</div>
 	<div v-else style="margin-top: 50px" class="endpoints-container">
 		<div
 			v-for="(cluster, i) in networkStore.clusters"
@@ -76,24 +63,6 @@
 			</div>
 		</div>
 	</div>
-	<div style="margin-top: 50px; margin-bottom: 20px">
-		<a-button type="primary" @click="clusterDialog = true">
-			<deployment-unit-outlined />
-			Add new cluster
-		</a-button>
-	</div>
-	<a-modal
-		v-model:visible="clusterDialog"
-		title="Add new cluster"
-		@ok="addCluster"
-	>
-		<a-checkbox-group
-			v-if="replicaOptions.length !== 0"
-			v-model:value="selectedReplicas"
-			:options="replicaOptions"
-		/>
-		<div v-else>No replica remaining for selection</div>
-	</a-modal>
 </template>
 
 <style scoped lang="scss">

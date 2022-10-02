@@ -30,6 +30,7 @@ export const useDeploymentStore = defineStore("deployment", {
         return;
       }
       this.deployed = true;
+/*
       const clusters = useNetworkStore().clusters;
       const replicas = useNodesStore().replicas;
       const deployedReplicas = [];
@@ -66,15 +67,13 @@ export const useDeploymentStore = defineStore("deployment", {
         },
         clusters: clustersCfgs,
       };
+*/
       try {
         const endpointsStore = useEndpointsStore();
-        await deploy(endpointsStore.endpoints, {
-          replicaIds: this.replicaIds,
-          config: this.deploymentConfig,
-        });
-        endpointRefreshId = setInterval(() => {
-          endpointsStore.refresh();
-        }, 2500);
+        await deploy(endpointsStore.endpoints, {});
+        //endpointRefreshId = setInterval(() => {
+         // endpointsStore.refresh();
+        //}, 2500);
       } catch (e) {
         console.log(e);
       }

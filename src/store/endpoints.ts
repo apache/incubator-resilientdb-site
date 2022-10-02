@@ -10,7 +10,7 @@ interface EndpointsStoreState {
 export const useEndpointsStore = defineStore("endpoints", {
 	state: () => {
 		const state: EndpointsStoreState = {
-			endpoints: ["127.0.0.1:3000"],
+			endpoints: [/*"127.0.0.1:3000"*/],
 		};
 		return state;
 	},
@@ -35,13 +35,7 @@ export const useEndpointsStore = defineStore("endpoints", {
 			}
 			try {
 				const endpoint = `${ip}:${port}`;
-				const result = await getAvailableNodes(endpoint);
 				this.endpoints.push(endpoint);
-				const nodes = useNodesStore();
-				result.replicas.forEach((replica) => (replica.endpointID = endpoint));
-				result.clients.forEach((client) => (client.endpointID = endpoint));
-				nodes.addReplicas(result.replicas);
-				nodes.addClients(result.clients);
 			} catch (e) {
 				console.log(e);
 				return false;

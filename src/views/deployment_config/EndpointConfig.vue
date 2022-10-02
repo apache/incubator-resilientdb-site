@@ -72,10 +72,6 @@ defineExpose({
         <cloud-filled class="icon" />
         <div style="margin-left: 10px; font-weight: 500">{{ endpoint }}</div>
       </div>
-      <div class="info">
-        <div>{{ getTotalReplicas(endpoint) }} Replicas</div>
-        <div>{{ getTotalClients(endpoint) }} Clients</div>
-      </div>
     </div>
   </div>
   <div style="margin-top: 50px; margin-bottom: 20px">

@@ -7,51 +7,24 @@ interface AvailableNodesResponse {
   clients: ClientState[];
 }
 
-/*const dummyResponse = {
-  replicas: [
-    {
-      id: 0,
-      ip: "127.0.0.1",
-      port: "10000",
-    },
-    {
-      id: 1,
-      ip: "127.0.0.1",
-      port: "10000",
-    },
-    {
-      id: 3,
-      ip: "127.0.0.1",
-      port: "10003",
-    },
-  ],
-  clients: [
-    {
-      id: 10,
-    },
-  ],
-};*/
 export const getAvailableNodes = async (address: string) => {
-  //return dummyResponse as unknown as AvailableNodesResponse;
-  const res = await axios.get(`http://${address}/node/available`);
+  const res = await axios.get(`http://127.0.0.1:4080/node/available`);
   return res.data as AvailableNodesResponse;
 };
 
 export const deploy = async (
   addresses: string[],
-  payload: { replicaIds: number[]; config: any }
 ) => {
+  const params = new URLSearchParams();
   for (const address of addresses) {
-    const res = await axios.post(`http://${address}/node/deploy`, payload);
-    return res.data;
+	params.append('address', address);
   }
+  axios.post('http://192.18.137.13:4080/node/deploy', params);
 };
 
 export const stopDeployment = async (addresses: string[]) => {
-  for (const address of addresses) {
-    const res = await axios.get(`http://${address}/node/stopDeployment`);
+    const res = await axios.get(`http://192.18.137.13:4080/node/stop`);
     return res.data;
-  }
 };
 
 export const execTransaction = async (
