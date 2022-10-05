@@ -13,7 +13,6 @@
 	import { computed, ref } from "vue";
 
 	const confComponents = [EndpointConfig,  NetworkConfig];
-	const currentConfig = ref<EndpointConfig>(null);
 	const current = ref(0);
 	const deploying = ref(false);
 	const totalSteps = 2;
@@ -77,7 +76,6 @@
 		</div>
 		    <component
 		      :is="confComponents[current]"
-		      ref="currentConfig"
 		    />
 		<div style="margin-top: 20px">
 			<a-button @click="onPrevious">
