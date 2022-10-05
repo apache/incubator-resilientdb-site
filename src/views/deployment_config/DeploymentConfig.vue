@@ -74,9 +74,9 @@
 				</a-step>
 			</a-steps>
 		</div>
-		    <component
+		    <!--<component
 		      :is="confComponents[current]"
-		    />
+		    />-->
 		<div style="margin-top: 20px">
 			<a-button @click="onPrevious">
 				<left-outlined />
