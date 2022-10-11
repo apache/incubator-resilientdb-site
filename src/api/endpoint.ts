@@ -19,8 +19,7 @@ export const deploy = async (
   for (const address of addresses) {
 	params.append('address', address);
   }
-  axios.post('https://ec2-54-84-181-59.compute-1.amazonaws.com/deploy', params);
-  //axios.post(`http://192.18.137.13:4080/node/deploy`, params);
+  axios.post('http://192.18.137.13:4080/node/deploy', params);
 };
 
 export const stopDeployment = async (addresses: string[]) => {

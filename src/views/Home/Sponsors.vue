@@ -74,6 +74,23 @@
 				/>
 			</li>
 		</ul>
+		<ul class="sponsor-grid">
+			<li class="sponsor">
+				<img
+					src="https://lawr.ucdavis.edu/logos/images/expanded_logo_blue.png"
+					alt="ucd"
+					style="width: 190px"
+				/>
+			</li>
+
+			<li class="sponsor">
+				<img
+					src="https://cs.ucdavis.edu/sites/g/files/dgvnsk8441/files/cs_logo_125px.png"
+					alt="ucd-cs"
+					style="width: 200px"
+				/>
+			</li>
+		</ul>
 	</div>
 </template>
 <style scoped>

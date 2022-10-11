@@ -8,14 +8,16 @@
 		LeftOutlined,
 	} from "@ant-design/icons-vue";
 	import EndpointConfig from "./EndpointConfig.vue";
+	import OrderingConfig from "./OrderingConfig.vue";
 	import NetworkConfig from "./NetworkConfig.vue";
 	import { useDeploymentStore } from "@/store/deployment";
 	import { computed, ref } from "vue";
 
-	const confComponents = [EndpointConfig,  NetworkConfig];
+	const confComponents = [EndpointConfig, OrderingConfig, NetworkConfig];
+	const currentConfig = ref(null);
 	const current = ref(0);
 	const deploying = ref(false);
-	const totalSteps = 2;
+	const totalSteps = 3;
 
 	const finalStep = computed(() => {
 		return current.value + 1 === totalSteps;
@@ -28,13 +30,15 @@
 	}
 
 	async function onNext() {
+		if (currentConfig.value.proceed()) {
 			if (finalStep.value) {
 				deploying.value = true;
 				await useDeploymentStore().deploy();
 				deploying.value = false;
 				// deploy
-		} else {
-			current.value++;
+			} else {
+				current.value++;
+			}
 		}
 	}
 </script>
@@ -67,6 +71,11 @@
 						<cloud-server-outlined />
 					</template>
 				</a-step>
+				<a-step title="Ordering">
+					<template #icon>
+						<block-outlined />
+					</template>
+				</a-step>
 				<a-step title="Network">
 					<template #icon>
 						<cluster-outlined />
@@ -74,9 +83,7 @@
 				</a-step>
 			</a-steps>
 		</div>
-		    <component
-		      :is="confComponents[current]"
-		    />
+		<component :is="confComponents[current]" ref="currentConfig" />
 		<div style="margin-top: 20px">
 			<a-button @click="onPrevious">
 				<left-outlined />
@@ -88,12 +95,6 @@
 				<right-outlined v-else />
 			</a-button>
 		</div>
-		<div style="margin-top: 50px">
-			<a-button target="_blank" type="primary" style="background-color:blue" href="http://ec2-54-84-181-59.compute-1.amazonaws.com:9090/targets?search=">
-				Deployment Status
-			</a-button>
-		</div>
-
 	</div>
 </template>
 

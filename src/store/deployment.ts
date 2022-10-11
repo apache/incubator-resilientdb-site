@@ -70,7 +70,10 @@ export const useDeploymentStore = defineStore("deployment", {
 */
       try {
         const endpointsStore = useEndpointsStore();
-        deploy(endpointsStore.endpoints);
+        await deploy(endpointsStore.endpoints, {});
+        //endpointRefreshId = setInterval(() => {
+         // endpointsStore.refresh();
+        //}, 2500);
       } catch (e) {
         console.log(e);
       }

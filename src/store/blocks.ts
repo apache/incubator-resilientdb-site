@@ -51,4 +51,11 @@ export const useBlocksStore = defineStore("blocks", {
 });
 
 export const initialize = function () {
+	const blocksStore = useBlocksStore();
+	blocksStore.refreshBlocks();
+	setInterval(async () => {
+		try {
+			await blocksStore.refreshBlocks();
+		} catch (_) {}
+	}, 5000);
 };

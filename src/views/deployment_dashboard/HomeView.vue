@@ -45,22 +45,38 @@ function killDeployment() {
 
 <template>
   <div>
-     <div style="display: flex; justify-content: center">
+    <div style="display: flex; justify-content: center">
       <a-button type="primary" danger @click="killDeployment">
         <close-square-filled />
         Stop deployment
       </a-button>
     </div>
-
-    <div style="display: flex; justify-content: center; margin-top: 50px">
-	<a-button target="_blank" type="primary" style="background-color:blue" href="http://ec2-54-84-181-59.compute-1.amazonaws.com:9090/targets?search=">
-		Deployment Status
-	</a-button>
+    <div
+      style="display: flex; justify-content: center; align-items: flex-start"
+    >
+      <div class="replicas-container">
+        <replica-item
+          v-for="replicaId in replicaIds"
+          :key="replicaId"
+          :replica-id="replicaId"
+        />
+        <!--    <h1 style="font-weight: bold; font-size: 40px;"> COOKING.</h1>-->
+      </div>
     </div>
-    
-    <iframe src="https://ec2-54-84-181-59.compute-1.amazonaws.com/targets?search="
-        width="100%" height="110%" frameborder="0" >
-    </iframe>
+    <div style="margin-top: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center">
+      <a-input-search
+        v-model:value="transaction"
+        placeholder="set hello world"
+        enter-button="Execute transaction"
+        :loading="executingTransaction"
+        size="medium"
+        @search="execTransaction"
+        style="max-width: 500px"
+      />
+      <div class="response" v-if="transactionResult">
+        ✓ {{transactionResult}}
+      </div>
+    </div>
   </div>
 </template>
 
