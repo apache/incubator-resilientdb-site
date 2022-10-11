@@ -48,31 +48,6 @@
 		</div>
 	</section>
 
-	<section class="stance">
-		<div class="info">
-			<div class="title">OUR STANCE</div>
-			<div class="desc">
-				We stand in solidarity with the brave and determined Iranian women and
-				Iranian people. We are committed to upholding fundamental human rights,
-				maintaining equity and justice, and standing against the use of
-				violence, repression, and discrimination. We condemn the barbaric acts
-				and brutal killings in Iranian streets and globally.
-			</div>
-			<strong>#MahsaAmini &nbsp #مهسا_امینی &nbsp #WomenLifeFreedom</strong>
-			<div>
-				[Statements by UC Davis:
-				<a
-					href="https://www.ucdavis.edu/news/statement-resources-and-support-impacted-unrest-iran"
-					>Chancellor Gary S. May</a
-				>,
-				<a
-					href="https://engineering.ucdavis.edu/news/statement-resources-and-support-those-impacted-unrest-iran"
-					>Dean Corsi, College of Engineering</a
-				>]
-			</div>
-		</div>
-	</section>
-
 	<section class="mission">
 		<div class="info">
 			<div class="title">OUR MISSION</div>
@@ -637,18 +612,6 @@
 		color: rgb(53, 53, 53);
 	}
 
-	.stance .title {
-		margin-top: 3rem;
-		font-size: 1rem;
-		color: rgb(114, 114, 114);
-	}
-
-	.stance .desc {
-		padding: 1.5rem 0;
-		width: 65%;
-		color: rgb(53, 53, 53);
-	}
-
 	/* PRODUCT SECTION */
 	.product {
 		margin: 2.5rem 0;
@@ -766,12 +729,6 @@
 		width: 100%;
 		overflow: auto;
 		white-space: nowrap;
-	}
-
-	@media only screen and (max-width: 300) {
-		.charts .mainbody {
-			justify-content: center;
-		}
 	}
 
 	.charts .mainbody .body {

@@ -8,9 +8,7 @@
       font-size: 30pt;
     "
   >
-    <iframe src="http://192.18.137.13:9090/targets?search="
-        width="100%" height="110%" frameborder="0" >
-    </iframe>
+    Brewing <coffee-outlined style="margin-left: 10px; margin-top: -4px" />
   </div>
 </template>
 
