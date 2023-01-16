@@ -103,11 +103,13 @@
 				<img src="@/assets/team_img/dakai.jpg" />
 			</div>
 			<div class="caption">
-				<h3>Kang Dakai</h3>
+				<h3>Dakai Kang</h3>
 				<p>Concurrent Consensus Architect</p>
-				<!-- <div class="social-links">
-					<a href="#"><linkedin-outlined /></a>
-				</div> -->
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/dakai-kang-288451227/"
+						><linkedin-outlined
+					/></a>
+				</div>
 			</div>
 		</div>
 
@@ -213,13 +215,58 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="@/assets/team_img/SeongwooChoi.jpeg" />
+				<img src="@/assets/team_img/ManjunathJakaraddi.jpg" />
 			</div>
 			<div class="caption">
-				<h3>Seongwoo Choi</h3>
-				<p>DevOp Support</p>
+				<h3>Manjunath Jakaraddi</h3>
+				<p>Consensus Protocol Developer</p>
 				<div class="social-links">
-					<a href="https://www.linkedin.com/in/swchoi1994/"
+					<a href="https://www.linkedin.com/in/manjunath-jakaraddi-316957121/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/RohithRaj.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Rohith Raj Srinivasan</h3>
+				<p>Backend Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/rohith-raj-s/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/ApratimShukla.jpeg" />
+			</div>
+			<div class="caption">
+				<h3>Apratim Shukla</h3>
+				<p>Full-Stack Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/apratimshukla6/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/PriyalSoni.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Priyal Soni</h3>
+				<p>Backend Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/priyal-soni-150/"
 						><linkedin-outlined
 					/></a>
 				</div>
@@ -227,19 +274,20 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
-				<img src="@/assets/team_img/TroyInsixiengmay.jpg" />
+				<img src="@/assets/team_img/kaustubhshete.jpeg" />
 			</div>
 			<div class="caption">
-				<h3>Troy Insixiengmay</h3>
-				<p>Mobile DApp Developer</p>
+				<h3>Kaustubh Shete</h3>
+				<p>Full Stack Developer</p>
 				<div class="social-links">
-					<a href="https://www.linkedin.com/in/troy-i-a07bb9187/"
+					<a href="https://www.linkedin.com/in/kvshete15/"
 						><linkedin-outlined
 					/></a>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="alumni">Distinguished Alumni</div>
 	<div class="main2">
 		<div class="profile-card">
@@ -301,6 +349,34 @@
 		</div>
 		<div class="profile-card">
 			<div class="img">
+				<img src="@/assets/team_img/SeongwooChoi.jpeg" />
+			</div>
+			<div class="caption">
+				<h3>Seongwoo Choi</h3>
+				<p>DevOp Support</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/swchoi1994/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/TroyInsixiengmay.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Troy Insixiengmay</h3>
+				<p>Mobile DApp Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/troy-i-a07bb9187/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
 				<img src="@/assets/team_img/howard.png" />
 			</div>
 			<div class="caption">
@@ -328,6 +404,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="profile-card">
 			<div class="img">
 				<img src="@/assets/team_img/iyer.jpg" />

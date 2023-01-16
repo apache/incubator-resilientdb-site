@@ -14,6 +14,18 @@
 						</template>
 						Documentation
 					</a-button> -->
+
+				<a-button
+					href="https://youtu.be/QlwnZuBHqM4"
+					type="primary"
+					size="large"
+				>
+					<template #icon>
+						<play-circle-outlined />
+					</template>
+					Our Vision
+				</a-button>
+
 				<a-button
 					href="https://resilientdb.com/blog/"
 					type="primary"
@@ -92,7 +104,7 @@
 				democratic and decentralized computational paradigm, that is, to ingrain
 				privacy, integrity, transparency, and accountability into the very
 				fabric of the computational model. At the heart of this paradigm shift
-				lies a family of Byzantine-tolerant consensus protocols, a classical
+				lies a family of fault-tolerant consensus protocols, a classical
 				distributed theory problem that has failed to fulfill the needs of
 				high-performant modern applications. To close this gap, we have boldly
 				re-imagined the entire blockchain fabric through a scale-centric lens in
@@ -167,13 +179,13 @@
 		</div>
 	</section>
 
-	<!-- <section class="timeline">
+	<section class="timeline">
 		<div class="info">
-			<div class="title">PROGRESS TO DATE</div>
+			<div class="title">OUR SPECIAL WAY</div>
 			<div class="head">ResilientDB Roadmap</div>
 			<timeline />
 		</div>
-	</section> -->
+	</section>
 
 	<section class="charts">
 		<div class="info">
@@ -384,7 +396,7 @@
 						>
 							<file-text-outlined style="font-size: 24px" />
 							<p style="padding-top: 8px; color: black">
-								Coordination-Free Byzantine Replication
+								Coordination-Free Replication
 							</p>
 						</a>
 					</a-card>
@@ -536,7 +548,7 @@
 		FileTextOutlined,
 	} from "@ant-design/icons-vue";
 
-	// import Timeline from "../Home/Timeline.vue";
+	import Timeline from "../Home/Timeline.vue";
 	import Team from "./Team.vue";
 	import FooterSection from "./FooterSection.vue";
 	import Sponsors from "./Sponsors.vue";
@@ -552,7 +564,7 @@
 			PlayCircleOutlined,
 			CodeOutlined,
 			ReadOutlined,
-			// Timeline,
+			Timeline,
 			Team,
 			Chart1,
 			Chart2,
@@ -689,7 +701,7 @@
 	.timeline {
 		background: #000103;
 		/* background-image: url("@/assets/timeline.png"); */
-		background-color: #cccccc;
+		/* background-color: #cccccc; */
 		/* background-size: 100%; */
 		position: relative;
 	}
