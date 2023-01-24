@@ -10,7 +10,7 @@
 		<div class="wrapper inner-wrapper-padding">
 			<div class="start-point">
 				<div class="black-dot"></div>
-				<h4>Start</h4>
+				<h4>Inception</h4>
 				<div class="corner bl"></div>
 			</div>
 
@@ -411,7 +411,22 @@
 												Hybrid Consensus: Power-of-Collaboration
 											</a>
 										</span>
-										, View-Change-Less Consensus
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap">
+							<h6>Fall 2022</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>
+										<a
+											href="https://www.cidrdb.org/cidr2023/papers/p85-gupta.pdf"
+										>
+											Chemistry behind Agreement
+										</a>
 									</p>
 								</div>
 							</div>
@@ -440,7 +455,139 @@
 				<div class="timeline-row">
 					<div class="timeline-box">
 						<div class="timeline-box-wrap">
+							<h6>February 4, 2023</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>
+										Consensus in Data Management: From Distributed Commit to
+										Blockchain
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
 							<h6>Spring 2023</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>
+										View-Change-Less Consensus, Extended SDK, Smart Contract &
+										Wallet Integration, Exploration & Deployment Dashboard
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Summer 2023</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>
+										Application Landscape:
+										<span>
+											<a href="https://nft.resilientdb.com/"> NFT </a>
+										</span>
+										&
+										<span>
+											<a href="https://debitable.resilientdb.com/">
+												Debitable
+											</a>
+										</span>
+										, Minting Resilient Token (RoK)
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="horizontal-line"></div>
+					<div class="verticle-line"></div>
+					<div class="corner top"></div>
+					<div class="corner bottom"></div>
+				</div>
+
+				<div class="timeline-row">
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Fall 2023</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>DAG Meets BFT</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>September 30, 2023</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>Apache Incubation</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Winter 2024</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>Philosophical Pillars of Blockchain</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="horizontal-line"></div>
+					<div class="verticle-line"></div>
+					<div class="corner top"></div>
+					<div class="corner bottom"></div>
+				</div>
+
+				<div class="timeline-row">
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Spring 2024</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>Smart Contract Concurrency Control</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Summer 2024</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>FLeX: Fault-tolerant Learner-Executer Paradigm</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Fall 2024</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>Off-chain Decentralized Storage</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="horizontal-line"></div>
+					<div class="verticle-line"></div>
+					<div class="corner top"></div>
+					<div class="corner bottom"></div>
+				</div>
+
+				<div class="timeline-row">
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
+							<h6>Winter 2025</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
 									<p>Reconfigurable Ecosystem</p>
@@ -449,11 +596,11 @@
 						</div>
 					</div>
 					<div class="timeline-box">
-						<div class="timeline-box-wrap">
-							<h6>Winter 2024</h6>
+						<div class="timeline-box-wrap future">
+							<h6>Spring 2025</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>Planet Scale</p>
+									<p>Planet Scale Reliability</p>
 								</div>
 							</div>
 						</div>
@@ -898,6 +1045,10 @@
 		/*min-height: 318px;*/
 		padding: 0;
 		margin-bottom: 90px;
+	}
+
+	.future > h6 {
+		color: #d9363e;
 	}
 	/*.timeline-row:after{content: ''; position: absolute; left: 50%; top: 74.5px; height: 1px; width: 91%; background-color: #aaa; transform: translateX(-50%);top: 0;} .timeline-row .verticle-line { margin: 0; padding: 0; width: 1px; border-right: 1px solid #aaa; height:calc(100% - 126px); position: absolute; top: calc( 50% + 75px );; right: 0; margin: auto 0; bottom: unset; transform: translateY(-50%);top: 50%; } */
 	.timeline-row:first-child::after {

@@ -23,7 +23,7 @@
 					<template #icon>
 						<play-circle-outlined />
 					</template>
-					Our Vision
+					Vision
 				</a-button>
 
 				<a-button
@@ -34,7 +34,7 @@
 					<template #icon>
 						<read-outlined />
 					</template>
-					ExpoLab Blog
+					Blog
 				</a-button>
 				<a-button
 					href="https://github.com/resilientdb/resilientdb"
@@ -44,7 +44,7 @@
 					<template #icon>
 						<code-outlined />
 					</template>
-					Get Code
+					Code
 				</a-button>
 				<a-button
 					href="https://youtu.be/ewtFSwjitsg"
@@ -54,7 +54,7 @@
 					<template #icon>
 						<play-circle-outlined />
 					</template>
-					Watch Demo
+					Demo
 				</a-button>
 			</div>
 		</div>
@@ -515,6 +515,19 @@
 							<file-text-outlined style="font-size: 24px" />
 							<p style="padding-top: 8px; color: black">
 								Power-of-Collaboration Consensus
+							</p>
+						</a>
+					</a-card>
+				</div>
+				<div class="Item">
+					<a-card hoverable :bordered="false">
+						<a
+							target="_blank"
+							href="https://www.cidrdb.org/cidr2023/papers/p85-gupta.pdf"
+						>
+							<file-text-outlined style="font-size: 24px" />
+							<p style="padding-top: 8px; color: black">
+								Chemistry behind Agreement
 							</p>
 						</a>
 					</a-card>

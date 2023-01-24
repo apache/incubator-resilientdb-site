@@ -230,21 +230,6 @@
 
 		<div class="profile-card">
 			<div class="img">
-				<img src="@/assets/team_img/RohithRaj.jpg" />
-			</div>
-			<div class="caption">
-				<h3>Rohith Raj Srinivasan</h3>
-				<p>Backend Developer</p>
-				<div class="social-links">
-					<a href="https://www.linkedin.com/in/rohith-raj-s/"
-						><linkedin-outlined
-					/></a>
-				</div>
-			</div>
-		</div>
-
-		<div class="profile-card">
-			<div class="img">
 				<img src="@/assets/team_img/ApratimShukla.jpeg" />
 			</div>
 			<div class="caption">
