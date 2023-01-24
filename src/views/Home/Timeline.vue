@@ -468,6 +468,17 @@
 					</div>
 					<div class="timeline-box">
 						<div class="timeline-box-wrap future">
+							<h6>Winter 2023</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<p>View-Change-Less Consensus</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="timeline-box">
+						<div class="timeline-box-wrap future">
 							<h6>Spring 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
@@ -487,15 +498,15 @@
 									<p>
 										Application Landscape:
 										<span>
-											<a href="https://nft.resilientdb.com/"> NFT </a>
+											<a href="https://nft.resilientdb.com/"> NFT</a>
 										</span>
 										&
 										<span>
 											<a href="https://debitable.resilientdb.com/">
-												Debitable
+												Debitable,
 											</a>
 										</span>
-										, Minting Resilient Token (RoK)
+										Minting Resilient Token (RoK)
 									</p>
 								</div>
 							</div>
@@ -985,7 +996,7 @@
 	.timeline-row {
 		display: flex;
 		justify-content: space-around;
-		flex-wrap: wrap;
+		/* flex-wrap: wrap; */
 		padding-bottom: 0px;
 		position: relative; /*padding: 0 66px 130px;margin-right: 111px;*/
 	}
@@ -1048,7 +1059,7 @@
 	}
 
 	.future > h6 {
-		color: #d9363e;
+		color: #1890ff;
 	}
 	/*.timeline-row:after{content: ''; position: absolute; left: 50%; top: 74.5px; height: 1px; width: 91%; background-color: #aaa; transform: translateX(-50%);top: 0;} .timeline-row .verticle-line { margin: 0; padding: 0; width: 1px; border-right: 1px solid #aaa; height:calc(100% - 126px); position: absolute; top: calc( 50% + 75px );; right: 0; margin: auto 0; bottom: unset; transform: translateY(-50%);top: 50%; } */
 	.timeline-row:first-child::after {
@@ -1169,6 +1180,10 @@
 		}
 		.timeline-box-wrap .timeline-content img {
 			max-width: 100%;
+		}
+
+		.timeline-row {
+			flex-wrap: nowrap;
 		}
 	}
 
@@ -1363,6 +1378,9 @@
 		.timeline-row:last-child {
 			padding-bottom: 70px;
 		}
+		.timeline-row {
+			flex-wrap: wrap;
+		}
 	}
 
 	@media screen and (max-width: 640px) {
@@ -1394,6 +1412,9 @@
 		.timeline-box.img-left .timeline-content img {
 			max-width: 100%;
 			max-height: unset;
+		}
+		.timeline-row {
+			flex-wrap: wrap;
 		}
 	}
 </style>
