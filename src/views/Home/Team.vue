@@ -271,6 +271,36 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/gopal.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Gopal Nambiar</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/gopal-nambiar2/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/tim.jpeg" />
+			</div>
+			<div class="caption">
+				<h3>Tim</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/timhwang777"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="alumni">Distinguished Alumni</div>

@@ -471,7 +471,14 @@
 							<h6>Winter 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>View-Change-Less Consensus</p>
+									<p>
+										View-Change-Less Consensus,
+										<a
+											href="https://github.com/resilientdb/resilientdb/releases/tag/version_v1.2.0"
+										>
+											EVM-based Smart Contract with Solidity
+										</a>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -483,8 +490,8 @@
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
 									<p>
-										View-Change-Less Consensus, Extended SDK, Smart Contract &
-										Wallet Integration, Exploration & Deployment Dashboard
+										Extended SDK, Wallet Integration, Exploration & Deployment
+										Dashboard
 									</p>
 								</div>
 							</div>
