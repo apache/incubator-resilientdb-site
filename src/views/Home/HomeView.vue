@@ -532,6 +532,26 @@
 						</a>
 					</a-card>
 				</div>
+				<div class="Item">
+					<a-card hoverable :bordered="false">
+						<a target="_blank" href="https://arxiv.org/abs/2302.02325">
+							<file-text-outlined style="font-size: 24px" />
+							<p style="padding-top: 8px; color: black">
+								Collaborative Consensus
+							</p>
+						</a>
+					</a-card>
+				</div>
+				<div class="Item">
+					<a-card hoverable :bordered="false">
+						<a target="_blank" href="https://arxiv.org/abs/2302.02118">
+							<file-text-outlined style="font-size: 24px" />
+							<p style="padding-top: 8px; color: black">
+								View-Change-Less Protocol
+							</p>
+						</a>
+					</a-card>
+				</div>
 			</div>
 		</div>
 	</section>

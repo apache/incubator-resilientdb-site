@@ -278,7 +278,7 @@
 			</div>
 			<div class="caption">
 				<h3>Gopal Nambiar</h3>
-				<p>Developer</p>
+				<p>Full Stack Developer</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/gopal-nambiar2/"
 						><linkedin-outlined
@@ -292,8 +292,8 @@
 				<img src="@/assets/team_img/tim.jpeg" />
 			</div>
 			<div class="caption">
-				<h3>Tim</h3>
-				<p>Developer</p>
+				<h3>Tim Huang</h3>
+				<p>Storage Developer</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/timhwang777"
 						><linkedin-outlined

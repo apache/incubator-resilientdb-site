@@ -460,7 +460,13 @@
 								<div class="timeline-content-txt">
 									<p>
 										Consensus in Data Management: From Distributed Commit to
-										Blockchain
+										Blockchain,
+										<a href="https://arxiv.org/abs/2302.02325">
+											Collaborative Consensus</a
+										>,
+										<a href="https://arxiv.org/abs/2302.02118">
+											View-Change-Less Protocol</a
+										>
 									</p>
 								</div>
 							</div>
@@ -472,12 +478,11 @@
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
 									<p>
-										View-Change-Less Consensus,
 										<a
 											href="https://github.com/resilientdb/resilientdb/releases/tag/version_v1.2.0"
 										>
-											EVM-based Smart Contract with Solidity
-										</a>
+											EVM-based Smart Contract with Solidity </a
+										>, Extended Python SDK
 									</p>
 								</div>
 							</div>
@@ -489,10 +494,7 @@
 							<h6>Spring 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
-									<p>
-										Extended SDK, Wallet Integration, Exploration & Deployment
-										Dashboard
-									</p>
+									<p>Wallet Integration, Exploration & Deployment Dashboard</p>
 								</div>
 							</div>
 						</div>
