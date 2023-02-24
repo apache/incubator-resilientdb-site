@@ -479,10 +479,15 @@
 								<div class="timeline-content-txt">
 									<p>
 										<a
-											href="https://github.com/resilientdb/resilientdb/releases/tag/version_v1.2.0"
+											href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.2.0"
 										>
-											EVM-based Smart Contract with Solidity </a
-										>, Extended Python SDK
+											EVM-based Smart Contract with Solidity</a
+										>,
+										<a
+											href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.3.0"
+										>
+											Extended Python SDK
+										</a>
 									</p>
 								</div>
 							</div>

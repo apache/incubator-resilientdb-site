@@ -82,7 +82,7 @@
 		</div>
 	</div>
 
-	<div class="head2">NexRes Team</div>
+	<div class="head2">NexRes (Next Generation ResilientDB) Team</div>
 	<div class="main2">
 		<div class="profile-card">
 			<div class="img">
