@@ -68,7 +68,12 @@
 				Iranian people. We are committed to upholding fundamental human rights,
 				maintaining equity and justice, and standing against the use of
 				violence, repression, and discrimination. We condemn the barbaric acts
-				and brutal killings in Iranian streets and globally.
+				and brutal killings in Iranian streets,
+				<a
+					href="https://www.ucdavis.edu/news/chancellors-statement-crisis-ukraine"
+					target="_blank"
+					>of innocent people in Ukraine</a
+				>, and everywhere globally.
 			</div>
 			<strong>#MahsaAmini &nbsp #مهسا_امینی &nbsp #WomenLifeFreedom</strong>
 			<div>

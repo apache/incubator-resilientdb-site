@@ -133,7 +133,7 @@
 			</div>
 			<div class="caption">
 				<h3>Jinxiao Yu</h3>
-				<p>Sharding Architect</p>
+				<p>Performance Analyst</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/jinxiao-yu-029137150/"
 						><linkedin-outlined
