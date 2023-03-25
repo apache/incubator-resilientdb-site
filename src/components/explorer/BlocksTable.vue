@@ -126,7 +126,12 @@
 			};
 
 			const searchInput = ref();
-			const { blocks } = storeToRefs(useBlocksStore());
+			const blocksStore = useBlocksStore();
+			const { blocks } = storeToRefs(blocksStore);
+			const { refreshBlocks } = blocksStore;
+			refreshBlocks();
+
+			console.log(blocks);
 			return {
 				data: blocks,
 				columns,
