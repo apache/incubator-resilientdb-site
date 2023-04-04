@@ -1,6 +1,5 @@
 import blocks from "@/api/blockstatus.json";
 import axios from "axios";
-// import Block from "@/store/blocks";
 
 // Temporary - maybe better to find a way to import the interface from store/blocks.ts
 interface Block {
@@ -28,15 +27,36 @@ interface Block {
 	createdAt: string;
 }
 
+interface TempBlock {
+	transactions: {
+		cmd: string;
+		key: string;
+		value: string;
+		seq: number;
+		proxy_id: number;
+	}[];
+	createtime: number;
+	local_id: number;
+	seq: number;
+}
+
 export const getAvailableBlocks = async (address: string) => {
-	//TODO: Fetch from network
 
-	// let blockslist: Block[] = [];
+	try {
+		let res = await axios({
+			 url: 'http://localhost:18000/explorertest',
+			 method: 'get',
+			 timeout: 8000,
+			 headers: {
+				 'Content-Type': 'application/json',
+			 }
+		 })
 
-	// axios
-	// .get(address)
-	// .then(response => (blockslist = response.data))
+		 return res.data
+	 }
+	 catch (err) {
+		 console.error(err);
+	 }
 
-	// return blockslist;
-	return blocks;
+	// return blocks;
 };
