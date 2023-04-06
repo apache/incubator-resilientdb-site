@@ -7,11 +7,17 @@ interface Block {
 	number: string;
 	hash: string;
 	transactions: {
-		txnHash: string;
-		block: string;
-		clientId: string;
-		transactionData: string;
-		clientSignature: string;
+		// txnHash: string;
+		// block: string;
+		// clientId: string;
+		// transactionData: string;
+		// clientSignature: string;
+		cmd: string;
+		key?: string;
+		value?: string;
+		min_key?: string;
+		max_key?: string;
+
 	}[];
 	size: number;
 	blockHeight: number;
