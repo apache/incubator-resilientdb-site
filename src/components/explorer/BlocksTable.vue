@@ -41,11 +41,11 @@
 				}
 			},
 		},
-		{
-			title: "Hash",
-			dataIndex: "hash",
-			key: "hash",
-		},
+		// {
+		// 	title: "Hash",
+		// 	dataIndex: "hash",
+		// 	key: "hash",
+		// },
 		{
 			title: "Size",
 			dataIndex: "size",
@@ -55,33 +55,33 @@
 				multiple: 1,
 			},
 		},
-		{
-			title: "Block Height",
-			dataIndex: "blockHeight",
-			key: "blockHeight",
-		},
+		// {
+		// 	title: "Block Height",
+		// 	dataIndex: "blockHeight",
+		// 	key: "blockHeight",
+		// },
 		{
 			title: "Transactions",
 			dataIndex: "transactions",
 			key: "transactions",
 		},
-		{
-			title: "Mined By",
-			dataIndex: "minedBy",
-			key: "minedBy",
-		},
+		// {
+		// 	title: "Mined By",
+		// 	dataIndex: "minedBy",
+		// 	key: "minedBy",
+		// },
+		
+		// {
+		// 	title: "Gas Used",
+		// 	dataIndex: "gasUsed",
+		// 	key: "gasUsed",
+		// },
 
-		{
-			title: "Gas Used",
-			dataIndex: "gasUsed",
-			key: "gasUsed",
-		},
-
-		{
-			title: "Commit Certificate",
-			key: "commitCertificate",
-			dataIndex: "commitCertificate",
-		},
+		// {
+		// 	title: "Commit Certificate",
+		// 	key: "commitCertificate",
+		// 	dataIndex: "commitCertificate",
+		// },
 		{
 			title: "Created At",
 			key: "createdAt",
@@ -129,9 +129,10 @@
 			const blocksStore = useBlocksStore();
 			const { blocks } = storeToRefs(blocksStore);
 			const { refreshBlocks } = blocksStore;
-			refreshBlocks();
+			refreshBlocks(); // Populate table on initial load
 
-			console.log(blocks);
+			setInterval(()=> { refreshBlocks() }, 5 * 1000);
+
 			return {
 				data: blocks,
 				columns,

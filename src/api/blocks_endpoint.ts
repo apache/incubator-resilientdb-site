@@ -5,7 +5,7 @@ export const getAvailableBlocks = async (address: string) => {
 
 	try {
 		let res = await axios({
-			 url: 'http://localhost:18000/v1/blocks/1',
+			 url: address,
 			 method: 'get',
 			 timeout: 8000,
 			 headers: {
