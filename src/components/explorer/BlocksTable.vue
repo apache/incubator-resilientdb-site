@@ -105,20 +105,19 @@
 			const { refreshBlocks } = blocksStore;
 			refreshBlocks(); // Populate table on initial load
 
-			// setInterval(()=> { refreshBlocks() }, 5 * 1000);
+			const socket = new WebSocket('ws://localhost:18000/ws'); 
+			socket.addEventListener('open', function (event) { 
+				console.log('Opened websocket for reading blocks'); 
+			}); 
 
-			// const socket = new WebSocket('ws://localhost:18000/ws'); 
-			// socket.addEventListener('open', function (event) { 
-			// 	socket.send('Opened websocket for reading blocks'); 
-			// }); 
+			socket.addEventListener('message', function (event) { 
+				console.log('Refreshing blocks')
+				refreshBlocks();
+			});
 
-			// socket.addEventListener('message', function (event) { 
-			// 	console.log('Message from server ', event.data);
-			// });
-
-			// socket.addEventListener('close', function (event) { 
-			// 	console.log('Websocket for reading blocks has been closed'); 
-			// });
+			socket.addEventListener('close', function (event) { 
+				console.log('Websocket for reading blocks has been closed'); 
+			});
 
 			return {
 				data: blocks,
