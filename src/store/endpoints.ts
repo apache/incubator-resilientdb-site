@@ -10,7 +10,7 @@ interface EndpointsStoreState {
 export const useEndpointsStore = defineStore("endpoints", {
 	state: () => {
 		const state: EndpointsStoreState = {
-			endpoints: ["http://localhost:18000/v1/blocks/1"],
+			endpoints: ["http://localhost:18000/v1/blocks/1", "http://localhost:18000/populatetable"],
 		};
 		return state;
 	},

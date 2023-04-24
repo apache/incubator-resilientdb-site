@@ -36,6 +36,19 @@ interface BlocksState {
 	blocks: Block[];
 }
 
+interface Ledger{
+	replicaNum: number;
+	clientNum: number;
+	workerNum: number;
+	clientBatchNum: number;
+	maxProcessTxn: number;
+	clientBatchWaitTime: number;
+}
+
+interface LedgerState {
+	ledger: Ledger[];
+}
+
 export const useBlocksStore = defineStore("blocks", {
 	state: () => {
 		const state: BlocksState = {
@@ -55,6 +68,27 @@ export const useBlocksStore = defineStore("blocks", {
 		},
 	},
 });
+
+export const useLedgerStore = defineStore("ledger", {
+	state: () => {
+		const state: LedgerState = {
+			ledger: [],
+		};
+		return state;
+	},
+
+	actions: {
+		async populateTable() {
+			const endpointsStore = useEndpointsStore();
+			if (!endpointsStore.endpoints[1]) {
+				throw new Error("No Endpoints Found.");
+			}
+		
+			this.ledger = await getAvailableBlocks(endpointsStore.endpoints[1]);
+		},
+	},
+});
+
 
 export const initialize = function () {
 };

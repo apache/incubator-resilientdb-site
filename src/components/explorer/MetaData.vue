@@ -1,32 +1,10 @@
-<template>
-	<div class="statistics">
-		<a-card title="NexRes Blockchain (Sample Data)">
-			<a-row style="margin: 1.5rem">
-				<a-col :xs="12" :sm="12" :md="6">
-					<a-statistic title="Active Replica" :value="11" />
-					<a-divider />
-					<a-statistic title="Batch Size (MB)" :value="112" />
-					<a-divider />
-					<a-statistic title="Client Timer" :value="3" />
-				</a-col>
-				<a-col :xs="12" :sm="12" :md="6">
-					<a-statistic title="Active Client" :value="2" />
-					<a-divider />
-					<a-statistic title="Checkpoint Window Size" :value="12" />
-					<a-divider />
-					<a-statistic title="Proposal Timer" :value="4" />
-				</a-col>
-				<a-col :md="12">
-					<chart />
-				</a-col>
-			</a-row>
-		</a-card>
-	</div>
-</template>
-
 <script lang="ts">
 	import { defineComponent } from "vue";
 	import Chart from "../explorer/Chart.vue";
+	import { useLedgerStore } from "@/store/blocks";
+	import { storeToRefs } from "pinia";
+	
+
 	export default defineComponent({
 		name: "MetaData",
 		components: { Chart },
@@ -40,8 +18,45 @@
 				required: true,
 			},
 		},
+		setup() {
+			const ledgerStore = useLedgerStore();
+			const { ledger } = storeToRefs(ledgerStore);
+			const { populateTable } = ledgerStore;
+			populateTable();
+			console.log(ledger);
+			console.log("try this");
+			return {
+				data: ledger,
+			};
+		},
 	});
 </script>
+
+<template>
+	<div class="statistics">
+		<a-card title="ResilientDB BlockChain Data">
+			<a-row style="margin: 1.5rem">
+				<a-col :xs="12" :sm="12" :md="6">
+					<a-statistic title="Active Replicas" :value="data[0].replicaNum"/>
+					<a-divider />
+					<a-statistic title="Active Clients" :value="data[0].clientNum" />
+					<a-divider />
+					<a-statistic title="Workers" :value="data[0].workerNum" />
+				</a-col>
+				<a-col :xs="12" :sm="12" :md="6">
+					<a-statistic title="Client Batch Size" :value="data[0].clientBatchNum" />
+					<a-divider />
+					<a-statistic title="Maximum TXN Process" :value="data[0].maxProcessTxn" />
+					<a-divider />
+					<a-statistic title="Client Batch Wait Time (MS)" :value="data[0].clientBatchWaitTime" />
+				</a-col>
+				<a-col :md="12">
+					<chart />
+				</a-col>
+			</a-row>
+		</a-card>
+	</div>
+</template>
 
 <style scoped>
 	.container {
