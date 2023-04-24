@@ -5,7 +5,7 @@ import { useEndpointsStore } from "@/store/endpoints";
 interface Block {
 	id: number;
 	number: string;
-	hash: string;
+	// hash: string;
 	transactions: {
 		// txnHash: string;
 		// block: string;
@@ -20,16 +20,16 @@ interface Block {
 
 	}[];
 	size: number;
-	blockHeight: number;
-	minedBy: string;
-	blockReward: number;
-	difficulty: number;
-	totalDifficulty: number;
-	gasUsed: string;
-	parentHash: string;
-	stateRoot: string;
-	nounce: string;
-	commitCertificate: string;
+	// blockHeight: number;
+	// minedBy: string;
+	// blockReward: number;
+	// difficulty: number;
+	// totalDifficulty: number;
+	// gasUsed: string;
+	// parentHash: string;
+	// stateRoot: string;
+	// nounce: string;
+	// commitCertificate: string;
 	createdAt: string;
 }
 interface BlocksState {

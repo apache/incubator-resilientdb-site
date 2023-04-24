@@ -2,56 +2,37 @@
 	import { useBlocksStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
 	// import blocks from "../../api/blockstatus.json";
+	import blocks from "../../api/transactions.json";
 	import { DownOutlined, FireTwoTone } from "@ant-design/icons-vue";
-	import { defineComponent } from "vue";
+	import { defineComponent, unref } from "vue";
 	import { useRoute } from "vue-router";
-	/*
-	cmd: string;
-		key?: string;
-		value?: string;
-		min_key?: string;
-		max_key?: string;
-		*/
+	
 	const columns = [
 		{
-			title: "cmd",
+			title: "Command Type",
 			dataIndex: "cmd",
 			key: "cmd",
 		},
-		// {
-		// 	title: "#",
-		// 	dataIndex: "id",
-		// 	key: "id",
-		// },
-		// {
-		// 	title: "Transaction Hash",
-		// 	dataIndex: "txnHash",
-		// 	key: "txnHash",
-		// },
-		// {
-		// 	title: "Block",
-		// 	dataIndex: "block",
-		// 	key: "block",
-		// },
-		// {
-		// 	title: "Client Id",
-		// 	dataIndex: "clientId",
-		// 	key: "clientId",
-		// },
-		// {
-		// 	title: "Transaction Data",
-		// 	key: "transactionData",
-		// 	dataIndex: "transactionData",
-		// },
-        // {
-		// 	title: "Client Signature",
-		// 	key: "clientSignature",
-		// 	dataIndex: "clientSignature",
-		// },
-		// {
-		// 	title: "Action",
-		// 	key: "action",
-		// },
+		{
+			title: "Key",
+			dataIndex: "key",
+			key: "key",
+		},
+		{
+			title: "Value",
+			dataIndex: "value",
+			key: "value",
+		},
+		{
+			title: "Min Key",
+			dataIndex: "min_key",
+			key: "min_key",
+		},
+		{
+			title: "Max Key",
+			dataIndex: "max_key",
+			key: "max_key",
+		},
 	];
 
 	// const data = blocks;
@@ -67,7 +48,6 @@
 			const { blocks } = storeToRefs(blocksStore);
 			const { refreshBlocks } = blocksStore;
 			refreshBlocks();
-			// setInterval(()=> { refreshBlocks() }, 5 * 1000);
 
 			const block = blocks.value.filter(
 				(b) => b.id === parseInt(route.query.id as string)
