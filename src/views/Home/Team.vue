@@ -301,6 +301,49 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/haskell.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Haskell Lark Macaraig</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/haskell-macaraig-79aaba230"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/steve.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Steve Chen</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/schen7239/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/jared.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Jared Givens</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/jared-givens-41582518b"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="alumni">Distinguished Alumni</div>

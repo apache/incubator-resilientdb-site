@@ -477,7 +477,7 @@
 						</div>
 					</div>
 					<div class="timeline-box">
-						<div class="timeline-box-wrap future">
+						<div class="timeline-box-wrap">
 							<h6>Winter 2023</h6>
 							<div class="timeline-content">
 								<div class="timeline-content-txt">
