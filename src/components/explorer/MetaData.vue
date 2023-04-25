@@ -24,7 +24,6 @@
 			const { populateTable } = ledgerStore;
 			populateTable();
 			console.log(ledger);
-			console.log("try this");
 			return {
 				data: ledger,
 			};
@@ -39,20 +38,34 @@
 				<a-col :xs="12" :sm="12" :md="6">
 					<a-statistic title="Active Replicas" :value="data[0].replicaNum"/>
 					<a-divider />
-					<a-statistic title="Active Clients" :value="data[0].clientNum" />
-					<a-divider />
 					<a-statistic title="Workers" :value="data[0].workerNum" />
+					<a-divider />
+					<a-statistic title="Minimum Data Received" :value="data[0].minDataReceiveNum" />
 				</a-col>
 				<a-col :xs="12" :sm="12" :md="6">
-					<a-statistic title="Client Batch Size" :value="data[0].clientBatchNum" />
+					<a-statistic title="Active Clients" :value="data[0].clientNum" />
+					<a-divider />
+					<a-statistic title="Input Workers" :value="data[0].inputWorkerNum" />
+					<a-divider />
+					<a-statistic title="Max Malicious Replicas" :value="data[0].maxMaliciousReplicaNum" />
+				</a-col>
+				<a-col :xs="12" :sm="12" :md="6">
+					<a-statistic title="Client Batch Size" :value="data[0].clientBatchNum"/>
+					<a-divider />
+					<a-statistic title="Output Workers" :value="data[0].outputWorkerNum" />
+					<a-divider />
+					<a-statistic title="Checkpoint Water Mark" :value="data[0].checkpointWaterMark" />
+				</a-col>
+				<a-col :xs="12" :sm="12" :md="6">
+					<a-statistic title="Client Batch Wait Time(MS)" :value="data[0].clientBatchWaitTime" />
 					<a-divider />
 					<a-statistic title="Maximum TXN Process" :value="data[0].maxProcessTxn" />
 					<a-divider />
-					<a-statistic title="Client Batch Wait Time (MS)" :value="data[0].clientBatchWaitTime" />
+					<a-statistic title="Client Timeout (MS)" :value="data[0].clientTimeoutMs" />
 				</a-col>
-				<a-col :md="12">
+				<!-- <a-col :md="12">
 					<chart />
-				</a-col>
+				</a-col> -->
 			</a-row>
 		</a-card>
 	</div>

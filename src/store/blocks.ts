@@ -43,6 +43,12 @@ interface Ledger{
 	clientBatchNum: number;
 	maxProcessTxn: number;
 	clientBatchWaitTime: number;
+	inputWorkerNum: number;
+	outputWorkerNum: number;
+	clientTimeoutMs: number;
+	minDataReceiveNum: number;
+	maxMaliciousReplicaNum: number;
+	checkpointWaterMark: number;
 }
 
 interface LedgerState {
