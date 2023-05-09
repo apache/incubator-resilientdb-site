@@ -344,6 +344,36 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/Saipranav.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Saipranav Kotamreddy</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/saip-reddy/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/aditya.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Aditya Bej</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/aditya-bej-029381110/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="alumni">Distinguished Alumni</div>
