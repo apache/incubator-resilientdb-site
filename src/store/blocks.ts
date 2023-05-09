@@ -20,7 +20,7 @@ interface BlocksState {
 	blocks: Block[];
 }
 
-interface Ledger{
+interface Ledger {
 	replicaNum: number;
 	clientNum: number;
 	workerNum: number;

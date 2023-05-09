@@ -18,12 +18,12 @@
 				required: true,
 			},
 		},
-		setup() {
+		async setup() {
 			const ledgerStore = useLedgerStore();
 			const { ledger } = storeToRefs(ledgerStore);
 			const { populateTable } = ledgerStore;
-			populateTable();
-			console.log(ledger);
+			await populateTable();
+			// console.log(ledger);
 			return {
 				data: ledger,
 			};
