@@ -101,18 +101,22 @@
 			const searchInput = ref();
 			const blocksStore = useBlocksStore();
 			const { blocks } = storeToRefs(blocksStore);
-			console.log(blocks);
+
 			const { refreshBlocks } = blocksStore;
 			refreshBlocks(); // Populate table on initial load
 
-			const socket = new WebSocket('ws://localhost:18000/ws'); 
+			const socket = new WebSocket('ws://localhost:18000/blockupdatelistener'); 
 			socket.addEventListener('open', function (event) { 
 				console.log('Opened websocket for reading blocks'); 
 			}); 
 
 			socket.addEventListener('message', function (event) { 
-				console.log('Refreshing blocks')
-				refreshBlocks();
+				console.log(event.data);
+
+				function delay(time) {
+					return new Promise(resolve => setTimeout(resolve, time));
+				}
+				delay(1000).then(() => refreshBlocks());
 			});
 
 			socket.addEventListener('close', function (event) { 

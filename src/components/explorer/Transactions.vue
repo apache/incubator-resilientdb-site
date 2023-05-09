@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { useBlocksStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
-	// import blocks from "../../api/blockstatus.json";
 	import blocks from "../../api/transactions.json";
 	import { DownOutlined, FireTwoTone } from "@ant-design/icons-vue";
-	import { defineComponent, unref } from "vue";
+	import { defineComponent } from "vue";
 	import { useRoute } from "vue-router";
 	
 	const columns = [
@@ -42,19 +41,17 @@
 			DownOutlined,
 			FireTwoTone,
 		},
-		setup() {
+		async setup() {
 			const route = useRoute();
 			const blocksStore = useBlocksStore();
 			const { blocks } = storeToRefs(blocksStore);
 			const { refreshBlocks } = blocksStore;
-			refreshBlocks();
-
+			await refreshBlocks();
+			
 			const block = blocks.value.filter(
 				(b) => b.id === parseInt(route.query.id as string)
 			);
-
-			console.log(blocks);
-			console.log(block);
+			
 			return {
 				data: block[0].transactions,
                 blockInfo: block,
@@ -66,11 +63,9 @@
 <template>
 	<div class="container timeline">
 		<div class="grid letOverflow">
- 
-        <a-table :columns="columns" :data-source="data" >
-   <template #title><strong>Transactions</strong> for Block <a :href="'/block?id=' + blockInfo[0].id">{{blockInfo[0].number}}</a></template>
-  </a-table>
-		
+			<a-table :columns="columns" :data-source="data" >
+				<template #title><strong>Transactions</strong> for Block <a :href="'/block?id=' + blockInfo[0].id">{{blockInfo[0].number}}</a></template>
+			</a-table>
 		</div>
 	</div>
 </template>
