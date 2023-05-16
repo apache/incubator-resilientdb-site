@@ -23,7 +23,7 @@
 			const { ledger } = storeToRefs(ledgerStore);
 			const { populateTable } = ledgerStore;
 			await populateTable();
-			// console.log(ledger);
+			console.log(ledger);
 			return {
 				data: ledger,
 			};
@@ -63,10 +63,10 @@
 					<a-divider />
 					<a-statistic title="Client Timeout (MS)" :value="data[0].clientTimeoutMs" />
 				</a-col>
-				<!-- <a-col :md="12">
-					<chart />
-				</a-col> -->
 			</a-row>
+			<!-- <a-col :md="12"> -->
+				<chart />
+				<!-- </a-col> -->
 		</a-card>
 	</div>
 </template>
