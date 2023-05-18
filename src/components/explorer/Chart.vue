@@ -76,54 +76,50 @@
 				refreshBlocks();
 				console.log(blocks);
 
-				const transactions = [];
+				const transactionCount = [];
 				const createdAt = [];
-				const dateTime = [];
+				const minute = [];
 				for (var i = 0; i < blocks.value.length; i++) {
 					var obj = blocks.value[i].transactions;
 					for (var j = 1; j < obj.length + 1; j++) {
-						transactions[i] = j;
+						transactionCount[i] = j;
 					}
 					createdAt[i] = blocks.value[i].createdAt; 
-					dateTime[i] = createdAt[i].split(" ")[1];
+					minute[i] = createdAt[i].split(" ")[1].split(":")[1];
 				}
-				console.log("created at: " + createdAt);
-				let timeStart = parseInt(blocks.value[0].createdAt.split(" ")[1].split(":")[1]); 
-				let latestTime = parseInt(blocks.value[blocks.value.length - 1].createdAt.split(" ")[1].split(":")[1]); 
-				// console.log("time start " + timeStart);
-				// console.log("time end: " + latestTime);
 			
-				// const xtime = [];
-				// const final = [];
-				// let counter = 0;
-				// for (var i = timeStart; i < latestTime + 1; i++){
-				// 	xtime[i] = timeStart;
-				// 	if (dateTime.length === 0){
-				// 		break;
-				// 	}
-				// 	if (dateTime[0].split(":")[1] <= timeStart) {
-				// 		while (dateTime[0].split(":")[1] <= timeStart){
-				// 			if (dateTime.length === 0){
-				// 				break;
-				// 			}
-				// 			counter = counter + 1
-				// 			final[i] = counter; 
-				// 			console.log("same category");
-				// 			dateTime.shift(); 
-				// 		}
-				// 	} else {
-				// 		counter = 0;
-				// 		final[i] = counter; 
-				// 	}
-				// 	timeStart = timeStart + 1; 
-				// }
+				const arrayRange = (start, stop, step) =>
+					Array.from(
+					{ length: (stop - start) / step + 1 },
+					(value, index) => start + index * step
+				);
+				
+				let timeStart = parseInt(blocks.value[0].createdAt.split(" ")[1].split(":")[1]); 
+				let latestTime = parseInt(blocks.value[blocks.value.length - 1].createdAt.split(" ")[1].split(":")[1]);
+				let timeRange = arrayRange(timeStart, latestTime, 1);
+				let hour = parseInt(blocks.value[0].createdAt.split(" ")[1].split(":")[0]);
+				let timeZone = blocks.value[0].createdAt.split(" ")[2];
+				const time = timeRange.map(timeRange => hour + ':' + timeRange + ':00 ' + timeZone); 
 
-				//  console.log(xtime);
-				//  console.log(final);
+				const transactions = [];
+				let counter = 1;
+				for (var i = 0; i < timeRange.length; i++){
+					transactions[i] = 0; 
+					while (parseInt(minute[0]) === timeStart) {
+						if (minute.length === 0){
+							break;
+						}
+						console.log("gets here" + counter);
+						transactions[i] = counter++;
+						minute.shift(); 
+					}
+					counter = 1; 
+					timeStart++; 
+				}
 
 				this.chartOptions = {
 					xaxis: {
-						categories: dateTime,
+						categories: time,
 					}
 				};
 
