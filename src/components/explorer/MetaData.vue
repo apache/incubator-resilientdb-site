@@ -1,25 +1,37 @@
 <template>
 	<div class="statistics">
 		<a-card title="NexRes Blockchain (Sample Data)">
-			<a-row style="margin: 1.5rem">
+			<a-row style=" margin: 1.5rem">
 				<a-col :xs="12" :sm="12" :md="6">
-					<a-statistic title="Active Replica" :value="11" />
+					<a-statistic title="Active Replicas" :value="4"/>
 					<a-divider />
-					<a-statistic title="Batch Size (MB)" :value="112" />
+					<a-statistic title="Workers" :value="64" />
 					<a-divider />
-					<a-statistic title="Client Timer" :value="3" />
+					<a-statistic title="Minimum Data Received" :value="1" />
 				</a-col>
 				<a-col :xs="12" :sm="12" :md="6">
-					<a-statistic title="Active Client" :value="2" />
+					<a-statistic title="Active Clients" :value="1" />
 					<a-divider />
-					<a-statistic title="Checkpoint Window Size" :value="12" />
+					<a-statistic title="Input Workers" :value="1" />
 					<a-divider />
-					<a-statistic title="Proposal Timer" :value="4" />
+					<a-statistic title="Max Malicious Replicas" :value="0" />
 				</a-col>
-				<a-col :md="12">
-					<chart />
+				<a-col :xs="12" :sm="12" :md="6">
+					<a-statistic title="Client Batch Size" :value="100"/>
+					<a-divider />
+					<a-statistic title="Output Workers" :value="1" />
+					<a-divider />
+					<a-statistic title="Checkpoint Water Mark" :value="5" />
+				</a-col>
+				<a-col :xs="12" :sm="12" :md="6">
+					<a-statistic title="Client Batch Wait Time(MS)" :value="100" />
+					<a-divider />
+					<a-statistic title="Maximum TXN Process" :value="2048" />
+					<a-divider />
+					<a-statistic title="Client Timeout (MS)" :value="100000" />
 				</a-col>
 			</a-row>
+				<chart />
 		</a-card>
 	</div>
 </template>
