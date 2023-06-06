@@ -408,6 +408,28 @@
 				</div>
 				<div class="Item">
 					<a-card hoverable :bordered="false">
+						<a
+							target="_blank"
+							href="https://dl.acm.org/doi/10.1145/3274808.3274810"
+						>
+							<file-text-outlined style="font-size: 24px" />
+							<p style="padding-top: 8px; color: black">
+								Coordination-free Concurrency Control
+							</p>
+							<div
+								style="
+									font-size: 12px;
+									font-weight: 600;
+									color: rgb(255, 87, 51);
+								"
+							>
+								[Best Paper Award, ACM Middleware'18]
+							</div>
+						</a>
+					</a-card>
+				</div>
+				<div class="Item">
+					<a-card hoverable :bordered="false">
 						<a target="_blank" href="https://arxiv.org/pdf/2008.04450.pdf">
 							<file-text-outlined style="font-size: 24px" />
 							<p style="padding-top: 8px; color: black">
@@ -459,11 +481,23 @@
 				</div>
 				<div class="Item">
 					<a-card hoverable :bordered="false">
-						<a target="_blank" href="https://arxiv.org/abs/2202.01354">
+						<a
+							target="_blank"
+							href="https://dl.acm.org/doi/10.1145/3552326.3587455"
+						>
 							<file-text-outlined style="font-size: 24px" />
 							<p style="padding-top: 8px; color: black">
 								SGX Accelerated Consensus
 							</p>
+							<div
+								style="
+									font-size: 12px;
+									font-weight: 600;
+									color: rgb(255, 87, 51);
+								"
+							>
+								[Best Paper Award, EuroSys’23]
+							</div>
 						</a>
 					</a-card>
 				</div>

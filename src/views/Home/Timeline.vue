@@ -60,6 +60,18 @@
 					</div>
 					<div class="timeline-box">
 						<div class="timeline-box-wrap">
+							<h6>December 2018</h6>
+							<div class="timeline-content">
+								<div class="timeline-content-txt">
+									<a href="https://dl.acm.org/doi/10.1145/3274808.3274810">
+										<p>Coordination-free Concurrency Control</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-box">
+						<div class="timeline-box-wrap">
 							<h6>March 2019</h6>
 							<div class="timeline-content">
 								<a
@@ -362,7 +374,7 @@
 						<div class="timeline-box-wrap">
 							<h6>Winter 2022</h6>
 							<div class="timeline-content">
-								<a href="https://arxiv.org/abs/2202.01354">
+								<a href="https://dl.acm.org/doi/10.1145/3552326.3587455">
 									<div class="timeline-content-txt">
 										<p>SGX Accelerated Consensus</p>
 									</div>

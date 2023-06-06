@@ -213,7 +213,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="profile-card">
+		<!-- <div class="profile-card">
 			<div class="img">
 				<img src="@/assets/team_img/ManjunathJakaraddi.jpg" />
 			</div>
@@ -226,7 +226,7 @@
 					/></a>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="profile-card">
 			<div class="img">
