@@ -133,7 +133,7 @@
 			</div>
 			<div class="caption">
 				<h3>Jinxiao Yu</h3>
-				<p>Sharding Architect</p>
+				<p>Performance Analyst</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/jinxiao-yu-029137150/"
 						><linkedin-outlined
@@ -213,7 +213,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="profile-card">
+		<!-- <div class="profile-card">
 			<div class="img">
 				<img src="@/assets/team_img/ManjunathJakaraddi.jpg" />
 			</div>
@@ -226,7 +226,7 @@
 					/></a>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="profile-card">
 			<div class="img">
@@ -296,6 +296,79 @@
 				<p>Storage Developer</p>
 				<div class="social-links">
 					<a href="https://www.linkedin.com/in/timhwang777"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/haskell.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Haskell Lark Macaraig</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/haskell-macaraig-79aaba230"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/steve.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Steve Chen</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/schen7239/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/jared.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Jared Givens</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/jared-givens-41582518b"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/Saipranav.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Saipranav Kotamreddy</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/saip-reddy/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/aditya.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Aditya Bej</h3>
+				<p>Developer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/aditya-bej-029381110/"
 						><linkedin-outlined
 					/></a>
 				</div>

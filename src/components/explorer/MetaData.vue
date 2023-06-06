@@ -1,3 +1,4 @@
+
 <script lang="ts">
 	import { defineComponent } from "vue";
 	import Chart from "../explorer/Chart.vue";
