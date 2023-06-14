@@ -115,34 +115,6 @@
 
 		<div class="profile-card">
 			<div class="img">
-				<img src="@/assets/team_img/SheshaVishnuPrasad.jpg" />
-			</div>
-			<div class="caption">
-				<h3>Shesha Vishnu Prasad</h3>
-				<p>Recovery Architect</p>
-				<div class="social-links">
-					<a href="https://www.linkedin.com/in/sheshavpd"
-						><linkedin-outlined
-					/></a>
-				</div>
-			</div>
-		</div>
-		<div class="profile-card">
-			<div class="img">
-				<img src="@/assets/team_img/JinxiaoYu.jpg" />
-			</div>
-			<div class="caption">
-				<h3>Jinxiao Yu</h3>
-				<p>Performance Analyst</p>
-				<div class="social-links">
-					<a href="https://www.linkedin.com/in/jinxiao-yu-029137150/"
-						><linkedin-outlined
-					/></a>
-				</div>
-			</div>
-		</div>
-		<div class="profile-card">
-			<div class="img">
 				<img src="@/assets/team_img/divjeet.jpg" />
 			</div>
 			<div class="caption">
@@ -171,20 +143,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="profile-card">
-			<div class="img">
-				<img src="@/assets/team_img/WayneWang.jpg" />
-			</div>
-			<div class="caption">
-				<h3>Wayne Wang</h3>
-				<p>Sharding Engineer</p>
-				<div class="social-links">
-					<a href="https://www.linkedin.com/in/weijia-w/"
-						><linkedin-outlined
-					/></a>
-				</div>
-			</div>
-		</div>
+
 		<div class="profile-card">
 			<div class="img">
 				<img src="@/assets/team_img/Julieta.jpg" />
@@ -378,6 +337,48 @@
 
 	<div class="alumni">Distinguished Alumni</div>
 	<div class="main2">
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/SheshaVishnuPrasad.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Shesha Vishnu Prasad</h3>
+				<p>Recovery Architect</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/sheshavpd"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/JinxiaoYu.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Jinxiao Yu</h3>
+				<p>Performance Analyst</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/jinxiao-yu-029137150/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
+		<div class="profile-card">
+			<div class="img">
+				<img src="@/assets/team_img/WayneWang.jpg" />
+			</div>
+			<div class="caption">
+				<h3>Wayne Wang</h3>
+				<p>Sharding Engineer</p>
+				<div class="social-links">
+					<a href="https://www.linkedin.com/in/weijia-w/"
+						><linkedin-outlined
+					/></a>
+				</div>
+			</div>
+		</div>
 		<div class="profile-card">
 			<div class="img">
 				<img src="@/assets/team_img/rohan.jpeg" />

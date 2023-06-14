@@ -430,7 +430,7 @@
 				</div>
 				<div class="Item">
 					<a-card hoverable :bordered="false">
-						<a target="_blank" href="https://arxiv.org/pdf/2008.04450.pdf">
+						<a target="_blank" href="https://escholarship.org/uc/item/6h427354">
 							<file-text-outlined style="font-size: 24px" />
 							<p style="padding-top: 8px; color: black">
 								Cerberus Minimalistic Sharded Consensus
@@ -453,7 +453,7 @@
 				</div>
 				<div class="Item">
 					<a-card hoverable :bordered="false">
-						<a target="_blank" href="https://arxiv.org/pdf/2108.08541.pdf">
+						<a target="_blank" href="https://escholarship.org/uc/item/97s0f1gh">
 							<file-text-outlined style="font-size: 24px" />
 							<p style="padding-top: 8px; color: black">
 								Probabilistic Cluster Sending
