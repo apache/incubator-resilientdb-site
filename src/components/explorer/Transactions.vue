@@ -1,61 +1,57 @@
 <script lang="ts">
 	import { useBlocksStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
-	import blocks from "../../api/blockstatus.json";
+	import blocks from "../../api/transactions.json";
 	import { DownOutlined, FireTwoTone } from "@ant-design/icons-vue";
 	import { defineComponent } from "vue";
 	import { useRoute } from "vue-router";
+	
 	const columns = [
 		{
-			title: "#",
-			dataIndex: "id",
-			key: "id",
+			title: "Command Type",
+			dataIndex: "cmd",
+			key: "cmd",
 		},
 		{
-			title: "Transaction Hash",
-			dataIndex: "txnHash",
-			key: "txnHash",
+			title: "Key",
+			dataIndex: "key",
+			key: "key",
 		},
 		{
-			title: "Block",
-			dataIndex: "block",
-			key: "block",
+			title: "Value",
+			dataIndex: "value",
+			key: "value",
 		},
 		{
-			title: "Client Id",
-			dataIndex: "clientId",
-			key: "clientId",
+			title: "Min Key",
+			dataIndex: "min_key",
+			key: "min_key",
 		},
 		{
-			title: "Transaction Data",
-			key: "transactionData",
-			dataIndex: "transactionData",
+			title: "Max Key",
+			dataIndex: "max_key",
+			key: "max_key",
 		},
-        {
-			title: "Client Signature",
-			key: "clientSignature",
-			dataIndex: "clientSignature",
-		},
-		// {
-		// 	title: "Action",
-		// 	key: "action",
-		// },
 	];
 
-	const data = blocks;
+	// const data = blocks;
 
 	export default defineComponent({
 		components: {
 			DownOutlined,
 			FireTwoTone,
 		},
-		setup() {
+		async setup() {
 			const route = useRoute();
-			const { blocks } = storeToRefs(useBlocksStore());
+			const blocksStore = useBlocksStore();
+			const { blocks } = storeToRefs(blocksStore);
+			const { refreshBlocks } = blocksStore;
+			await refreshBlocks();
+			
 			const block = blocks.value.filter(
 				(b) => b.id === parseInt(route.query.id as string)
 			);
-
+			
 			return {
 				data: block[0].transactions,
                 blockInfo: block,
@@ -67,11 +63,9 @@
 <template>
 	<div class="container timeline">
 		<div class="grid letOverflow">
- 
-        <a-table :columns="columns" :data-source="data" >
-   <template #title><strong>Transactions</strong> for Block <a :href="'/block?id=' + blockInfo[0].id">{{blockInfo[0].number}}</a></template>
-  </a-table>
-		
+			<a-table :columns="columns" :data-source="data" >
+				<template #title><strong>Transactions</strong> for Block <a :href="'/block?id=' + blockInfo[0].id">{{blockInfo[0].number}}</a></template>
+			</a-table>
 		</div>
 	</div>
 </template>
