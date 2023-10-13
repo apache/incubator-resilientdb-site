@@ -5,7 +5,7 @@ export const getAvailableBlocks = async (address: string) => {
 
 	try {
 		let res = await axios({
-			url: address,
+			url: `/api/${address}`,
 			method: 'get',
 			timeout: 8000,
 			headers: {

@@ -16,33 +16,6 @@ const router = createRouter({
 	routes: [
 		{
 			path: "/",
-			name: "home",
-			component: HomeView,
-			props: {
-				icon: HomeOutlined,
-			},
-		},
-		{
-			path: "/deployment",
-			name: "deployment",
-			component: DashboardView,
-			props: {
-				icon: DeploymentUnitOutlined,
-			},
-		},
-		{
-			path: "/monitoring",
-			name: "monitoring",
-			// route level code-splitting
-			// this generates a separate chunk (About.[hash].js) for this route
-			// which is lazy-loaded when the route is visited.
-			component: () => import("../components/CookingView.vue"),
-			props: {
-				icon: MonitorOutlined,
-			},
-		},
-		{
-			path: "/explorer",
 			name: "explorer",
 			// route level code-splitting
 			// this generates a separate chunk (About.[hash].js) for this route

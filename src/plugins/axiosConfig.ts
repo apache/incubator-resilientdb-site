@@ -1,8 +1,6 @@
 import axios from "axios";
 import { notification } from "ant-design-vue";
 
-axios.defaults.baseURL = "http://localhost:3000";
-
 axios.interceptors.response.use(
   function (response) {
     // Called when request ends with 2xx
