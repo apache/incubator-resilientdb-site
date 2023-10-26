@@ -52,7 +52,7 @@
 						type: "gradient",
 					},
 					title: {
-						text: "NexRes Transaction History",
+						text: "Resilient Transaction History",
 						style: {
 							fontFamily: "Poppins, 'Helvetica Neue', sans-serif",
 							fontWeight: "normal",
@@ -74,59 +74,73 @@
 				const { blocks } = storeToRefs(blocksStore);
 				const { refreshBlocks } = blocksStore;
 				refreshBlocks();
-				console.log(blocks);
-
-				const transactionCount = [];
-				const createdAt = [];
-				const minute = [];
-				for (var i = 0; i < blocks.value.length; i++) {
-					var obj = blocks.value[i].transactions;
-					for (var j = 1; j < obj.length + 1; j++) {
-						transactionCount[i] = j;
-					}
-					createdAt[i] = blocks.value[i].createdAt; 
-					minute[i] = createdAt[i].split(" ")[1].split(":")[1];
-				}
 			
 				const arrayRange = (start, stop, step) =>
 					Array.from(
 					{ length: (stop - start) / step + 1 },
 					(value, index) => start + index * step
 				);
-				
-				let timeStart = parseInt(blocks.value[0].createdAt.split(" ")[1].split(":")[1]); 
-				let latestTime = parseInt(blocks.value[blocks.value.length - 1].createdAt.split(" ")[1].split(":")[1]);
-				let timeRange = arrayRange(timeStart, latestTime, 1);
-				let hour = parseInt(blocks.value[0].createdAt.split(" ")[1].split(":")[0]);
-				let timeZone = blocks.value[0].createdAt.split(" ")[2];
-				const time = timeRange.map(timeRange => hour + ':' + timeRange + ':00 ' + timeZone); 
 
-				const transactions = [];
-				let counter = 1;
-				for (var i = 0; i < timeRange.length; i++){
-					transactions[i] = 0; 
-					while (parseInt(minute[0]) === timeStart) {
-						if (minute.length === 0){
-							break;
-						}
-						console.log("gets here" + counter);
-						transactions[i] = counter++;
-						minute.shift(); 
+				const timezone = "GMT";
+				const minuteInterval = 60*1000;
+				const hourInterval = 60*60*1000;
+				const dayInterval = 24*60*60*1000;
+				let interval = 0;
+
+				let timeStart = blocks.value.length > 0 ? 
+								Date.parse(blocks.value[0].createdAt) : 0;
+				let latestTime = blocks.value.length > 0 ? 
+								Date.parse(blocks.value[blocks.value.length - 1].createdAt) 
+								: 0;
+
+				if (latestTime - timeStart <= hourInterval) {
+					interval = minuteInterval;
+				}
+				else if (latestTime - timeStart <= dayInterval) {
+					interval = hourInterval;
+				}
+				else {
+					interval = dayInterval;
+				}
+				let timeRange = arrayRange(timeStart, latestTime, interval);
+
+				const getChartDateString = (time) => {
+					let str = new Date(time).toUTCString().substring(4);
+
+					// keep in UTC to be consistent with the BlocksTable
+					if (interval == dayInterval) {
+						str = str.substring(0, str.indexOf(":") - 3);
 					}
-					counter = 1; 
-					timeStart++; 
+					return str;
+				}
+
+				const timeAxis = timeRange.map(timeRange => getChartDateString(timeRange));
+
+				const transactionCount = Array(timeRange.length).fill(0);
+				let timeIndex = 0;
+				for (let i = 0; i < blocks.value.length; i++) {
+					let timeVal = Date.parse(blocks.value[i].createdAt);
+
+					// TODO: improve efficiency using binary search
+					while (timeVal >= timeRange[timeIndex] + interval) {
+						timeIndex++;
+					}
+					transactionCount[timeIndex] += blocks.value[i].transactions.length;
 				}
 
 				this.chartOptions = {
 					xaxis: {
-						categories: time,
+						categories: timeAxis,
+					},
+					yaxis: {
+						min: 0,
 					}
 				};
 
 				this.series = [{
-					data: transactions,
+					data: transactionCount,
 				}]
-				}
+			}
 		},
 	};
 </script>

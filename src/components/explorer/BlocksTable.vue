@@ -158,7 +158,9 @@
 					<template v-if="column.key === 'transactions'">
 						<a-tag color="cyan">
 							<a :href="'/transactions?id=' + record.id">
-								{{ Object.keys(record.transactions).length }} transactions
+								View {{ Object.keys(record.transactions).length }}
+								{{ Object.keys(record.transactions).length > 1 ? 
+								" transactions" : " transaction"}}
 							</a>
 						</a-tag>
 					</template>

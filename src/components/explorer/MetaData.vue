@@ -58,7 +58,7 @@
 					<a-statistic title="Checkpoint Water Mark" :value="data[0].checkpointWaterMark" />
 				</a-col>
 				<a-col :xs="12" :sm="12" :md="6">
-					<a-statistic title="Client Batch Wait Time(MS)" :value="data[0].clientBatchWaitTime" />
+					<a-statistic title="Client Batch Wait Time (MS)" :value="data[0].clientBatchWaitTime" />
 					<a-divider />
 					<a-statistic title="Maximum TXN Process" :value="data[0].maxProcessTxn" />
 					<a-divider />
