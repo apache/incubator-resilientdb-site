@@ -79,9 +79,7 @@
 				<a-descriptions-item label="Transactions">
 					<a-tag color="cyan">
 							<a :href="'/transactions?id=' + data[0].id">
-								View {{ Object.keys(data[0].transactions).length }}
-								{{ Object.keys(data[0].transactions).length > 1 ? 
-								" transactions" : " transaction"}}
+								View transaction
 							</a>
 						</a-tag>
 				</a-descriptions-item>
