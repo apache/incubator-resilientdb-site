@@ -18,6 +18,7 @@
 				compare: (a, b) => a.id - b.id,
 				multiple: 1,
 			},
+			defaultSortOrder: 'descend',
 		},
 		{
 			title: " Block #",
