@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { useBlocksStore } from "@/store/blocks";
 	import { storeToRefs } from "pinia";
-	import blocks from "../../api/blockstatus.json";
 	import { DownOutlined, FireTwoTone } from "@ant-design/icons-vue";
 	import { defineComponent } from "vue";
 	import { useRoute } from "vue-router";
@@ -36,8 +35,6 @@
 		// 	key: "action",
 		// },
 	];
-
-	const data = blocks;
 
 	export default defineComponent({
 		components: {
@@ -79,7 +76,9 @@
 				<a-descriptions-item label="Transactions">
 					<a-tag color="cyan">
 							<a :href="'/transactions?id=' + data[0].id">
-								View transaction
+								View {{ Object.keys(data[0].transactions).length }}
+								{{ Object.keys(data[0].transactions).length > 1 ? 
+								" transactions" : " transaction"}}
 							</a>
 						</a-tag>
 				</a-descriptions-item>

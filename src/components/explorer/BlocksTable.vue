@@ -105,7 +105,7 @@
 			const { refreshBlocks } = blocksStore;
 			refreshBlocks(); // Populate table on initial load
 
-			const socket = new WebSocket('ws://localhost:18000/blockupdatelistener'); 
+			const socket = new WebSocket('wss://crow.resilientdb.com/blockupdatelistener'); 
 			socket.addEventListener('open', function (event) { 
 				console.log('Opened websocket for reading blocks'); 
 			}); 

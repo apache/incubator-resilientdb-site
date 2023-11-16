@@ -53,13 +53,22 @@
 
 			// Format transaction value JSON
 			for (let i = 0; i < block[0].transactions.length; i++) {
+				if (!block[0].transactions[i].key) {
+					block[0].transactions[i].key = "N/A";
+				}
+				
 				if (block[0].transactions[i].value) {
 					let value_str = String(block[0].transactions[i].value);
 					let value = JSON.parse(value_str);
 					block[0].transactions[i].value = JSON.stringify(value, null, 4);;
 				}
 				else {
-					block[0].transactions[i].value = "";
+					block[0].transactions[i].value = "N/A";
+				}
+
+				if (!block[0].transactions[i].min_key || !block[0].transactions[i].max_key) {
+					block[0].transactions[i].min_key = "N/A";
+					block[0].transactions[i].max_key = "N/A";
 				}
 			}
 			
