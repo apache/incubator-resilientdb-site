@@ -10,7 +10,7 @@ interface EndpointsStoreState {
 export const useEndpointsStore = defineStore("endpoints", {
 	state: () => {
 		const state: EndpointsStoreState = {
-			endpoints: ["https://crow.resilientdb.com/v1/blocks/1", "https://crow.resilientdb.com/populatetable"],
+			endpoints: ["https://crow.resilientdb.com/v1/blocks", "https://crow.resilientdb.com/populatetable"],
 		};
 		return state;
 	},
