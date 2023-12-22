@@ -33,6 +33,9 @@ interface Ledger {
 	minDataReceiveNum: number;
 	maxMaliciousReplicaNum: number;
 	checkpointWaterMark: number;
+	transactionNum: number;
+    blockNum: number;
+    chainAge: number;
 }
 
 interface LedgerState {

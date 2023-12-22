@@ -47,27 +47,31 @@
 					<a-statistic title="Workers" :value="data[0].workerNum" />
 					<a-divider />
 					<a-statistic title="Minimum Data Received" :value="data[0].minDataReceiveNum" />
+					<a-divider />
+					<a-statistic title="Blocks" :value="data[0].blockNum" />
 				</a-col>
 				<a-col :xs="12" :sm="12" :md="6">
-					<a-statistic title="Active Clients" :value="data[0].clientNum" />
-					<a-divider />
 					<a-statistic title="Input Workers" :value="data[0].inputWorkerNum" />
 					<a-divider />
+					<a-statistic title="Output Workers" :value="data[0].outputWorkerNum" />
+					<a-divider />
 					<a-statistic title="Max Malicious Replicas" :value="data[0].maxMaliciousReplicaNum" />
+					<a-divider />
+					<a-statistic title="Chain Age (s)" :value="data[0].chainAge" />
 				</a-col>
 				<a-col :xs="12" :sm="12" :md="6">
 					<a-statistic title="Client Batch Size" :value="data[0].clientBatchNum"/>
 					<a-divider />
-					<a-statistic title="Output Workers" :value="data[0].outputWorkerNum" />
+					<a-statistic title="Client Batch Wait Time (MS)" :value="data[0].clientBatchWaitTime" />
 					<a-divider />
 					<a-statistic title="Checkpoint Water Mark" :value="data[0].checkpointWaterMark" />
 				</a-col>
 				<a-col :xs="12" :sm="12" :md="6">
-					<a-statistic title="Client Batch Wait Time (MS)" :value="data[0].clientBatchWaitTime" />
-					<a-divider />
 					<a-statistic title="Maximum TXN Process" :value="data[0].maxProcessTxn" />
 					<a-divider />
 					<a-statistic title="Client Timeout (MS)" :value="data[0].clientTimeoutMs" />
+					<a-divider />
+					<a-statistic title="Transactions Committed" :value="data[0].transactionNum" />
 				</a-col>
 			</a-row>
 			<!-- <a-col :md="12"> -->
