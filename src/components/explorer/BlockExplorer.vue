@@ -10,14 +10,6 @@
 <template>
 	<div class="container timeline">
 		<meta-data />
-		<!-- <div class="search">
-			<a-input-search
-				v-model:value="value"
-				placeholder="Search by Block/ Txn Hash "
-				enter-button
-				@search="onSearch"
-			/>
-		</div> -->
 
 		<blocks-table />
 	</div>

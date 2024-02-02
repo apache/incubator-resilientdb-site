@@ -6,7 +6,7 @@
 		FireTwoTone,
 		SearchOutlined,
 	} from "@ant-design/icons-vue";
-	import { defineComponent, reactive, ref, toRefs } from "vue";
+	import { defineComponent, reactive, ref, toRefs, computed } from "vue";
 	const columns = [
 		{
 			title: "Block # (sort)",
@@ -103,6 +103,29 @@
 			const blocksStore = useBlocksStore();
 			const { blocks } = storeToRefs(blocksStore);
 
+			// Reactive state for search text
+			const searchText = ref("");
+
+			// Reactive state for filtered blocks
+			const filteredBlocks = computed(() => {
+				return blocks.value.filter((block) => {
+					// Check if block ID matches the search text
+					const blockIdMatch = block.id.toString().includes(searchText.value);
+					
+					// Check if any transaction matches the search text (if cmd is "SET")
+					const transactionMatch = block.transactions.some((tx) => {
+						return tx && tx.key && tx.key.includes(searchText.value);
+					});
+
+					return blockIdMatch || transactionMatch;
+				});
+			});
+
+			// Define the onSearch function
+			const onSearch = (value) => {
+				searchText.value = value;
+			};
+
 			const { refreshBlocks } = blocksStore;
 			refreshBlocks(); // Populate table on initial load
 
@@ -125,11 +148,13 @@
 			});
 
 			return {
-				data: blocks,
+				searchText,
+				data: filteredBlocks,
 				columns,
 				handleSearch,
-				handleReset,
 				searchInput,
+				handleReset,
+            	onSearch,
 				...toRefs(state),
 			};
 		},
@@ -138,6 +163,15 @@
 
 <template>
 	<div class="container timeline">
+		<div class="search">
+			<a-input-search
+				v-model:value="searchText"
+				placeholder="Search by Block ID / Txn Hash "
+				enter-button
+				@search="onSearch"
+			/>
+		</div>
+
 		<div class="grid letOverflow">
 			<a-table :columns="columns" :data-source="data" bordered>
 				<!-- <template #headerCell="{ column }">
@@ -286,5 +320,9 @@
 	.highlight {
 		background-color: rgb(255, 192, 105);
 		padding: 0px;
+	}
+	.search {
+		margin-top: 3rem;
+		margin: 0.5rem 2rem;
 	}
 </style>
