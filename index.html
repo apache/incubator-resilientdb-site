@@ -1,19 +1,2013 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>ResilientDB Dashboard</title>
-		<script
-			type="text/javascript"
-			src="https://app.termly.io/embed.min.js"
-			data-auto-block="on"
-			data-website-uuid="df2da6b8-f8f8-47f4-b600-b09e62e7d852"
-		></script>
-	</head>
-	<body>
-		<div id="app"></div>
-		<script type="module" src="/src/main.ts"></script>
-	</body>
+<html lang="zxx" class="js">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/icons/icon-128.png">
+    <!-- Site Title  -->
+    <title>ResilientDB | Dashboard</title>
+    <!-- Bundle and Base CSS -->
+    <link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=210">
+    <link rel="stylesheet" href="assets/css/style-dark.css?ver=210">
+    <!-- Extra CSS -->
+    <link rel="stylesheet" href="assets/css/theme.css?ver=210">
+</head>
+
+<body class="nk-body body-wider theme-dark mode-onepage">
+    <div class="nk-wrap">
+        <header class="nk-header page-header is-transparent is-sticky is-shrink is-dark" id="header">
+            <!-- Header @s -->
+            <div class="header-main">
+                <div class="header-container container">
+                    <div class="header-wrap">
+                        <!-- Logo @s -->
+                        <div class="header-logo logo animated" data-animate="fadeInDown" data-delay=".65">
+                            <a href="./" class="logo-link">
+                                <img class="logo-dark" src="images/icons/resilientdb_logo_light-text-modern-v2-2.svg" alt="logo">
+                                <img class="logo-light" src="images/icons/resilientdb_logo_light-text-modern-v2-2.svg" alt="logo">
+                            </a>
+                        </div>
+                        <!-- Menu Toogle @s -->
+                        <div class="header-nav-toggle">
+                            <a href="#" class="navbar-toggle" data-menu-toggle="example-menu-04">
+                                <div class="toggle-line">
+                                    <span></span>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Menu @s -->
+                        <div class="header-navbar header-navbar-s1">
+                            <nav class="header-menu" id="example-menu-04">
+                                <ul class="menu menu-s2 animated" data-animate="fadeInDown" data-delay=".75">
+                                    <li class="menu-item"><a class="menu-link nav-link" href="#">Home</a></li>
+                                    <li class="menu-item"><a class="menu-link nav-link" href="https://cloud.resilientdb.com/graphql" target="_blank">Cloud</a></li>
+                                    <li class="menu-item"><a class="menu-link nav-link" href="https://monitoring.resilientdb.com" target="_blank">Monitoring</a></li>
+                                    <li class="menu-item"><a class="menu-link nav-link" href="https://explorer.resilientdb.com" target="_blank">Explorer</a></li>
+                                    <li class="menu-item"><a class="menu-link nav-link" href="https://youtu.be/ewtFSwjitsg" target="_blank">Demo</a></li>
+                                </ul>
+                                <ul class="menu-btns animated" data-animate="fadeInDown" data-delay=".85">
+                                    <li><a href="https://github.com/resilientdb/resilientdb" class="btn btn-rg btn-auto btn-outline btn-grad on-bg-theme btn-round" target="_blank"><span><em class="fas fa-code" style="padding-right: 5px;"></em>Code</span></a></li>
+                                    <li><a href="https://github.com/ResilientApp" class="btn btn-rg btn-auto btn-outline btn-grad on-bg-theme btn-round" target="_blank"><span><em class="fas fa-cog" style="padding-right: 5px;"></em>ResilientApps</span></a></li>
+                                    <li><a href="https://github.com/ResilientEcosystem" class="btn btn-rg btn-auto btn-outline btn-grad on-bg-theme btn-round" target="_blank"><span><em class="far fa-folder" style="padding-right: 5px;"></em>EcoSystem</span></a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- .header-navbar @e -->
+                    </div>
+                </div>
+            </div><!-- .header-main @e -->
+            <!-- Banner @s -->
+            <div class="header-banner bg-theme-dark">
+                <div class="nk-banner">
+                    <div class="banner banner-mask-fix banner-fs banner-single tc-light">
+                        <div class="banner-wrap">
+                            <div class="container">
+                                <div class="row align-items-center justify-content-center gutter-vr-30px">
+                                    <div class="col-lg-6 order-lg-last">
+                                        <div class="banner-gfx banner-gfx-re-s3 animated" data-animate="fadeInUp" data-delay="1.25">
+                                            <img src="images/dark/gfx-d-dark.png" alt="header">
+                                            <img class="banner-gfx-icon banner-gfx-icon-1" src="images/icons/icon-custom.png" alt="">
+                                            <img class="banner-gfx-icon banner-gfx-icon-2" src="images/icons/bitcoin.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="banner-caption wide-auto text-center text-lg-start">
+                                            <div class="cpn-head mt-0">
+                                                <h1 class="title title-xl-2 title-semibold animated" data-animate="fadeInUp" data-delay="1.35">Global-Scale Sustainable Blockchain Fabric</h1>
+                                            </div>
+                                            <div class="cpn-text cpn-text-s1">
+                                                <p class="lead animated" data-animate="fadeInUp" data-delay="1.45">ResilientDB offers a high-throughput yielding distributed ledger built upon scale-centric design principles to democratize and decentralize computation</p>
+                                            </div>
+                                            <div class="cpn-btns">
+                                                <ul class="btn-grp animated" data-animate="fadeInUp" data-delay="1.55">
+                                                    <li><a href="https://youtu.be/QlwnZuBHqM4" class="btn btn-md btn-grad btn-round" target="_blank"><em class="far fa-play-circle" style="padding-right: 5px;"></em>Vision</a></li>
+                                                    <li><a href="https://blog.resilientdb.com" class="btn btn-md btn-grad btn-grad-alternet btn-round" target="_blank"><em class="fas fa-book" style="padding-right: 5px;"></em>Blog</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="cpn-social">
+                                                <ul class="social">
+                                                    <li class="animated" data-animate="fadeInUp" data-delay="1.7"><a href="https://twitter.com/resilientdb" target="_blank"><em class="social-icon fab fa-twitter"></em></a></li>
+                                                    <li class="animated" data-animate="fadeInUp" data-delay="1.75"><a href="https://www.youtube.com/@ExpoLabUCDavis" target="_blank"><em class="social-icon fab fa-youtube"></em></a></li>
+                                                    <li class="animated" data-animate="fadeInUp" data-delay="1.8"><a href="https://github.com/apache/incubator-resilientdb" target="_blank"><em class="social-icon fab fa-github"></em></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div><!-- .col -->
+                                </div><!-- .row -->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .nk-banner -->
+                <div class="nk-ovm mask-c-dark shape-v mask-contain-bottom"></div>
+                <!-- Place Particle Js -->
+                <div id="particles-bg" class="particles-container particles-bg" data-pt-base="#00c0fa" data-pt-base-op=".3" data-pt-line="#2b56f5" data-pt-line-op=".5" data-pt-shape="#00c0fa" data-pt-shape-op=".2"></div>
+            </div>
+            <!-- .header-banner @e -->
+        </header>
+        <main class="nk-pages">
+            <section class="section mask-c-blend-dark bg-theme-dark-alt tc-light ov-h" id="ico">
+                <div class="container">
+                    <!-- Block @s -->
+                    <div class="nk-block nk-block-text-wrap">
+                        <div class="row align-items-center justify-content-center justify-content-md-between gutter-vr-30px">
+                            <div class="col-mb-9 col-sm-7 col-md-6 col-lg-5 order-md-last">
+                                <div class="nk-block-img animated" data-animate="fadeInUp" data-delay=".1">
+                                    <img src="images/light/gfx-z-a.png" alt="app">
+                                </div>
+                            </div>
+                            <div class="col-sm-10 col-md-6 text-center text-md-start">
+                                <div class="nk-block-text">
+                                    <h2 class="title animated" data-animate="fadeInUp" data-delay=".2">Why ResilientDB?</h2>
+                                    <p class="lead animated" data-animate="fadeInUp" data-delay=".3">The inception of Bitcoin and blockchain have renewed the vision of a democratic and decentralized computational paradigm, that is, to ingrain privacy, integrity, transparency, and accountability into the very fabric of the computational model. At the heart of this paradigm shift lies a family of fault-tolerant consensus protocols, a classical distributed theory problem that has failed to fulfill the needs of high-performant modern applications. To close this gap, we have boldly re-imagined the entire blockchain fabric through a scale-centric lens in ResilientDB. We have re-architected and re-imagined modular system design from scratch that embeds parallelism and deep pipelining at every layer to fully exploit modern hardware and cloud infrastructure globally.</p>
+                                    <a href="https://www.youtube.com/watch?v=whgGTSQttds&ab_channel=ExpoLabatUCDavis" class="btn-play-wrap animated" data-animate="fadeInUp" target="_blank">
+                                        <div class="btn-play btn-play-sm btn-play-s2">
+                                            <em class="btn-play-icon"></em>
+                                        </div>
+                                        <div class="btn-play-text">
+                                            <span class="text-sm">ResilientDB: A journey in Becoming</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div><!-- .row -->
+                    </div><!-- .block @e -->
+                </div>
+            </section>
+            <!-- // -->
+            <section class="section bg-theme-dark-alt tc-light">
+                <div class="container">
+                    <div class="section-head text-center wide-auto-sm tc-light">
+                        <div class="section-head-line">
+                            <span class="line-1"></span><span class="line-2"></span><span class="line-3"></span><span class="line-4"></span>
+                            <span class="line-5"></span><span class="line-6"></span><span class="line-7"></span><span class="line-8"></span>
+                        </div>
+                        <h2 class="title title-s4 animated" data-animate="fadeInUp" data-delay=".1" title="Wallet">ResVault</h2>
+                        <p class="animated" data-animate="fadeInUp" data-delay=".2">ResVault is a streamlined Chrome extension designed as a wallet for ResilientDB. It facilitates data transactions, user account management, and secure communication via the ResilientDB GraphQL server.</p>
+                    </div>
+                    <!-- Block @s -->
+                    <div class="nk-block nk-block-text-wrap">
+                        <div class="row align-items-center justify-content-center justify-content-md-between gutter-vr-30px">
+                            <div class="col-mb-9 col-sm-7 col-md-6">
+                                <div class="nk-block-img animated" data-animate="fadeInUp" data-delay=".3">
+                                    <img src="images/light/gfx-z-c.png" alt="app">
+                                </div>
+                            </div>
+                            <div class="col-sm-10 col-md-6 col-lg-5">
+                                <div class="nk-block-text ms-lg-3 ms-xl-0">
+                                    <p class="animated" data-animate="fadeInUp" data-delay=".4">With enhanced transaction logging features, ResVault offers a user-friendly and efficient interface for managing ResilientDB interactions.</p>
+                                    <ul class="list list-dot pdb-r">
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".5">Register New Account</li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".55">Remove Existing Account</li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".65">User Authentication</li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".7">Process Transactions</li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".75">Log Transaction History</li>
+                                    </ul>
+                                    <ul class="btn-grp justify-content-center justify-content-md-start">
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".85"><a href="https://github.com/apache/incubator-resilientdb-resvault/releases" class="btn btn-grad btn-round btn-md" target="_blank">Get ResVault for &nbsp;
+                                            <img loading="lazy" decoding="async" src="https://images.ctfassets.net/9sy2a0egs6zh/6jY0xZYtP18iUGOuL7qsEa/255fab1bec903c6a079c5b171afa9504/Chrome_Logo.svg" alt="Download for Chrome" width="28px" height="28px" class="Image__StyledImage-sc-gdjqpy-2 ecLpVZ" style="border-radius: 50%; box-shadow: 0 0 0 1px white inset; border: solid white 1.5px;">
+                                        </a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".95">
+                                            <ul class="btn-grp gutter-15px">
+                                                <li><a href="https://github.com/apache/incubator-resilientdb-resvault" target="_blank"><em class="fab fa-github"></em></a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- .row -->
+                    </div><!-- .block @e -->
+                </div>
+            </section>
+            <!-- // -->
+            <!-- // -->
+            <section class="section tc-light bg-theme-dark">
+                <div class="container">
+                    <div class="section-head text-center wide-auto-sm tc-light">
+                        <h2 class="title title-s4 animated" data-animate="fadeInUp" data-delay=".1" title="Apps">Resilient Apps</h2>
+                        <p class="animated" data-animate="fadeInUp" data-delay=".2">ResilientDB Fullstack comprises applications built on ResilientDB, utilizing ResVault as the wallet interface for seamless interaction via the ResilientDB GraphQL server. Web applications can effortlessly connect with ResVault using the provided web SDK.</p>
+                    </div>
+                    <!-- Block @s -->
+                    <div class="nk-block nk-block-text-wrap">
+                        <div class="row align-items-center justify-content-center justify-content-md-between gutter-vr-30px">
+                            <div class="col-mb-9 col-sm-7 col-md-6">
+                                <div class="nk-block-img animated" data-animate="fadeInUp" data-delay=".3">
+                                    <img src="images/light/gfx-apps.png" alt="app">
+                                </div>
+                            </div>
+                            <div class="col-sm-10 col-md-6 col-lg-5">
+                                <div class="nk-block-text ms-lg-3 ms-xl-0">
+                                    <ul class="list list-dot pdb-r">
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".20"><a href="https://debitable.resilientdb.com" target="_blank">Debitable</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".25"><a href="https://draftres.resilientdb.com" target="_blank">DraftRes</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".30"><a href="https://arrayan.resilientdb.com" target="_blank">Arrayán</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".35"><a href="https://echo-app.resilientdb.com" target="_blank">Echo</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".40"><a href="https://utxo-lenses.resilientdb.com" target="_blank">UTXO Lenses</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".45"><a href="https://rescounty.resilientdb.com" target="_blank">ResCounty</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".50"><a href="https://blog.resilientdb.com/2023/12/17/CrypoGo.html" target="_blank">CrypoGo</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".55"><a href="https://explorer.resilientdb.com" target="_blank">Explorer</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".60"><a href="https://monitoring.resilientdb.com" target="_blank">Monitoring</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".65"><a href="https://medium.com/@gopalnambiar2/introducing-resui-a-user-friendly-interface-for-resilientdb-da8918f1d501" target="_blank">ResilientDB CLI</a></li>
+                                        <li class="animated" data-animate="fadeInUp" data-delay=".70"><a href="https://blog.resilientdb.com/2023/12/06/ResView.html" target="_blank">ResView</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- .row -->
+                    </div><!-- .block @e -->
+                </div>
+            </section>
+            <!-- // -->
+            <section class="section section-tokensale tc-light bg-theme-dark" id="token">
+                <!-- Block @s -->
+                <div class="container">
+                    <div class="section-head text-center wide-auto-sm">
+                        <h2 class="title title-s4 animated" data-animate="fadeInUp" data-delay=".1" title="Features">Features</h2>
+                        <p class="animated" data-animate="fadeInUp" data-delay=".2">Why ResilientDB?</p>
+                    </div>
+                    <div class="nk-block nk-block-token mgb-m30">
+                        <div class="row align-items-center justify-content-between gutter-vr-50px">
+                            <div class="col-lg-6">
+                                <div class="row gutter-vr-30px">
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".3">
+                                            <h6 class="title title-s6 title-xs-s2">GraphQL Support</h6>
+                                            <p>Interactive API</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".4">
+                                            <h6 class="title title-s6 title-xs-s2">Wallet Integration</h6>
+                                            <p>Easy token management</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".5">
+                                            <h6 class="title title-s6 title-xs-s2">SDK Support</h6>
+                                            <p>Python, Rust, TypeScript</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".6">
+                                            <h6 class="title title-s6 title-xs-s2">Multiple Interfaces</h6>
+                                            <p>Smart Contract, KeyValue, UTXO</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".7">
+                                            <h6 class="title title-s6 title-xs-s2">RPC Architecture</h6>
+                                            <p>Scalable Decoupled Abstraction</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".8">
+                                            <h6 class="title title-s6 title-xs-s2">Dockerized CLI</h6>
+                                            <p>Ease of setup</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".8">
+                                            <h6 class="title title-s6 title-xs-s2">In-Memory & Durable Storage</h6>
+                                            <p>Low-latency access</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".8">
+                                            <h6 class="title title-s6 title-xs-s2">Secure Authentication</h6>
+                                            <p>NIST cryptographic constructs</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".9">
+                                            <h6 class="title title-s6 title-xs-s2">Mempool</h6>
+                                            <p>Coming Soon!</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                    <div class="col-sm-6">
+                                        <div class="stage-info animated" data-animate="fadeInUp" data-delay=".9">
+                                            <h6 class="title title-s6 title-xs-s2">DAG</h6>
+                                            <p>Coming Soon!</p>
+                                        </div>
+                                    </div><!-- .col  -->
+                                </div><!-- .row  -->
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="token-status token-status-s5 bg-theme-alt round no-bd animated" data-animate="fadeInUp" data-delay=".9">
+                                    <div class="token-box token-box-s3">
+                                        <div class="countdown-s3 countdown-s4 countdown" data-date="2023/04/27"></div>
+                                    </div>
+                                    <div class="token-action">
+                                        <a class="btn btn-md btn-grad btn-grad-alternet btn-round" href="https://cloud.resilientdb.com/graphql" target="_blank">Visit the API Playground</a>
+                                    </div>
+                                    <ul class="icon-list">
+                                        <li><em class="fab fa-chrome"></em></li>
+                                        <li><em class="fab fa-safari"></em></li>
+                                        <li><em class="fab fa-edge"></em></li>
+                                        <li><em class="fab fa-firefox-browser"></em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .block @e -->
+                    <div class="nk-block">
+                        <div class="row justify-content-center gutter-vr-40px">
+                            <div class="col-md-6 col-mb-8">
+                                <div class="single-chart">
+                                    <h3 class="mgb-l text-center title-lg animated" data-animate="fadeInUp" data-delay=".1"> With Scaling Consensus in <br /> 2024</h3>
+                                    <div class="stats-container" style="max-width: 400px; margin: auto;">
+                                        <div class="stat">
+                                            <div class="number">5,768,104</div>
+                                            <div class="label">Resilient TPS</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">0.1 seconds</div>
+                                            <div class="label">Resilient Latency</div>
+                                        </div>
+                                    </div>
+                                    <div class="chart animated" data-animate="fadeInUp" data-delay=".2"> 
+                                        <canvas id="chart5" width="450" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-mb-8">
+                                <div class="single-chart">
+                                    <h3 class="mgb-l text-center title-lg animated" data-animate="fadeInUp" data-delay=".3">With Concurrent Consensus Revisited in 2023</h3>
+                                    <div class="stats-container" style="max-width: 400px; margin: auto;">
+                                        <div class="stat">
+                                            <div class="number">2,176,961</div>
+                                            <div class="label">Resilient TPS</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">4.1 seconds</div>
+                                            <div class="label">Resilient Latency</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">128</div>
+                                            <div class="label">Replicas</div>
+                                        </div>
+                                    </div>
+                                    <div class="chart animated" data-animate="fadeInUp" data-delay=".4">
+                                        <canvas id="chart6" width="450" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center gutter-vr-40px">
+                            <div class="col-md-6 col-mb-8">
+                                <div class="single-chart">
+                                    <h3 class="mgb-l text-center title-lg animated" data-animate="fadeInUp" data-delay=".1">with Power-of-Collaboration Consensus in 2022</h3>
+                                    <div class="stats-container" style="max-width: 400px; margin: auto;">
+                                        <div class="stat">
+                                            <div class="number">939,820</div>
+                                            <div class="label">Resilient TPS</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">0.1 seconds</div>
+                                            <div class="label">Resilient Latency</div>
+                                        </div>
+                                    </div>
+                                    <div class="chart animated" data-animate="fadeInUp" data-delay=".2"> 
+                                        <canvas id="chart1" width="450" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-mb-8">
+                                <div class="single-chart">
+                                    <h3 class="mgb-l text-center title-lg animated" data-animate="fadeInUp" data-delay=".3">with RingBFT Sharded Consensus in 2021</h3>
+                                    <div class="stats-container" style="max-width: 400px; margin: auto;">
+                                        <div class="stat">
+                                            <div class="number">1200,000</div>
+                                            <div class="label">Resilient TPS</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">3.3 seconds</div>
+                                            <div class="label">Resilient Latency</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">10</div>
+                                            <div class="label">Countries</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">5</div>
+                                            <div class="label">Continents</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">15</div>
+                                            <div class="label">Regions</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">420</div>
+                                            <div class="label">Replicas Globally</div>
+                                        </div>
+                                    </div>
+                                    <div class="chart animated" data-animate="fadeInUp" data-delay=".4">
+                                        <canvas id="chart2" width="450" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center gutter-vr-40px">
+                            <div class="col-md-6 col-mb-8">
+                                <div class="single-chart">
+                                    <h3 class="mgb-l text-center title-lg animated" data-animate="fadeInUp" data-delay=".5">With RCC Concurrent Consensus in 2020</h3>
+                                    <div class="stats-container" style="max-width: 400px; margin: auto;">
+                                        <div class="stat">
+                                            <div class="number">365,354</div>
+                                            <div class="label">Resilient TPS</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">91</div>
+                                            <div class="label">Replicas</div>
+                                        </div>
+                                    </div>
+                                    <div class="chart animated" data-animate="fadeInUp" data-delay=".6">
+                                        <canvas id="chart3" width="450" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-mb-8">
+                                <div class="single-chart">
+                                    <h3 class="mgb-l text-center title-lg animated" data-animate="fadeInUp" data-delay=".7">With the GeoBFT Global Consensus in 2019</h3>
+                                    <div class="stats-container" style="max-width: 400px; margin: auto;">
+                                        <div class="stat">
+                                            <div class="number">>50,000</div>
+                                            <div class="label">Resilient TPS</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number"></div>
+                                            <div class="label"></div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">60</div>
+                                            <div class="label">Replicas Globally</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">6</div>
+                                            <div class="label">Countries</div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number"></div>
+                                            <div class="label"></div>
+                                        </div>
+                                        <div class="stat">
+                                            <div class="number">4</div>
+                                            <div class="label">Continents</div>
+                                        </div>
+                                    </div>
+                                    <div class="chart animated" data-animate="fadeInUp" data-delay="0.8">
+                                        <canvas id="chart4" width="450" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .block @e -->
+                </div>
+            </section>
+            <!-- // -->
+            <section class="section bg-theme tc-light section-connect" id="roadmap">
+                <div class="container ov-h">
+                    <div class="section-head text-center wide-auto-sm">
+                        <h2 class="title title-s4 animated" data-animate="fadeInUp" data-delay=".1" title="Roadmap">Our Roadmap</h2>
+                    </div><!-- .section-head @e -->
+                </div>
+                <!-- Block @s -->
+                <div class="nk-block ov-h modify">
+                    <div class="container">
+                        <div class="roadmap-list animated" data-animate="fadeInUp" data-delay=".2">
+                            <div class="roadmap-item roadmap-item-sm roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">2018</h6>
+                                    <p style="font-size: 10px;"><a href="https://www.youtube.com/watch?v=whgGTSQttds&feature=emb_logo" target="_blank">ResilientDB Vision</a>, <br />
+                                        Optimal Batching,  <br />
+                                        Deep Pipeline Architecture, <br />
+                                        <a href="https://dl.acm.org/doi/10.1145/3274808.3274810" target="_blank"> <em class="fas fa-crown" style="font-size: 8px;"></em> Coordination-free Concurrency Control</a></p>
+                                </div>
+                            </div><!-- .roadmap-item -->
+                            <div class="roadmap-item roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">2019</h6>
+                                    <p style="font-size: 10px;">Out-of-order Communication, <br />
+                                        De-coupled Execution, <br />
+                                        Off-Chain Management, <br />
+                                        <a href="https://www.morganclaypool.com/doi/abs/10.2200/S00896ED1V01Y201901DTM058" target="_blank">Advanced Transaction Processing Textbook</a>, <br />
+                                        <a href="https://drops.dagstuhl.de/opus/volltexte/2019/11352/pdf/LIPIcs-DISC-2019-45.pdf" target="_blank">Reliable Cluster Sending</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-item-lg roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">2020</h6>
+                                    <p style="font-size: 10px;"><a href="https://www.youtube.com/watch?v=0kObJ0KPdkw" target="_blank">DB-based Chain, Smart Contract, Admin UI, Dashboard</a>, <br />
+                                        <a href="https://arxiv.org/pdf/1911.00838.pdf" target="_blank">Speculative Consensus</a>, <br />
+                                        <a href="https://drops.dagstuhl.de/opus/volltexte/2019/11351/pdf/LIPIcs-DISC-2019-44.pdf" target="_blank">Wait-free Consensus</a>, <br />
+                                        <a href="https://www.youtube.com/watch?v=tbUNAPiAcYI" target="_blank">Delayed Replication</a>, <br />
+                                        <a href="https://www.youtube.com/watch?v=33k9aFoDtBw" target="_blank">GeoBFT Consensus</a>, <br />
+                                        <a href="https://arxiv.org/abs/1911.00837" target="_blank">Cerberus Sharded Consensus</a>, <br />
+                                        <a href="https://arxiv.org/abs/1911.00837" target="_blank">Concurrent Consensus</a>, <br />
+                                        <a href="https://www.youtube.com/watch?v=lvftXtpxEEc" target="_blank">Architectural Lessons Learned</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">February 4, 2021</h6>
+                                    <p style="font-size: 10px;"><a href="https://www.morganclaypool.com/doi/abs/10.2200/S01068ED1V01Y202012DTM065" target="_blank">Authoritative Blockchain Textbook</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-item-sm roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">September 30, 2021</h6>
+                                    <p style="font-size: 10px;"><a href="https://github.com/resilientdb/resilientdb" target="_blank">ResilientDB 3.0</a>, and <a href="https://resilientdb.com/blog/" target="_blank">ResilientBlog Release</a>, <br />
+                                        <a href="https://expolab.org/papers/byshard-vldb.pdf" target="_blank">ByShard: Theoretical Sharding Foundation</a>, <br />
+                                        <a href="https://arxiv.org/pdf/2107.13047.pdf" target="_blank">RingBFT Sharded Consensus on Ring Topology</a>, <br />
+                                        <a href="https://arxiv.org/pdf/2108.08541.pdf" target="_blank">Probabilistic Reliable Cluster Communication</a>, <br />
+                                        <a href="https://arxiv.org/abs/2201.00982" target="_blank">Fault-tolerant Serverless Infrastructure</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">2022 Research</h6>
+                                    <p style="font-size: 10px;"><a href="https://dl.acm.org/doi/10.1145/3552326.3587455" target="_blank"><em class="fas fa-crown" style="font-size: 8px;"></em> SGX Accelerated Consensus</a>, <br />
+                                    <a href="https://arxiv.org/abs/2204.03552" target="_blank">On the Correctness of Speculative Consensus</a>, <br />
+                                    <a href="https://arxiv.org/abs/2205.04534" target="_blank">The Bedrock of BFT</a>, <br />
+                                    <a href="http://sites.computer.org/debull/A22june/p25.pdf" target="_blank">Hybrid Consensus: Power-of-Collaboration</a>, <br />
+                                    <a href="https://www.cidrdb.org/cidr2023/papers/p85-gupta.pdf" target="_blank">Chemistry behind Agreement</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-item-lg roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">September 30, 2022</h6>
+                                    <p style="font-size: 10px;"><a href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.0.0" target="_blank">NexRes: A New Sustainable Foundation [Next Generation ResilientDB]</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">February 4, 2023</h6>
+                                    <p style="font-size: 10px;"><a href="https://www.nowpublishers.com/article/Details/DBS-075" target="_blank">Consensus in Data Management: From Distributed Commit to Blockchain</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-item-sm roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">2023</h6>
+                                    <p style="font-size: 10px;"><a href="https://arxiv.org/abs/2302.02325" target="_blank">Collaborative Consensus</a>, <br />
+                                        <a href="https://arxiv.org/abs/2302.02118" target="_blank">View-Change-Less Protocol</a>, <br />
+                                        <a href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.2.0" target="_blank">EVM-based Smart Contract with Solidity</a>, <br />
+                                        <a href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v1.3.0" target="_blank">Extended Python SDK</a>, <br />
+                                        <a href="https://github.com/resilientdb/resilientdb/releases/tag/nexres-v.1.4.0" target="_blank">Native UTXO & Wallet API</a>, <br />
+                                        <a href="https://blog.resilientdb.com/2023/09/21/ResVault.html" target="_blank">Wallet Integration</a>, <br />
+                                        <a href="https://blog.resilientdb.com/2023/05/06/NexResExplorer.html" target="_blank">Exploration & Deployment Dashboard</a>, <br />
+                                        Application Landscape: <a href="https://nft.resilientdb.com/" target="_blank">NFT</a> & <a href="https://debitable.resilientdb.com/" target="_blank">Debitable</a>, <br />
+                                        <a href="https://blog.resilientdb.com/2023/09/21/ResVault.html" target="_blank">Minting Resilient Token (RoK)</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-done">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">September 30, 2023</h6>
+                                    <p style="font-size: 10px;"><a href="https://incubator.apache.org/projects/resilientdb.html" target="_blank">Apache ResilientDB Incubation</a></p>
+                                </div>
+                            </div>
+                            <div class="roadmap-item roadmap-item-lg">
+                                <div class="roadmap-innr">
+                                    <h6 class="roadmap-title roadmap-title-s2">2024 & Beyond</h6>
+                                    <p style="font-size: 10px;">Philosophical Pillars of Blockchain, <br />
+                                        DAG Meets BFT, <br />
+                                        Smart Contract Concurrency Control, <br />
+                                        Revisiting Evaluation of Blockchain, <br />
+                                        FLeX: Fault-tolerant Learner-Executer Paradigm, <br />
+                                        Off-chain Decentralized Storage, <br />
+                                        Reconfigurable Ecosystem, <br />
+                                        Planet Scale Reliability</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .block @e -->
+            </section>
+            <!-- // -->
+            <section class="section bg-theme-dark tc-light ov-h pdb-0" id="team">
+                <div class="container">
+                    <div class="section-head section-head-sm text-center wide-auto-sm">
+                        <h2 class="title-lg-2 title-semibold animated" data-animate="fadeInUp" data-delay=".7">Foundation</h2>
+                    </div>
+                    <!-- Block @s -->
+                    <div class="nk-block nk-block-team-list team-list">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".3">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://expolab.org/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/sadoghi.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Mohammad Sadoghi</h5>
+                                    <span class="team-position">Principle Investigator</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/mohammad-sadoghi-b842a27/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://expolab.org/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-head text-center wide-auto-sm tc-light">
+                            <h2 class="title title-s4 animated" data-animate="fadeInUp" data-delay=".1" title="team">Brain</h2>
+                            <p class="animated" data-animate="fadeInUp" data-delay=".2">Meet the people behind ResilientDB</p>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/junchao-chen-ab75a353/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/junchao.png" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Junchao Chen</h5>
+                                    <span class="team-position">Lead Architect</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/junchao-chen-ab75a353/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/dakai-kang-288451227/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/dakai.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Dakai Kang</h5>
+                                    <span class="team-position">Concurrent Consensus Architect</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/dakai-kang-288451227/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://dakaikang.github.io" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/apratimshukla6/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/apratim.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Apratim Shukla</h5>
+                                    <span class="team-position">Lead Full-Stack Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/apratimshukla6/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://apratim.me" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                        <li><a href="https://github.com/apratimshukla6" target="_blank"><em class="fab fa-github"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".7">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/priyal-soni-150/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/priyal.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Priyal Soni</h5>
+                                    <span class="team-position">Backend Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/priyal-soni-150/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/gopal-nambiar2/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/gopal.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Gopal Nambiar</h5>
+                                    <span class="team-position">Full-Stack Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/gopal-nambiar2/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/saip-reddy/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/sai.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Saipranav Kotamreddy</h5>
+                                    <span class="team-position">Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/saip-reddy/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/schen7239/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/steve.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Steve Chen</h5>
+                                    <span class="team-position">Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/schen7239/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".7">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/malata/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/mariana.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Mariana Tapia</h5>
+                                    <span class="team-position">Food System Designer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/malata/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/sasha-pimento/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/sasha.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Sasha Pimento</h5>
+                                    <span class="team-position">Full-Stack Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/sasha-pimento/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://sashapimento.com/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/kvshete15/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/kaustubh.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Kaustubh Shete</h5>
+                                    <span class="team-position">Full-Stack Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/kvshete15/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/haskell-macaraig-79aaba230" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/haskell.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Haskell Lark Macaraig</h5>
+                                    <span class="team-position">Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/haskell-macaraig-79aaba230" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/weichenzhang/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/weichen.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Weichen Zhang</h5>
+                                    <span class="team-position">Full-Stack Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/weichenzhang/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/jiazhi-sun-25a130191/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/kenny.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Jiazhi (Kenny) Sun</h5>
+                                    <span class="team-position">Full-Stack Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/jiazhi-sun-25a130191/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div>
+                    <div class="nk-block nk-block-team-list">
+                        <div class="section-head section-head-sm text-center wide-auto-sm">
+                            <h2 class="title-lg-2 title-semibold animated" data-animate="fadeInUp" data-delay=".7">Founding Team</h2>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/suyash-gupta-253b39a1" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/suyash.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Suyash Gupta</h5>
+                                    <span class="team-position">Lead Architect</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/suyash-gupta-253b39a1" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://gupta-suyash.github.io/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/sajjadrahnama/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/sajjad.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Sajjad Rahnama</h5>
+                                    <span class="team-position">Lead System Designer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/sajjadrahnama/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://sajjadrahnama.com/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="http://jhellings.nl/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/jelle.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Jelle Hellings</h5>
+                                    <span class="team-position">Complexity Theorist</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="http://jhellings.nl/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".7">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/qadahtm/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/thamir.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Thamir Qadah</h5>
+                                    <span class="team-position">Concurrency Control Specialist</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/qadahtm/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://thamir.qadah.com/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .block @e -->
+                    <div class="nk-block nk-block-team-list">
+                        <div class="section-head section-head-sm text-center wide-auto-sm">
+                            <h2 class="title-lg-2 title-semibold animated" data-animate="fadeInUp" data-delay=".7">Distinguished Alumni</h2>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https//www.linkedin.com/in/arindaam-roy/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/arindaam.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Arindaam Roy</h5>
+                                    <span class="team-position">Toolkit & Integration Lead Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https//www.linkedin.com/in/arindaam-roy/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://arindaam.com/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/divjeet-singh/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/divjeet.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Divjeet Singh Jas</h5>
+                                    <span class="team-position">dApp Lead Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/divjeet-singh/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://www.divjeet.me/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/julieta-duarte-994983238" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/julietta.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Julieta Duarte</h5>
+                                    <span class="team-position">System Storage Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/julieta-duarte-994983238" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".7">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/glenn-chen1" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/glenn.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Glenn Chen</h5>
+                                    <span class="team-position">System Storage Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/glenn-chen1" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/sheshavpd" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/vishnu.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Shesha Vishnu Prasad</h5>
+                                    <span class="team-position">Recovery Architect</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/sheshavpd" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/jinxiao-yu-029137150/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/jinxiao.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Jinxiao Yu</h5>
+                                    <span class="team-position">Performance Analyst</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/jinxiao-yu-029137150/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/weijia-w/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/wayne.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Wayne Wang</h5>
+                                    <span class="team-position">Sharding Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/weijia-w/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".7">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/rohan-sogani-80a2088a/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/rohan.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Rohan Sogani</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/rohan-sogani-80a2088a/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/priyaholani" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/priya.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Priya Holani</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/priyaholani" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/dhruvkrishnan/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/dhruv.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Dhruv Krishnan</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/dhruvkrishnan/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="http://dhruvkrishnan.com/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/p-shubham1996" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/shubham.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Shubham Pandey</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/p-shubham1996" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".7">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/swchoi1994/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/seongwoo.jpeg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Seongwoo Choi</h5>
+                                    <span class="team-position">DevOp Support</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/swchoi1994/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/troy-i-a07bb9187/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/troy.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Troy Insixiengmay</h5>
+                                    <span class="team-position">Mobile dApp Developer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/troy-i-a07bb9187/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/haojun-zhu-89ab9419b/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/haojun.png" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Haojun (Howard) Zhu</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/haojun-zhu-89ab9419b/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/armasalejandro/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/alejandro.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Alejandro Armas</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/armasalejandro/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                        <li><a href="https://alejandroarmas.github.io/" target="_blank"><em class="fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".7">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/iyershreenath" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/shreenath.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Shreenath Iyer</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/iyershreenath" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/erik-linsenmayer" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/erik.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Erik Linsenmayer</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/erik-linsenmayer" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".5">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/patrick-liao-2ab6b214a" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/patrick.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Patrick Liao</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/patrick-liao-2ab6b214a" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-3 col-mb-6">
+                                <div class="team team-s3 team-s3-alt animated" data-animate="fadeInUp" data-delay=".6">
+                                    <div class="team-photo round-full team-photo-bg">
+                                        <a href="https://www.linkedin.com/in/domeniccianfichi/" class="team-show" data-overlay="bg-theme-grad-alternet" target="_blank"></a>
+                                        <img src="images/team/domenic.jpg" alt="team" class="round-full">
+                                    </div>
+                                    <h5 class="team-name title title-sm">Domenic Cianfichi</h5>
+                                    <span class="team-position">System Engineer</span>
+                                    <ul class="team-social team-social-s2">
+                                        <li><a href="https://www.linkedin.com/in/domeniccianfichi/" target="_blank"><em class="fab fa-linkedin-in"></em></a></li>
+                                    </ul>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <br />
+                        <br />
+                    </div><!-- .block @e -->
+                </div>
+            </section>
+            <!-- // -->
+            
+            <!-- // -->
+            <section class="section bg-theme tc-light pb-0" id="faqs">
+                <div class="container">
+                    <div class="section-head text-center wide-auto-sm">
+                        <h2 class="title title-s4 animated" data-animate="fadeInUp" data-delay=".1" title="Publications">Publications</h2>
+                        <p class="animated" data-animate="fadeInUp" data-delay=".2">Our publications over the years</p>
+                    </div><!-- .section-head @e -->
+                    <!-- Block @s -->
+                    <div class="nk-block overflow-hidden">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8 col-lg-10">
+                                <ul class="nav tab-nav tab-nav-line mgb-r animated" data-animate="fadeInUp" data-delay=".3">
+                                    <li><a data-bs-toggle="tab" href="#first">2018</a></li>
+                                    <li><a data-bs-toggle="tab" href="#second">2019</a></li>
+                                    <li><a class="active" data-bs-toggle="tab" href="#third">2020</a></li>
+                                    <li><a data-bs-toggle="tab" href="#fourth">2021</a></li>
+                                    <li><a data-bs-toggle="tab" href="#fifth">2022</a></li>
+                                    <li><a data-bs-toggle="tab" href="#sixth">2023</a></li>
+                                    <li><a data-bs-toggle="tab" href="#seventh">2024</a></li>
+                                    <li><a data-bs-toggle="tab" href="#eight">Books</a></li>
+                                </ul>
+                                <div class="tab-content animated" data-animate="fadeInUp" data-delay=".4">
+                                    <div class="tab-pane fade" id="first">
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2018">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#faq-2018-1"> Coordination-free Concurrency Control, <span class="location">ACM Middleware 2018, Best Paper Award</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2018-1" class="collapse show" data-bs-parent="#faq-2018">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://dl.acm.org/doi/10.1145/3274808.3274810" target="_blank">Read Publication</a>,
+                                                        <a href="https://expolab.org/papers/QueCC-mw18.pdf"target="_blank">View Slides</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2018-2"> Blockchain Transaction Processing, <span class="location">Springer 2018</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2018-2" class="collapse" data-bs-parent="#faq-2018">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://www.researchgate.net/publication/325116198_Blockchain_Transaction_Processing" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2018-3"> EasyCommit, <span class="location">EDBT 2018</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2018-3" class="collapse" data-bs-parent="#faq-2018">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://www.researchgate.net/publication/324089842_EasyCommit_A_Non-blocking_Two-phase_Commit_Protocol" target="_blank">Read Publication</a>, 
+                                                        <a href="https://expolab.org/papers/easy-commit-slides.pdf" target="_blank">View Slides</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="second">
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2019">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#faq-2019-1"> Cluster Sending Protocols, <span class="location">DISC 2019</span>  <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2019-1" class="collapse show" data-bs-parent="#faq-2019">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://expolab.org/papers/csp_disc2019.pdf" target="_blank">Read Publication</a>, 
+                                                        <a href="https://arxiv.org/abs/1908.01455" target="_blank">View Technical Report</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2019-2"> Blockplane, <span class="location">ICDE 2019</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2019-2" class="collapse" data-bs-parent="#faq-2019">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://expolab.org/papers/bp.pdf" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2019-3"> Wait-free Consensus, <span class="location">DISC 2019</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2019-3" class="collapse" data-bs-parent="#faq-2019">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.DISC.2019.44" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2019-4"> An In-Depth Look of BFT Consensus, <span class="location">Middleware 2019</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2019-4" class="collapse" data-bs-parent="#faq-2019">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://dl.acm.org/doi/10.1145/3366625.3369437" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade show active" id="third">
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2020">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#faq-2020-1"> ResilientDB Global Consensus, <span class="location">PVLDB 2020</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2020-1" class="collapse show" data-bs-parent="#faq-2020">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://www.researchgate.net/publication/339866008_ResilientDB_global_scale_resilient_blockchain_fabric" target="_blank">Read Publication</a>, 
+                                                        <a href="https://expolab.org/papers/GeoBFT-VLDB20.pptx" target="_blank">View Slides</a>, 
+                                                        <a href="https://youtu.be/FL1KXEvR-84" target="_blank">View Video</a><br />
+                                                        <a href="http://vldb.org/pvldb/reproducibility/" target="_blank">[pVLDB Reproducibility Badge]</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2020-2">  ResilientDB Fabric, <span class="location">PVLDB 2020</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2020-2" class="collapse" data-bs-parent="#faq-2020">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://www.researchgate.net/publication/344968805_Scalable_resilient_and_configurable_permissioned_blockchain_fabric" target="_blank">Read Publication</a>, 
+                                                        <a href="https://expolab.org/papers/ResilientDB-Demo-VLDB2020.pptx" target="_blank">View Slides</a>, 
+                                                        <a href="https://youtu.be/By4Ga1Lemm4" target="_blank">View Video</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2020-3">   Architectural Lessons Learned, <span class="location">ICDCS 2020</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2020-3" class="collapse" data-bs-parent="#faq-2020">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://arxiv.org/abs/1911.09208" target="_blank">Read Publication</a>, 
+                                                        <a href="https://expolab.org/papers/EvalPaper-ICDCS-2020.pdf" target="_blank">View Slides</a>, 
+                                                        <a href="https://youtu.be/QLpnc_eRObA" target="_blank">View Video</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2020-4">  Coordination-Free Replication, <span class="location">ICDT 2020</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2020-4" class="collapse" data-bs-parent="#faq-2020">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://drops.dagstuhl.de/opus/volltexte/2020/11941/pdf/LIPIcs-ICDT-2020-17.pdf" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2020-5"> Building High Throughput Permissioned Blockchain, <span class="location">VLDB 2020</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2020-5" class="collapse" data-bs-parent="#faq-2020">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://expolab.org/papers/Tutorial%20-%20Theory%20-%20VLDB%202020.pdf" target="_blank">View Theory</a>, 
+                                                        <a href="https://expolab.org/papers/Tutorial%20-%20System%20-%20VLDB%202020.pptx" target="_blank">View System</a>,
+                                                        <a href="https://youtu.be/Jj6hVs1SF3E" target="_blank">View Video</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2020-6">  Blockchain Consensus Unraveled, <span class="location">DEBS 2020</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2020-6" class="collapse" data-bs-parent="#faq-2020">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://dl.acm.org/doi/10.1145/3401025.3404099" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="fourth">
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2021">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#faq-2021-1">  ByShard Theoretical Sharding Foundation, <span class="location">PVLDB 2021</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2021-1" class="collapse show" data-bs-parent="#faq-2021">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://expolab.org/papers/byshard-vldb.pdf" target="_blank">Read Publication</a>, 
+                                                        <a href="https://expolab.org/papers/byshard-slides.pdf" target="_blank">View Slides</a>, 
+                                                        <a href="https://expolab.org/papers/byshard-poster.pdf" target="_blank">View Poster</a>, 
+                                                        <a href="https://youtu.be/doUo5DdBAyA" target="_blank">View Video</a><br />
+                                                        <a href="http://vldb.org/pvldb/reproducibility/" target="_blank">[pVLDB Reproducibility Badge]</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2021">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2021-2">  Byzantine Cluster-Sending, <span class="location">arXiv 2021</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2021-2" class="collapse" data-bs-parent="#faq-2021">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://arxiv.org/pdf/2108.08541.pdf" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2021">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2021-3">  Proof-of-Execution, <span class="location">EDBT 2021</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2021-3" class="collapse" data-bs-parent="#faq-2021">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://www.researchgate.net/publication/337019762_Proof-of-Execution_Reaching_Consensus_through_Fault-Tolerant_Speculation" target="_blank">Read Publication</a>, 
+                                                        <a href="https://expolab.org/papers/PoE-EDBT-21.pptx" target="_blank">View Slides</a>, 
+                                                        <a href="https://youtu.be/cwHP_e_NOKI" target="_blank">View Video</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2021">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2021-3">  Resilient Concurrent Consensus, <span class="location">ICDE 2021</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2021-3" class="collapse" data-bs-parent="#faq-2021">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://ieeexplore.ieee.org/document/9458641" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="fifth">
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2022">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#faq-2022-1"> RingBFT Practical Sharded Topology, <span class="location">EDBT 2022</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2022-1" class="collapse show" data-bs-parent="#faq-2022">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://arxiv.org/pdf/2107.13047.pdf" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2022-2">  Theory of Speculative Consensus, <span class="location">arXiv 2022</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2022-2" class="collapse" data-bs-parent="#faq-2022">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://arxiv.org/abs/2204.03552" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2022-3"> Power-of-Collaboration Consensus, <span class="location">IEEE Data Engineering Bulletin 2022</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2022-3" class="collapse" data-bs-parent="#faq-2022">
+                                                    <div class="accordion-content">
+                                                        <p><a href="http://sites.computer.org/debull/A22june/p25.pdf" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2022-4"> Reliable Cluster Sending Protocols, <span class="location">FoIKS 2022</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2022-4" class="collapse" data-bs-parent="#faq-2022">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://expolab.org/papers/CSP%20-%20FoIKs%202022.pdf" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="sixth">
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2023">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#faq-2023-1">  Dissecting BFT Consensus, <span class="location">EuroSys 2023, Best Paper Award</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2023-1" class="collapse show" data-bs-parent="#faq-2023">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://dl.acm.org/doi/10.1145/3552326.3587455" target="_blank">Read Publication</a>, 
+                                                        <a href="https://expolab.org/papers/trusted-eurosys23.pdf" target="_blank">View Slides</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2023-2">  Cerberus Minimalistic Sharded Consensus, <span class="location">JSys 2023</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2023-2" class="collapse" data-bs-parent="#faq-2023">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://escholarship.org/uc/item/6h427354" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2023-3">  Probabilistic Cluster Sending, <span class="location">JSys 2023</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2023-3" class="collapse" data-bs-parent="#faq-2023">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://escholarship.org/uc/item/97s0f1gh" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2023-4">  Chemistry behind Agreement, <span class="location">CIDR 2023</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2023-4" class="collapse" data-bs-parent="#faq-2023">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://www.cidrdb.org/cidr2023/papers/p85-gupta.pdf" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2023-5"> Collaborative Consensus, <span class="location">arXiv 2023</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2023-5" class="collapse" data-bs-parent="#faq-2023">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://arxiv.org/abs/2302.02325" target="_blank">Read Publication</a>, 
+                                                        <a href="https://expolab.org/papers/chemistry-cidr23.pdf" target="_blank">View Slides</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2023-6"> ByShard Foundation Extended, <span class="location">VLDBJ 2023</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2023-6" class="collapse" data-bs-parent="#faq-2023">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://link.springer.com/article/10.1007/s00778-023-00794-0" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2023-7"> Reliable Transactions in Serverless-Edge Architecture, <span class="location">ICDE 2023</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2023-7" class="collapse" data-bs-parent="#faq-2023">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://arxiv.org/abs/2201.00982" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="seventh">
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-2024">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#faq-2024-1"> The Bedrock of BFT, <span class="location">NSDI 2024</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2024-1" class="collapse show" data-bs-parent="#faq-2024">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://arxiv.org/abs/2205.04534" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-2024-2"> SpotLess: Concurrent Rotational Consensus, <span class="location">ICDE 2024</span> <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-2024-2" class="collapse" data-bs-parent="#faq-2024">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://arxiv.org/abs/2302.02118" target="_blank">Read Publication</a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="eight">
+                                        <div class="accordion accordion-s1 accordion-faq" id="faq-book">
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#faq-book-1"> Consensus in Data Management: From Distributed Commit to Blockchain <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-book-1" class="collapse show" data-bs-parent="#faq-book">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://www.nowpublishers.com/article/Details/DBS-075" target="_blank">Read Book</a>, 
+                                                        <a href="https://expolab.org/images/Sadoghi_CBook_Flyer.pdf" target="_blank">View Flyer</a><br />
+                                                        Foundations and Trends &#174; in Databases 2023
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-book-2"> Fault-tolerant Distributed Transactions on Blockchain <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-book-2" class="collapse" data-bs-parent="#faq-book">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://link.springer.com/book/10.1007/978-3-031-01877-0" target="_blank">Read Book</a>, 
+                                                        <a href="https://expolab.org/images/Sadoghi_BBook_Flyer.pdf" target="_blank">View Flyer</a><br />
+                                                        Morgan & Claypool Synthesis Lectures on Data Management 2021
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item accordion-item-s4 bg-theme-alt">
+                                                <h5 class="accordion-title collapsed" data-bs-toggle="collapse" data-bs-target="#faq-book-3"> Transaction Processing on Modern Hardware <span class="accordion-icon accordion-icon-s2"></span>
+                                                </h5>
+                                                <div id="faq-book-3" class="collapse" data-bs-parent="#faq-book">
+                                                    <div class="accordion-content">
+                                                        <p><a href="https://link.springer.com/book/10.1007/978-3-031-01870-1" target="_blank">Read Book</a>, 
+                                                        <a href="https://expolab.org/images/Sadoghi_TBook_Flyer.pdf" target="_blank">View Flyer</a><br />
+                                                        Morgan & Claypool Synthesis Lectures on Data Management 2019
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <br />
+                        <br />
+                    </div><!-- .block @e -->
+                    
+                </div>
+                
+            </section>
+            <!-- // -->
+            <section class="section bg-theme-alt tc-light" id="media-partner">
+                <div class="container">
+                    <!-- Section Head @s -->
+                    <div class="section-head text-center wide-auto-sm tc-light">
+                        <h2 class="title title-s4 animated" data-animate="fadeInUp" data-delay=".1" title="Sponsors">Sponsors</h2>
+                    </div><!-- .section-head @e -->
+                    <!-- Block @s -->
+                    <div class="nk-block block-partners">
+                        <ul class="partner-list partner-list-s2 flex-wrap">
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".2"><img src="images/sponsors/nsf.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".3"><img src="images/sponsors/radix.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".35"><img src="images/sponsors/moka.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".4"><img src="images/sponsors/mysten.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".45"><img src="images/sponsors/google.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".25"><img src="images/sponsors/doe.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".5"><img src="images/sponsors/ucdavis.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".55"><img src="images/sponsors/microsoft.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".6"><img src="images/sponsors/aws.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".65"><img src="images/sponsors/mousebelt.svg" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".7"><img src="images/sponsors/oracle.png" alt="partner"></li>
+                            <li class="partner-logo-s2 animated" data-animate="fadeInUp" data-delay=".75"><img src="images/sponsors/ucdaviscs.png" alt="partner"></li>
+                        </ul>
+                    </div>
+                    <!-- Block @e -->
+                </div>
+            </section>
+            <!-- // -->
+            <section class="section section-contact bg-theme tc-light" id="contact">
+                <div class="container">
+                    <div class="section-head text-center wide-auto-sm">
+                        <h2 class="title title-s4 animated" data-animate="fadeInUp" data-delay=".1" title="Contact">Contact</h2>
+                        <p class="animated" data-animate="fadeInUp" data-delay=".2">Any question? Reach out to us and we’ll get back to you shortly.</p>
+                    </div><!-- .section-head @e -->
+                    <!-- Block @s -->
+                    <div class="nk-block block-contact">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-xl-8 col-lg-10">
+                                <ul class="contact-list contact-list-s1 flex-wrap flex-md-nowrap pdb-l">
+                                    <li class="animated" data-animate="fadeInUp" data-delay=".3">
+                                        <em class="contact-icon fas fa-envelope"></em>
+                                        <div class="contact-text">
+                                            <span><a href="mailto:info@resilientdb.com">info@resilientdb.com</a></span>
+                                        </div>
+                                    </li>
+                                    <li class="animated" data-animate="fadeInUp" data-delay=".4">
+                                        <em class="contact-icon fas fa-cogs"></em>
+                                        <div class="contact-text">
+                                            <span><a href="mailto:support@resilientdb.com">support@resilientdb.com</a></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!-- .col -->
+                           
+                        </div><!-- .row -->
+                    </div><!-- .block @e -->
+                </div>
+            </section>
+            <!-- // -->
+        </main>
+        <!-- Footer -->
+        <footer class="nk-footer bg-theme-alt section-connect">
+            <div class="section section-m pb-0 tc-light ov-h">
+                <div class="container py-4">
+                    <!-- Block @s -->
+                    <div class="nk-block pb-lg-5">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-6 col-md-9">
+                                <div class="wide-auto-sm section-head section-head-sm pdb-r">
+                                    <h4 class="title title-md animated" data-animate="fadeInUp" data-delay=".1"><img src="images/sponsors/resdb.png" style="height: 150px;"></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .block @e -->
+                </div>
+                <div class="nk-ovm shape-contain shape-center-top shape-p"></div>
+            </div>
+            <div class="section section-footer section-s tc-light bg-transparent">
+                <div class="container">
+                    <!-- Block @s -->
+                    <div class="nk-block block-footer">
+                        <div class="row">
+                            <div class="col">
+                                <div class="wgs wgs-text text-center mb-3">
+                                    <ul class="social pdb-m justify-content-center">
+                                        <li><a href="https://twitter.com/resilientdb" target="_blank"><em class="social-icon fab fa-twitter"></em></a></li>
+                                        <li><a href="https://www.youtube.com/@ExpoLabUCDavis" target="_blank"><em class="social-icon fab fa-youtube"></em></a></li>
+                                        <li><a href="https://github.com/apache/incubator-resilientdb" target="_blank"><em class="social-icon fab fa-github"></em></a></li>
+                                        <li><a href="https://resilientdb.com/blog/" target="_blank"><em class="social-icon fab fa-blogger"></em></a></li>
+                                        <li><a href="https://legacy.resilientdb.com" target="_blank"><em class="social-icon fab fa-connectdevelop"></em></a></li>
+                                    </ul>
+                                    <div class="copyright-text copyright-text-s3 pdt-m">
+                                        <p><span class="d-sm-block">Copyright &copy; 2019-2024, ResilientDB</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .block @e -->
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Preloader -->
+    <div class="preloader"><span class="spinner spinner-round"></span></div>
+    <!-- JavaScript -->
+    <script src="assets/js/jquery.bundle.js?ver=210"></script>
+    <script src="assets/js/scripts.js?ver=210"></script>
+    <script src="assets/js/charts.js?ver=210"></script>
+    <script src="assets/js/charts.js?ver=210"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var ctx = document.getElementById('chart1').getContext('2d');
+
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+            labels: ["4", "16", "32", "64", "120"],
+            datasets: [{
+                label: 'Throughput',
+                yAxisID: 'y-throughput',
+                backgroundColor: 'rgb(89, 180, 169)',
+                borderColor: 'rgb(89, 180, 169)',
+                data: [939, 892, 453, 222, 106],
+                fill: false,
+            }, {
+                label: 'Latency',
+                yAxisID: 'y-latency',
+                backgroundColor: 'rgb(255, 87, 51)',
+                borderColor: 'rgb(255, 87, 51)',
+                data: [0.01, 0.07, 0.2, 0.5, 0.99],
+                fill: false,
+            }]
+            },
+            options: {
+            scales: {
+                'y-throughput': {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                title: {
+                    display: true,
+                    text: 'Throughput (KTPS)'
+                }
+                },
+                'y-latency': {
+                type: 'linear',
+                display: true,
+                position: 'right',
+                title: {
+                    display: true,
+                    text: 'Latency (Seconds)'
+                },
+                grid: {
+                    drawOnChartArea: false,
+                },
+                },
+                x: {
+                title: {
+                    display: true,
+                    text: 'Number of Replicas'
+                }
+                }
+            },
+            plugins: {
+                legend: {
+                position: 'top',
+                }
+            }
+            }
+        });
+        });
+    </script>       
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var ctx = document.getElementById('chart2').getContext('2d');
+
+          const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["Partitioned Workload", "Low", "Medium", "High", "Extreme"],
+              datasets: [{
+                label: 'Throughput',
+                data: [1200, 254, 196, 167, 81],
+                borderColor: '#59b4a9',
+                backgroundColor: 'rgba(89, 180, 169, 0.5)',
+                yAxisID: 'y',
+              }, {
+                label: 'Latency',
+                data: [3, 6, 7, 6, 7],
+                borderColor: '#FF5733',
+                backgroundColor: 'rgba(255, 87, 51, 0.5)',
+                yAxisID: 'y1',
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  type: 'linear',
+                  display: true,
+                  position: 'left',
+                  title: {
+                    display: true,
+                    text: 'Throughput (KTPS)',
+                  },
+                },
+                y1: {
+                  type: 'linear',
+                  display: true,
+                  position: 'right',
+                  title: {
+                    display: true,
+                    text: 'Latency (Seconds)',
+                  },
+                  grid: {
+                    drawOnChartArea: false,
+                  },
+                }
+              },
+              plugins: {
+                legend: {
+                  position: 'top',
+                }
+              }
+            }
+          });
+        });
+    </script>       
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var ctx = document.getElementById('chart3').getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["4", "16", "32", "64", "91"], // X-axis categories
+              datasets: [{
+                label: 'ResilientDB', // First dataset
+                data: [355, 365, 356, 242, 210], // Data for the first dataset
+                borderColor: '#59b4a9', // Line color
+                backgroundColor: 'rgba(89, 180, 169, 0.5)', // Fill color with transparency
+                tension: 0.1 // Smooth the line
+              }, {
+                label: 'PBFT', // Second dataset
+                data: [191, 150, 95, 55, 38], // Data for the second dataset
+                borderColor: '#FF5733', // Line color
+                backgroundColor: 'rgba(255, 87, 51, 0.5)', // Fill color with transparency
+                tension: 0.1 // Smooth the line
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: false, // Start the y-axis from the lowest value in the dataset
+                  title: {
+                    display: true,
+                    text: 'Throughput (KTPS)'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Number of Replicas'
+                  }
+                }
+              },
+              plugins: {
+                legend: {
+                  position: 'top'
+                }
+              }
+            }
+          });
+        });
+    </script>     
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var ctx = document.getElementById('chart4').getContext('2d');
+          var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ["1", "2", "3", "4", "5", "6"], // X-axis categories
+              datasets: [{
+                label: 'ResilientDB', // First dataset
+                data: [10, 40, 42, 48, 52, 53], // Data for the first dataset
+                borderColor: '#59b4a9', // Line color
+                backgroundColor: 'rgba(89, 180, 169, 0.5)', // Fill color with transparency
+                tension: 0.1 // Smooth the line
+              }, {
+                label: 'PBFT', // Second dataset
+                data: [34, 33, 30, 17, 16, 15], // Data for the second dataset
+                borderColor: '#FF5733', // Line color
+                backgroundColor: 'rgba(255, 87, 51, 0.5)', // Fill color with transparency
+                tension: 0.1 // Smooth the line
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: false, // Start the y-axis from the lowest value in the dataset
+                  title: {
+                    display: true,
+                    text: 'Throughput (KTPS)'
+                  }
+                },
+                x: {
+                  title: {
+                    display: true,
+                    text: 'Number of Clusters (Regions)'
+                  }
+                }
+              },
+              plugins: {
+                legend: {
+                  position: 'top'
+                }
+              }
+            }
+          });
+        });
+        </script> 
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('chart5').getContext('2d');
+    
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                labels: ["16", "32", "64", "128"],
+                datasets: [{
+                    label: 'Throughput',
+                    yAxisID: 'y-throughput',
+                    backgroundColor: 'rgb(89, 180, 169)',
+                    borderColor: 'rgb(89, 180, 169)',
+                    data: [5.768104, 5.225173655, 3.425058836, 2.176961564],
+                    fill: false,
+                }, {
+                    label: 'Latency',
+                    yAxisID: 'y-latency',
+                    backgroundColor: 'rgb(255, 87, 51)',
+                    borderColor: 'rgb(255, 87, 51)',
+                    data: [0.0470566524, 0.4063441034, 1.345684984, 4.106499498],
+                    fill: false,
+                }]
+                },
+                options: {
+                scales: {
+                    'y-throughput': {
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    title: {
+                        display: true,
+                        text: 'Throughput (Million TPS)'
+                    }
+                    },
+                    'y-latency': {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    title: {
+                        display: true,
+                        text: 'Latency (Seconds)'
+                    },
+                    grid: {
+                        drawOnChartArea: false,
+                    },
+                    },
+                    x: {
+                    title: {
+                        display: true,
+                        text: 'Number of Replicas'
+                    }
+                    }
+                },
+                plugins: {
+                    legend: {
+                    position: 'top',
+                    }
+                }
+                }
+            });
+            });
+        </script>      
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('chart6').getContext('2d');
+
+            var chart = new Chart(ctx, {
+                type: 'scatter', // Change the type to 'scatter' to support x and y values in data
+                data: {
+                    datasets: [{
+                        label: 'Throughput',
+                        backgroundColor: 'rgb(89, 180, 169)',
+                        borderColor: 'rgb(89, 180, 169)',
+                        // Combine throughput (as x-values) and latency (as y-values) into one dataset
+                        data: [
+                        {x: 0.0080788014, y: 1.88241215, batch: "1"},
+                        {x: 0.4581162703, y: 2.218035842, batch: "100"},
+                        {x: 0.8065180876, y: 3.040727589, batch: "200"},
+                        {x: 1.758653427, y: 3.735271081, batch: "400"},
+                        {x: 2.176961564, y: 4.106499498, batch: "600"},
+                        {x: 2.179059153, y: 5.580073744, batch: "800"},
+                        {x: 2.265541534, y: 6.418122143, batch: "1000"}
+                        ],
+                        fill: false,
+                        // To draw lines between points, ensure the 'showLine' option is true
+                        showLine: true,
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            position: 'bottom',
+                            title: {
+                                display: true,
+                                text: 'Throughput (Million TPS)'
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Latency (Seconds)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                // Customize the tooltip content
+                                beforeTitle: function(context) {
+                                    // Access the batch size using the first item in the context array
+                                    return 'Batch Size: ' + context[0].raw.batch;
+                                },
+                                label: function(context) {
+                                    // Customize the label to show throughput and latency
+                                    var label = '';
+                                    
+                                    label += `Throughput: ${context.raw.x.toLocaleString()}, Latency: ${context.raw.y}`;
+                                    return label;
+                                }
+                            }
+                        },
+                        legend: {
+                            position: 'top',
+                        }
+                    }
+                }
+            });
+        });
+
+        </script>             
+</body>
+
 </html>

@@ -1,28 +1,3 @@
-# nexres_dashboard
-## Customize configuration
+# ResilientDB website
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Note that any changes deployed to this branch will automatically be published live at https://resilientdb.com
