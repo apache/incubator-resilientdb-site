@@ -7884,5 +7884,19 @@ ul.progress-info { display: flex; justify-content: space-between; }
   }
   
 }
+
+.img-zoom {
+  /* Initial state */
+  overflow: hidden; /* Optional: in case the image is inside a container */
+  display: block; /* Prevents adding extra space below the image */
+  transition: transform 0.5s ease; /* Smooth transition for the transform */
+  transform: scale(1); /* Initial scale is 100% */
+}
+
+.img-zoom:hover {
+  /* Hover state */
+  transform: scale(1.1); /* Scale the image to 110% of its original size */
+}
+
 /* END @iO */
 /* END @iO */
