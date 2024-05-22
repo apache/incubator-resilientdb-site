@@ -1,0 +1,42 @@
+name: Deploy to ASF Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.13.1'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Add asf.yaml file
+        run: |
+          echo "publish:" > out/asf.yaml
+          echo "  whoami: asf-site" >> out/asf.yaml
+
+      - name: Deploy to asf-site branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          cd out
+          git init
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Deploy to asf-site"
+          git push --force https://x-access-token:${{ secrets.TOKEN }}@github.com/apache/incubator-resilientdb-site.git master:asf-site
