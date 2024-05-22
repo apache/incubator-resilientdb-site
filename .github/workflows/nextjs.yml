@@ -31,7 +31,7 @@ jobs:
 
       - name: Deploy to asf-site branch
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
         run: |
           cd out
           git init
@@ -39,4 +39,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add .
           git commit -m "Deploy to asf-site"
-          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/apache/incubator-resilientdb-site.git master:asf-site
+          git push --force https://x-access-token:${{ secrets.TOKEN }}@github.com/apache/incubator-resilientdb-site.git master:asf-site
