@@ -24,6 +24,11 @@ jobs:
       - name: Build the site
         run: npm run build
 
+      - name: Add asf.yaml file
+        run: |
+          echo "publish:" > out/asf.yaml
+          echo "  whoami: asf-site" >> out/asf.yaml
+
       - name: Deploy to asf-site branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,4 +39,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add .
           git commit -m "Deploy to asf-site"
-          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/<YOUR_GITHUB_USERNAME>/<YOUR_PROJECT_REPO>.git master:asf-site
+          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/apache/incubator-resilientdb-site.git master:asf-site
