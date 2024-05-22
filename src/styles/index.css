@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  input[type="checkbox"]:checked ~ label span svg {
+    @apply inline-flex;
+  }
+
+  .sticky .header-logo {
+    @apply py-5 lg:py-2;
+  }
+
+  .sticky .menu-scroll.active {
+    @apply opacity-70;
+  }
+
+  input#togglePlan:checked ~ .dot {
+    @apply translate-x-full;
+  }
+
+  input#checkboxLabel:checked ~ .box span {
+    @apply opacity-100;
+  }
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.15s all, transform 0.15s all;
+  transform: translateY(-10px); /* Move up when collapsed */
+  background-color: #1E232E;
+  padding: 0; /* Set padding to 0 when collapsed */
+  width: 100%;
+}
+
+.expanded .accordion-content {
+  max-height: 500px; /* Adjust based on content size */
+  transform: translateY(0px); /* Stay in place when expanded */
+  padding: 10px; /* Apply padding only when expanded */
+  background-color: #151523;
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+  background-color: #131320;
+  padding: 10px;
+  width: 100%;
+  position: relative; /* Needed for absolute positioning of the arrow */
+}
+
+.title-and-badge {
+  display: flex;
+  align-items: center; /* Vertically align items in the center */
+  justify-content: flex-start; /* Align items to the left for desktop view */
+  flex-wrap: nowrap; /* Prevent wrapping in desktop view */
+}
+
+.title-text {
+  overflow: hidden; /* Prevent text from overflowing */
+  text-overflow: ellipsis; /* Add ellipsis when text overflows */
+  white-space: nowrap; /* Keep the title in a single line */
+  flex-grow: 1; /* Allow title text to expand within the container */
+}
+
+.badge {
+  margin-left: 0.5rem; /* Space between title text and badge */
+  background-color: #1E232E; /* Distinctive background color */
+  border-radius: 5px; /* Rounded corners for the badge */
+  padding: 2px 8px; /* Padding inside the badge */
+  flex-shrink: 0; /* Prevent badge from shrinking */
+}
+
+.badge-award {
+  margin-left: 0.5rem; /* Space between title text and badge */
+  background-color: #203c77; /* Distinctive background color */
+  border-radius: 5px; /* Rounded corners for the badge */
+  padding: 2px 8px; /* Padding inside the badge */
+  flex-shrink: 0; /* Prevent badge from shrinking */
+}
+
+.arrow {
+  position: absolute; /* Position the arrow absolutely to keep it on the right */
+  right: 10px; /* Distance from the right edge */
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+@media (max-width: 750px) {
+  .title-and-badge {
+    flex-wrap: wrap; /* Allow items to wrap to the next line in mobile view */
+    justify-content: flex-start; /* Align items to the left even when wrapped */
+    padding-right: 30px; /* Right padding to avoid overlap with the arrow */
+    flex-grow: 1;
+  }
+
+  .title-text, .badge {
+    flex-basis: 100%; /* Each takes full width of the container when wrapped */
+    white-space: normal; /* Allow text to wrap naturally */
+  }
+
+  .badge {
+    order: 2; /* Position badge below title text in mobile view */
+    margin-left: 0; /* No left margin in mobile view */
+    margin-bottom: 2px;
+  }
+
+  .title-text, .badge-award {
+    flex-basis: 100%; /* Each takes full width of the container when wrapped */
+    white-space: normal; /* Allow text to wrap naturally */
+  }
+
+  .badge-award {
+    order: 2; /* Position badge below title text in mobile view */
+    margin-left: 0; /* No left margin in mobile view */
+  }
+}
+
+.publink {
+  color: #546082;
+  font-size: 13px;
+}
+
+.publink:hover {
+  color: #66749B;
+}
+
+.accordion-item:first-child .accordion-title {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.accordion-item:last-child .accordion-title {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* When last accordion-item is expanded, remove border-radius from title */
+.accordion-item:last-child.expanded .accordion-title {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* When last accordion-item is expanded, add border-radius to content */
+.accordion-item:last-child.expanded .accordion-content {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Specific styles for the SingleTestimonial container */
+.testimonial-container .rounded-sm {
+  background: transparent; /* Remove background */
+  border: none; /* Remove borders */
+  box-shadow: none; /* Remove shadows */
+}
+
+.year-selector {
+  display: flex;
+  width: 100%; /* Match with accordion width */
+  justify-content: space-around; /* Distribute space evenly */
+  margin-bottom: 20px; /* Spacing between year selector and testimonials */
+}
+
+.year-btn {
+  flex-grow: 1; /* Makes each button expand to fill the available space */
+  text-align: center; /* Centers the text inside the button */
+  padding-bottom: 10px;
+}
+
+.year-btn.active {
+  border-bottom: 2px solid #25D8C5; /* Active state indication */
+}
+
+.SingleTestimonial {
+  width: 80%; /* Standard width to align with the year selector */
+  margin: 0 auto; /* Center the accordion horizontally */
+}
+
+.accordion-item {
+  width: 100%; /* Ensures accordion items stretch to fill the container */
+}
+
+/* styles.css or your global CSS file */
+
+.badge-download {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #495064;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.badge-download:hover {
+  background-color: #3d4353;
+}
+
+.badge-download-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
