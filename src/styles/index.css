@@ -36,16 +36,16 @@
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.15s all, transform 0.15s all;
-  transform: translateY(-10px); /* Move up when collapsed */
+  transform: translateY(-10px);
   background-color: #1E232E;
-  padding: 0; /* Set padding to 0 when collapsed */
+  padding: 0;
   width: 100%;
 }
 
 .expanded .accordion-content {
-  max-height: 500px; /* Adjust based on content size */
-  transform: translateY(0px); /* Stay in place when expanded */
-  padding: 10px; /* Apply padding only when expanded */
+  max-height: 500px;
+  transform: translateY(0px);
+  padding: 10px;
   background-color: #151523;
 }
 
@@ -55,72 +55,72 @@
   background-color: #131320;
   padding: 10px;
   width: 100%;
-  position: relative; /* Needed for absolute positioning of the arrow */
+  position: relative;
 }
 
 .title-and-badge {
   display: flex;
-  align-items: center; /* Vertically align items in the center */
-  justify-content: flex-start; /* Align items to the left for desktop view */
-  flex-wrap: nowrap; /* Prevent wrapping in desktop view */
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
 }
 
 .title-text {
-  overflow: hidden; /* Prevent text from overflowing */
-  text-overflow: ellipsis; /* Add ellipsis when text overflows */
-  white-space: nowrap; /* Keep the title in a single line */
-  flex-grow: 1; /* Allow title text to expand within the container */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: 1;
 }
 
 .badge {
-  margin-left: 0.5rem; /* Space between title text and badge */
-  background-color: #1E232E; /* Distinctive background color */
-  border-radius: 5px; /* Rounded corners for the badge */
-  padding: 2px 8px; /* Padding inside the badge */
-  flex-shrink: 0; /* Prevent badge from shrinking */
+  margin-left: 0.5rem;
+  background-color: #1E232E;
+  border-radius: 5px;
+  padding: 2px 8px;
+  flex-shrink: 0;
 }
 
 .badge-award {
-  margin-left: 0.5rem; /* Space between title text and badge */
-  background-color: #203c77; /* Distinctive background color */
-  border-radius: 5px; /* Rounded corners for the badge */
-  padding: 2px 8px; /* Padding inside the badge */
-  flex-shrink: 0; /* Prevent badge from shrinking */
+  margin-left: 0.5rem;
+  background-color: #203c77;
+  border-radius: 5px;
+  padding: 2px 8px;
+  flex-shrink: 0;
 }
 
 .arrow {
-  position: absolute; /* Position the arrow absolutely to keep it on the right */
-  right: 10px; /* Distance from the right edge */
-  transition: transform 0.3s ease; /* Smooth transition for rotation */
+  position: absolute;
+  right: 10px;
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 750px) {
   .title-and-badge {
-    flex-wrap: wrap; /* Allow items to wrap to the next line in mobile view */
-    justify-content: flex-start; /* Align items to the left even when wrapped */
-    padding-right: 30px; /* Right padding to avoid overlap with the arrow */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-right: 30px;
     flex-grow: 1;
   }
 
   .title-text, .badge {
-    flex-basis: 100%; /* Each takes full width of the container when wrapped */
-    white-space: normal; /* Allow text to wrap naturally */
+    flex-basis: 100%;
+    white-space: normal;
   }
 
   .badge {
-    order: 2; /* Position badge below title text in mobile view */
-    margin-left: 0; /* No left margin in mobile view */
+    order: 2;
+    margin-left: 0;
     margin-bottom: 2px;
   }
 
   .title-text, .badge-award {
-    flex-basis: 100%; /* Each takes full width of the container when wrapped */
-    white-space: normal; /* Allow text to wrap naturally */
+    flex-basis: 100%;
+    white-space: normal;
   }
 
   .badge-award {
-    order: 2; /* Position badge below title text in mobile view */
-    margin-left: 0; /* No left margin in mobile view */
+    order: 2;
+    margin-left: 0;
   }
 }
 
@@ -143,13 +143,11 @@
   border-bottom-right-radius: 10px;
 }
 
-/* When last accordion-item is expanded, remove border-radius from title */
 .accordion-item:last-child.expanded .accordion-title {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-/* When last accordion-item is expanded, add border-radius to content */
 .accordion-item:last-child.expanded .accordion-content {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -159,40 +157,37 @@
   transform: rotate(180deg);
 }
 
-/* Specific styles for the SinglePublication container */
 .publication-container .rounded-sm {
-  background: transparent; /* Remove background */
-  border: none; /* Remove borders */
-  box-shadow: none; /* Remove shadows */
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .year-selector {
   display: flex;
-  width: 100%; /* Match with accordion width */
-  justify-content: space-around; /* Distribute space evenly */
-  margin-bottom: 20px; /* Spacing between year selector and publications */
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .year-btn {
-  flex-grow: 1; /* Makes each button expand to fill the available space */
-  text-align: center; /* Centers the text inside the button */
+  flex-grow: 1;
+  text-align: center;
   padding-bottom: 10px;
 }
 
 .year-btn.active {
-  border-bottom: 2px solid #25D8C5; /* Active state indication */
+  border-bottom: 2px solid #25D8C5;
 }
 
 .SinglePublication {
-  width: 80%; /* Standard width to align with the year selector */
-  margin: 0 auto; /* Center the accordion horizontally */
+  width: 80%;
+  margin: 0 auto;
 }
 
 .accordion-item {
-  width: 100%; /* Ensures accordion items stretch to fill the container */
+  width: 100%;
 }
-
-/* styles.css or your global CSS file */
 
 .badge-download {
   display: inline-block;
