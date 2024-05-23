@@ -6,13 +6,14 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/node:current
+      - image: cimg/node:22.2.0
     steps:
       - checkout
-      - node/install
+      - node/install:
+          node-version: "22.2.0"
       - run:
-          name: Update NPM
-          command: npm install -g npm
+          name: Update NPM to specific version
+          command: npm install -g npm@10.7.0
       - run:
           name: Install dependencies
           command: npm install
