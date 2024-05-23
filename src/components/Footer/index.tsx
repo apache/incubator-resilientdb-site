@@ -158,13 +158,15 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="flex justify-center my-2">
             <div className="apache-logo">
-              <Image
-                src="/images/podling/apache.png"
-                alt="logo"
-                className="w-full h-full"
-                width={150}
-                height={100}
-              />
+              <Link href="https://incubator.apache.org/">
+                <Image
+                  src="/images/podling/apache.png"
+                  alt="logo"
+                  className="w-full h-full"
+                  width={150}
+                  height={100}
+                />
+              </Link>
             </div>
           </div>
           <div className="py-2">
