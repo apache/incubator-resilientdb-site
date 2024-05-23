@@ -6,11 +6,11 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/node:20.13.1
+      - image: cimg/node:18.14.0
     steps:
       - checkout
       - node/install:
-          node-version: "20.13.1"
+          node-version: "18.14.0"
       - run:
           name: Install dependencies
           command: npm install
@@ -36,4 +36,8 @@ jobs:
 workflows:
   build:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only:
+                - main
