@@ -1,12 +1,12 @@
 "use client";
-import { Testimonial } from "@/types/testimonial";
+import { Publication } from "@/types/publication";
 import SectionTitle from "../Common/SectionTitle";
-import SingleTestimonial from "./SingleTestimonial";
+import SinglePublication from "./SinglePublication";
 import { useState, useEffect } from 'react';
 
 const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024];
 
-const testimonialData: Testimonial[] = [
+const publicationData: Publication[] = [
   {
     id: 1,
     name: "Blockchain Transaction Processing",
@@ -229,12 +229,12 @@ const testimonialData: Testimonial[] = [
   }
 ];
 
-const Testimonials = () => {
+const Publications = () => {
   const [selectedYear, setSelectedYear] = useState<number>(2024);
   const [activeId, setActiveId] = useState<number | null>(null);
 
   useEffect(() => {
-    const firstItem = testimonialData.find(t => t.year === selectedYear);
+    const firstItem = publicationData.find(t => t.year === selectedYear);
     setActiveId(firstItem ? firstItem.id : null);
   }, [selectedYear]);
 
@@ -246,10 +246,10 @@ const Testimonials = () => {
           paragraph="Our publications over the years"
           center
         />
-        <SingleTestimonial testimonials={testimonialData} years={years} selectedYear={selectedYear} setSelectedYear={setSelectedYear} activeId={activeId} setActiveId={setActiveId} />
+        <SinglePublication publications={publicationData} years={years} selectedYear={selectedYear} setSelectedYear={setSelectedYear} activeId={activeId} setActiveId={setActiveId} />
       </div>
     </section>
   );
 };
 
-export default Testimonials;
+export default Publications;

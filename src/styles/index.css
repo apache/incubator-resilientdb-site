@@ -159,8 +159,8 @@
   transform: rotate(180deg);
 }
 
-/* Specific styles for the SingleTestimonial container */
-.testimonial-container .rounded-sm {
+/* Specific styles for the SinglePublication container */
+.publication-container .rounded-sm {
   background: transparent; /* Remove background */
   border: none; /* Remove borders */
   box-shadow: none; /* Remove shadows */
@@ -170,7 +170,7 @@
   display: flex;
   width: 100%; /* Match with accordion width */
   justify-content: space-around; /* Distribute space evenly */
-  margin-bottom: 20px; /* Spacing between year selector and testimonials */
+  margin-bottom: 20px; /* Spacing between year selector and publications */
 }
 
 .year-btn {
@@ -183,7 +183,7 @@
   border-bottom: 2px solid #25D8C5; /* Active state indication */
 }
 
-.SingleTestimonial {
+.SinglePublication {
   width: 80%; /* Standard width to align with the year selector */
   margin: 0 auto; /* Center the accordion horizontally */
 }

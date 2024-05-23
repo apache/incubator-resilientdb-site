@@ -1,8 +1,8 @@
-import { Testimonial } from "@/types/testimonial";
+import { Publication } from "@/types/publication";
 
-const SingleTestimonial = ({ testimonials, years, selectedYear, setSelectedYear, activeId, setActiveId }: { testimonials: Testimonial[], years: number[], selectedYear: number, setSelectedYear: Function, activeId: number | null, setActiveId: Function }) => {
+const SinglePublication = ({ publications, years, selectedYear, setSelectedYear, activeId, setActiveId }: { publications: Publication[], years: number[], selectedYear: number, setSelectedYear: Function, activeId: number | null, setActiveId: Function }) => {
   return (
-    <div className="w-full testimonial-container">
+    <div className="w-full publication-container">
       <div className="rounded-sm shadow-two dark:bg-transparent">
         <div className="mb-8">
           <div className="year-selector">
@@ -10,8 +10,8 @@ const SingleTestimonial = ({ testimonials, years, selectedYear, setSelectedYear,
               <button key={year} onClick={() => setSelectedYear(year)} className={`year-btn ${selectedYear === year ? 'active' : ''}`}>{year}</button>
             ))}
           </div>
-          <div className="testimonials-section">
-            {testimonials.filter(t => t.year === selectedYear).map((t) => (
+          <div className="publications-section">
+            {publications.filter(t => t.year === selectedYear).map((t) => (
               <div key={t.id} className={`accordion-item ${activeId === t.id ? 'expanded' : 'collapsed'}`}>
                 <button className="accordion-title" onClick={() => setActiveId(activeId === t.id ? null : t.id)}>
                   <div className="title-and-badge">
@@ -37,4 +37,4 @@ const SingleTestimonial = ({ testimonials, years, selectedYear, setSelectedYear,
   );
 };
 
-export default SingleTestimonial;
+export default SinglePublication;

@@ -1,4 +1,4 @@
-const PricingBox = (props: {
+const DownloadBox = (props: {
   type: string;
   packageName: string;
   subtitle: string;
@@ -89,4 +89,4 @@ const PricingBox = (props: {
   );
 };
 
-export default PricingBox;
+export default DownloadBox;

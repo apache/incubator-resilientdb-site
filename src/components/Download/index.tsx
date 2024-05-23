@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-import OfferList from "./OfferList";
-import PricingBox from "./PricingBox";
+import DownloadBox from "./DownloadBox";
 
-const Pricing = () => {
+const Download = () => {
   const [isZIP, setIsZIP] = useState(true);
 
   const sha256Link = isZIP
@@ -69,7 +68,7 @@ const Pricing = () => {
 
         <div className="flex justify-center">
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-1 lg:grid-cols-1">
-            <PricingBox
+            <DownloadBox
               packageName="v1.9.0"
               type={isZIP ? "zip" : "tar.gz"}
               subtitle="Download the latest source code release from GitHub"
@@ -84,4 +83,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default Download;
