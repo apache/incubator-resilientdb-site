@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
-                <Link href="/" className="mb-8 inline-block">
+                <Link href="/" className="custom-inline-block">
                   <Image
                     src="/images/logo/logo.svg"
                     alt="logo"
@@ -157,7 +157,7 @@ const Footer = () => {
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="flex justify-center my-2">
-            <div className="w-200 h-100">
+            <div className="apache-logo">
               <Image
                 src="/images/podling/apache.png"
                 alt="logo"

@@ -217,3 +217,14 @@
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
+.apache-logo {
+  height: 35px;
+  width: auto;
+}
+
+.custom-inline-block {
+  display: inline-block;
+  margin-bottom: 2rem;
+  height: 100px;
+}
