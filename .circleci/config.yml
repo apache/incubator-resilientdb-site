@@ -34,10 +34,6 @@ jobs:
             git push --force https://${CIRCLE_TOKEN}@github.com/apache/incubator-resilientdb-site.git master:asf-site
 
 workflows:
-  version: 2
-  deploy:
+  build:
     jobs:
-      - build:
-          filters:
-            branches:
-              only: main
+      - build
