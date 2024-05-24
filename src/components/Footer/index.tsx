@@ -160,7 +160,7 @@ const Footer = () => {
             <div className="apache-logo">
               <Link href="https://incubator.apache.org/">
                 <Image
-                  src="/images/podling/apache.png"
+                  src="/images/podling/apache-incubator.svg"
                   alt="logo"
                   className="w-full h-full"
                   width={150}
