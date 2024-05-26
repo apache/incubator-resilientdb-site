@@ -19,7 +19,7 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <About />
-      <Setup />
+      {/* <Setup /> */}
       <Features />
       <Publications />
       <Download />
