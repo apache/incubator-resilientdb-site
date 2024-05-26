@@ -71,4 +71,4 @@ Pushing to the `main` branch triggers a CircleCI build. CircleCI is configured t
 
 ## License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0 - see the [https://github.com/apache/incubator-resilientdb-site/blob/master/LICENSE](LICENSE) file for details.
