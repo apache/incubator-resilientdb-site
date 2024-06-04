@@ -37,6 +37,9 @@ const DownloadBox = (props: {
             <a href={signLink} className="badge-download">
               Sign
             </a>
+            <span className="badge-asf">
+              Non-ASF release
+            </span>
           </div>
         </div>
         <div>{children}</div>
