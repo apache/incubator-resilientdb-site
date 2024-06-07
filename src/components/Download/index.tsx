@@ -8,9 +8,9 @@ const Download = () => {
 
   const sha256Link = isZIP
     ? "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.zip.sha256"
-    : "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.zip.asc";
+    : "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.tar.gz.sha256";
   const signLink = isZIP
-    ? "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.tar.gz.sha256"
+    ? "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.zip.asc"
     : "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.tar.gz.asc";
   const downloadLink = isZIP
     ? "https://github.com/apache/incubator-resilientdb/archive/refs/tags/nexres-v1.9.0.zip"
