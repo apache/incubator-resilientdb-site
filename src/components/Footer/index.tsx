@@ -59,10 +59,28 @@ const Footer = () => {
                     aria-label="Youtube"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#959CB1] duration-300 hover:text-teal-500 dark:text-body-color-dark dark:hover:text-teal-500"
+                    className="mr-3 text-[#959CB1] duration-300 hover:text-teal-500 dark:text-body-color-dark dark:hover:text-teal-500"
                   >
                     <FontAwesomeIcon icon={faYoutube} size="lg" />
                   </a>
+                  <div className="flex mr-3">
+                    <a className="mr-2" href="https://github.com/apache/incubator-resilientdb">
+                      <Image
+                      src="https://img.shields.io/github/stars/apache/incubator-resilientdb?style=flat&color=959CB1"
+                      alt="GitHub stars"
+                      width={100}
+                      height={20}
+                      />
+                    </a>
+                    <a href="https://github.com/apache/incubator-resilientdb/fork">
+                      <Image
+                        src="https://img.shields.io/github/forks/apache/incubator-resilientdb?style=flat&color=959CB1"
+                        alt="GitHub forks"
+                        width={100}
+                        height={20}
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
