@@ -1,4 +1,6 @@
 "use client";
+
+import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,8 +10,42 @@ import {
   faTwitter,
   faYoutube
 } from "@fortawesome/free-brands-svg-icons";
+import { faStar as faStarSolid, faCodeBranch as faCodeBranchSolid } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
+  const [repoData, setRepoData] = useState({
+    stars: 0,
+    forks: 0,
+    error: null,
+  });
+
+  useEffect(() => {
+    const fetchRepoData = async () => {
+      const url = "https://api.github.com/repos/apache/incubator-resilientdb";
+
+      try {
+        const response = await fetch(url);
+        if (response.ok) {
+          const data = await response.json();
+          setRepoData({
+            stars: data.stargazers_count,
+            forks: data.forks,
+            error: null,
+          });
+        } else {
+          throw new Error('Failed to fetch data');
+        }
+      } catch (error) {
+        setRepoData((prevState) => ({
+          ...prevState,
+          error: error.message,
+        }));
+      }
+    };
+
+    fetchRepoData();
+  }, []);
+
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -65,20 +101,16 @@ const Footer = () => {
                   </a>
                   <div className="flex mr-3">
                     <a className="mr-2" href="https://github.com/apache/incubator-resilientdb">
-                      <Image
-                      src="https://img.shields.io/github/stars/apache/incubator-resilientdb?style=flat&color=959CB1"
-                      alt="GitHub stars"
-                      width={100}
-                      height={20}
-                      />
+                      <div className="flex items-center px-3 py-1 rounded-full bg-gray-400 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
+                        <FontAwesomeIcon icon={faStarSolid} className="text-xs" />
+                        <span className="ml-2 text-sm">{repoData.stars}</span>
+                      </div>
                     </a>
                     <a href="https://github.com/apache/incubator-resilientdb/fork">
-                      <Image
-                        src="https://img.shields.io/github/forks/apache/incubator-resilientdb?style=flat&color=959CB1"
-                        alt="GitHub forks"
-                        width={100}
-                        height={20}
-                      />
+                      <div className="flex items-center px-3 py-1 rounded-full bg-gray-400 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
+                        <FontAwesomeIcon icon={faCodeBranchSolid} className="text-xs" />
+                        <span className="ml-2 text-sm">{repoData.forks}</span>
+                      </div>
                     </a>
                   </div>
                 </div>

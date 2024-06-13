@@ -1,4 +1,7 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useRef } from 'react';
+import lottie from 'lottie-web';
 import SectionTitle from "../Common/SectionTitle";
 
 const checkIcon = (
@@ -8,6 +11,35 @@ const checkIcon = (
 );
 
 const Features = () => {
+  const animationContainer = useRef(null);
+
+  useEffect(() => {
+    const instance = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: '/images/features/features.json'
+    });
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          instance.play();
+        } else {
+          instance.pause();
+        }
+      });
+    });
+  
+    observer.observe(animationContainer.current);
+  
+    return () => {
+      instance.destroy();
+      observer.disconnect();
+    };
+  }, []);  
+
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -55,12 +87,7 @@ const Features = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/features/features.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
+                <div ref={animationContainer}></div>
               </div>
             </div>
           </div>
