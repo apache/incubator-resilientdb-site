@@ -2,12 +2,13 @@ const DownloadBox = (props: {
   type: string;
   packageName: string;
   subtitle: string;
-  sha256Link: string;
+  sha512Link: string;
   signLink: string;
   downloadLink: string;
+  isApache: boolean;
   children?: React.ReactNode;
 }) => {
-  const { type, packageName, subtitle, sha256Link, signLink, downloadLink, children } = props;
+  const { type, packageName, subtitle, sha512Link, signLink, downloadLink, isApache, children } = props;
 
   return (
     <div className="w-full">
@@ -31,14 +32,18 @@ const DownloadBox = (props: {
         </div>
         <div className="flex justify-center mb-4">
           <div className="badge-download-container">
-            <a href={sha256Link} className="badge-download">
-              SHA256
-            </a>
-            {/*<a href={signLink} className="badge-download">
-              Sign
-            </a>*/}
+            {sha512Link && (
+              <a href={sha512Link} className="badge-download">
+                SHA512
+              </a>
+            )}
+            {signLink && (
+              <a href={signLink} className="badge-download">
+                Sign
+              </a>
+            )}
             <span className="badge-asf">
-              Non-ASF release
+              {isApache ? "ASF release" : "Non-ASF release"}
             </span>
           </div>
         </div>

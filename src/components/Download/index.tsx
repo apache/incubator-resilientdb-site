@@ -4,17 +4,21 @@ import SectionTitle from "../Common/SectionTitle";
 import DownloadBox from "./DownloadBox";
 
 const Download = () => {
-  const [isZIP, setIsZIP] = useState(true);
+  const [isZIP, setIsZIP] = useState(false);
 
-  const sha256Link = isZIP
-    ? "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.zip.sha256"
-    : "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.tar.gz.sha256";
-  const signLink = isZIP
-    ? "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.zip.asc"
-    : "https://github.com/apache/incubator-resilientdb/releases/download/nexres-v1.9.0/nexres-v1.9.0.tar.gz.asc";
-  const downloadLink = isZIP
-    ? "https://github.com/apache/incubator-resilientdb/archive/refs/tags/nexres-v1.9.0.zip"
-    : "https://github.com/apache/incubator-resilientdb/archive/refs/tags/nexres-v1.9.0.tar.gz";
+  const asfSha512LinkZIP = "";
+  const asfSha512LinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.10.0-rc3/apache-resilientdb-1.10.0-incubating-src.tar.gz.sha512";
+  const nonAsfSha512LinkZIP = "";
+  const nonAsfSha512LinkTAR = "";
+  const signLink = "";
+
+  const asfDownloadLinkZIP = "";
+  const asfDownloadLinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.10.0-rc3/apache-resilientdb-1.10.0-incubating-src.tar.gz";
+  const nonAsfDownloadLinkZIP = "https://github.com/apache/incubator-resilientdb/archive/refs/tags/v1.10.0-rc03.zip";
+  const nonAsfDownloadLinkTAR = "https://github.com/apache/incubator-resilientdb/archive/refs/tags/v1.10.0-rc03.tar.gz";
+
+  const availableZIP = asfDownloadLinkZIP && nonAsfDownloadLinkZIP;
+  const availableTAR = asfDownloadLinkTAR && nonAsfDownloadLinkTAR;
 
   return (
     <section
@@ -25,7 +29,7 @@ const Download = () => {
       <div className="container">
         <SectionTitle
           title="Download"
-          paragraph="Download Non-ASF release of Apache ResilientDB (Incubating) "
+          paragraph="Download Non-ASF release of Apache ResilientDB (Incubating)"
           center
           width="665px"
         />
@@ -56,7 +60,7 @@ const Download = () => {
               </div>
             </div>
             <span
-              onClick={() => setIsZIP(false)}
+              onClick={() => setIsZIP(true)}
               className={`${
                 isZIP ? "text-dark dark:text-white" : "pointer-events-none text-primary"
               } ml-4 cursor-pointer text-base font-semibold`}
@@ -67,16 +71,83 @@ const Download = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-1 lg:grid-cols-1">
-            <DownloadBox
-              packageName="v1.9.0"
-              type={isZIP ? "zip" : "tar.gz"}
-              subtitle="Download the latest source code release from GitHub"
-              sha256Link={sha256Link}
-              signLink={signLink}
-              downloadLink={downloadLink}
-            />
-          </div>
+            {isZIP ? (
+              asfDownloadLinkZIP || nonAsfDownloadLinkZIP ? (
+                <div className={`grid grid-cols-1 gap-x-0 gap-y-2 md:grid-cols-2 ${availableZIP ? 'lg:grid-cols-2': 'lg:grid-cols-1'}`}>
+                  {asfDownloadLinkZIP && (
+                    <div className="px-10">
+                      <DownloadBox
+                        packageName="v1.10.0"
+                        type="zip"
+                        subtitle="Download the latest source code release from Apache"
+                        sha512Link={asfSha512LinkZIP}
+                        signLink={signLink}
+                        downloadLink={asfDownloadLinkZIP}
+                        isApache={true}
+                      />
+                    </div>
+                  )}
+                  {nonAsfDownloadLinkZIP && (
+                    <div className="px-10">
+                      <DownloadBox
+                        packageName="v1.10.0"
+                        type="zip"
+                        subtitle="Download the latest source code release from GitHub"
+                        sha512Link={nonAsfSha512LinkZIP}
+                        signLink={signLink}
+                        downloadLink={nonAsfDownloadLinkZIP}
+                        isApache={false}
+                      />
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className={`grid grid-cols-1 gap-x-0 gap-y-2 md:grid-cols-2 ${availableZIP ? 'lg:grid-cols-2': 'lg:grid-cols-1'}`}>
+                  <div className="px-10">
+                    <DownloadBox
+                      packageName="v1.10.0"
+                      type="zip"
+                      subtitle="Download the latest source code release from GitHub"
+                      sha512Link={nonAsfSha512LinkZIP}
+                      signLink={signLink}
+                      downloadLink={nonAsfDownloadLinkZIP}
+                      isApache={false}
+                    />
+                  </div>
+                </div>
+              )
+            ) : (
+              <>
+                <div className={`grid grid-cols-1 gap-x-0 gap-y-2 md:grid-cols-2 ${availableTAR ? 'lg:grid-cols-2': 'lg:grid-cols-1'}`}>
+                {asfDownloadLinkTAR && (
+                  <div className="px-10">
+                    <DownloadBox
+                      packageName="v1.10.0"
+                      type="tar.gz"
+                      subtitle="Download the latest source code release from Apache"
+                      sha512Link={asfSha512LinkTAR}
+                      signLink={signLink}
+                      downloadLink={asfDownloadLinkTAR}
+                      isApache={true}
+                    />
+                  </div>
+                )}
+                {nonAsfDownloadLinkTAR && (
+                  <div className="px-10">
+                    <DownloadBox
+                      packageName="v1.10.0"
+                      type="tar.gz"
+                      subtitle="Download the latest source code release from GitHub"
+                      sha512Link={nonAsfSha512LinkTAR}
+                      signLink={signLink}
+                      downloadLink={nonAsfDownloadLinkTAR}
+                      isApache={false}
+                    />
+                  </div>
+                )}
+                </div>
+              </>
+            )}
         </div>
       </div>
     </section>

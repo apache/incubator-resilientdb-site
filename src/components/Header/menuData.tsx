@@ -21,9 +21,23 @@ const menuData: Menu[] = [
   },
   {
     id: 4,
-    title: "Wallet",
-    path: "https://github.com/ResilientApp/ResVault",
+    title: "Tools",
+    path: "",
     newTab: true,
+    submenu: [
+      {
+        id: 41,
+        title: "Wallet",
+        path: "https://github.com/ResilientApp/ResVault",
+        newTab: true,
+      },
+      {
+        id: 42,
+        title: "Smart Contract CLI",
+        path: "https://github.com/ResilientEcosystem/ResContract/",
+        newTab: true,
+      },
+    ]
   },
   {
     id: 5,
