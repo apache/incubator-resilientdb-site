@@ -15,7 +15,7 @@ const Download = () => {
   const asfDownloadLinkZIP = "";
   const asfDownloadLinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.10.0-rc3/apache-resilientdb-1.10.0-incubating-src.tar.gz";
   const nonAsfDownloadLinkZIP = "https://github.com/apache/incubator-resilientdb/archive/refs/tags/v1.10.0-rc03.zip";
-  const nonAsfDownloadLinkTAR = "https://github.com/apache/incubator-resilientdb/archive/refs/tags/v1.10.0-rc03.tar.gz";
+  const nonAsfDownloadLinkTAR = "";
 
   const availableZIP = asfDownloadLinkZIP && nonAsfDownloadLinkZIP;
   const availableTAR = asfDownloadLinkTAR && nonAsfDownloadLinkTAR;
