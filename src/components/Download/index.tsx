@@ -96,7 +96,7 @@ const Download = () => {
                         sha512Link={nonAsfSha512LinkZIP}
                         signLink={signLink}
                         downloadLink={nonAsfDownloadLinkZIP}
-                        isApache={false}
+                        isApache={true}
                       />
                     </div>
                   )}
@@ -111,7 +111,7 @@ const Download = () => {
                       sha512Link={nonAsfSha512LinkZIP}
                       signLink={signLink}
                       downloadLink={nonAsfDownloadLinkZIP}
-                      isApache={false}
+                      isApache={true}
                     />
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Download = () => {
                       sha512Link={nonAsfSha512LinkTAR}
                       signLink={signLink}
                       downloadLink={nonAsfDownloadLinkTAR}
-                      isApache={false}
+                      isApache={true}
                     />
                   </div>
                 )}
