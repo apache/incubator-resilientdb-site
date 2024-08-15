@@ -226,6 +226,16 @@ const publicationData: Publication[] = [
       "Read Publication",
     publink: "https://dl.acm.org/doi/10.1145/3274808.3274810",
     award: "Best Paper Award"
+  },
+  {
+    id: 23,
+    name: "HotStuff-1: Linear Consensus with One-Phase Speculation",
+    venue: "arXiv 2024",
+    year: 2024,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2408.04728",
+    award: ""
   }
 ];
 
