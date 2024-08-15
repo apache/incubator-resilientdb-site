@@ -229,6 +229,16 @@ const publicationData: Publication[] = [
   },
   {
     id: 23,
+    name: "Thunderbolt: Causal Concurrent Consensus and Execution",
+    venue: "arXiv 2024",
+    year: 2024,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2407.09409",
+    award: ""
+  },
+  {
+    id: 24,
     name: "HotStuff-1: Linear Consensus with One-Phase Speculation",
     venue: "arXiv 2024",
     year: 2024,
