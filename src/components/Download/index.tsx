@@ -29,7 +29,7 @@ const Download = () => {
       <div className="container">
         <SectionTitle
           title="Download"
-          paragraph="Download Non-ASF release of Apache ResilientDB (Incubating)"
+          paragraph="Download ASF release of Apache ResilientDB (Incubating)"
           center
           width="665px"
         />
