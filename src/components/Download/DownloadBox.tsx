@@ -39,7 +39,7 @@ const DownloadBox = (props: {
             )}
             {signLink && (
               <a href={signLink} className="badge-download">
-                Sign
+                ASC
               </a>
             )}
             <span className="badge-asf">

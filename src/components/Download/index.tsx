@@ -7,13 +7,13 @@ const Download = () => {
   const [isZIP, setIsZIP] = useState(false);
 
   const asfSha512LinkZIP = "";
-  const asfSha512LinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.10.0-rc3/apache-resilientdb-1.10.0-incubating-src.tar.gz.sha512";
+  const asfSha512LinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.10.0/apache-resilientdb-1.10.0-incubating-src.tar.gz.sha512";
   const nonAsfSha512LinkZIP = "";
   const nonAsfSha512LinkTAR = "";
-  const signLink = "";
+  const signLink = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.10.0/apache-resilientdb-1.10.0-incubating-src.tar.gz.asc";
 
   const asfDownloadLinkZIP = "";
-  const asfDownloadLinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.10.0-rc3/apache-resilientdb-1.10.0-incubating-src.tar.gz";
+  const asfDownloadLinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.10.0/apache-resilientdb-1.10.0-incubating-src.tar.gz";
   const nonAsfDownloadLinkZIP = "https://github.com/apache/incubator-resilientdb/archive/refs/tags/v1.10.0-rc03.zip";
   const nonAsfDownloadLinkTAR = "";
 
@@ -34,7 +34,7 @@ const Download = () => {
           width="665px"
         />
 
-        <div className="w-full">
+        {/*<div className="w-full">
           <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
             <span
               onClick={() => setIsZIP(true)}
@@ -68,7 +68,7 @@ const Download = () => {
               tar.gz
             </span>
           </div>
-        </div>
+        </div>*/}
 
         <div className="flex justify-center">
             {isZIP ? (
