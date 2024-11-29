@@ -16,8 +16,22 @@ const menuData: Menu[] = [
   {
     id: 3,
     title: "Demo",
-    path: "https://youtu.be/ewtFSwjitsg",
+    path: "",
     newTab: true,
+    submenu: [
+      {
+        id: 31,
+        title: "ResilientDB Demo",
+        path: "https://youtu.be/ewtFSwjitsg",
+        newTab: true,
+      },
+      {
+        id: 32,
+        title: "Quickstart",
+        path: "https://quickstart.resilientdb.com",
+        newTab: true,
+      },
+    ]
   },
   {
     id: 4,
