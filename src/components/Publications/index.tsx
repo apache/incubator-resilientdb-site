@@ -4,7 +4,7 @@ import SectionTitle from "../Common/SectionTitle";
 import SinglePublication from "./SinglePublication";
 import { useState, useEffect } from 'react';
 
-const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024];
+const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
 
 const publicationData: Publication[] = [
   {
@@ -229,7 +229,37 @@ const publicationData: Publication[] = [
   },
   {
     id: 23,
-    name: "Thunderbolt: Causal Concurrent Consensus and Execution",
+    name: "Orthrus: Accelerating Multi-BFT Consensus through Concurrent Partial Ordering of Transactions.",
+    venue: "arXiv 2024",
+    year: 2024,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2501.14732",
+    award: ""
+  },
+  {
+    id: 24,
+    name: "Did we miss P In CAP? Partial Progress Conjecture under Asynchrony.",
+    venue: "arXiv 2024",
+    year: 2024,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2501.00021",
+    award: ""
+  },
+  {
+    id: 25,
+    name: "AVA: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters.",
+    venue: "arXiv 2024",
+    year: 2024,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2412.01999",
+    award: ""
+  },
+  {
+    id: 26,
+    name: "Thunderbolt: Causal Concurrent Consensus and Execution.",
     venue: "arXiv 2024",
     year: 2024,
     content:
@@ -238,19 +268,29 @@ const publicationData: Publication[] = [
     award: ""
   },
   {
-    id: 24,
-    name: "HotStuff-1: Linear Consensus with One-Phase Speculation",
-    venue: "arXiv 2024",
-    year: 2024,
+    id: 27,
+    name: "HotStuff-1: Linear Consensus with One-Phase Speculation.",
+    venue: "SIGMOD 2025",
+    year: 2025,
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2408.04728",
     award: ""
-  }
+  },
+  {
+    id: 28,
+    name: "Fides: Scalable Censorship-Resistant DAG Consensus via Trusted Components.",
+    venue: "arXiv 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2501.01062",
+    award: ""
+  },
 ];
 
 const Publications = () => {
-  const [selectedYear, setSelectedYear] = useState<number>(2024);
+  const [selectedYear, setSelectedYear] = useState<number>(2025);
   const [activeId, setActiveId] = useState<number | null>(null);
 
   useEffect(() => {
