@@ -87,6 +87,12 @@ const menuData: Menu[] = [
         title: "ResView",
         path: "https://resview.resilientdb.com",
         newTab: true,
+      },
+      {
+        id: 56,
+        title: "ResLens",
+        path: "https://reslens.resilientdb.com",
+        newTab: true,
       }
     ]
   },

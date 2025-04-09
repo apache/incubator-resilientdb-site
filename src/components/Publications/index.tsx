@@ -229,16 +229,6 @@ const publicationData: Publication[] = [
   },
   {
     id: 23,
-    name: "Orthrus: Accelerating Multi-BFT Consensus through Concurrent Partial Ordering of Transactions.",
-    venue: "arXiv 2024",
-    year: 2024,
-    content:
-      "Read Publication",
-    publink: "https://arxiv.org/abs/2501.14732",
-    award: ""
-  },
-  {
-    id: 24,
     name: "Did we miss P In CAP? Partial Progress Conjecture under Asynchrony.",
     venue: "arXiv 2024",
     year: 2024,
@@ -248,23 +238,33 @@ const publicationData: Publication[] = [
     award: ""
   },
   {
-    id: 25,
-    name: "AVA: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters.",
-    venue: "arXiv 2024",
-    year: 2024,
-    content:
-      "Read Publication",
-    publink: "https://arxiv.org/abs/2412.01999",
-    award: ""
-  },
-  {
-    id: 26,
+    id: 24,
     name: "Thunderbolt: Causal Concurrent Consensus and Execution.",
     venue: "arXiv 2024",
     year: 2024,
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2407.09409",
+    award: ""
+  },
+  {
+    id: 25,
+    name: "Orthrus: Accelerating Multi-BFT Consensus through Concurrent Partial Ordering of Transactions",
+    venue: "ICDE 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2501.14732",
+    award: ""
+  },
+  {
+    id: 26,
+    name: "AVA: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters",
+    venue: "ICDE 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2412.01999",
     award: ""
   },
   {
@@ -285,6 +285,16 @@ const publicationData: Publication[] = [
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2501.01062",
+    award: ""
+  },
+  {
+    id: 29,
+    name: "FairDAG: Consensus Fairness over Concurrent Causal Design",
+    venue: "arXiv 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2504.02194",
     award: ""
   },
 ];
