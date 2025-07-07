@@ -21,25 +21,66 @@ const Footer = () => {
 
   useEffect(() => {
     const fetchRepoData = async () => {
+      // Try the main GitHub API first
       const url = "https://api.github.com/repos/apache/incubator-resilientdb";
 
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'ResilientDB-Website'
+          },
+        });
+        
         if (response.ok) {
           const data = await response.json();
           setRepoData({
-            stars: data.stargazers_count,
-            forks: data.forks,
+            stars: data.stargazers_count || 0,
+            forks: data.forks || 0,
             error: null,
           });
         } else {
-          throw new Error('Failed to fetch data');
+          // Fallback: Try alternative approach
+          await fetchFallbackData();
         }
       } catch (error) {
-        setRepoData((prevState) => ({
-          ...prevState,
-          error: error.message,
-        }));
+        // Fallback: Try alternative approach
+        await fetchFallbackData();
+      }
+    };
+
+    const fetchFallbackData = async () => {
+      try {
+        // Alternative: Use GitHub's public API with different endpoint
+        const fallbackUrl = "https://api.github.com/repos/apache/incubator-resilientdb";
+        const response = await fetch(fallbackUrl, {
+          headers: {
+            'Accept': 'application/vnd.github.v3+json',
+          }
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          setRepoData({
+            stars: data.stargazers_count || 0,
+            forks: data.forks || 0,
+            error: null,
+          });
+        } else {
+          // Set default values if all else fails
+          setRepoData({
+            stars: 0,
+            forks: 0,
+            error: 'Unable to fetch GitHub data',
+          });
+        }
+      } catch (fallbackError) {
+        setRepoData({
+          stars: 0,
+          forks: 0,
+          error: 'Unable to fetch GitHub data',
+        });
       }
     };
 
@@ -167,10 +208,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="https://resview.resilientdb.com"
+                      href="https://resai.resilientdb.com"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      ResView
+                      ResAI
                     </Link>
                   </li>
                   <li>
