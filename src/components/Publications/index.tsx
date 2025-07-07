@@ -4,7 +4,7 @@ import SectionTitle from "../Common/SectionTitle";
 import SinglePublication from "./SinglePublication";
 import { useState, useEffect } from 'react';
 
-const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025];
+const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
 
 const publicationData: Publication[] = [
   {
@@ -240,8 +240,8 @@ const publicationData: Publication[] = [
   {
     id: 24,
     name: "Thunderbolt: Causal Concurrent Consensus and Execution.",
-    venue: "arXiv 2024",
-    year: 2024,
+    venue: "EDBT 2026",
+    year: 2026,
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2407.09409",
@@ -259,7 +259,7 @@ const publicationData: Publication[] = [
   },
   {
     id: 26,
-    name: "AVA: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters",
+    name: "Hamava: Fault-tolerant Reconfigurable Geo-Replication on Heterogeneous Clusters",
     venue: "ICDE 2025",
     year: 2025,
     content:

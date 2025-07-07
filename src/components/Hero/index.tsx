@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faRobot } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
   return (
@@ -28,8 +28,14 @@ const Hero = () => {
                   <FontAwesomeIcon icon={faPlayCircle} className="text-base mr-2 h-5" /> Vision
                   </Link>
                   <Link
-                    href="https://blog.resilientdb.com/"
+                    href="https://resai.resilientdb.com"
                     className="flex items-center justify-center rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5 w-40 h-15"
+                  >
+                  <FontAwesomeIcon icon={faRobot} className="text-base mr-2 h-5" /> ResAI
+                  </Link>
+                  <Link
+                    href="https://blog.resilientdb.com/"
+                    className="flex items-center justify-center rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80 w-40 h-15"
                   >
                   <FontAwesomeIcon icon={faBook} className="text-base mr-2 h-5" /> Blog
                   </Link>
