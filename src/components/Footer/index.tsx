@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,82 +10,8 @@ import {
   faTwitter,
   faYoutube
 } from "@fortawesome/free-brands-svg-icons";
-import { faStar as faStarSolid, faCodeBranch as faCodeBranchSolid } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-  const [repoData, setRepoData] = useState({
-    stars: 0,
-    forks: 0,
-    error: null,
-  });
-
-  useEffect(() => {
-    const fetchRepoData = async () => {
-      // Try the main GitHub API first
-      const url = "https://api.github.com/repos/apache/incubator-resilientdb";
-
-      try {
-        const response = await fetch(url, {
-          method: 'GET',
-          headers: {
-            'Accept': 'application/vnd.github.v3+json',
-            'User-Agent': 'ResilientDB-Website'
-          },
-        });
-        
-        if (response.ok) {
-          const data = await response.json();
-          setRepoData({
-            stars: data.stargazers_count || 0,
-            forks: data.forks || 0,
-            error: null,
-          });
-        } else {
-          // Fallback: Try alternative approach
-          await fetchFallbackData();
-        }
-      } catch (error) {
-        // Fallback: Try alternative approach
-        await fetchFallbackData();
-      }
-    };
-
-    const fetchFallbackData = async () => {
-      try {
-        // Alternative: Use GitHub's public API with different endpoint
-        const fallbackUrl = "https://api.github.com/repos/apache/incubator-resilientdb";
-        const response = await fetch(fallbackUrl, {
-          headers: {
-            'Accept': 'application/vnd.github.v3+json',
-          }
-        });
-        
-        if (response.ok) {
-          const data = await response.json();
-          setRepoData({
-            stars: data.stargazers_count || 0,
-            forks: data.forks || 0,
-            error: null,
-          });
-        } else {
-          // Set default values if all else fails
-          setRepoData({
-            stars: 0,
-            forks: 0,
-            error: 'Unable to fetch GitHub data',
-          });
-        }
-      } catch (fallbackError) {
-        setRepoData({
-          stars: 0,
-          forks: 0,
-          error: 'Unable to fetch GitHub data',
-        });
-      }
-    };
-
-    fetchRepoData();
-  }, []);
 
   return (
     <>
@@ -142,16 +68,22 @@ const Footer = () => {
                   </a>
                   <div className="flex mr-3">
                     <a className="mr-2" href="https://github.com/apache/incubator-resilientdb">
-                      <div className="flex items-center px-3 py-1 rounded-full bg-gray-400 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
-                        <FontAwesomeIcon icon={faStarSolid} className="text-xs" />
-                        <span className="ml-2 text-sm">{repoData.stars}</span>
-                      </div>
+                      <Image 
+                        src="https://img.shields.io/github/stars/apache/incubator-resilientdb?style=flat-square&labelColor=6b7280&color=14b8a6&logo=git&logoColor=orange" 
+                        alt="GitHub stars" 
+                        width={120}
+                        height={20}
+                        className="h-5"
+                      />
                     </a>
                     <a href="https://github.com/apache/incubator-resilientdb/fork">
-                      <div className="flex items-center px-3 py-1 rounded-full bg-gray-400 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
-                        <FontAwesomeIcon icon={faCodeBranchSolid} className="text-xs" />
-                        <span className="ml-2 text-sm">{repoData.forks}</span>
-                      </div>
+                      <Image 
+                        src="https://img.shields.io/github/forks/apache/incubator-resilientdb?style=flat-square&labelColor=6b7280&color=14b8a6&logo=git&logoColor=white" 
+                        alt="GitHub forks" 
+                        width={120}
+                        height={20}
+                        className="h-5"
+                      />
                     </a>
                   </div>
                 </div>
