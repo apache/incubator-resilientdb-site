@@ -239,7 +239,7 @@ const publicationData: Publication[] = [
   },
   {
     id: 24,
-    name: "Thunderbolt: Causal Concurrent Consensus and Execution.",
+    name: "Thunderbolt: Concurrent Smart Contract Execution with Non-blocking Reconfiguration for Sharded DAGs.",
     venue: "EDBT 2026",
     year: 2026,
     content:
@@ -295,6 +295,16 @@ const publicationData: Publication[] = [
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2504.02194",
+    award: ""
+  },
+  {
+    id: 30,
+    name: "Securing Consensus from Long-Range Attacks through Collaboration",
+    venue: "SRDS 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2302.02325",
     award: ""
   },
 ];
