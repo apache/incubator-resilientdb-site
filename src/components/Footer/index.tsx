@@ -1,17 +1,36 @@
-"use client";
-
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faDiscord,
-  faTwitter,
-  faYoutube
-} from "@fortawesome/free-brands-svg-icons";
+import { faStar as faStarSolid, faCodeBranch as faCodeBranchSolid } from "@fortawesome/free-solid-svg-icons";
+import SocialIcons from "./SocialIcons";
 
-const Footer = () => {
+// Fetch GitHub data at build time
+async function getGitHubStats() {
+  try {
+    const response = await fetch('https://api.github.com/repos/apache/incubator-resilientdb', {
+      headers: {
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'ResilientDB-Website'
+      },
+    });
+    
+    if (response.ok) {
+      const data = await response.json();
+      return {
+        stars: data.stargazers_count || 0,
+        forks: data.forks || 0,
+      };
+    }
+  } catch (error) {
+    console.error('Failed to fetch GitHub stats:', error);
+  }
+  
+  return { stars: 0, forks: 0 };
+}
+
+const Footer = async () => {
+  const repoData = await getGitHubStats();
 
   return (
     <>
@@ -30,60 +49,19 @@ const Footer = () => {
                   />
                 </Link>
                 <div className="flex items-center">
-                  <a
-                    href="https://github.com/apache/incubator-resilientdb"
-                    aria-label="GitHub"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-[#959CB1] duration-300 hover:text-teal-500 dark:text-body-color-dark dark:hover:text-teal-500"
-                  >
-                    <FontAwesomeIcon icon={faGithub} size="lg" />
-                  </a>
-                  <a
-                    href="https://discord.gg/qbTVfZVs2M"
-                    aria-label="Discord"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-[#959CB1] duration-300 hover:text-teal-500 dark:text-body-color-dark dark:hover:text-teal-500"
-                  >
-                    <FontAwesomeIcon icon={faDiscord} size="lg" />
-                  </a>
-                  <a
-                    href="https://twitter.com/resilientdb"
-                    aria-label="Twitter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-6 text-[#959CB1] duration-300 hover:text-teal-500 dark:text-body-color-dark dark:hover:text-teal-500"
-                  >
-                    <FontAwesomeIcon icon={faTwitter} size="lg" />
-                  </a>
-                  <a
-                    href="https://www.youtube.com/@ExpoLabUCDavis"
-                    aria-label="Youtube"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mr-3 text-[#959CB1] duration-300 hover:text-teal-500 dark:text-body-color-dark dark:hover:text-teal-500"
-                  >
-                    <FontAwesomeIcon icon={faYoutube} size="lg" />
-                  </a>
+                  <SocialIcons />
                   <div className="flex mr-3">
                     <a className="mr-2" href="https://github.com/apache/incubator-resilientdb">
-                      <Image 
-                        src="https://img.shields.io/github/stars/apache/incubator-resilientdb?style=flat-square&labelColor=6b7280&color=14b8a6&logo=git&logoColor=orange" 
-                        alt="GitHub stars" 
-                        width={120}
-                        height={20}
-                        className="h-5"
-                      />
+                      <div className="flex items-center px-3 py-1 rounded-full bg-gray-400 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
+                        <FontAwesomeIcon icon={faStarSolid} className="text-xs" />
+                        <span className="ml-2 text-sm">{repoData.stars}</span>
+                      </div>
                     </a>
                     <a href="https://github.com/apache/incubator-resilientdb/fork">
-                      <Image 
-                        src="https://img.shields.io/github/forks/apache/incubator-resilientdb?style=flat-square&labelColor=6b7280&color=14b8a6&logo=git&logoColor=white" 
-                        alt="GitHub forks" 
-                        width={120}
-                        height={20}
-                        className="h-5"
-                      />
+                      <div className="flex items-center px-3 py-1 rounded-full bg-gray-400 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
+                        <FontAwesomeIcon icon={faCodeBranchSolid} className="text-xs" />
+                        <span className="ml-2 text-sm">{repoData.forks}</span>
+                      </div>
                     </a>
                   </div>
                 </div>
