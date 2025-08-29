@@ -1,10 +1,9 @@
-"use client";
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,5 +31,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-import { Providers } from "./providers";
