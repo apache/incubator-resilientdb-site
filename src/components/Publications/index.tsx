@@ -239,7 +239,7 @@ const publicationData: Publication[] = [
   },
   {
     id: 24,
-    name: "Thunderbolt: Causal Concurrent Consensus and Execution.",
+    name: "Thunderbolt: Concurrent Smart Contract Execution with Non-blocking Reconfiguration for Sharded DAGs.",
     venue: "EDBT 2026",
     year: 2026,
     content:
@@ -290,11 +290,31 @@ const publicationData: Publication[] = [
   {
     id: 29,
     name: "FairDAG: Consensus Fairness over Concurrent Causal Design",
-    venue: "arXiv 2025",
-    year: 2025,
+    venue: "VLDB 2026",
+    year: 2026,
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2504.02194",
+    award: ""
+  },
+  {
+    id: 30,
+    name: "Securing Consensus from Long-Range Attacks through Collaboration",
+    venue: "SRDS 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2302.02325",
+    award: ""
+  },
+  {
+    id: 31,
+    name: "Brief Announcement: Carry the Tail in Consensus Protocols",
+    venue: "DISC 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2508.12173",
     award: ""
   },
 ];
