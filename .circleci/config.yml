@@ -32,7 +32,12 @@ jobs:
             git push --force https://${CIRCLE_TOKEN}@github.com/apache/incubator-resilientdb-site.git master:asf-site
 
 workflows:
-  build:
+  version: 2
+  build-and-deploy:   
+    jobs:
+      - build
+
+  nightly:           
     triggers:
       - schedule:
           cron: "0 0 * * *"
