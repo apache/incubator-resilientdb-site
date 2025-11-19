@@ -1,6 +1,6 @@
 import { Publication } from "@/types/publication";
 
-const SinglePublication = ({ publications, years, selectedYear, setSelectedYear, activeId, setActiveId }: { publications: Publication[], years: number[], selectedYear: number, setSelectedYear: Function, activeId: number | null, setActiveId: Function }) => {
+const SinglePublication = ({ publications, years, selectedYear, setSelectedYear, activeId, setActiveId }: { publications: Publication[], years: (number | string)[], selectedYear: number | string, setSelectedYear: Function, activeId: number | null, setActiveId: Function }) => {
   return (
     <div className="w-full publication-container">
       <div className="rounded-sm shadow-two dark:bg-transparent">
@@ -26,6 +26,14 @@ const SinglePublication = ({ publications, years, selectedYear, setSelectedYear,
                     <a className="publink" href={t.publink} target="_blank" rel="noopener noreferrer">
                       {t.content}
                     </a>
+                    {t.flyer && (
+                      <>
+                        {" | "}
+                        <a className="publink" href={t.flyer} target="_blank" rel="noopener noreferrer">
+                          View Flyer
+                        </a>
+                      </>
+                    )}
                   </p>
                 </div>
               </div>

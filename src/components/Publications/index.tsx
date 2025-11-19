@@ -4,7 +4,7 @@ import SectionTitle from "../Common/SectionTitle";
 import SinglePublication from "./SinglePublication";
 import { useState, useEffect } from 'react';
 
-const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, "Books"];
 
 const publicationData: Publication[] = [
   {
@@ -317,10 +317,53 @@ const publicationData: Publication[] = [
     publink: "https://arxiv.org/abs/2508.12173",
     award: ""
   },
+  {
+    id: 32,
+    name: "The Problems of Consensus: An Ethical Inquiry into Democratic and Decentralized Principles.",
+    venue: "SpringerBriefs in Philosophy 2025",
+    year: "Books",
+    content:
+      "Read Book",
+    publink: "https://link.springer.com/book/10.1007/978-3-032-07282-5",
+    award: ""
+  },
+  {
+    id: 33,
+    name: "Consensus in Data Management: From Distributed Commit to Blockchain",
+    venue: "Foundations and Trends &#174; in Databases 2023",
+    year: "Books",
+    content:
+      "Read Book",
+    publink: "https://www.nowpublishers.com/article/Details/DBS-075",
+    award: "",
+    flyer: "https://expolab.org/images/Sadoghi_CBook_Flyer.pdf"
+  },
+  {
+    id: 34,
+    name: "Fault-tolerant Distributed Transactions on Blockchain",
+    venue: "Morgan & Claypool Synthesis Lectures on Data Management 2021",
+    year: "Books",
+    content:
+      "Read Book",
+    publink: "https://link.springer.com/book/10.1007/978-3-031-01877-0",
+    award: "",
+    flyer: "https://expolab.org/images/Sadoghi_BBook_Flyer.pdf"
+  },
+  {
+    id: 35,
+    name: "Transaction Processing on Modern Hardware",
+    venue: "Morgan & Claypool Synthesis Lectures on Data Management 2019",
+    year: "Books",
+    content:
+      "Read Book",
+    publink: "https://link.springer.com/book/10.1007/978-3-031-01870-1",
+    award: "",
+    flyer: "https://expolab.org/images/Sadoghi_TBook_Flyer.pdf"
+  },
 ];
 
 const Publications = () => {
-  const [selectedYear, setSelectedYear] = useState<number>(2025);
+  const [selectedYear, setSelectedYear] = useState<number | string>(2025);
   const [activeId, setActiveId] = useState<number | null>(null);
 
   useEffect(() => {
