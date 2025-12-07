@@ -325,7 +325,8 @@ const publicationData: Publication[] = [
     content:
       "Read Book",
     publink: "https://link.springer.com/book/10.1007/978-3-032-07282-5",
-    award: ""
+    award: "",
+    flyer: "https://expolab.org/images/Sadoghi_FFlyer2025.pdf"
   },
   {
     id: 33,
@@ -372,8 +373,8 @@ const Publications = () => {
   }, [selectedYear]);
 
   return (
-    <section className="relative z-10 py-10 md:py-10 lg:py-10" style={{ backgroundColor: '#0F0F1A' }}>
-      <div className="container">
+    <section className="relative z-10 py-6 md:py-10 lg:py-10 px-4 md:px-0" style={{ backgroundColor: '#0F0F1A' }}>
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <SectionTitle
           title="Publications"
           paragraph="Our publications over the years"
