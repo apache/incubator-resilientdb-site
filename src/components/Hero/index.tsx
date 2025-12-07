@@ -28,7 +28,7 @@ const Hero = () => {
                   <FontAwesomeIcon icon={faPlayCircle} className="text-base mr-2 h-5" /> Vision
                   </Link>
                   <Link
-                    href="https://resai.resilientdb.com"
+                    href="https://resai-hub.resilientdb.com/"
                     className="flex items-center justify-center rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5 w-40 h-15"
                   >
                   <FontAwesomeIcon icon={faRobot} className="text-base mr-2 h-5" /> ResAI
