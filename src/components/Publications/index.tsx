@@ -361,6 +361,26 @@ const publicationData: Publication[] = [
     award: "",
     flyer: "https://expolab.org/images/Sadoghi_TBook_Flyer.pdf"
   },
+  {
+    id: 36,
+    name: "Proof-of-Execution: Low-Latency Consensus via Speculative Execution.",
+    venue: "ACM TODS 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://dl.acm.org/doi/abs/10.1145/3774322",
+    award: ""
+  },
+  {
+    id: 37,
+    name: "HYDRA: Breaking the Global Ordering Barrier in Multi-BFT Consensus.",
+    venue: "arXiv 2025",
+    year: 2025,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2511.05843",
+    award: ""
+  },
 ];
 
 const Publications = () => {
@@ -368,7 +388,8 @@ const Publications = () => {
   const [activeId, setActiveId] = useState<number | null>(null);
 
   useEffect(() => {
-    const firstItem = publicationData.find(t => t.year === selectedYear);
+    const yearPublications = publicationData.filter(t => t.year === selectedYear);
+    const firstItem = yearPublications.sort((a, b) => b.id - a.id)[0];
     setActiveId(firstItem ? firstItem.id : null);
   }, [selectedYear]);
 

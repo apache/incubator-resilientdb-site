@@ -11,7 +11,7 @@ const SinglePublication = ({ publications, years, selectedYear, setSelectedYear,
             ))}
           </div>
           <div className="publications-section">
-            {publications.filter(t => t.year === selectedYear).map((t) => (
+            {publications.filter(t => t.year === selectedYear).sort((a, b) => b.id - a.id).map((t) => (
               <div key={t.id} className={`accordion-item ${activeId === t.id ? 'expanded' : 'collapsed'}`}>
                 <button className="accordion-title" onClick={() => setActiveId(activeId === t.id ? null : t.id)}>
                   <div className="title-and-badge">
