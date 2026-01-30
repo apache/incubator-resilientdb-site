@@ -5,10 +5,11 @@ const DownloadBox = (props: {
   sha512Link: string;
   signLink: string;
   downloadLink: string;
+  keysLink: string;
   isApache: boolean;
   children?: React.ReactNode;
 }) => {
-  const { type, packageName, subtitle, sha512Link, signLink, downloadLink, isApache, children } = props;
+  const { type, packageName, subtitle, sha512Link, signLink, downloadLink, keysLink, isApache, children } = props;
 
   return (
     <div className="w-full">
@@ -24,26 +25,41 @@ const DownloadBox = (props: {
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
           <a
-            href={downloadLink}
-            className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+            href={`${downloadLink}?action=download`}
+            className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp mb-3"
           >
             Download Code ({type})
           </a>
+          <a
+            href={downloadLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-full items-center justify-center rounded-sm border border-primary bg-transparent p-3 text-base font-semibold text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white"
+          >
+            Other Download Options
+          </a>
         </div>
-        <div className="flex justify-center mb-4">
-          <div className="badge-download-container">
+        <div className="mb-4">
+          <div className="flex justify-center gap-2 mb-3">
             {sha512Link && (
-              <a href={sha512Link} className="badge-download">
+              <a href={sha512Link} className="badge-download" target="_blank" rel="noopener noreferrer">
                 SHA512
               </a>
             )}
             {signLink && (
-              <a href={signLink} className="badge-download">
+              <a href={signLink} className="badge-download" target="_blank" rel="noopener noreferrer">
                 ASC
               </a>
             )}
-            <span className="badge-asf">
-              {isApache ? "ASF release" : "Non-ASF release"}
+            {keysLink && (
+              <a href={keysLink} className="badge-download" target="_blank" rel="noopener noreferrer">
+                KEYS
+              </a>
+            )}
+          </div>
+          <div className="flex justify-center">
+            <span className={`badge-asf ${!isApache ? "non-asf" : ""}`}>
+              {isApache ? "ASF release" : "Non-ASF"}
             </span>
           </div>
         </div>

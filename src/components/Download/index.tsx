@@ -6,16 +6,26 @@ import DownloadBox from "./DownloadBox";
 const Download = () => {
   const [isZIP, setIsZIP] = useState(false);
 
-  const asfSha512LinkZIP = "";
-  const asfSha512LinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.11.0/apache-resilientdb-1.11.0-incubating-src.tar.gz.sha512";
-  const nonAsfSha512LinkZIP = "";
-  const nonAsfSha512LinkTAR = "";
-  const signLink = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.11.0/apache-resilientdb-1.11.0-incubating-src.tar.gz.asc";
+  // Version configuration
+  const version = "1.11.0";
+  const fileName = `apache-resilientdb-${version}-incubating-src`;
 
+  // Apache download URLs - use closer.lua for source code (mirrors), downloads.apache.org for sigs/hashes
+  const asfDownloadLinkTAR = `https://www.apache.org/dyn/closer.lua/incubator/resilientdb/${version}/${fileName}.tar.gz`;
+  const asfSha512LinkTAR = `https://downloads.apache.org/incubator/resilientdb/${version}/${fileName}.tar.gz.sha512`;
+  const signLinkTAR = `https://downloads.apache.org/incubator/resilientdb/${version}/${fileName}.tar.gz.asc`;
+  const keysLink = "https://downloads.apache.org/incubator/resilientdb/KEYS";
+
+  // ZIP links (if available)
   const asfDownloadLinkZIP = "";
-  const asfDownloadLinkTAR = "https://dist.apache.org/repos/dist/release/incubator/resilientdb/1.11.0/apache-resilientdb-1.11.0-incubating-src.tar.gz";
+  const asfSha512LinkZIP = "";
+  const signLinkZIP = "";
+
+  // Non-ASF (GitHub) links
   const nonAsfDownloadLinkZIP = "https://github.com/apache/incubator-resilientdb/archive/refs/tags/v1.11.0-rc03.zip";
   const nonAsfDownloadLinkTAR = "";
+  const nonAsfSha512LinkZIP = "";
+  const nonAsfSha512LinkTAR = "";
 
   const availableZIP = asfDownloadLinkZIP && nonAsfDownloadLinkZIP;
   const availableTAR = asfDownloadLinkTAR && nonAsfDownloadLinkTAR;
@@ -77,12 +87,13 @@ const Download = () => {
                   {asfDownloadLinkZIP && (
                     <div className="px-10">
                       <DownloadBox
-                        packageName="v1.10.0"
+                        packageName={`v${version}`}
                         type="zip"
                         subtitle="Download the latest source code release from Apache"
                         sha512Link={asfSha512LinkZIP}
-                        signLink={signLink}
+                        signLink={signLinkZIP}
                         downloadLink={asfDownloadLinkZIP}
+                        keysLink={keysLink}
                         isApache={true}
                       />
                     </div>
@@ -90,13 +101,14 @@ const Download = () => {
                   {nonAsfDownloadLinkZIP && (
                     <div className="px-10">
                       <DownloadBox
-                        packageName="v1.10.0"
+                        packageName="v1.11.0-rc03"
                         type="zip"
                         subtitle="Download the latest source code release from GitHub"
                         sha512Link={nonAsfSha512LinkZIP}
-                        signLink={signLink}
+                        signLink=""
                         downloadLink={nonAsfDownloadLinkZIP}
-                        isApache={true}
+                        keysLink=""
+                        isApache={false}
                       />
                     </div>
                   )}
@@ -105,13 +117,14 @@ const Download = () => {
                 <div className={`grid grid-cols-1 gap-x-0 gap-y-2 md:grid-cols-2 ${availableZIP ? 'lg:grid-cols-2': 'lg:grid-cols-1'}`}>
                   <div className="px-10">
                     <DownloadBox
-                      packageName="v1.10.0"
+                      packageName="v1.11.0-rc03"
                       type="zip"
                       subtitle="Download the latest source code release from GitHub"
                       sha512Link={nonAsfSha512LinkZIP}
-                      signLink={signLink}
+                      signLink=""
                       downloadLink={nonAsfDownloadLinkZIP}
-                      isApache={true}
+                      keysLink=""
+                      isApache={false}
                     />
                   </div>
                 </div>
@@ -122,12 +135,13 @@ const Download = () => {
                 {asfDownloadLinkTAR && (
                   <div className="px-10">
                     <DownloadBox
-                      packageName="v1.10.0"
+                      packageName={`v${version}`}
                       type="tar.gz"
                       subtitle="Download the latest source code release from Apache"
                       sha512Link={asfSha512LinkTAR}
-                      signLink={signLink}
+                      signLink={signLinkTAR}
                       downloadLink={asfDownloadLinkTAR}
+                      keysLink={keysLink}
                       isApache={true}
                     />
                   </div>
@@ -135,19 +149,74 @@ const Download = () => {
                 {nonAsfDownloadLinkTAR && (
                   <div className="px-10">
                     <DownloadBox
-                      packageName="v1.10.0"
+                      packageName={`v${version}`}
                       type="tar.gz"
                       subtitle="Download the latest source code release from GitHub"
                       sha512Link={nonAsfSha512LinkTAR}
-                      signLink={signLink}
+                      signLink=""
                       downloadLink={nonAsfDownloadLinkTAR}
-                      isApache={true}
+                      keysLink=""
+                      isApache={false}
                     />
                   </div>
                 )}
                 </div>
               </>
             )}
+        </div>
+
+        {/* Verification Instructions */}
+        <div className="mt-16 mx-auto max-w-3xl">
+          <h3 className="mb-6 text-2xl font-bold text-black dark:text-white text-center">
+            Verify Your Download
+          </h3>
+          <div className="rounded-sm bg-white px-8 py-8 shadow-three dark:bg-gray-dark dark:shadow-two">
+            <p className="mb-4 text-base text-body-color dark:text-body-color-dark">
+              It is essential to verify the integrity of downloaded files using the PGP signature (.asc) or SHA512 hash (.sha512).
+            </p>
+            
+            <h4 className="mb-3 text-lg font-semibold text-black dark:text-white">
+              1. Download the KEYS file
+            </h4>
+            <p className="mb-2 text-base text-body-color dark:text-body-color-dark">
+              First, download the{" "}
+              <a 
+                href={keysLink} 
+                className="text-primary hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                KEYS file
+              </a>
+              {" "}containing the public keys used to sign releases.
+            </p>
+            <pre className="mb-6 overflow-x-auto rounded bg-gray-100 p-4 text-sm dark:bg-gray-800">
+              <code>gpg --import KEYS</code>
+            </pre>
+
+            <h4 className="mb-3 text-lg font-semibold text-black dark:text-white">
+              2. Verify using PGP signature
+            </h4>
+            <p className="mb-2 text-base text-body-color dark:text-body-color-dark">
+              Download the .asc signature file and verify:
+            </p>
+            <pre className="mb-6 overflow-x-auto rounded bg-gray-100 p-4 text-sm dark:bg-gray-800">
+              <code>{`gpg --verify ${fileName}.tar.gz.asc ${fileName}.tar.gz`}</code>
+            </pre>
+
+            <h4 className="mb-3 text-lg font-semibold text-black dark:text-white">
+              3. Verify using SHA512 hash
+            </h4>
+            <p className="mb-2 text-base text-body-color dark:text-body-color-dark">
+              Download the .sha512 hash file and verify:
+            </p>
+            <pre className="mb-4 overflow-x-auto rounded bg-gray-100 p-4 text-sm dark:bg-gray-800">
+              <code>{`shasum -a 512 -c ${fileName}.tar.gz.sha512`}</code>
+            </pre>
+            <p className="text-sm text-body-color dark:text-body-color-dark">
+              On Linux, you can use <code className="rounded bg-gray-100 px-1 dark:bg-gray-800">sha512sum</code> instead of <code className="rounded bg-gray-100 px-1 dark:bg-gray-800">shasum -a 512</code>.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -158,6 +158,14 @@ const Footer = async () => {
                       Email us
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href="https://github.com/apache/incubator-resilientdb/issues"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Issue Tracker
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
