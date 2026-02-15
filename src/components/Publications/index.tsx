@@ -245,7 +245,7 @@ const publicationData: Publication[] = [
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2407.09409",
-    award: ""
+    award: "Best Paper Award (Runner Up)"
   },
   {
     id: 25,

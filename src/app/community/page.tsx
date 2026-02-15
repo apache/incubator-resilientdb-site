@@ -2863,6 +2863,37 @@ email with next steps within the next few days (can take up to a week).`}
                 </p>
               </div>
 
+              {/* Resigning as a Committer */}
+              <div className="rounded-lg bg-white p-6 shadow-two dark:bg-gray-dark">
+                <h2 className="community-h2-in-card">
+                  Resigning as a Committer
+                </h2>
+                <p className="mb-4 text-base leading-relaxed text-body-color">
+                  If you need to step down as a committer, you can resign at any time. Per{" "}
+                  <a 
+                    href="https://infra.apache.org/account-mgmt.html" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    ASF account management
+                  </a>
+                  , account removal is done either by your request or in other rare circumstances. In practice, the ASF typically does not delete your LDAP account; you are removed from the project&apos;s LDAP groups and mailing lists so you no longer have write access.
+                </p>
+                <div className="mb-4 rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
+                  <p className="font-semibold text-black dark:text-white mb-2">How to resign</p>
+                  <ol className="space-y-2 text-base text-body-color list-decimal list-inside">
+                    <li>Email <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">private@resilientdb.apache.org</code> (or contact the PMC chair) to state that you wish to resign as a committer.</li>
+                    <li>The PMC will process the resignation and work with Apache Infra so you are removed from project committer groups and lists.</li>
+                    <li>Your Apache ID and ICLA remain on file with the ASF; only your access to this project is removed.</li>
+                  </ol>
+                </div>
+                <p className="text-sm text-body-color">
+                  Some projects use <strong>emeritus committer</strong> for contributors who can no longer give much time but wish to stay listed; see the{" "}
+                  <a href="https://www.apache.org/dev/committers.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Committers&apos; FAQs</a> for context. If you prefer emeritus status instead of full resignation, mention that when you contact the PMC.
+                </p>
+              </div>
+
               {/* Summary Checklist */}
               <div className="rounded-lg bg-primary bg-opacity-10 p-6">
                 <h3 className="mb-4 text-lg font-semibold text-black dark:text-white">
