@@ -374,8 +374,8 @@ const publicationData: Publication[] = [
   {
     id: 37,
     name: "HYDRA: Breaking the Global Ordering Barrier in Multi-BFT Consensus.",
-    venue: "arXiv 2025",
-    year: 2025,
+    venue: "ICDE 2026",
+    year: 2026,
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2511.05843",
