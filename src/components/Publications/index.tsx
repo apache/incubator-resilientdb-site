@@ -275,7 +275,7 @@ const publicationData: Publication[] = [
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2408.04728",
-    award: ""
+    award: "Best Artifact Award (Honorable Mention)"
   },
   {
     id: 28,
@@ -384,7 +384,7 @@ const publicationData: Publication[] = [
 ];
 
 const Publications = () => {
-  const [selectedYear, setSelectedYear] = useState<number | string>(2025);
+  const [selectedYear, setSelectedYear] = useState<number | string>(2026);
   const [activeId, setActiveId] = useState<number | null>(null);
 
   useEffect(() => {

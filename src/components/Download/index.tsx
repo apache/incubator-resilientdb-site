@@ -6,9 +6,11 @@ import DownloadBox from "./DownloadBox";
 const Download = () => {
   const [isZIP, setIsZIP] = useState(false);
 
-  // Version configuration
-  const version = "1.11.0";
-  const fileName = `apache-resilientdb-${version}-incubating-src`;
+  const version = "1.12.0";
+  /** RC segment in ASF source tarball name, e.g. "-rc3" → …-incubating-rc3-src.tar.gz; "" for GA …-incubating-src.tar.gz */
+  const sourceArchiveRc = "-rc3";
+  const fileName = `apache-resilientdb-${version}-incubating${sourceArchiveRc}-src`;
+  const githubReleaseTag = `v${version}-incubating${sourceArchiveRc}`;
 
   // Apache download URLs - use closer.lua for source code (mirrors), downloads.apache.org for sigs/hashes
   const asfDownloadLinkTAR = `https://www.apache.org/dyn/closer.lua/incubator/resilientdb/${version}/${fileName}.tar.gz`;
@@ -22,7 +24,7 @@ const Download = () => {
   const signLinkZIP = "";
 
   // Non-ASF (GitHub) links
-  const nonAsfDownloadLinkZIP = "https://github.com/apache/incubator-resilientdb/archive/refs/tags/v1.11.0-rc03.zip";
+  const nonAsfDownloadLinkZIP = `https://github.com/apache/incubator-resilientdb/archive/refs/tags/${githubReleaseTag}.zip`;
   const nonAsfDownloadLinkTAR = "";
   const nonAsfSha512LinkZIP = "";
   const nonAsfSha512LinkTAR = "";
@@ -101,7 +103,7 @@ const Download = () => {
                   {nonAsfDownloadLinkZIP && (
                     <div className="px-10">
                       <DownloadBox
-                        packageName="v1.11.0-rc03"
+                        packageName={githubReleaseTag}
                         type="zip"
                         subtitle="Download the latest source code release from GitHub"
                         sha512Link={nonAsfSha512LinkZIP}
@@ -117,7 +119,7 @@ const Download = () => {
                 <div className={`grid grid-cols-1 gap-x-0 gap-y-2 md:grid-cols-2 ${availableZIP ? 'lg:grid-cols-2': 'lg:grid-cols-1'}`}>
                   <div className="px-10">
                     <DownloadBox
-                      packageName="v1.11.0-rc03"
+                      packageName={githubReleaseTag}
                       type="zip"
                       subtitle="Download the latest source code release from GitHub"
                       sha512Link={nonAsfSha512LinkZIP}
