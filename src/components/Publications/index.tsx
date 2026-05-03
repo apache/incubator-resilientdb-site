@@ -381,6 +381,16 @@ const publicationData: Publication[] = [
     publink: "https://arxiv.org/abs/2511.05843",
     award: ""
   },
+  {
+    id: 38,
+    name: "FEAT: Fair and Efficient Adversarial Transaction Ordering.",
+    venue: "PODC 2026",
+    year: 2026,
+    content:
+      "TBA",
+    publink: "TBA",
+    award: ""
+  },
 ];
 
 const Publications = () => {

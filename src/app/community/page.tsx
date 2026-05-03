@@ -1325,17 +1325,33 @@ I checked:
                     2.1 Branch Structure
                   </h3>
                   <p className="mb-4 text-base leading-relaxed text-body-color">
-                    The ResilientDB repository has many branches, but these are the two main ones you should know:
+                    The ResilientDB repository uses a three-layer branch workflow to separate active
+                    development, stable source code, and production deployments:
                   </p>
                   <div className="space-y-3">
                     <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <code className="font-semibold text-primary">master</code>
-                      <span className="ml-2 text-body-color">— The main production branch containing stable, release-ready code</span>
+                      <code className="font-semibold text-primary">development</code>
+                      <span className="ml-2 text-body-color">— The working branch for new development, pull requests, testing, and finalizing changes before they become stable</span>
                     </div>
                     <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                      <code className="font-semibold text-primary">development</code>
-                      <span className="ml-2 text-body-color">— The staging branch for working on features and testing before merging to master</span>
+                      <code className="font-semibold text-primary">master</code>
+                      <span className="ml-2 text-body-color">— The source of truth for stable code after a feature, tool, add-on, or other change has been validated</span>
                     </div>
+                    <div className="rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
+                      <code className="font-semibold text-primary">deployment</code>
+                      <span className="ml-2 text-body-color">— The deployment-only branch kept aligned with master; direct code changes should not be made here</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 rounded-lg bg-primary bg-opacity-10 p-4">
+                    <p className="text-base leading-relaxed text-body-color">
+                      <strong className="text-black dark:text-white">Workflow summary:</strong>{" "}
+                      New work starts in <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">development</code>.
+                      Once stable, it moves to <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">master</code>.
+                      Deployment infrastructure, including ResDB instances, API endpoints, and stable projects,
+                      should deploy from <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">deployment</code>,
+                      which mirrors <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">master</code>.
+                    </p>
                   </div>
 
                   <h4 className="mt-6 mb-3 text-lg font-semibold text-black dark:text-white">
@@ -1392,7 +1408,7 @@ git remote remove apache`}
                   </h3>
                   <ol className="mb-4 space-y-3 text-base leading-relaxed text-body-color list-decimal list-inside">
                     <li>
-                      <strong>Confirm the base branch</strong> — Usually the current version in development. 
+                      <strong>Confirm the base branch</strong> — Usually the current version in <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">development</code>. 
                       If unsure, ask in the community Discord or in the relevant issue.
                     </li>
                     <li>
@@ -1401,7 +1417,7 @@ git remote remove apache`}
                     <li>
                       <strong>Create a feature branch</strong> — Don't modify the main branch directly:
                       <pre className="mt-2 overflow-x-auto rounded-lg bg-gray-900 p-3 text-sm text-gray-100">
-{`git checkout -b fix-issue-123 main
+{`git checkout -b fix-issue-123 development
 git push origin fix-issue-123:fix-issue-123`}
                       </pre>
                     </li>
@@ -1437,10 +1453,10 @@ git push origin --delete fix-issue-123`}
                   </p>
                   <pre className="mb-4 overflow-x-auto rounded-lg bg-gray-900 p-4 text-sm text-gray-100">
 {`# Clone your fork
-git clone https://github.com/{your-username}/incubator-resilientdb.git --branch main
+git clone https://github.com/{your-username}/incubator-resilientdb.git --branch development
 
 # Create a development branch
-git checkout -b dev-fix main
+git checkout -b dev-fix development
 
 # Push to your fork
 git push origin dev-fix:dev-fix`}
