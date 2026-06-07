@@ -23,9 +23,13 @@ const SinglePublication = ({ publications, years, selectedYear, setSelectedYear,
                 </button>
                 <div className="accordion-content">
                   <p>
-                    <a className="publink" href={t.publink} target="_blank" rel="noopener noreferrer">
-                      {t.content}
-                    </a>
+                    {t.publink === "TBA" ? (
+                      <span>{t.content}</span>
+                    ) : (
+                      <a className="publink" href={t.publink} target="_blank" rel="noopener noreferrer">
+                        {t.content}
+                      </a>
+                    )}
                     {t.flyer && (
                       <>
                         {" | "}
