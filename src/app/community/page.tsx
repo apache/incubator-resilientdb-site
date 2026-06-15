@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faDiscord,
-  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { 
   faEnvelope, 
@@ -246,17 +245,6 @@ const CommunityPage = () => {
                   <ul className="space-y-2">
                     <li>
                       <a
-                        href="https://discord.gg/vKtRX4MRJR"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-primary hover:underline"
-                      >
-                        <FontAwesomeIcon icon={faDiscord} className="mr-2" />
-                        Discord Server
-                      </a>
-                    </li>
-                    <li>
-                      <a
                         href="https://lists.apache.org/list.html?dev@resilientdb.apache.org"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -265,6 +253,21 @@ const CommunityPage = () => {
                         <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                         Mailing Lists
                       </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://discord.gg/vKtRX4MRJR"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-primary hover:underline"
+                        title="Unofficial community chat — official communication is on dev@resilientdb.apache.org"
+                      >
+                        <FontAwesomeIcon icon={faDiscord} className="mr-2" />
+                        Discord Server
+                      </a>
+                      <p className="mt-1 text-xs text-body-color">
+                        Unofficial — for informal questions only. Votes and official updates are on the mailing lists.
+                      </p>
                     </li>
                   </ul>
                 </div>
@@ -284,6 +287,20 @@ const CommunityPage = () => {
               to connect with our team and get the information and knowledge you need. 
               Choose the method that works best for you.
             </p>
+
+            <div className="mb-8 rounded-lg bg-primary bg-opacity-10 p-6 border border-primary border-opacity-20">
+              <h2 className="mb-3 text-lg font-bold text-black dark:text-white">
+                Official project communication
+              </h2>
+              <p className="text-base leading-relaxed text-body-color">
+                Apache ResilientDB conducts all official discussion, votes, releases, and PMC
+                announcements on our Apache mailing lists — especially{" "}
+                <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">dev@resilientdb.apache.org</code>{" "}
+                and{" "}
+                <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">private@resilientdb.apache.org</code>.
+                Subscribe to stay informed; decisions made elsewhere (including Discord) are not binding.
+              </p>
+            </div>
 
             <div className="space-y-8">
               {/* Method 1: GitHub Issues */}
@@ -385,6 +402,14 @@ const CommunityPage = () => {
                   community support. Our Discord has dedicated channels for different topics 
                   and a community forum where you can post questions.
                 </p>
+                <div className="mb-4 rounded-lg bg-yellow-50 p-4 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
+                  <p className="text-base leading-relaxed text-body-color">
+                    <strong>Unofficial channel.</strong> Discord is for informal questions and
+                    real-time community chat only. Do not hold or participate in votes here.
+                    Release announcements, <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">[VOTE]</code> threads,
+                    and other official updates are always posted to the mailing lists.
+                  </p>
+                </div>
                 <div className="mb-4 rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
                   <h3 className="mb-3 text-lg font-semibold text-black dark:text-white">
                     How to Get Help on Discord:
@@ -521,9 +546,9 @@ const CommunityPage = () => {
               How to Subscribe
             </h1>
             <p className="mb-6 text-base leading-relaxed text-body-color">
-              Stay connected with the ResilientDB community by subscribing to our mailing lists. 
-              Our mailing lists are the primary channels for development discussions, announcements, 
-              and commit notifications.
+              Stay connected with the ResilientDB community by subscribing to our mailing lists.
+              Our mailing lists are the only official channels for development discussions,
+              project votes, release announcements, and commit notifications.
             </p>
 
             <div className="space-y-8">
@@ -3274,15 +3299,7 @@ email with next steps within the next few days (can take up to a week).`}
                             Discord Server
                           </a>
                         </td>
-                        <td className="px-4 py-3">Real-time community chat</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-3">
-                          <a href="https://www.youtube.com/@ExpoLabUCDavis" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                            YouTube Channel
-                          </a>
-                        </td>
-                        <td className="px-4 py-3">Tutorials, demos, and talks</td>
+                        <td className="px-4 py-3">Unofficial chat for questions and informal discussion (not for votes or official decisions)</td>
                       </tr>
                     </tbody>
                   </table>

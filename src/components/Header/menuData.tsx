@@ -10,7 +10,7 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "Code",
-    path: "https://github.com/resilientdb/resilientdb",
+    path: "https://github.com/apache/incubator-resilientdb",
     newTab: true,
   },
   {
@@ -48,13 +48,13 @@ const menuData: Menu[] = [
       {
         id: 41,
         title: "Wallet",
-        path: "https://github.com/ResilientApp/ResVault",
+        path: "https://github.com/apache/incubator-resilientdb/tree/master/ecosystem/tools/resvault",
         newTab: true,
       },
       {
         id: 42,
         title: "Smart Contract CLI",
-        path: "https://github.com/ResilientEcosystem/ResContract/",
+        path: "https://github.com/apache/incubator-resilientdb/tree/master/ecosystem/smart-contract/rescontract",
         newTab: true,
       },
     ]
@@ -98,25 +98,6 @@ const menuData: Menu[] = [
         id: 56,
         title: "ResLens",
         path: "https://reslens.resilientdb.com",
-        newTab: true,
-      }
-    ]
-  },
-  {
-    id: 6,
-    title: "Environment",
-    newTab: false,
-    submenu: [
-      {
-        id: 61,
-        title: "Resilient Apps",
-        path: "https://github.com/ResilientApp",
-        newTab: true,
-      },
-      {
-        id: 62,
-        title: "Resilient EcoSystem",
-        path: "https://github.com/ResilientEcosystem",
         newTab: true,
       }
     ]

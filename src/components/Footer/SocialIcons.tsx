@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faDiscord,
-  faTwitter,
-  faYoutube
 } from "@fortawesome/free-brands-svg-icons";
+
+const DISCORD_INVITE = "https://discord.gg/vKtRX4MRJR";
 
 const SocialIcons = () => {
   return (
@@ -22,31 +22,14 @@ const SocialIcons = () => {
         <FontAwesomeIcon icon={faGithub} size="lg" />
       </a>
       <a
-        href="https://discord.gg/qbTVfZVs2M"
+        href={DISCORD_INVITE}
         aria-label="Discord"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mr-6 text-gray-600 dark:text-gray-400 duration-300 hover:text-teal-500 dark:hover:text-teal-500"
-      >
-        <FontAwesomeIcon icon={faDiscord} size="lg" />
-      </a>
-      <a
-        href="https://twitter.com/resilientdb"
-        aria-label="Twitter"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mr-6 text-gray-600 dark:text-gray-400 duration-300 hover:text-teal-500 dark:hover:text-teal-500"
-      >
-        <FontAwesomeIcon icon={faTwitter} size="lg" />
-      </a>
-      <a
-        href="https://www.youtube.com/@ExpoLabUCDavis"
-        aria-label="Youtube"
+        title="Unofficial community chat — official communication is on dev@resilientdb.apache.org"
         target="_blank"
         rel="noopener noreferrer"
         className="mr-3 text-gray-600 dark:text-gray-400 duration-300 hover:text-teal-500 dark:hover:text-teal-500"
       >
-        <FontAwesomeIcon icon={faYoutube} size="lg" />
+        <FontAwesomeIcon icon={faDiscord} size="lg" />
       </a>
     </>
   );

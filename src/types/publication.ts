@@ -4,7 +4,7 @@ export type Publication = {
   year: number | string;
   venue: string;
   content: string;
-  publink: string;
+  publink?: string;
   award: string;
   flyer?: string;
 };

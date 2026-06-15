@@ -24,7 +24,7 @@ const publicationData: Publication[] = [
     year: 2019,
     content:
       "Read Publication",
-    publink: "https://expolab.org/papers/csp_disc2019.pdf",
+    publink: "https://doi.org/10.4230/LIPIcs.DISC.2019.45",
     award: ""
   },
   {
@@ -74,7 +74,7 @@ const publicationData: Publication[] = [
     year: 2020,
     content:
       "View Theory",
-    publink: "https://expolab.org/papers/Tutorial%20-%20Theory%20-%20VLDB%202020.pdf",
+    publink: "https://vldb2020.org/tutorial1_part1_theory.pdf",
     award: ""
   },
   {
@@ -84,7 +84,7 @@ const publicationData: Publication[] = [
     year: 2021,
     content:
       "Read Publication",
-    publink: "https://expolab.org/papers/byshard-vldb.pdf",
+    publink: "https://doi.org/10.14778/3476249.3476275",
     award: ""
   },
   {
@@ -134,7 +134,7 @@ const publicationData: Publication[] = [
     year: 2022,
     content:
       "Read Publication",
-    publink: "https://expolab.org/papers/CSP%20-%20FoIKs%202022.pdf",
+    publink: "https://doi.org/10.1007/978-3-031-11321-5_10",
     award: ""
   },
   {
@@ -325,8 +325,7 @@ const publicationData: Publication[] = [
     content:
       "Read Book",
     publink: "https://link.springer.com/book/10.1007/978-3-032-07282-5",
-    award: "",
-    flyer: "https://expolab.org/images/Sadoghi_FFlyer2025.pdf"
+    award: ""
   },
   {
     id: 33,
@@ -336,8 +335,7 @@ const publicationData: Publication[] = [
     content:
       "Read Book",
     publink: "https://www.nowpublishers.com/article/Details/DBS-075",
-    award: "",
-    flyer: "https://expolab.org/images/Sadoghi_CBook_Flyer.pdf"
+    award: ""
   },
   {
     id: 34,
@@ -347,8 +345,7 @@ const publicationData: Publication[] = [
     content:
       "Read Book",
     publink: "https://link.springer.com/book/10.1007/978-3-031-01877-0",
-    award: "",
-    flyer: "https://expolab.org/images/Sadoghi_BBook_Flyer.pdf"
+    award: ""
   },
   {
     id: 35,
@@ -358,8 +355,7 @@ const publicationData: Publication[] = [
     content:
       "Read Book",
     publink: "https://link.springer.com/book/10.1007/978-3-031-01870-1",
-    award: "",
-    flyer: "https://expolab.org/images/Sadoghi_TBook_Flyer.pdf"
+    award: ""
   },
   {
     id: 36,
@@ -388,7 +384,6 @@ const publicationData: Publication[] = [
     year: 2026,
     content:
       "TBA",
-    publink: "TBA",
     award: ""
   },
 ];
