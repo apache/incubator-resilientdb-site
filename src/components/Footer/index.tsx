@@ -68,74 +68,6 @@ const Footer = async () => {
               </div>
             </div>
 
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="https://blog.resilientdb.com"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Blog
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
-              <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  ResilientDB Testnet
-                </h2>
-                <ul>
-                  <li>
-                    <Link
-                      href="https://cloud.resilientdb.com/graphql"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Cloud
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://explorer.resilientdb.com"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Explorer
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://resai.resilientdb.com"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      ResAI
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://reslens.resilientdb.com"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      ResLens
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://monitoring.resilientdb.com/d/-cdKDm9nk/nexres?orgId=1&refresh=5s"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Monitoring
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
@@ -185,7 +117,7 @@ const Footer = async () => {
           </div>
           <div className="py-2">
             <p className="text-center text-base text-body-color dark:text-white">
-              &copy; 2024 Apache ResilientDB (Incubating). All rights reserved.
+              &copy; 2026 Apache ResilientDB (Incubating). All rights reserved.
             </p>
           </div>
           <div className="py-2">

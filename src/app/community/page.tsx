@@ -8,7 +8,6 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
-  faDiscord,
 } from "@fortawesome/free-brands-svg-icons";
 import { 
   faEnvelope, 
@@ -254,21 +253,6 @@ const CommunityPage = () => {
                         Mailing Lists
                       </a>
                     </li>
-                    <li>
-                      <a
-                        href="https://discord.gg/vKtRX4MRJR"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-primary hover:underline"
-                        title="Unofficial community chat — official communication is on dev@resilientdb.apache.org"
-                      >
-                        <FontAwesomeIcon icon={faDiscord} className="mr-2" />
-                        Discord Server
-                      </a>
-                      <p className="mt-1 text-xs text-body-color">
-                        Unofficial — for informal questions only. Votes and official updates are on the mailing lists.
-                      </p>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -298,7 +282,7 @@ const CommunityPage = () => {
                 <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">dev@resilientdb.apache.org</code>{" "}
                 and{" "}
                 <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">private@resilientdb.apache.org</code>.
-                Subscribe to stay informed; decisions made elsewhere (including Discord) are not binding.
+                Subscribe to stay informed; decisions made elsewhere are not binding.
               </p>
             </div>
 
@@ -382,74 +366,7 @@ const CommunityPage = () => {
                 </div>
               </div>
 
-              {/* Method 2: Discord */}
-              <div className="rounded-lg bg-white p-6 shadow-two dark:bg-gray-dark">
-                <div className="mb-4 flex items-center">
-                  <div className="mr-4 flex h-[50px] w-[50px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-                    <FontAwesomeIcon icon={faDiscord} size="lg" />
-                  </div>
-                  <div>
-                    <h2 className="community-h3">
-                      Method 2: Discord Community
-                    </h2>
-                    <p className="text-sm text-body-color">
-                      Real-time chat and community forum
-                    </p>
-                  </div>
-                </div>
-                <p className="mb-4 text-base leading-relaxed text-body-color">
-                  Join our Discord server for real-time discussions, quick questions, and 
-                  community support. Our Discord has dedicated channels for different topics 
-                  and a community forum where you can post questions.
-                </p>
-                <div className="mb-4 rounded-lg bg-yellow-50 p-4 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800">
-                  <p className="text-base leading-relaxed text-body-color">
-                    <strong>Unofficial channel.</strong> Discord is for informal questions and
-                    real-time community chat only. Do not hold or participate in votes here.
-                    Release announcements, <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">[VOTE]</code> threads,
-                    and other official updates are always posted to the mailing lists.
-                  </p>
-                </div>
-                <div className="mb-4 rounded-lg bg-gray-50 p-4 dark:bg-gray-800">
-                  <h3 className="mb-3 text-lg font-semibold text-black dark:text-white">
-                    How to Get Help on Discord:
-                  </h3>
-                  <ol className="space-y-3 text-base leading-relaxed text-body-color">
-                    <li className="flex items-start">
-                      <span className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary font-semibold">1</span>
-                      <span>Join our Discord server by clicking the link: <a href="https://discord.gg/vKtRX4MRJR" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://discord.gg/vKtRX4MRJR</a></span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary font-semibold">2</span>
-                      <span>Navigate to the appropriate channel for your question (e.g., <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">#general</code>, <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">#Research</code>, <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">#resdb-platform</code>)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary font-semibold">3</span>
-                      <span>For more detailed questions, use the community forum,<code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">#resdb-support</code>, channel where you can create a post with your query</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary font-semibold">4</span>
-                      <span>Be clear and specific about your question or problem. Include relevant code snippets, error messages, or context</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-3 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary font-semibold">5</span>
-                      <span>Community members and maintainers will respond as soon as possible</span>
-                    </li>
-                  </ol>
-                </div>
-                <div className="mt-4">
-                  <a
-                    href="https://discord.gg/vKtRX4MRJR"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-base font-medium text-primary hover:underline"
-                  >
-                    Join Discord Server →
-                  </a>
-                </div>
-              </div>
-
-              {/* Method 3: Email Consultation */}
+              {/* Method 2: Email Consultation */}
               <div className="rounded-lg bg-white p-6 shadow-two dark:bg-gray-dark">
                 <div className="mb-4 flex items-center">
                   <div className="mr-4 flex h-[50px] w-[50px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -457,7 +374,7 @@ const CommunityPage = () => {
                   </div>
                   <div>
                     <h2 className="community-h3">
-                      Method 3: Email Consultation
+                      Method 2: Email Consultation
                     </h2>
                     <p className="text-sm text-body-color">
                       Mailing list for development discussions
@@ -520,7 +437,7 @@ const CommunityPage = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2 text-primary">•</span>
-                  <span><strong>Search first:</strong> Check existing issues, Discord messages, and documentation before asking</span>
+                  <span><strong>Search first:</strong> Check existing issues, mailing list archives, and documentation before asking</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2 text-primary">•</span>
@@ -1434,7 +1351,7 @@ git remote remove apache`}
                   <ol className="mb-4 space-y-3 text-base leading-relaxed text-body-color list-decimal list-inside">
                     <li>
                       <strong>Confirm the base branch</strong> — Usually the current version in <code className="px-1 py-0.5 bg-gray-200 dark:bg-gray-700 rounded">development</code>. 
-                      If unsure, ask in the community Discord or in the relevant issue.
+                      If unsure, ask on the dev mailing list or in the relevant issue.
                     </li>
                     <li>
                       <strong>Sync your fork</strong> — Ensure your fork is up-to-date with the original repository.
@@ -2018,20 +1935,6 @@ git push origin dev-fix:dev-fix`}
                       <strong>Review the meeting notes</strong> sent to the mailing list after each meeting
                     </span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="mr-2 text-primary">•</span>
-                    <span>
-                      <strong>Join our Discord</strong> for asynchronous discussions —{" "}
-                      <a 
-                        href="https://discord.gg/vKtRX4MRJR" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline"
-                      >
-                        Join Discord
-                      </a>
-                    </span>
-                  </li>
                 </ul>
               </div>
 
@@ -2056,15 +1959,6 @@ git push origin dev-fix:dev-fix`}
                   >
                     <FontAwesomeIcon icon={faFileAlt} className="mr-3 text-primary" />
                     <span className="text-sm font-medium text-black dark:text-white">Meeting Notes Archive →</span>
-                  </a>
-                  <a
-                    href="https://discord.gg/vKtRX4MRJR"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center rounded-lg bg-white p-3 shadow-sm transition-colors hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600"
-                  >
-                    <FontAwesomeIcon icon={faDiscord} className="mr-3 text-primary" />
-                    <span className="text-sm font-medium text-black dark:text-white">Join Discord →</span>
                   </a>
                   <button
                     onClick={() => setActiveSection("email-usage")}
@@ -3292,14 +3186,6 @@ email with next steps within the next few days (can take up to a week).`}
                           </a>
                         </td>
                         <td className="px-4 py-3">Development discussions and meeting notes</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-3">
-                          <a href="https://discord.gg/vKtRX4MRJR" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                            Discord Server
-                          </a>
-                        </td>
-                        <td className="px-4 py-3">Unofficial chat for questions and informal discussion (not for votes or official decisions)</td>
                       </tr>
                     </tbody>
                   </table>

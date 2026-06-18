@@ -20,26 +20,6 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
-    id: 3,
-    title: "Demo",
-    path: "",
-    newTab: true,
-    submenu: [
-      {
-        id: 31,
-        title: "ResilientDB Demo",
-        path: "https://youtu.be/ewtFSwjitsg",
-        newTab: true,
-      },
-      {
-        id: 32,
-        title: "Quickstart",
-        path: "https://quickstart.resilientdb.com",
-        newTab: true,
-      },
-    ]
-  },
-  {
     id: 4,
     title: "Tools",
     path: "",
@@ -57,49 +37,6 @@ const menuData: Menu[] = [
         path: "https://github.com/apache/incubator-resilientdb/tree/master/ecosystem/smart-contract/rescontract",
         newTab: true,
       },
-    ]
-  },
-  {
-    id: 5,
-    title: "Testnet",
-    newTab: true,
-    submenu: [
-      {
-        id: 51,
-        title: "Status",
-        path: "https://status.resilientdb.com",
-        newTab: true,
-      },
-      {
-        id: 52,
-        title: "Cloud API",
-        path: "https://cloud.resilientdb.com/graphql",
-        newTab: true,
-      },
-      {
-        id: 53,
-        title: "Explorer",
-        path: "https://explorer.resilientdb.com",
-        newTab: true,
-      },
-      {
-        id: 54,
-        title: "Monitoring",
-        path: "https://monitoring.resilientdb.com/d/-cdKDm9nk/nexres?orgId=1&refresh=5s",
-        newTab: true,
-      },
-      {
-        id: 55,
-        title: "ResView",
-        path: "https://resview.resilientdb.com",
-        newTab: true,
-      },
-      {
-        id: 56,
-        title: "ResLens",
-        path: "https://reslens.resilientdb.com",
-        newTab: true,
-      }
     ]
   },
   {

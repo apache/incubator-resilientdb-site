@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-// import { faPlayCircle } from '@fortawesome/free-regular-svg-icons';
-import { faBook, faRobot } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
   return (
@@ -33,18 +31,6 @@ const Hero = () => {
                     className="flex items-center justify-center rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80 w-40 h-15"
                   >
                   <FontAwesomeIcon icon={faGithub} className="text-base mr-2 h-5" /> Codebase
-                  </Link>
-                  <Link
-                    href="https://resai-hub.resilientdb.com/"
-                    className="flex items-center justify-center rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5 w-40 h-15"
-                  >
-                  <FontAwesomeIcon icon={faRobot} className="text-base mr-2 h-5" /> ResAI
-                  </Link>
-                  <Link
-                    href="https://blog.resilientdb.com/"
-                    className="flex items-center justify-center rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80 w-40 h-15"
-                  >
-                  <FontAwesomeIcon icon={faBook} className="text-base mr-2 h-5" /> Blog
                   </Link>
                 </div>
               </div>
