@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Hero = () => {
   return (
@@ -20,17 +20,11 @@ const Hero = () => {
                 Apache ResilientDB (Incubating) offers a high-throughput yielding distributed ledger built upon scale-centric design principles to democratize and decentralize computation
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  {/* <Link
-                    href="https://youtu.be/QlwnZuBHqM4"
-                    className="flex items-center justify-center rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80 w-40 h-15"
-                  >
-                  <FontAwesomeIcon icon={faPlayCircle} className="text-base mr-2 h-5" /> Vision
-                  </Link> */}
                   <Link
-                    href="https://github.com/apache/incubator-resilientdb"
+                    href="/download"
                     className="flex items-center justify-center rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80 w-40 h-15"
                   >
-                  <FontAwesomeIcon icon={faGithub} className="text-base mr-2 h-5" /> Codebase
+                  <FontAwesomeIcon icon={faDownload} className="text-base mr-2 h-5" /> Download
                   </Link>
                 </div>
               </div>

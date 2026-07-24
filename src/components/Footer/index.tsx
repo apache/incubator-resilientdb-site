@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as faStarSolid, faCodeBranch as faCodeBranchSolid } from "@fortawesome/free-solid-svg-icons";
 import SocialIcons from "./SocialIcons";
 
-// Fetch GitHub data at build time
 async function getGitHubStats() {
   try {
     const response = await fetch('https://api.github.com/repos/apache/incubator-resilientdb', {
@@ -14,7 +13,7 @@ async function getGitHubStats() {
         'User-Agent': 'ResilientDB-Website'
       },
     });
-    
+
     if (response.ok) {
       const data = await response.json();
       return {
@@ -25,7 +24,7 @@ async function getGitHubStats() {
   } catch (error) {
     console.error('Failed to fetch GitHub stats:', error);
   }
-  
+
   return { stars: 0, forks: 0 };
 }
 
@@ -74,6 +73,22 @@ const Footer = async () => {
                   Support & Help
                 </h2>
                 <ul>
+                  <li>
+                    <Link
+                      href="/download"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Download
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/community"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      Community
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       href="mailto:dev@resilientdb.apache.org"

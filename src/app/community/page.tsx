@@ -204,13 +204,22 @@ const CommunityPage = () => {
                   <ul className="space-y-2">
                     <li>
                       <a
+                        href="/download"
+                        className="flex items-center text-primary hover:underline"
+                      >
+                        <FontAwesomeIcon icon={faCode} className="mr-2" />
+                        Official ASF Downloads
+                      </a>
+                    </li>
+                    <li>
+                      <a
                         href="https://github.com/apache/incubator-resilientdb"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center text-primary hover:underline"
                       >
                         <FontAwesomeIcon icon={faGithub} className="mr-2" />
-                        Main GitHub Repository
+                        GitHub Repository (development)
                       </a>
                     </li>
                     <li>
@@ -3157,11 +3166,19 @@ email with next steps within the next few days (can take up to a week).`}
                     <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-body-color">
                       <tr>
                         <td className="px-4 py-3">
+                          <a href="/download" className="text-primary hover:underline">
+                            Official Downloads
+                          </a>
+                        </td>
+                        <td className="px-4 py-3">ASF source releases (closer.lua mirrors) with signature and hash verification</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-3">
                           <a href="https://github.com/apache/incubator-resilientdb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                             GitHub Repository
                           </a>
                         </td>
-                        <td className="px-4 py-3">Main source code repository</td>
+                        <td className="px-4 py-3">Development source (unreleased) — for contributors, not a substitute for official releases</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3">

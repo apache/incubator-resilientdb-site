@@ -28,7 +28,9 @@ const About = () => {
     observer.observe(animationContainer.current);
   
     return () => {
-      instance.destroy();
+      if (typeof instance.destroy === "function") {
+        instance.destroy();
+      }
       observer.disconnect();
     };
   }, []);  

@@ -24,11 +24,12 @@ const DownloadBox = (props: {
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
+          {/* closer.lua: ?action=download picks a mirror and starts the artifact download */}
           <a
             href={`${downloadLink}?action=download`}
             className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp mb-3"
           >
-            Download Code ({type})
+            Download Source ({type})
           </a>
           <a
             href={downloadLink}
@@ -36,10 +37,13 @@ const DownloadBox = (props: {
             rel="noopener noreferrer"
             className="flex w-full items-center justify-center rounded-sm border border-primary bg-transparent p-3 text-base font-semibold text-primary transition duration-300 ease-in-out hover:bg-primary hover:text-white"
           >
-            Other Download Options
+            Other Mirror Options
           </a>
         </div>
         <div className="mb-4">
+          <p className="mb-3 text-center text-sm text-body-color dark:text-body-color-dark">
+            Signatures and checksums (from the main Apache distribution site):
+          </p>
           <div className="flex justify-center gap-2 mb-3">
             {sha512Link && (
               <a href={sha512Link} className="badge-download" target="_blank" rel="noopener noreferrer">

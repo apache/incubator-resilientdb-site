@@ -9,9 +9,9 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "Code",
-    path: "https://github.com/apache/incubator-resilientdb",
-    newTab: true,
+    title: "Download",
+    path: "/download",
+    newTab: false,
   },
   {
     id: 8,
@@ -37,7 +37,7 @@ const menuData: Menu[] = [
         path: "https://github.com/apache/incubator-resilientdb/tree/master/ecosystem/smart-contract/rescontract",
         newTab: true,
       },
-    ]
+    ],
   },
   {
     id: 7,
