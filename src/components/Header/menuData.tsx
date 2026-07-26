@@ -20,26 +20,6 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
-    id: 4,
-    title: "Tools",
-    path: "",
-    newTab: true,
-    submenu: [
-      {
-        id: 41,
-        title: "Wallet",
-        path: "https://github.com/apache/incubator-resilientdb/tree/master/ecosystem/tools/resvault",
-        newTab: true,
-      },
-      {
-        id: 42,
-        title: "Smart Contract CLI",
-        path: "https://github.com/apache/incubator-resilientdb/tree/master/ecosystem/smart-contract/rescontract",
-        newTab: true,
-      },
-    ],
-  },
-  {
     id: 7,
     title: "ASF",
     newTab: false,

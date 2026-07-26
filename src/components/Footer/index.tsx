@@ -1,36 +1,8 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar as faStarSolid, faCodeBranch as faCodeBranchSolid } from "@fortawesome/free-solid-svg-icons";
-import SocialIcons from "./SocialIcons";
 
-async function getGitHubStats() {
-  try {
-    const response = await fetch('https://api.github.com/repos/apache/incubator-resilientdb', {
-      headers: {
-        'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'ResilientDB-Website'
-      },
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      return {
-        stars: data.stargazers_count || 0,
-        forks: data.forks || 0,
-      };
-    }
-  } catch (error) {
-    console.error('Failed to fetch GitHub stats:', error);
-  }
-
-  return { stars: 0, forks: 0 };
-}
-
-const Footer = async () => {
-  const repoData = await getGitHubStats();
-
+const Footer = () => {
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -47,23 +19,6 @@ const Footer = async () => {
                     height={30}
                   />
                 </Link>
-                <div className="flex items-center">
-                  <SocialIcons />
-                  <div className="flex mr-3">
-                    <a className="mr-2" href="https://github.com/apache/incubator-resilientdb">
-                      <div className="flex items-center px-3 py-1 rounded-full bg-gray-400 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
-                        <FontAwesomeIcon icon={faStarSolid} className="text-xs" />
-                        <span className="ml-2 text-sm">{repoData.stars}</span>
-                      </div>
-                    </a>
-                    <a href="https://github.com/apache/incubator-resilientdb/fork">
-                      <div className="flex items-center px-3 py-1 rounded-full bg-gray-400 text-gray-700 hover:bg-teal-500 hover:text-white transition-colors">
-                        <FontAwesomeIcon icon={faCodeBranchSolid} className="text-xs" />
-                        <span className="ml-2 text-sm">{repoData.forks}</span>
-                      </div>
-                    </a>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -95,14 +50,6 @@ const Footer = async () => {
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Email us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://github.com/apache/incubator-resilientdb/issues"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
-                    >
-                      Issue Tracker
                     </Link>
                   </li>
                 </ul>
