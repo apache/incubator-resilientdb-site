@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <p>
-    <a href="https://resilientdb.apache.org"><img src="public/images/logo/logo.svg" width="300" alt="Apache ResilientDB (Incubating)" /></a>
+    <a href="https://resilientdb.apache.org"><img src="public/images/logo/logo.svg" width="300" alt="Apache ResilientDB" /></a>
   </p>
   <br />
 
@@ -13,7 +13,7 @@
 </div>
 
 # About
-This repository contains the official source code for the Apache ResilientDB (Incubating) website. It is a Next.js-based project configured with Tailwind CSS for styling and uses a variety of tools and libraries to enhance the frontend experience.
+This repository contains the official source code for the Apache ResilientDB website. It is a Next.js-based project configured with Tailwind CSS for styling and uses a variety of tools and libraries to enhance the frontend experience.
 
 ## Prerequisites
 

@@ -61,30 +61,25 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="flex justify-center my-2">
             <div className="apache-logo">
-              <Link href="https://incubator.apache.org/">
+              <Link href="https://www.apache.org/">
                 <Image
-                  src="/images/podling/apache-incubator.svg"
-                  alt="logo"
+                  src="/images/apache/asf-logo.svg"
+                  alt="Apache Software Foundation"
                   className="w-full h-full"
-                  width={150}
-                  height={100}
+                  width={220}
+                  height={115}
                 />
               </Link>
             </div>
           </div>
           <div className="py-2">
             <p className="text-center text-base text-body-color dark:text-white">
-              Apache ResilientDB is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.
+              &copy; 2026 The Apache Software Foundation. Licensed under the Apache License, Version 2.0.
             </p>
           </div>
           <div className="py-2">
             <p className="text-center text-base text-body-color dark:text-white">
-              &copy; 2026 Apache ResilientDB (Incubating). All rights reserved.
-            </p>
-          </div>
-          <div className="py-2">
-            <p className="text-center text-base text-body-color dark:text-white">
-              Apache, the names of Apache projects, and the feather logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries.
+              Apache ResilientDB, Apache, the Apache feather logo, and the Apache ResilientDB project logo are trademarks of the Apache Software Foundation.
             </p>
           </div>
         </div>

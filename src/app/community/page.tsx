@@ -102,7 +102,7 @@ const CommunityPage = () => {
                 Who Are We?
               </h2>
               <p className="mb-4 text-base leading-relaxed text-body-color">
-                ResilientDB is an Apache Software Foundation project currently in the Apache Incubator. 
+                ResilientDB is a Top-Level Project of the Apache Software Foundation.
                 We are a diverse community of developers, researchers, and engineers passionate about 
                 advancing blockchain technology and distributed systems.
               </p>
@@ -3209,10 +3209,10 @@ email with next steps within the next few days (can take up to a week).`}
                 </div>
               </div>
 
-              {/* Apache Incubator Links */}
+              {/* Apache Project Links */}
               <div className="rounded-lg bg-white p-6 shadow-two dark:bg-gray-dark">
                 <h2 className="community-h2-in-card">
-                  Apache Incubator
+                  Project Governance
                 </h2>
                 <div className="overflow-x-auto">
                   <table className="w-full text-left text-base">
@@ -3225,35 +3225,19 @@ email with next steps within the next few days (can take up to a week).`}
                     <tbody className="divide-y divide-gray-200 dark:divide-gray-700 text-body-color">
                       <tr>
                         <td className="px-4 py-3">
-                          <a href="https://incubator.apache.org/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                            Apache Incubator
+                          <a href="https://whimsy.apache.org/roster/committee/resilientdb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                            ResilientDB PMC Roster
                           </a>
                         </td>
-                        <td className="px-4 py-3">Incubator homepage with resources and guides</td>
+                        <td className="px-4 py-3">View PMC members and committers</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3">
-                          <a href="https://incubator.apache.org/projects/resilientdb.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                            ResilientDB Status Page
+                          <a href="https://projects.apache.org/committee.html?resilientdb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                            Project Committee Page
                           </a>
                         </td>
-                        <td className="px-4 py-3">Project incubation status and information</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-3">
-                          <a href="https://incubator.apache.org/guides/graduation.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                            Graduation Guide
-                          </a>
-                        </td>
-                        <td className="px-4 py-3">Guide for projects graduating from incubation</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-3">
-                          <a href="https://whimsy.apache.org/roster/ppmc/resilientdb" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                            ResilientDB PPMC Roster
-                          </a>
-                        </td>
-                        <td className="px-4 py-3">View PPMC members and committers</td>
+                        <td className="px-4 py-3">Apache project committee listing for ResilientDB</td>
                       </tr>
                     </tbody>
                   </table>

@@ -59,7 +59,7 @@ const Features = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Main Features"
-                paragraph="Explore Apache ResilientDB (Incubating), a high-throughput blockchain fabric with a multi-threaded design."
+                paragraph="Explore Apache ResilientDB, a high-throughput blockchain fabric with a multi-threaded design."
                 mb="44px"
               />
 

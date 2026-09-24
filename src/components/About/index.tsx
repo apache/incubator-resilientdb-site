@@ -70,7 +70,7 @@ const About = () => {
                 Reimagining Blockchain Fabric
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                To address these challenges, Apache ResilientDB (Incubating) has boldly reimagined the blockchain fabric through a scale-centric lens. Our complete redesign incorporates parallelism and deep pipelining at every layer, optimizing for modern hardware and global cloud infrastructure. 
+                To address these challenges, Apache ResilientDB has boldly reimagined the blockchain fabric through a scale-centric lens. Our complete redesign incorporates parallelism and deep pipelining at every layer, optimizing for modern hardware and global cloud infrastructure. 
                 </p>
               </div>
             </div>

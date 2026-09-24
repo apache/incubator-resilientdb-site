@@ -4,9 +4,9 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Download | Apache ResilientDB (Incubating)",
+  title: "Download | Apache ResilientDB",
   description:
-    "Download official Apache ResilientDB (Incubating) source releases via Apache mirrors, and verify signatures and hashes.",
+    "Download official Apache ResilientDB source releases via Apache mirrors, and verify signatures and hashes.",
 };
 
 export default function DownloadPage() {
@@ -15,7 +15,7 @@ export default function DownloadPage() {
       <ScrollUp />
       <Breadcrumb
         pageName="Download"
-        description="Official ASF source releases of Apache ResilientDB (Incubating)"
+        description="Official ASF source releases of Apache ResilientDB"
       />
       <Download />
     </>

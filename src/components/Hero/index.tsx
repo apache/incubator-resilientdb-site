@@ -17,7 +17,7 @@ const Hero = () => {
                 Global-Scale Sustainable Blockchain Fabric
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                Apache ResilientDB (Incubating) offers a high-throughput yielding distributed ledger built upon scale-centric design principles to democratize and decentralize computation
+                Apache ResilientDB offers a high-throughput yielding distributed ledger built upon scale-centric design principles to democratize and decentralize computation
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link

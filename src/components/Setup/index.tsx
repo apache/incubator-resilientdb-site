@@ -9,7 +9,7 @@ const Setup = () => {
       <div className="container">
         <SectionTitle
           title="Quick Setup"
-          paragraph="Get started with Apache ResilientDB (Incubating) in three steps."
+          paragraph="Get started with Apache ResilientDB in three steps."
           center
           mb="0px"
         />

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Community | Apache ResilientDB (Incubating)",
+  title: "Community | Apache ResilientDB",
   description: "Join the Apache ResilientDB community - contribute, collaborate, and connect with developers and researchers",
 };
 

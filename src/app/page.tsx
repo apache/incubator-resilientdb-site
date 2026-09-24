@@ -6,7 +6,7 @@ import Publications from "@/components/Publications";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Apache ResilientDB (Incubating)",
+  title: "Apache ResilientDB",
   description: "Global-Scale Sustainable Blockchain Fabric",
   // other metadata
 };

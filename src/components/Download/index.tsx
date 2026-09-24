@@ -26,7 +26,7 @@ const Download = () => {
       <div className="container">
         <SectionTitle
           title="Download"
-          paragraph="Download official Apache ResilientDB (Incubating) source releases. Release artifacts are served via the Apache mirror system (closer.lua). Signature and hash files are always downloaded from the main Apache distribution site."
+          paragraph="Download official Apache ResilientDB source releases. Release artifacts are served via the Apache mirror system (closer.lua). Signature and hash files are always downloaded from the main Apache distribution site."
           center
           width="720px"
         />
