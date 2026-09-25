@@ -352,7 +352,7 @@
 .custom-inline-block {
   display: inline-block;
   margin-bottom: 2rem;
-  height: 100px;
+  max-width: 280px;
 }
 
 .badge-asf {

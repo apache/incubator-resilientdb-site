@@ -12,11 +12,18 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="custom-inline-block">
                   <Image
-                    src="/images/logo/logo.svg"
-                    alt="logo"
-                    className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
+                    src="/images/logo/apache-resilientdb-dark-TLP.png"
+                    alt="Apache ResilientDB"
+                    className="block h-auto w-full max-w-[280px] dark:hidden"
+                    width={280}
+                    height={91}
+                  />
+                  <Image
+                    src="/images/logo/apache-resilientdb-white-TLP.png"
+                    alt="Apache ResilientDB"
+                    className="hidden h-auto w-full max-w-[280px] dark:block"
+                    width={280}
+                    height={91}
                   />
                 </Link>
               </div>

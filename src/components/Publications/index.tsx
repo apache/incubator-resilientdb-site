@@ -4,7 +4,7 @@ import SectionTitle from "../Common/SectionTitle";
 import SinglePublication from "./SinglePublication";
 import { useState, useEffect } from 'react';
 
-const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, "Books"];
+const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, "Books"];
 
 const publicationData: Publication[] = [
   {
@@ -279,9 +279,9 @@ const publicationData: Publication[] = [
   },
   {
     id: 28,
-    name: "Fides: Scalable Censorship-Resistant DAG Consensus via Trusted Components.",
-    venue: "arXiv 2025",
-    year: 2025,
+    name: "Fides: Secure and Scalable Asynchronous DAG Consensus via Trusted Components.",
+    venue: "VLDB 2026",
+    year: 2026,
     content:
       "Read Publication",
     publink: "https://arxiv.org/abs/2501.01062",
@@ -384,6 +384,16 @@ const publicationData: Publication[] = [
     year: 2026,
     content:
       "TBA",
+    award: ""
+  },
+  {
+    id: 39,
+    name: "Cassandra: Consensus with Partial Progress via Robust Partitionable View Synchronization.",
+    venue: "VLDB 2027",
+    year: 2027,
+    content:
+      "Read Publication",
+    publink: "https://arxiv.org/abs/2607.02856",
     award: ""
   },
 ];

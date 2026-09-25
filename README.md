@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <p>
-    <a href="https://resilientdb.apache.org"><img src="public/images/logo/logo.svg" width="300" alt="Apache ResilientDB" /></a>
+    <a href="https://resilientdb.apache.org"><img src="public/images/logo/apache-resilientdb-dark-TLP.png" width="300" alt="Apache ResilientDB" /></a>
   </p>
   <br />
 

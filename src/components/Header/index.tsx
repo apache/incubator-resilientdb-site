@@ -77,13 +77,20 @@ const Header = () => {
             </button>
 
             <div className="flex w-full items-center max-lg:justify-between lg:w-auto lg:items-center lg:gap-10 xl:gap-12">
-              <Link href="/" className="header-logo block w-[140px] shrink-0">
+              <Link href="/" className="header-logo block w-[200px] shrink-0 sm:w-[220px]">
                 <Image
-                  src="/images/logo/logo.svg"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="hidden w-full dark:block"
+                  src="/images/logo/apache-resilientdb-dark-TLP.png"
+                  alt="Apache ResilientDB"
+                  width={220}
+                  height={72}
+                  className="block h-auto w-full dark:hidden"
+                />
+                <Image
+                  src="/images/logo/apache-resilientdb-white-TLP.png"
+                  alt="Apache ResilientDB"
+                  width={220}
+                  height={72}
+                  className="hidden h-auto w-full dark:block"
                 />
               </Link>
 
