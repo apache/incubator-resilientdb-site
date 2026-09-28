@@ -383,7 +383,8 @@ const publicationData: Publication[] = [
     venue: "PODC 2026",
     year: 2026,
     content:
-      "TBA",
+      "Read Publication",
+    publink: "https://dl.acm.org/doi/10.1145/3796701.3815905",
     award: ""
   },
   {
@@ -396,6 +397,16 @@ const publicationData: Publication[] = [
     publink: "https://arxiv.org/abs/2607.02856",
     award: ""
   },
+  // {
+  //   id: 40,
+  //   name: "",
+  //   venue: ",
+  //   year: 2026,
+  //   content:
+  //     "Read Publication",
+  //   publink: "5",
+  //   award: ""
+  // },
 ];
 
 const Publications = () => {
