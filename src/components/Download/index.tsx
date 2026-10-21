@@ -5,13 +5,13 @@ import DownloadBox from "./DownloadBox";
 /** Official ASF releases. Artifact names must match downloads.apache.org. */
 const RELEASES = [
   {
-    version: "1.12.0",
-    fileName: "apache-resilientdb-1.12.0-incubating-rc3-src",
+    version: "1.13.0",
+    fileName: "apache-resilientdb-1.13.0-src",
     label: "Current",
   },
 ] as const;
 
-const KEYS_LINK = "https://downloads.apache.org/incubator/resilientdb/KEYS";
+const KEYS_LINK = "https://downloads.apache.org/resilientdb/KEYS";
 const VERIFICATION_GUIDE = "https://www.apache.org/info/verification.html";
 
 const Download = () => {
@@ -34,9 +34,11 @@ const Download = () => {
         <div className="flex justify-center">
           <div className="grid grid-cols-1 gap-x-0 gap-y-2 lg:grid-cols-1">
             {RELEASES.map((release) => {
-              const downloadLink = `https://www.apache.org/dyn/closer.lua/incubator/resilientdb/${release.version}/${release.fileName}.tar.gz`;
-              const sha512Link = `https://downloads.apache.org/incubator/resilientdb/${release.version}/${release.fileName}.tar.gz.sha512`;
-              const signLink = `https://downloads.apache.org/incubator/resilientdb/${release.version}/${release.fileName}.tar.gz.asc`;
+              const downloadLink =
+                `https://www.apache.org/dyn/closer.lua/resilientdb/${release.version}/${release.fileName}.tar.gz`;
+              const sha512Link =`https://downloads.apache.org/resilientdb/${release.version}/${release.fileName}.tar.gz.sha512`;
+              const signLink =
+                `https://downloads.apache.org/resilientdb/${release.version}/${release.fileName}.tar.gz.asc`;
 
               return (
                 <div key={release.version} className="px-10">
